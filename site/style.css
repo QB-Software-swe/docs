@@ -98,7 +98,18 @@ section{
 }
 
 
+.version{
+    color: #403d3d;
+    padding-left: 0.5em;
+}
 
+a:visited{
+    color: #5d686b;
+}
+
+a:link{
+    color: #1a2224;
+}
 
 .verbali{
     padding-top: 45px;
