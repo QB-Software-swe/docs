@@ -1,0 +1,161 @@
+%%%%%%%%%%%%%%%%%%%% PACKAGES %%%%%%%%%%%%%%%%%%%%
+\usepackage[english,italian]{babel}
+\usepackage[a4paper, margin=3cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[table]{xcolor}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{soul}
+\usepackage{enumitem}
+\usepackage{textcomp}
+\usepackage{eurosym}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{adjustbox}
+\usepackage{subfiles}
+
+%%%%%%%%%%%%%%%%%%%% COMMAND -> New commands %%%%%%%%%%%%%%%%%%%%
+\newcommand{\mailtoQBS}
+{
+	\href{mailto:qbsoftware.swe@gmail.com}{qbsoftware.swe@gmail.com}
+}
+
+\let\oldpar\paragraph
+\renewcommand{\paragraph}[1]{\oldpar{#1}\mbox{}\\}
+
+%%%%%%%%%%%%%%%%%%%% COMMAND -> Redefine LaTeX Commands %%%%%%%%%%%%%%%%%%%%
+\def\title#1{\gdef\THETITLE{#1}}
+\def\date#1{\gdef\THEDATE{#1}}
+\def\footname#1{\gdef\THEFOOTNAME{#1}}
+
+\let\oldtexteuro\texteuro
+\renewcommand{\texteuro}{\euro}
+
+%%%%%%%%%%%%%%%%%%%% STYLES -> Commands %%%%%%%%%%%%%%%%%%%%
+\newcommand{\makefirstpage}
+{
+	\begin{titlepage}
+		
+		% Defines a new command for the horizontal lines, change thickness here
+		\newcommand{\HRule}{\rule{\linewidth}{0.2mm}} 
+		
+		\center % Center everything on the page
+		
+		
+		%	Heading Sections
+		
+		\textsc{\LARGE QB Software}\\[.1cm] 
+		\includegraphics[scale=.15]{imgs/qb-software-logo.png}\\[-.1 cm] 
+		\includegraphics[scale=.025]{imgs/x.png}\\[0.5cm]
+		\includegraphics[scale=.3]{imgs/unipd_logo.png}\\[.5cm]
+		\textsc{\Large Università degli studi di Padova}\\[0.5cm] 
+		\textsc{\large corso di ingegneria del software }\\[0.5cm]
+		\textsc{\large anno accademico 2023/2024 }\\[0.5cm]
+		
+		
+		%	Title section and date section
+		
+		\ifdefined\THEDATE
+		\HRule \\[0.4cm]
+		{ \huge{ \bfseries {\THETITLE}} \\ [.5cm]
+			\THEDATE}\\[0.4cm] 
+		\HRule \\[0.4cm]
+		\else
+		\HRule \\[0.4cm]
+		{ \huge{ \bfseries {\THETITLE}} } \\
+		\HRule \\[0.4cm]
+		\fi
+		%
+		\textsc{Contatti:} \mailtoQBS\\[0.3cm]
+		
+		\vfill 
+		
+	\end{titlepage}
+}
+
+%%%%%%%%%%%%%%%%%%%% ACCESSIBILITY %%%%%%%%%%%%%%%%%%%%
+\let\oldhref\href
+\renewcommand{\href}[2]{\oldhref{#1}{\textcolor{blue}{\ul{#2}}}}
+
+\hypersetup{
+	colorlinks = true,
+	linkcolor = cyan,
+}
+
+%%%%%%%%%%%%%%%%%%%% STYLES -> Settings %%%%%%%%%%%%%%%%%%%%
+% Enable header and footer style
+\pagestyle{fancy}
+\thispagestyle{empty}
+\thispagestyle{fancy}
+\pagestyle{fancy}
+
+% Header
+\setlength{\topmargin}{-40pt}
+\setlength{\headsep}{60pt}
+\fancyhf{}
+\lhead{QB Software}
+\setlength{\headheight}{15pt}
+\rhead{\includegraphics[width=1cm]{imgs/qb-software-logo.png}}
+
+% Footer 
+\fancyfoot{}
+\fancyfoot[L]{\THEFOOTNAME}
+\fancyfoot[R]{Pagina \thepage~di~\pageref{LastPage}}
+\futurelet\TMPfootrule\def\footrule{\TMPfootrule}
+\setcounter{page}{0}
+\pagenumbering{arabic}
+\renewcommand{\footrulewidth}{0.3pt}
+
+%%%%%%%%%%%%%%%%%%%% ENVIRONMENT %%%%%%%%%%%%%%%%%%%%
+% Remove colorless padding in booktabs
+\setlength{\aboverulesep}{0cm}
+\setlength{\belowrulesep}{0cm}
+\setlength{\extrarowheight}{.75ex}
+
+\newenvironment{todo}{
+	\rowcolors{2}{cyan!80!black!30!}{cyan!80!black!20!}
+	\begin{tabular}{p{3.48cm}>{\raggedright\arraybackslash}p{4cm}>{\raggedright\arraybackslash}p{6.5cm}}
+		\toprule
+		\rowcolor{gray!20} \textbf{ID}	& \textbf{Interessato} & \textbf{Task} 
+		\\\midrule
+	}{
+		\bottomrule
+	\end{tabular}
+}
+
+\newenvironment{changelog}{
+	\noindent
+	{\Large \textbf{Registro delle modifiche}}
+	\noindent
+	\begin{table}[h]
+		\rowcolors{2}{cyan!80!black!30!}{cyan!80!black!20!}
+		\begin{adjustbox}{width=\textwidth}
+			\begin{tabular}{|c|c|p{2.35cm}|c|p{3.3cm}|}
+				\hline
+				\rowcolor{gray!20}
+				\textbf{V.} & \textbf{Data} & \textbf{Membro} & \textbf{Ruolo} & \textbf{Descrizione} \\
+				
+				\hline
+			}{
+				\hline
+			\end{tabular}
+		\end{adjustbox}
+	\end{table}
+	
+	\clearpage
+}
+
+% 1   2    3        4             5            6            7          
+% Ver Data Relatore RuoloRelatore DataVerifica Verificatore Descrizione
+\newcommand{\newlog}[7]{
+	#1 & #5 & #6 & Verificatore & Controllo qualità \\
+	   & #2 & #3 & #4           & #7 \\\hline
+}

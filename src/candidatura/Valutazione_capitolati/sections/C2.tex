@@ -1,0 +1,64 @@
+\subsection{Capitolato C2 - Sistemi di raccomandazione} \label{sec:c2}
+	\subsubsection{Descrizione}
+	
+		\begin{table}[H]
+			\begin{tabularx}{\textwidth}{p{5cm}|X}
+				\toprule
+				\textbf{Proponente} & ERGON Informatica Srl
+				\\
+				\textbf{Committenti} & Proff. Tullio Vardenega e Riccardo Cardin
+				\\
+				\textbf{Obiettivo} & Sistemi di raccomandazione
+				\\\toprule
+			\end{tabularx}
+			\caption{informazioni di carattere generale sul capitolato.}
+		\end{table}
+		
+		Data la sempre crescente mole di dati delle aziende, diventa necessario trovare un modo di analizzarli. In un contesto aziendale il cui core business è la vendita di diversi prodotti, si desidera utilizzare il Machine Learning (ML) per identificare le correlazioni nei dati. Questo ci permetterà di anticipare problemi o esigenze legate alla necessità di marketing e offrire ai singoli clienti attività di marketing personalizzazione basate sui loro interessi.
+		
+	\subsubsection{Domionio Applicativo}
+		Il dominio applicativo di questo progetto è il marketing predittivo e l'analisi dei dati dei clienti. Il progetto si concentra sullo sviluppo di un sistema di raccomandazione basato su Machine Learning per le aziende che vendono prodotti ai loro clienti.
+		
+		Questo sistema di raccomandazione potrà essere utilizzato per guidare le attività di marketing e commerciali dell'azienda, suggerendo i migliori clienti a cui indirizzare le loro offerte. Inoltre, il sistema sarebbe in grado di prevedere la quantità di prodotto che un cliente potrebbe acquistare, basandosi sulla storia delle sue preferenze e comportamenti passati.
+		
+		Entrambi i metodi richiederebbero un set di dati da utilizzare nella fase di training del modello contenente i feedback degli utenti. Questi feedback possono essere espliciti (come punteggi di gradimento) o impliciti (come l’elenco dei prodotti acquistati o il
+		tempo di permanenza su una scheda prodotto).
+		
+		L'applicazione dovrebbe restituire dei suggerimenti in base agli input proposti, che possono essere:
+		\begin{itemize}
+			\item prodotto o un insieme di prodotti: suggerisce a quali clienti proporli, in base alla probabilità sia di loro interesse;
+			\item prodotto con quantità di vendita target: suggerisce a quali clienti proporli e la quantità che si prevede acquistare;
+			\item cliente: suggerisce i prodotto con un alto grado di correlazione con il cliente, esclusi quelli già acquistati.
+		\end{itemize}
+		%
+		Il sistema desiderato dovrà avere un'interfaccia utente per la consultazione dei risultati e ritorno di feedback degli utenti, il sistema di raccomandazione e un database relazionale per la gestione dei dati.
+		
+	\subsubsection{Dominio tecnologico}
+		Le tecnologie suggerite sono:
+		\begin{itemize}
+			\item \emph{database relazione}, si può scegliere tra vari database relazionali disponibili sul mercato, come: SQL Server Express, MySQL o MariaDB;
+			\item \emph{sistema di raccomandazione}, si può optare per ML.NET, che è basato sul framework .NET e utilizza il linguaggio C\#, oppure Surprise, che è una libreria Python;
+			\item \emph{comunicazione da/per il database}, l'interazione con il database può avvenire in diversi modi a seconda del componente scelto per lo sviluppo del sistema di raccomandazione. Ad esempio, se si adotta ML.NET, l’interazione con il
+			database potrebbe avvenire utilizzando l’Entity Framework. Se si adotta la libreria Surprise, la comunicazione con il database potrebbe avvenire attraverso una fonte dati ODBC;
+			\item \emph{visualizzazione e gestione dei feedback UI}, il componente di consultazione
+			dei risultati da parte degli utenti può essere sviluppato come applicazione
+			desktop (ad esempio, utilizzando i componenti WinForms o WPF della
+			piattaforma .NET) o come applicazione web-based.
+		\end{itemize}
+		
+	\subsubsection{Aspetti positivi}
+		\begin{itemize}
+			\item Tecnologie consigliate non vincolanti e libertà di scelta;
+			\item azienda disponibile ad incontri di supporto nella varie fasi di sviluppo, sia in sede che tramite chat/chiamate;
+			\item disponibilità di un database per l'apprendimento del modello;
+			\item progetto allineato con le attuali necessità delle aziende di integrazione di modelli di Machine Learning nei loro sistemi attuali.
+		\end{itemize}
+		
+	\subsubsection{Fattori critici}
+		\begin{itemize}
+			\item Il sistema per funzionare bene necessità di dati ove la qualità e la quantità sono garantite;
+			\item l'implementazione di un sistema di raccomandazione basato su Machine Learning richiede competenze tecniche specifiche. Se non si dispone delle competenze necessarie, potrebbe essere necessario spendere più tempo del			previsto, difatti i processi di Machine Learning possono rivelarsi lunghi e costosi.
+		\end{itemize}
+		
+	\subsubsection{Conclusioni}
+		Questo progetto, rispetto ad altri, non rispecchia le esigenze del team, tenendo conto della disparità di formazione in ambito ML degli individui del gruppo abbiamo preferito dare precedenza a progetti in cui possiamo esprimere maggiormente il nostro		potenziale.

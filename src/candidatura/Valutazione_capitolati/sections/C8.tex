@@ -1,0 +1,81 @@
+\subsection{Capitolato C8 - JMAP, il nuovo protocollo standard per la comunicazione via email} \label{sec:c8}
+	\subsubsection{Descrizione}
+	
+		\begin{table}[H]
+			\begin{tabularx}{\textwidth}{p{3cm}|X}
+				\toprule
+				\textbf{Proponente} & Zextras
+				\\
+				\textbf{Committenti} & Proff. Tullio Vardenega e Riccardo Cardin
+				\\
+				\textbf{Obiettivo} & Sviluppare un servizio di posta elettronica con JMAP
+				\\\toprule
+			\end{tabularx}
+			\caption{informazioni di carattere generale sul capitolato.}
+		\end{table}
+		
+		Il capitolato ha per oggetto lo sviluppo di un servizio di posta elettronica che utilizza il protocollo JMAP.
+		
+		Il servizio deve essere testabile per permettere all'azienda di valutare le prestazioni, la manutenibilità e la completezza del protocollo JMAP, paragonandolo agli attuali protocolli attualmente implementati in Carbonio, piattaforma gratuita e open source per la collaborazione e la gestione dell'e-mail, sviluppato da Zextras.
+		
+	\subsubsection{Dominio applicativo}
+		Il capitolato si colloca nell'ambito delle telecomunicazioni, più precisamente nella posta elettronica on-premise e nella sincronizzazione dei dati correlati: contatti e calendari. I protocolli standard attualmente utilizzati, POP e IMAP, sono abbastanza datati e le necessità sorte in questi ultimi anni hanno portato l'adozione di soluzioni personalizzate per superare le loro limitazioni, determinando la necessità di sviluppare un protocollo su misura o proprietario.
+		
+		Per fare fronte alle nuove necessità nasce JMAP: un protocollo efficiente e moderno. Il prodotto da sviluppare dovrà essere in grado, ad esempio, di eseguire le seguenti operazioni:
+		\begin{multicols}{2}
+			\begin{itemize}
+				\item l'invio e la ricezione di una e-mail;
+				\item la gestione delle cartelle;
+				\item la gestione dei contenuti di una cartella;
+				\item l'eliminazione di un oggetto;
+				\item l'eliminazione di una cartella;
+				\item la condivisione di una cartella;
+				\item l'eliminazione di una condivisione cartella.
+			\end{itemize}
+		\end{multicols}
+		
+	\subsubsection{Dominio tecnologico}
+		Per lo svolgimento del capitolato, l'azienda richiede l'utilizzo delle seguenti tecnologie:
+		\begin{itemize}
+			\item protocollo JMAP: per la comunicazione tra server e client. In particolare, si deve usare una delle \href{https://jmap.io/software.html\#libraries}{librerie ufficialmente riconosciute da JMAP};
+			\item un sistema di container: per poter lanciare in simultanea più istanze del servizio;
+			\item uno dei \href{https://jmap.io/software.html\#clients}{client ufficalmente supportati}.
+		\end{itemize}
+		Sono state inoltre consigliate le seguenti tecnologie:
+		\begin{itemize}
+			\item Java: per lo sviluppo backend;
+			\item Docker: come sistema di container.
+		\end{itemize}
+		
+	\subsubsection{Aspetti positivi}
+		\begin{itemize}
+			\item Presentazione chiara, scopi e obbiettivi dello stakeholder ben definiti;
+			\item interesse da parte del gruppo per le tecnologie proposte;
+			\item opportunità di lavorare con un protocollo all'avanguardia che è:
+%           \begin{multicols}{3}
+                \begin{itemize}
+    				\item moderno;
+                    \item espandibile;
+                    \item flessibile;
+    				\item sicuro;
+    				\item veloce;
+    				\item open source;
+    				\item pubblicato ufficialmente come standard dall'IETF (Internet Engineering Task Force).
+    			\end{itemize}
+%           \end{multicols}
+			\item l'opportunità di sviluppare un servizio basato su contenitori rappresenta un'occasione rilevante, in quanto si tratta di una tecnologia in constante crescita e ampiamente adottata dalle aziende;
+			\item possibilità di utilizzare Java come linguaggio di programmazione, che gode delle seguenti peculiarità:
+			\begin{itemize}
+				\item implementazioni di feature moderne dei linguaggi di programmazione;
+				\item implementazione delle ultime tecnologie sviluppate per JVM, che solitamente sono facilmente portate in Java.
+			\end{itemize}
+		\end{itemize}
+		
+	\subsubsection{Fattori critici}
+		\begin{itemize}
+			\item Il protocollo JMAP è completo solo per il supporto all'e-mail e la parte core, mentre le altre funzionalità sono ancora in sviluppo;
+			\item implementazione limitata per alcuni linguaggi delle librerie proposte, con rischio di cambiamenti molto repentini nella struttura dell'interfaccia della librerie.
+		\end{itemize}
+		
+	\subsubsection{Conclusione}
+		In seguito all'incontro, molto positivo, con Zextras, i dubbi riguardanti le criticità sono stati chiariti. Il team QB Software, preso atto delle criticità e dell'opportunità (fattori positivi), e in vista del crescente interesse del gruppo, ha deciso di impegnarsi nello sviluppo del capitolato C8.

@@ -1,0 +1,134 @@
+% DOC TYPE E DEF QB SOFTWARE %%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\input{base.tex}
+
+% INFORMAZIONI DOCUMENTO %%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Verbale interno}
+\date{del 19 Ottobre 2023}
+\footname{Verbale interno del 19/10/2023}
+
+\begin{document}
+	% PRIME PAGINE %%%%%%%%%%%%%%%%%%%%%%%%%
+	\makefirstpage
+	
+	\include{changelog.tex}
+	\clearpage
+	
+	\tableofcontents
+	\clearpage
+
+    \section{Informazioni generali}
+    
+	    \subsection{Luogo e data dell'incontro}
+	    
+		    \begin{itemize}
+		    	\item \textbf{Luogo}: meeting su Discord
+		    	\item \textbf{Data}: 19/10/2023
+		    	\item \textbf{Ora di inizio}: 17:00
+		    	\item \textbf{Ora di fine}: 19:00
+		    \end{itemize}
+    
+	    \subsection{Presenze}
+	    
+		    \begin{itemize}
+		    	\item \textbf{Totale presenze}:
+		    	\begin{itemize}
+		    		\item Bustreo Alessandro
+		    		\item Destro Stefano
+		    		\item Domuta Alessia 
+		    		\item Feltrin Alessandro 
+		    		\item Fontana Raffaele Paolo 
+		    		\item Giurisato Andrea 
+		    		\item Rovea Silvia
+		    	\end{itemize}
+		    	
+		    	\item \textbf{Totale assenze}: 0
+		    	
+		    	\item \textbf{Partecipanti esterni}:
+		    	\begin{itemize}
+		    		\item nessuno
+		    	\end{itemize}
+		    \end{itemize}
+    
+    \section{Ordine del giorno}
+	    Questioni fissate nella riunione interna precedente:
+	    \begin{itemize}
+	    	\item discussione e scelta dei capitolati;
+	    	\item continuare lo sviluppo del way of working:
+	    	\begin{itemize}
+	    		\item strumenti da utilizzare per redigere i documenti;
+	    		\item software da usare per tenere traccia e valutare la qualità del lavoro.
+	    	\end{itemize}
+	    \end{itemize}
+	    %
+	    Nuove questioni:
+	    \begin{itemize}
+	    	\item nessuna.
+	    \end{itemize}
+    
+    \section{Verbale}
+	    Si è tenuta una discussione in merito ai capitolati, durante la quale è stato
+	    predisposto un foglio di Google condiviso tra il team, dove ogni membro del gruppo era tenuto ad esprimere le proprie preferenze in merito agli appalti. Ogni capitolato è stato oggetto di una discussione dove sorgevano dei fattori positivi e delle criticità, nel mentre ogni componente del gruppo poteva scegliere se modificare la propria preferenza. Alla fine di questo processo sono stati selezionati i 3 appalti che avevano ottenuto un maggiore consenso da parte del gruppo.
+	    Gli appalti scelti sono: C8, C5 e C2, in questo ordine di preferenza. Alcune
+	    domande sono sorte durante la discussione del C8, per questo si è deciso di
+	    contattare l'azienda proponente Zextras per dei chiarimenti.
+	    
+	    Nella seconda parte della riunione si è continuato con la strutturazione di
+	    un way of working, dove sono state prese le seguenti decisioni:
+	    \begin{itemize}
+	    	\item provare ad utilizzare Notion come strumento di organizzazione interna;
+	    	\item creare un account GitHub;
+	    	\item utilizzare GitFlow come flusso di lavoro per git;
+	    	\item usare \LaTeX\ come strumento per redigere i documenti e Overleaf come editor;
+	    	\item implementare due template \LaTeX, uno per le riunioni interne, seguendo la struttura descritta nel verbale del 16/10/2023, e un altro per le riunioni esterne.
+	    \end{itemize}
+	    È stato proposto di utilizzare GitHub Projects come strumento per valutare la qualità
+	    dell'operato, la scelta definitiva è stata rinviata alla prossima riunione per valutare
+	    altre possibili alternative (esempio: Jira e Trello).
+	    
+	    \section{Azioni da intraprendere}
+	    \begin{todo}
+	    	\href{https://github.com/QB-Software-swe/docs/issues/11}{VI-2023-10-19-\#11} 
+	    	&
+	    	Silvia Rovea
+	    	&
+	    	Scrivere una e-mail per prendere appuntamento con l'azienda Zextras
+	    	\\\midrule
+	    	-
+	    	&
+	    	Alessandro Bustreo
+	    	&
+	    	Imparare ad utilizzare Notion e creare l'account di GitHub
+	    	\\\midrule
+	    	-
+	    	&
+	    	Alessandro Feltrin
+	    	&
+	    	Imparare le basi di: GitHub, Git e GitFlow
+	    	\\\midrule
+	    	\href{https://github.com/QB-Software-swe/docs/issues/9}{VI-2023-10-19-\#9} 
+	    	&
+	    	Fontana Raffaele Paolo 
+	    	&
+	    	Creare il template in \LaTeX\, per le riunioni
+	    	\\\midrule
+	    	-
+	    	&
+	    	\emph{Tutto il gruppo}
+	    	&
+	    	Rileggersi i capitolati scelti. Valutare la possibilità di utilizzare altri servizi per il controllo della qualità
+	    	\\
+	    \end{todo}
+    
+    \section{Ordine del giorno per la prossima riunione interna}
+	    \begin{itemize}
+	    	\item Discutere le domande da proporre a Zextras e preparasi per il meeting; 
+	    	\item continuare lo sviluppo del \emph{way of working}:
+	    	\begin{itemize}
+	    		\item prendere la scelta definitiva sul software da utilizzare per tenere traccia e valutare la qualità del lavoro;
+	    		\item decidere se Notion è adatto come strumento di organizzazione interna;
+	    	\end{itemize}
+	    	\item preparare la divisione dei ruoli per la scrittura dei documenti di candidatura;
+	    	\item iniziare a strutturare la divisione dei ruoli e le ore assegnate.
+	    \end{itemize}
+\end{document}

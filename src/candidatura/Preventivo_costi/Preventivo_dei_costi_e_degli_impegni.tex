@@ -1,0 +1,82 @@
+% DOC TYPE E DEF QB SOFTWARE %%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\input{base.tex}
+
+% INFORMAZIONI DOCUMENTO %%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Preventivo dei costi e impegni}
+\footname{Preventivo dei costi e impegni}
+
+\begin{document}
+	% PRIME PAGINE %%%%%%%%%%%%%%%%%%%%%%%%%
+	\makefirstpage
+	
+	\include{changelog.tex}
+	\clearpage
+	
+	\tableofcontents
+	\clearpage
+	
+	% CONTENUTO QUI %%%%%%%%%%%%%%%%%%%%%%%%%
+	\noindent Con il presente documento il gruppo QB Software riporta il preventivo per il progetto JMAP: il nuovo protocollo per la posta elettronica, calcolato in base a ruoli e relativi costi.
+	
+	\section{Impegni orari}
+	Per lo svolgimento del progetto sono state previste 651 ore da dividere equamente. Ogni componente del gruppo QB Software si impegna a lavorare al progetto per un totale di 93 ore; tali ore saranno suddivise equamente per ciascun ruolo da assumere durante lo svolgimento del progetto.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=.6]{imgs/chart.png}
+		\caption{grafico indicativo per l'ammontare ore.}
+		\label{fig:enter-label}
+	\end{figure}
+	\clearpage
+	
+	\section{Considerazione sui ruoli} \label{sec:considerazioni}
+	L'ammontare delle ore ripartite come sopra indicato sono frutto di alcune considerazioni che abbiamo fatto:
+	
+	\subsection{Responsabile e Amministratore}
+	Tenendo conto che il responsabile e l'amministratore hanno un ruolo più incentrato sul controllare, coordinare l'operato del gruppo e favorire un buon way of warking collettivo, abbiamo ritenuto che necessitano meno ore produttive rispetto agli altri ruoli per portare a termine i propri compiti.
+	
+	
+	\subsection{Analista}
+	Colui che coprirà questo ruolo, dovrà occuparsi di analizzare e studiare i problemi che ostacoleranno l'avanzamento del team. E' fondamentale per avere una buona analisi dei requisiti, tuttavia, non è un ruolo che sarà attivo per l'intera durata del progetto, perciò gli abbiamo assegnato un numero di ore adeguato.
+	
+	\subsection{Progettista}
+	Il progettista si occupa di delle scelte di design e dell'architettura del software, indicando quali sono le soluzioni da implementare per risolvere i problemi evidenziati dagli analisti. Riteniamo che sia un ruolo fondamentale per adempiere in modo corretto ciò che è stato dichiarato nell'analisi dei requisiti, perciò gli abbiamo assegnato un montante ore più elevato rispetto ad altri ruoli.
+	
+	
+	\subsection{Programmatore}
+	Il programmatore svolge la funzione di realizzare le scelte implementative fatte dal progettista e  si occupa di una corretta manutenzione del codice nell'intero ciclo di vita del software. Considerando che tale figura sarà  in gran parte presente per tutto lo sviluppo e sarà fondamentale per soddisfare l'analisi dei requisiti, abbiamo deciso di allocare un numero considerevole di ore per svolgere questo ruolo. 
+	
+	
+	\subsection{Verificatore}
+	Il verificatore è colui che si assicura che tutte le attività prodotte dai membri del gruppo siano state svolte in maniera consona e corretta, compresa la documentazione. Considerando che sarà ruolo attivo permanentemente, in modo da assicurarci una buona qualità del prodotto, abbiamo deciso di assegnargli il maggior numero di ore.
+	
+	\section{Preventivo dei costi}
+	Il costo finale, basato sulle tariffe orarie dei vari ruoli e l'ammontare ore, è di 12.705,00\texteuro.
+	
+	\noindent Di seguito una tabella riepilogativa dei costi:
+	\newline\newline
+	%
+	\rowcolors{2}{cyan!80!black!30!}{cyan!80!black!20!}
+	\begin{tabularx}{\textwidth}{|X|c|c|c|c|}
+		\hline \rowcolor{gray!20}
+		\textbf{Ruolo} & \textbf{Ore}         & \textbf{Ore}    & \textbf{Costo}            & \textbf{Costo totale} \\ \rowcolor{gray!20}
+		& \textbf{individuali} & \textbf{totali} & \textbf{(\texteuro/ora)}  & \textbf{(\texteuro)}  \\
+		\hline\hline
+		Responsabile & 8 & 56 & 30 & 1680\\
+		\hline
+		Amministratore  & 8 & 56 & 20 & 1120\\
+		\hline
+		Analista & 8 & 56 & 25 & 1400\\
+		\hline
+		Progettista & 18 & 126 & 25 & 3150\\
+		\hline
+		Programmatore & 24 & 168 & 15 & 2520\\
+		\hline
+		Verificatore & 27 & 189 &  15 & 2835\\
+		\hline
+	\end{tabularx}
+	
+	\section{Scadenza di consegna}
+	Il gruppo stima di consegnare il prodotto finito entro e non oltre il 01/04/2024.
+\end{document}
