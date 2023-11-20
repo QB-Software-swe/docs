@@ -1,0 +1,91 @@
+% DOC TYPE E DEF QB SOFTWARE %%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\input{base.tex}
+
+% INFORMAZIONI DOCUMENTO %%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Verbale esterno}
+\date{del 25 Ottobre 2023}
+\footname{Verbale esterno del 25/10/2023}
+
+\begin{document}
+	% PRIME PAGINE %%%%%%%%%%%%%%%%%%%%%%%%%
+	\makefirstpage
+	
+	\include{changelog.tex}
+	\clearpage
+	
+	\tableofcontents
+	\clearpage
+
+    \section{Informazioni generali}
+    
+    \subsection{Luogo e data dell'incontro}
+    
+    \begin{itemize}
+    	\item \textbf{Luogo}: meeting su Zextras Chat
+    	\item \textbf{Data}: 25/10/2023
+    	\item \textbf{Ora di inizio}: 17:00
+    	\item \textbf{Ora di fine}: 17:30
+    \end{itemize}
+    
+    \subsection{Presenze}
+    
+    \begin{itemize}
+    	\item \textbf{Totale presenze}:
+    	\begin{itemize}
+    		\item Bustreo Alessandro
+    		\item Destro Stefano
+    		\item Domuta Alessia 
+    		\item Feltrin Alessandro 
+    		\item Fontana Raffaele Paolo 
+    		\item Giurisato Andrea 
+    		\item Rovea Silvia
+    	\end{itemize}
+    	
+    	\item \textbf{Totale assenze}: 0
+    	
+    	\item \textbf{Partecipanti esterni}:
+    	
+    	\begin{itemize}
+    		\item Alessio Crestani (Zextras)
+    	\end{itemize}
+    \end{itemize}
+    
+    \section{Ordine del giorno}
+    \begin{itemize}
+    	\item domande da porre all'azienda.
+    \end{itemize}
+    \clearpage
+    
+    \section{Verbale}
+    Le domande poste da QB Software a Zextras durante il meeting:
+    
+    % Risposta
+    \newcommand{\answer}{\item[\textbf{A:}]}
+    
+    \begin{enumerate}[label=\textbf{Q\arabic*:}]
+    	\item Qual è la disponibilità dell'azienda per seguirci durante il progetto?
+    	\answer Non c'è nessuna frequenza prefissata, siamo disponibili a seconda delle vostre necessità.
+    	
+    	\item Per comunicazioni brevi è possibile contattarvi via e-mail? Inoltre, è preferibile mettere come destinatario entrambi o solo uno?
+    	\answer È possibile contattarci via e-mail, come destinatario potete mettere entrambi.
+    	
+    	\item Per il repository con il sorgente del software preferite che sia pubblico o privato?
+    	\answer Non imponiamo restrizioni riguardo alla tipologia del repository, che può essere sia privato, e sia pubblico. È possibile aderire alla filosofia aziendale e rendere il vostro prodotto open source, se lo ritenete opportuno.
+    	
+    	\item Nella pratica, è necessario sviluppare un server che implementi il protocollo JMAP. Vorrei chiedere se avete delle raccomandazioni o consigli riguardo a un framework specifico che potrebbe essere appropriato per questo scopo?
+    	\answer Non consigliamo di usare framework per lo sviluppo in quanto potrebbero influire sui risultati degli stress test da eseguire, è dunque preferibile usare Java "puro" per implementare il servizio. Inoltre, utilizzare un framework rendere meno scalabile il prodotto. Al posto di un framework possiamo aiutarvi a scegliere delle librerie utili a dialogare con il database. 
+    	
+    	\item Che tecnologie consigliate per lo sviluppo del database?
+    	\answer Consigliamo di usare Postgre, e di utilizzare un database NoSQL. In ogni caso non c'è nessun vincolo sulla tipologia e che tipo di database utilizzare.
+    	
+    	\item Cosa comporta il significato di stateless a livello di programmazione? %TODO
+    	\answer Stateless, a livello di programmazione, significa che ogni nodo del sistema deve essere capace di rispondere ad una qualunque richiesta, e quindi non deve essere vincolato dallo stato della conversazione. L'approccio che bisogna tenere è quello atomico alle operazioni. %FIXME: Quello che intende affermare è che ogni operazione è indipendete
+    	
+    	\item Cosa consigliate per creare e testare gli stess test?
+    	\answer Chi di competenza non era disponibile, la domanda è stata rinviata per il prossimo meeting.
+    \end{enumerate}
+    
+    \section{Azioni da intraprendere}
+    Nessuna.
+\end{document}
