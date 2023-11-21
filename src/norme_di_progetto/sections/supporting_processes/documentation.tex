@@ -108,7 +108,7 @@
                     \\\hline
                     Verifica & Verificatore & \ref{sec:doc_verification}
                     \\\hline
-                    Approvazione & Responsabile & \ref{sec:doc_approval}
+                    Approvazione & Responsabile & \ref{sec:doc_production}
                     \\\hline
                     Configuration managment & Amministratore & \ref{sec:doc_CM}
                     \\\hline
@@ -330,7 +330,7 @@
             Non è stata usata una terza cifra, in quanto il gruppo considera inutile indicare il numero di build.
 
         \paragraph{Sviluppo dei documenti} \label{sec:doc_dev}
-            Di seguito illustriamo le fasi per lo sviluppo di ogni documento. Ogni creazione/modifica di un documento deve essere collegata a una issue in modo da rendere tracciabile il lavoro svolto, vedere la sezione \ref{sec:doc_CM}. QB Software ha individuato due momenti differenti del ciclo di vita di un documento: la creazione del documento, distinta da continue aggiunte di argomenti nuovi e sostanziali aggiunte in termini di contenuto, e la manutenzione del documento, distinta dall'assenza di modifiche sostanziali al contenuto e da modifiche che mirano a correggere o rendere il documento più fruibile.
+            Di seguito illustriamo le fasi per lo sviluppo di ogni documento. Ogni creazione/modifica di un documento deve essere collegata a una issue in modo da rendere tracciabile il lavoro svolto, vedere la sezione \ref{sec:doc_CM}: CM dei documenti. QB Software ha individuato due momenti differenti del ciclo di vita di un documento: la creazione del documento, distinta da continue aggiunte di argomenti nuovi e sostanziali aggiunte in termini di contenuto, e la manutenzione del documento, distinta dall'assenza di modifiche sostanziali al contenuto e da modifiche che mirano a correggere o rendere il documento più fruibile.
             \\
             Riportiamo i per lo sviluppo di un documento:
             \begin{enumerate}
@@ -350,11 +350,21 @@
                 \end{itemize}
             La verifica del documento per la fase di manutenzione avviene attraverso delle \emph{checklist} presenti nelle Piano di Qualifica. Terminatà la procedura di verifica il verificatore deve pubblicare un commento sulla pull request riportando il feedback della verifica.
             
+		\paragraph{Automazione build per i documenti} \label{sec:doc_CM}
+		    La configurazioni per l'automazione della build di ogni documento sono contenute dentro il file \verb|config.csv|. Tale file deve essere gestito dall'amministratore.
+		    Oltre al file di configurazione, il sistema di build usa le label assegnate alla pull request (che devono essere le stesse label assegnate alla issue) per impostare ulteriori parametri di compilazione.
+		    È responsabilità dell'autore della modifica e del verificatore nel assegnare le label corrette alla issue e alla pull request. Per la compilazione dei documenti le label da inserire sono:
+		    \begin{enumerate}
+		    	\item \emph{documentation}, indica che la pull request sta per introdurre un nuovo documento da compilare;
+		    	\item \emph{enhancement} o \emph{maintenance}, nel primo caso se la modifica è un aggiunta sostanziale, nel secondo caso se la modifica è di manutenzione. Permette di determinare come avviene l'aggiornamento della versione;
+		    	\item \emph{<Sigla Documento>}, serve a identificare quale documento costruire, es: NdP (Norme di Progetto), PdP (Piano di Progetto), e così via.
+		    \end{enumerate}
+            
     \subsubsection{Produzione} 
         \paragraph{Mettere in produzione i documenti} \label{sec:doc_production}
-            Il responsabile, può provvedere al rilascio di un documento da \verb|devlop| al \verb|main| attraverso una pull requst che viene automaticamente accetta. L'approvazione e il conseguente rilascio di un documento deve essere fatto dal responsabile solo quando il documento è pronto per la pubblicazione per la milestone esterna. Il documento è disponibile nel branch \verb|main| e nel \href{https://qb-software-swe.github.io/docs/}{sito web di QB Software}.
+            Il responsabile può provvedere al rilascio di un documento da \verb|devlop| al \verb|main| attraverso una pull requst. L'approvazione e il conseguente rilascio di un documento deve essere fatto dal responsabile solo quando il documento è pronto per la pubblicazione per la milestone esterna. Il documento è disponibile nel branch \verb|main| e nel \href{https://qb-software-swe.github.io/docs/}{sito web di QB Software}.
             
-        \paragraph{Mettere in produzione i documenti validati da esterni}
+        \paragraph{Mettere in produzione i documenti validati da esterni} \label{sec:doc_approval_external}
         	I documenti che devono essere validati dagli esterni richiedono prima di seguire la procedura indicata nella sezione \ref{sec:doc_production} il seguente requisito:
         	\begin{itemize}
         		\item una firma, o una qualunque marcatura che possa dimostrare l'approvazione da parte degli esterni.
@@ -362,9 +372,6 @@
 
 		\paragraph{Pubblicazione}
 			I documenti approvati verranno pubblicati nel \verb|main| della repository Docs e nel \href{https://qb-software-swe.github.io/docs/site/index.html}{sito di QB Software}.
-
-        \paragraph{Configuration Managment per i documenti} \label{sec:doc_CM}
-        %TODO
 
     \subsubsection{Manutenzione} \label{sec:doc_maintenance}
         Ogni documento che necessità di manutenzione può avere due tipo di modifiche:
