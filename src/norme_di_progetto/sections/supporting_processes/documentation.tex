@@ -115,8 +115,35 @@
                     Produzione e distribuzione & Responsabile & \ref{sec:doc_production}
                     \\\hline
                 \end{tabularx}
-                \item \textbf{schedule}, il documento non prevede una versione finale in quanto è continuamente soggetto a modifiche e revisioni, la prima versione è prevista per il 16/11/2023. 
-            \end{enumerate} 
+                \item \textbf{schedule}, il documento non prevede una versione finale in quanto è continuamente soggetto a modifiche e revisioni. 
+            \end{enumerate}
+            
+        \paragraph{Glossario}
+        	\begin{enumerate}
+        	\item \textbf{Nome file:} \texttt{Glossario\_X.Y.Z.pdf};
+        	\item \textbf{scopo}, riportare tutti i termini di dominio utilizzate durante il progetto;
+        	\item \textbf{procedure e responsabilità},
+        	\\
+        	\begin{tabularx}{0.93\textwidth}{|X|X|X|}
+        		\hline
+        		\textbf{Procedura} & \textbf{Responsabilità} & \textbf{Attività di} \\
+        		& & \textbf{riferimento (NdP)} \\
+        		\hline
+        		Sviluppo & Team QB Software &  \ref{sec:doc_dev}
+        		\\\hline
+        		Manutenzione & Team QB Software & \ref{sec:doc_maintenance} 
+        		\\\hline
+        		Verifica & Verificatore & \ref{sec:doc_verification}
+        		\\\hline
+        		Approvazione & Responsabile & \ref{sec:doc_production}
+        		\\\hline
+        		Configuration managment & Amministratore & \ref{sec:doc_CM}
+        		\\\hline
+        		Produzione e distribuzione & Responsabile & \ref{sec:doc_production}
+        		\\\hline
+        	\end{tabularx}
+        	\item \textbf{schedule}, il documento non prevede una versione finale in quanto è continuamente soggetto a modifiche e revisioni. 
+        \end{enumerate}
 
         \paragraph{Verbali interni}
             \begin{enumerate}
@@ -166,7 +193,7 @@
                     \\\hline
                     Approvazione & Responsabile & \ref{sec:doc_production}
                     \\\hline
-                    Approvazione (esterni) & Esterni & \ref{sed:doc_approval_external}
+                    Approvazione (esterni) & Esterni & \ref{sec:doc_approval_external}
                     \\\hline
                     Configuration managment & Amministratore & \ref{sec:doc_CM}
                     \\\hline
@@ -327,38 +354,37 @@
                 \item $y$ rappresenta una modifica sostanziale, come l'aggiunta di una nuova sezione;
                 \item $z$ rappresenta una modifica minore, come l'aggiornamento di una paragrafo;
             \end{itemize}
-            Non è stata usata una terza cifra, in quanto il gruppo considera inutile indicare il numero di build.
 
         \paragraph{Sviluppo dei documenti} \label{sec:doc_dev}
-            Di seguito illustriamo le fasi per lo sviluppo di ogni documento. Ogni creazione/modifica di un documento deve essere collegata a una issue in modo da rendere tracciabile il lavoro svolto, vedere la sezione \ref{sec:doc_CM}: CM dei documenti. QB Software ha individuato due momenti differenti del ciclo di vita di un documento: la creazione del documento, distinta da continue aggiunte di argomenti nuovi e sostanziali aggiunte in termini di contenuto, e la manutenzione del documento, distinta dall'assenza di modifiche sostanziali al contenuto e da modifiche che mirano a correggere o rendere il documento più fruibile.
+            Di seguito illustriamo le fasi per lo sviluppo di ogni documento. Ogni creazione/modifica di un documento deve essere collegata a una issue in modo da rendere tracciabile il lavoro svolto, vedere la sezione \ref{sec:doc_CM}: automazione build per i documenti. QB Software ha individuato due momenti differenti del ciclo di vita di un documento: la creazione del documento, distinta da continue aggiunte di argomenti nuovi e sostanziali aggiunte in termini di contenuto, e la manutenzione del documento, distinta dall'assenza di modifiche sostanziali al contenuto e da modifiche che mirano a correggere o rendere il documento più fruibile.
             \\
-            Riportiamo i per lo sviluppo di un documento:
+            Riportiamo la procedura per lo sviluppo di un documento:
             \begin{enumerate}
                 \item il membro che deve scrivere la modifica crea un nuovo branch a partire da \verb|develop| usando la sezione \emph{Development} nel form della issue su GitHub;
-                \item i redattori sviluppano la parte richiesta seguendo le regole imposte dalle norme di progetto, e ogni volta che terminano una parte del lavoro pubblicano sul proprio ramo le modifiche, in modo da renderle disponibili a tutti;
-                \item quando un relatore ha finito, aggiorna il registro delle modifiche e richiede una pull request del proprio branch con il \verb|develop| e assegna un verificatore che dovrà verificare il lavoro;
+                \item i redattori sviluppano la parte richiesta seguendo le regole imposte dalle norme di progetto, ogni volta che terminano una parte del lavoro pubblicano sul proprio ramo le modifiche in modo da renderle disponibili a tutto il team di QB Software. In questa fase il documento viene considerato ancora una bozza;
+                \item quando un relatore ha finito la task e il documento è pronto, aggiorna il registro delle modifiche e richiede una pull request del proprio branch con il \verb|develop|, e assegna un verificatore che dovrà verificare il lavoro;
                 \item il verificatore assegnato dovrà verificare i contenuti secondo quanto riportato nella sezione \ref{sec:doc_verification};
-                \item il verificatore se approva il contenuto deve fare il merge della pull request e elimina il branch di creato dalla issue, in caso di rifiuto il redattore deve assolvere alle mancanze e iniziare nuovamente la procedura di verifica.
+                \item il verificatore se approva il contenuto deve fare il merge della pull request e elimina il branch creato dalla issue, in caso di rifiuto il redattore deve assolvere alle mancanze e iniziare nuovamente la procedura di verifica.
             \end{enumerate}
-            Per vedere quali sono le manutenzione vedere la sezione \ref{sec:doc_maintenance}.
 
         \paragraph{Verifica del documento} \label{sec:doc_verification}
-            La verifica del documento per la fase di creazione di un documento viene fatta attraverso il metodo del \emph{walkthrough}, cioè il verificatore legge l'interno documento, e controlla:
+            La verifica del documento per la fase di creazione di un documento viene fatta attraverso il metodo del \emph{walkthrough}, cioè il verificatore legge l'interno documento e controlla:
                 \begin{itemize}
                     \item il pieno rispetto delle scelte tipografiche dettate dalle norme di progetto;
                     \item la soddisfazione delle modifiche richieste dalla issue.
                 \end{itemize}
-            La verifica del documento per la fase di manutenzione avviene attraverso delle \emph{checklist} presenti nelle Piano di Qualifica. Terminatà la procedura di verifica il verificatore deve pubblicare un commento sulla pull request riportando il feedback della verifica.
+            La verifica del documento per la fase di manutenzione avviene attraverso delle \emph{checklist} presenti nelle Piano di Qualifica. Terminata la procedura di verifica il verificatore deve pubblicare un commento sulla pull request riportando il feedback della verifica.
             
 		\paragraph{Automazione build per i documenti} \label{sec:doc_CM}
-		    La configurazioni per l'automazione della build di ogni documento sono contenute dentro il file \verb|config.csv|. Tale file deve essere gestito dall'amministratore.
-		    Oltre al file di configurazione, il sistema di build usa le label assegnate alla pull request (che devono essere le stesse label assegnate alla issue) per impostare ulteriori parametri di compilazione.
+		    La configurazioni per l'automazione della build di ogni documento sono contenute dentro il file \verb|config.csv|. Il file di configurazione appena citato deve essere gestito dall'amministratore.
+		    Oltre al file di configurazione il sistema di build usa le label assegnate alla pull request (che devono essere le stesse label assegnate alla issue) per impostare ulteriori parametri di compilazione.
 		    È responsabilità dell'autore della modifica e del verificatore nel assegnare le label corrette alla issue e alla pull request. Per la compilazione dei documenti le label da inserire sono:
 		    \begin{enumerate}
-		    	\item \emph{documentation}, indica che la pull request sta per introdurre un nuovo documento da compilare;
+		    	\item \emph{documentation}, indica che la pull request sta per introdurre un documento da compilare;
 		    	\item \emph{enhancement} o \emph{maintenance}, nel primo caso se la modifica è un aggiunta sostanziale, nel secondo caso se la modifica è di manutenzione. Permette di determinare come avviene l'aggiornamento della versione;
 		    	\item \emph{<Sigla Documento>}, serve a identificare quale documento costruire, es: NdP (Norme di Progetto), PdP (Piano di Progetto), e così via.
 		    \end{enumerate}
+		    Per tutte le label con la loro descrizione visitare la \href{https://github.com/QB-Software-swe/docs/labels}{repository Docs di QB Software}.
             
     \subsubsection{Produzione} 
         \paragraph{Mettere in produzione i documenti} \label{sec:doc_production}
@@ -371,7 +397,7 @@
         	\end{itemize}
 
 		\paragraph{Pubblicazione}
-			I documenti approvati verranno pubblicati nel \verb|main| della repository Docs e nel \href{https://qb-software-swe.github.io/docs/site/index.html}{sito di QB Software}.
+			I documenti approvati verranno pubblicati nel \verb|main| della repository Docs di QB Software e nel \href{https://qb-software-swe.github.io/docs/site/index.html}{sito di QB Software}.
 
     \subsubsection{Manutenzione} \label{sec:doc_maintenance}
         Ogni documento che necessità di manutenzione può avere due tipo di modifiche:
