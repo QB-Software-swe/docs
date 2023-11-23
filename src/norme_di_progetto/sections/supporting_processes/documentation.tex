@@ -1,0 +1,408 @@
+\subsection{Processo di documentazione} \label{sec:documentation}
+    Il processo di documentazione ha lo scopo di registrare tutte le informazioni prodotte dal ciclo di vita di un processo o di un'attività. Di seguito riportiamo le quattro attività fondamentali della documentazione: implementazione del processo, design e sviluppo, produzione e manutenzione.
+
+    \subsubsection{Implementazione del processo}
+        In questa attività l'obiettivo è quello di pianificare lo sviluppo dei documenti, riportando le seguenti informazioni per ogni documento da produrre durante il progetto: il titolo del documento, il nome del documento in produzione, lo scopo, il target (a chi è rivolto il documento), le procedure che devono essere attuate, le responsabilità per l'attuazione delle procedure e le date/tempi previsti per il rilascio del documento.
+        \\
+        Utilizzeremo il formato \verb|YYYY-MM-DD| quando vogliamo indicare una data scritta nel seguente modo: anno-mese-giorno. Utilizzeremo il formato \verb|X.Y.Z| per le versioni come riportato nella sezione \ref{sec:doc_version}. I documenti pianificati sono:
+        \\
+        \paragraph{Lettera di presentazione}
+            \begin{enumerate}
+                \item \textbf{Nome file}: \texttt{Lettera\_di\_presentazione\_X.Y.Z.pdf};
+                \item \textbf{scopo}: presentarsi alla candidatura di una milestone "esterna" (candidatura, RTB, PB o CA), riporta i documenti e le decisioni più rilevanti;
+                \item \textbf{target}: committente, documento esterno;
+                \item \textbf{procedure e responsabilità}:
+                \\
+                \begin{tabularx}{0.93\textwidth}{|X|X|X|}
+                    \hline
+                    \textbf{Procedura} & \textbf{Responsabilità} & \textbf{Attività di} \\
+                    & & \textbf{riferimento (NdP)} \\
+                    \hline
+                    Sviluppo & Responsabile &  \ref{sec:doc_dev}
+                    \\\hline
+                    Manutenzione & Responsabile & \ref{sec:doc_maintenance}
+                    \\\hline
+                    Verifica & Verificatore & \ref{sec:doc_verification}
+                    \\\hline
+                    Approvazione & Responsabile & \ref{sec:doc_production}
+                    \\\hline
+                    Configuration managment & Amministratore & \ref{sec:doc_CM}
+                    \\\hline
+                    Produzione e distribuzione & Responsabile & \ref{sec:doc_production}
+                    \\\hline
+                \end{tabularx}
+                \item \textbf{schedule}: il documento deve essere redatto e approvato entro un periodo di tempo che precede di almeno tre giorni la scadenza fissata per la consegna della milestone.
+            \end{enumerate} 
+
+        \paragraph{Preventivo dei costi e degli impegni}
+            \begin{enumerate}
+                \item \textbf{Nome file}: \texttt{Preventivo\_dei\_costi\_e\_degli\_impegni\_X.Y.Z.pdf};
+                \item \textbf{scopo}: presentarsi alla prima milestone (candidatura), riporta i costi e la suddivisione delle ore per ruolo preventivate;
+                \item \textbf{target}: committente, documento esterno;
+                \item \textbf{procedure e responsabilità}:
+                \\
+                \begin{tabularx}{0.93\textwidth}{|X|X|X|}
+                    \hline
+                    \textbf{Procedura} & \textbf{Responsabilità} & \textbf{Attività di} \\
+                    & & \textbf{riferimento (NdP)} \\
+                    \hline
+                    Sviluppo & Responsabile &  \ref{sec:doc_dev}
+                    \\\hline
+                    Manutenzione & Responsabile & \ref{sec:doc_maintenance}
+                    \\\hline
+                    Verifica & Verificatore & \ref{sec:doc_verification}
+                    \\\hline
+                    Approvazione & Responsabile & \ref{sec:doc_production}
+                    \\\hline
+                    Configuration managment & Amministratore & \ref{sec:doc_CM}
+                    \\\hline
+                    Produzione e distribuzione & Responsabile & \ref{sec:doc_production}
+                    \\\hline
+                \end{tabularx}
+                \item \textbf{schedule}: consegna entro il 31/10/2023 alle ore 17:00.
+            \end{enumerate} 
+
+        \paragraph{Valutazione capitolati}
+            \begin{enumerate}
+                \item \textbf{Nome file}: \texttt{Valutazione\_dei\_capitolati\_X.Y.Z.pdf};
+                \item \textbf{scopo}: presentarsi alla candidatura, valutare i 3 capitolati che risultano essere i nostri preferiti tra quelli proposti, riportando quelle che sono state le opportunità e le criticità individuate dal team durante la scelta dei capitolati;
+                \item \textbf{target}: committente, documento esterno;
+                \item \textbf{procedura e responsabilità}:
+                \\
+                \begin{tabularx}{0.93\textwidth}{|X|X|X|}
+                    \hline
+                    \textbf{Procedura} & \textbf{Responsabilità} & \textbf{Attività di} \\
+                    & & \textbf{riferimento (NdP)} \\
+                    \hline
+                    Sviluppo & Team QB Software &  \ref{sec:doc_dev}
+                    \\\hline
+                    Manutenzione & Team QB Software & \ref{sec:doc_maintenance}
+                    \\\hline
+                    Verifica & Verificatore & \ref{sec:doc_verification}
+                    \\\hline
+                    Approvazione & Responsabile & \ref{sec:doc_production}
+                    \\\hline
+                    Configuration managment & Amministratore & \ref{sec:doc_CM}
+                    \\\hline
+                    Produzione e distribuzione & Responsabile & \ref{sec:doc_production}
+                    \\\hline
+                \end{tabularx}
+                \item \textbf{schedule}: consegna entro il 31/10/2023 alle ore 17:00.
+            \end{enumerate} 
+            
+        \paragraph{Norme di progetto}
+            \begin{enumerate}
+                \item \textbf{Nome file}: \texttt{Norme\_di\_progetto\_X.Y.Z.pdf};
+                \item \textbf{scopo}: normare il way of working in modo prescrittivo, regolando i vari processi proposti dello standard ISO del 12207 del 1997 \cite{bib:ISO12207_1997}, basandosi sulle decisioni prese durante le riunioni;
+                \item \textbf{target}: team di QB Software, documento interno;
+                \item \textbf{procedure e responsabilità}:
+                \\
+                \begin{tabularx}{0.93\textwidth}{|X|X|X|}
+                    \hline
+                    \textbf{Procedura} & \textbf{Responsabilità} & \textbf{Attività di} \\
+                    & & \textbf{riferimento (NdP)} \\
+                    \hline
+                    Sviluppo & Team QB Software &  \ref{sec:doc_dev}
+                    \\\hline
+                    Manutenzione & Team QB Software & \ref{sec:doc_maintenance} 
+                    \\\hline
+                    Verifica & Verificatore & \ref{sec:doc_verification}
+                    \\\hline
+                    Approvazione & Responsabile & \ref{sec:doc_production}
+                    \\\hline
+                    Configuration managment & Amministratore & \ref{sec:doc_CM}
+                    \\\hline
+                    Produzione e distribuzione & Responsabile & \ref{sec:doc_production}
+                    \\\hline
+                \end{tabularx}
+                \item \textbf{schedule}: il documento non prevede una versione finale in quanto è continuamente soggetto a modifiche e revisioni. 
+            \end{enumerate}
+            
+        \paragraph{Glossario}
+        	\begin{enumerate}
+        	\item \textbf{Nome file}: \texttt{Glossario\_X.Y.Z.pdf};
+        	\item \textbf{scopo}: riportare tutti i termini di dominio utilizzate durante il progetto;
+        	\item \textbf{target}: tutte le persone che devono interagire con questo progetto, documento esterno;
+        	\item \textbf{procedure e responsabilità}:
+        	\\
+        	\begin{tabularx}{0.93\textwidth}{|X|X|X|}
+        		\hline
+        		\textbf{Procedura} & \textbf{Responsabilità} & \textbf{Attività di} \\
+        		& & \textbf{riferimento (NdP)} \\
+        		\hline
+        		Sviluppo & Team QB Software &  \ref{sec:doc_dev}
+        		\\\hline
+        		Manutenzione & Team QB Software & \ref{sec:doc_maintenance} 
+        		\\\hline
+        		Verifica & Verificatore & \ref{sec:doc_verification}
+        		\\\hline
+        		Approvazione & Responsabile & \ref{sec:doc_production}
+        		\\\hline
+        		Configuration managment & Amministratore & \ref{sec:doc_CM}
+        		\\\hline
+        		Produzione e distribuzione & Responsabile & \ref{sec:doc_production}
+        		\\\hline
+        	\end{tabularx}
+        	\item \textbf{schedule}: il documento non prevede una versione finale in quanto è continuamente soggetto a modifiche e revisioni. 
+        \end{enumerate}
+
+        \paragraph{Verbali interni}
+            \begin{enumerate}
+                \item \textbf{Nome file}: \texttt{Verbale\_interno\_YYYY-MM-DD\_X.Y.Z.pdf};
+                \item \textbf{scopo}: riportare le decisioni prese durante le riunioni interne ufficiali. Il documento ha come primo obbiettivo quello di riportare le decisioni di pianificazione prese, fornendo contestualmente le ragioni di tali scelte, i ticket inseriti nel ITS dovuti ai compiti assegnati e gli argomenti da trattare per la prossima riunione;
+                \item \textbf{target}: team di QB Software, documento interno;
+                \item \textbf{procedure e responsabilità}:
+                \\
+                \begin{tabularx}{0.93\textwidth}{|X|X|X|}
+                    \hline
+                    \textbf{Procedura} & \textbf{Responsabilità} & \textbf{Attività di} \\
+                    & & \textbf{riferimento (NdP)} \\
+                    \hline
+                    Sviluppo & Team QB Software &  \ref{sec:doc_dev}
+                    \\\hline
+                    Manutenzione & Team QB Software & \ref{sec:doc_maintenance}
+                    \\\hline
+                    Verifica & Verificatore & \ref{sec:doc_verification}
+                    \\\hline
+                    Approvazione & Responsabile & \ref{sec:doc_production}
+                    \\\hline
+                    Configuration managment & Amministratore & \ref{sec:doc_CM}
+                    \\\hline
+                    Produzione e distribuzione & Responsabile & \ref{sec:doc_production}
+                    \\\hline
+                \end{tabularx}
+                \item \textbf{schedule}: il verbale deve essere redatto e verificato entro cinque giorni dall'avvenuta riunione.
+            \end{enumerate} 
+
+        \paragraph{Verbali esterni}
+            \begin{enumerate}
+                \item \textbf{Nome file}: \texttt{Verbale\_esterno\_YYYY-MM-DD\_X.Y.pdf};
+                \item \textbf{scopo}: riportare le decisioni prese durante le riunioni esterne ufficiali. Il documento ha come primo obbiettivo quello di riportare gli argomenti di discussione durante la riunione e i ticket inseriti nel ITS dovuti alle decisioni;
+                \item \textbf{target}: QB Software e partecipanti esterni, documento esterno;
+                \item \textbf{procedure e responsabilità}:
+                \\
+                \begin{tabularx}{0.93\textwidth}{|X|X|X|}
+                    \hline
+                    \textbf{Procedura} & \textbf{Responsabilità} & \textbf{Attività di} \\
+                    & & \textbf{riferimento (NdP)} \\
+                    \hline
+                    Sviluppo & Team QB Software &  \ref{sec:doc_dev}
+                    \\\hline
+                    Manutenzione & Team QB Software & \ref{sec:doc_maintenance}
+                    \\\hline
+                    Verifica & Verificatore & \ref{sec:doc_verification}
+                    \\\hline
+                    Approvazione & Responsabile & \ref{sec:doc_production}
+                    \\\hline
+                    Approvazione (esterni) & Esterni & \ref{sec:doc_approval_external}
+                    \\\hline
+                    Configuration managment & Amministratore & \ref{sec:doc_CM}
+                    \\\hline
+                    Produzione e distribuzione & Responsabile & \ref{sec:doc_production}
+                    \\\hline
+                \end{tabularx}
+                \item \textbf{schedule}: il verbale deve essere redatto e verificato entro cinque giorni dall'avvenuta riunione, poi l'approvazione passa a tutti i proponenti esterni.
+            \end{enumerate} 
+
+        \paragraph{Piano di Qualifica}
+            \begin{enumerate}
+                \item \textbf{Nome file}: \texttt{Piano\_di\_qualifica\_X.Y.Z.pdf};
+                \item \textbf{scopo}: normare le procedure di verifica con l'obbiettivo di mantenere una qualità del prodotto alta;
+                \item \textbf{target}: QB Software, documento interno;
+                \item \textbf{procedure e responsabilità}:
+                \\
+                \begin{tabularx}{0.93\textwidth}{|X|X|X|}
+                    \hline
+                    \textbf{Procedura} & \textbf{Responsabilità} & \textbf{Attività di} \\
+                    & & \textbf{riferimento (NdP)} \\
+                    \hline
+                    Sviluppo & Verificatore &  \ref{sec:doc_dev}
+                    \\\hline
+                    Manutenzione & Verificatore & \ref{sec:doc_maintenance} 
+                    \\\hline
+                    Verifica & Verificatore (che non ha redatto la modifica) & \ref{sec:doc_verification}
+                    \\\hline
+                    Approvazione & Responsabile & \ref{sec:doc_production}
+                    \\\hline
+                    Configuration managment & Amministratore & \ref{sec:doc_CM}
+                    \\\hline
+                    Produzione e distribuzione & Responsabile & \ref{sec:doc_production}
+                    \\\hline
+                \end{tabularx}
+                \item \textbf{schedule}: la prima versione deve essere rilasciata entro l'ultima settimana di novembre 2023, ulteriori aggiornamenti sono previsti.
+            \end{enumerate} 
+
+        \paragraph{Analisi dei requisiti}
+            \begin{enumerate}
+                \item \textbf{Nome file}: \texttt{Analisi\_dei\_requisiti\_X.Y.Z.pdf};
+                \item \textbf{scopo}: contiene i requisiti individuati e gli use case per il prodotto da sviluppare;
+                \item \textbf{target}: QB Software, documento esterno;
+                \item \textbf{procedure e responsabilità}:
+                    \newline
+                    \begin{tabularx}{0.93\textwidth}{|X|X|X|}
+                        \hline
+                        \textbf{Procedura} & \textbf{Responsabilità} & \textbf{Attività di} \\
+                        & & \textbf{riferimento (NdP)} \\
+                        \hline
+                        Sviluppo & Analisti & \ref{sec:doc_dev}
+                        \\\hline
+                        Manutenzione & Analisti & \ref{sec:doc_maintenance}
+                        \\\hline
+                        Verifica & Verificatore & \ref{sec:doc_verification}
+                        \\\hline
+                        Approvazione & Responsabile & \ref{sec:doc_production}
+                        \\\hline
+                        Configuration managment & Amministratore & \ref{sec:doc_CM}
+                        \\\hline
+                        Produzione e distribuzione & Responsabile & \ref{sec:doc_production}
+                        \\\hline
+                    \end{tabularx}
+                \item \textbf{schedule}: una prima versione del documento deve essere prodotta entro il primo incontro con il proponente, dove si deve parlare dei requisiti, la prima versione deve essere messa in produzione entro RTB.
+            \end{enumerate} 
+
+    \subsubsection{Design e development}
+        In questa attività vengono riportati tutti gli strumenti necessari allo sviluppo della documentazione, vengono definite le regole di impaginazione dei documenti da produrre. Lo scopo è quello di partire dai sorgenti .tex per ottenere dei documenti in formato PDF che seguano le scelte tipografiche scelte dal team QB Software.
+    
+        \paragraph{Strumenti per lo sviluppo}  \label{doc:tools}
+            \begin{itemize}
+                \item I documenti devono essere scritti in \LaTeX, usando la distribuzione \href{https://tug.org/texlive/}{TexLive};
+                \item non viene imposto nessun vincolo per l'editor/IDE da utilizzare per scrivere i documenti, comunque, si consiglia di utilizzare \href{https://code.visualstudio.com/}{Visual Studio Code} con l'estensione \href{https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop}{LaTeX Workshop};
+                \item il VCS da utilizzare per tracciare la storia dello sviluppo dei documenti è \href{https://git-scm.com/}{Git};
+                \item ogni documento deve importare il sorgente \LaTeX\ \verb|base.tex|, il quale contiene tutte le utilità e le regole tipografiche normate in questo documento per lo sviluppo della documentazione;
+                \item vengono messi a disposizione i seguenti template, presenti nel repository al path \verb|templates/|:
+                \begin{itemize}
+                    \item la cartella \verb|empty/|, struttura di un documento di base generico, da questo template derivano tutti gli altri template;
+                    \item la cartella \verb|verbale_interno/|, struttura di un documento per i verbali interni;
+                    \item la cartella \verb|verbale_esterno/|, struttura di un documento per i verbali esterni.
+                \end{itemize}
+                \item \href{https://github.com/QB-Software-swe/docs}{GitHub} come servizio per pubblicare una repository pubblica per il tracciamento della storia dei sorgenti dei documenti, nel repository \verb|docs| ramo \verb|develop| dove vengono caricati i documenti verificati, ma non ancora approvati;
+            \end{itemize}
+    
+        \paragraph{Impaginazione di base}
+            Ogni documento di QB Software deve essere sviluppato a partire da un template di base, presente nella cartella \verb|src/templates/empty| nel ramo di \verb|develop|. Il template di base deve rispettare la seguente impaginazione:
+            \begin{enumerate}[label=\Roman*)]
+                \item deve essere in formato A4, dimensione font 12pt, margine di 2.5 cm;
+                \item la prima pagina deve riportare nel seguente ordine:
+                \begin{enumerate}[label=\arabic*.]
+                    \item la scritta "QB Software";
+                    \item il logo di QB Software;
+                    \item il logo dell'università di Padova;
+                    \item la scritta "\textsc{Università degli studi di Padova}";
+                    \item la scritta "\textsc{corso di ingegneria del software}";
+                    \item la scritta "\textsc{anno accademico 2023/2024}";
+                    \item il titolo del documento, e quando richiesto anche la data;
+                    \item il contatto e-mail di QB Software come link.
+                \end{enumerate}
+                \item la seconda pagina è dedicata al registro delle modifiche descritto al paragrafo \ref{sec:doc_changelog};
+                \item una pagina dedicata all'indice dei contenuti generato da \LaTeX;
+            \end{enumerate}
+            %
+            Ogni documento deve riportare su ogni pagina, a eccezione della prima pagina, un piè di pagina e una testatina separate dal contenuto con una linea. In ogni testatina deve essere riportato nel margine destro il logo del gruppo e nel margine sinistro la scritta "QB Software". Ogni piè di pagina deve riportare nel margine sinistro il titolo del documento e nel margine destro la pagina attuale nella seguente forma: \verb|Pagina x di y|, dove \verb|x| è la pagina attuale, e \verb|y| il totale delle pagine senza contare la prima.
+        
+        \paragraph{Regole tipografiche e di coding}
+            Di seguito ridefiniamo, o aggiungiamo, ulteriori regole tipografiche oltre a quelle normalmente usate dal \LaTeX, con lo scopo di rendere il documento più accessibile, ed evitare incongruenze di stile tra i diversi documenti da produrre:
+            \begin{itemize}
+                \item ogni tabella e figura libera presenti nel documento, a eccezione del \emph{registro delle modifiche} e dei loghi, devono essere accompagnati da una didascalia che ne descrive il contenuto. A questo scopo è necessario usare l'ambiente LaTeX \verb|figure| o \verb|table| e l'istruzione \verb|\caption| per la didascalia;
+                \item ogni tabella e figura deve inoltre essere dotata di una label, creata con il commando \verb|\label|. Le label devono iniziare come \emph{fig:} per le figure, e \emph{table:} per le tabelle;
+                \item le tabelle vanno inserite in un ambiente \verb|table| e devono essere posizionate sempre all'inizio della pagina, come da impostazione predefinita per l'ambiente citato, possono fare eccezione dei casi particolari dove la presenza della tabella in un certo punto del testo permette una migliore comprensione del discorso;
+                \item quando ci si riferisce a una figura, una tabella, oppure a una sezione, citarla con il comando \verb|\ref| specificando la tipologia (tabella, figura, sezione) dell'elemento citato seguito dal numero della sezione;
+                \item ogni link deve essere inserito sotto forma di testo sottolineato di colore blu, inoltre non si deve scrivere direttamente l'URL, ma una frase chiara che specifichi dove quel link stia puntando;
+                \item soltanto i link posso essere sottolineati, nessun'altra parte del testo può essere sottolineata;
+                \item ogni sezione creata con il commando \verb|\section| deve iniziare sempre in una nuova pagina, per fare ciò ogni section di testo va scritta in un file .tex a parte, sotto la cartella \verb|sections/| e importando nel documento principale attraverso il comando \verb|\include|;
+                \item i riferimenti a immagini, sezioni e tabelle, interni al documento vengono colorati di azzurro, questo colore non deve essere utilizzato per nessun'altra parte del testo che non sia un link.
+            \end{itemize}
+
+        \paragraph{Registro delle modifiche} \label{sec:doc_changelog}%
+            Il registro delle modifiche, per tenere una traccia completa e sensata della storia del documento deve riportare i seguenti dati:
+            \begin{multicols}{2}
+            	\begin{enumerate}
+            		\item versione del documento;
+            		\item data della modifica;
+            		\item membro del gruppo che ha introdotto la modifica;
+            		\item ruolo assunto dall'autore al momento della stesura;
+            		\item chi si è occupato della verifica (implicitamente il ruolo sarà sempre verificatore);
+            		\item data del superamento della verifica;
+            		\item descrizione, breve, ma significativa delle modifiche apportante, con riferimento alla sezione modificata o introdotta.
+            	\end{enumerate}
+            \end{multicols}
+            \noindent
+            Il registro delle modifiche deve essere implementato attraverso l'ambiente \LaTeX\ \verb|changelog| definito all'interno del pacchetto \verb|base.tex|. Tale ambiente deve provvedere a creare:
+            \begin{enumerate}
+                \item il titolo "Registro delle modifiche", il quale non verrà riportato nell'indice del documento;
+                \item una tabella formata dalle seguenti quattro colonne, nel seguente ordine:
+                \begin{enumerate}
+                    \item \emph{V.}, vengono riportate le versioni del documento al momento dell'approvazione della modifica;
+                    \item \emph{data}, vengono riportate le date di stesura della modifica e di approvazione da parte del verificatore;
+                    \item \emph{membro}, vengono riportati gli autori della modifica, e i verificatori che hanno approvato la modifica;
+                    \item \emph{ruolo}, vengono riportati i ruoli degli autori al momento della modifica, mentre per chi ha fatto la verifica viene riportato il ruolo di verificatore;
+                    \item \emph{descrizione}, vengono riportate le modifiche, o aggiunte, fatte al documento facendo riferimento alle sezioni che hanno subito la modifica, o aggiunta. 
+                \end{enumerate}
+            \end{enumerate}
+            %
+            Inoltre il sorgente \verb|base.tex| fornisce il comando:
+            \begin{center}
+                \verb*|\newlog{Ver}{DataModifica}{Membro}{RuoloMembro}|\par\verb|{DataVerifica}{Verificatore}{Descizione}|
+            \end{center}
+            che permette di inserire una nuova modifica all'interno del registro delle modifiche. Il comando deve essere usato all'interno dell'ambiente \verb|changelog| dentro il pacchetto precedentemente citato.
+
+        \paragraph{Versioni documenti} \label{sec:doc_version}%
+            La versione dei documenti proposta deriva dal \href{https://semver.org/}{semantic versioning} ed è composta da 3 cifre:
+            \begin{center}
+                $x.y.z$
+            \end{center}
+            \begin{itemize}
+            	\item $x$ indica l'approvazione e il rilascio del documento per una milestone esterna (RTB, PB o CA);
+                \item $y$ rappresenta una modifica sostanziale, come l'aggiunta di una nuova sezione;
+                \item $z$ rappresenta una modifica minore, come l'aggiornamento di una paragrafo;
+            \end{itemize}
+
+        \paragraph{Sviluppo dei documenti} \label{sec:doc_dev}%
+            Di seguito illustriamo le fasi per lo sviluppo di ogni documento. Ogni creazione/modifica di un documento deve essere collegata a una issue in modo da rendere tracciabile il lavoro svolto, vedere la sezione \ref{sec:doc_CM}: automazione build per i documenti. QB Software ha individuato due momenti differenti del ciclo di vita di un documento: la creazione del documento, distinta da continue aggiunte di argomenti nuovi e sostanziali aggiunte in termini di contenuto, e la manutenzione del documento, distinta dall'assenza di modifiche sostanziali al contenuto e da modifiche che mirano a correggere o rendere il documento più fruibile.
+            \\
+            Riportiamo la procedura per lo sviluppo di un documento:
+            \begin{enumerate}
+                \item il membro che deve scrivere la modifica crea un nuovo branch a partire da \verb|develop| usando la sezione \emph{Development} nel form della issue su GitHub;
+                \item i redattori sviluppano la parte richiesta seguendo le regole imposte dalle norme di progetto, ogni volta che terminano una parte del lavoro pubblicano sul proprio ramo le modifiche in modo da renderle disponibili a tutto il team di QB Software. In questa fase il documento viene considerato ancora una bozza;
+                \item quando un relatore ha finito la task e il documento è pronto, aggiorna il registro delle modifiche e richiede una pull request del proprio branch con il \verb|develop|, e assegna un verificatore che dovrà verificare il lavoro;
+                \item il verificatore assegnato dovrà verificare i contenuti secondo quanto riportato nella sezione \ref{sec:doc_verification};
+                \item il verificatore se approva il contenuto deve fare il merge della pull request e elimina il branch creato dalla issue, in caso di rifiuto il redattore deve assolvere alle mancanze e iniziare nuovamente la procedura di verifica.
+            \end{enumerate}
+
+        \paragraph{Verifica del documento} \label{sec:doc_verification}%
+            La verifica del documento per la fase di creazione di un documento viene fatta attraverso il metodo del \emph{walkthrough}, cioè il verificatore legge l'interno documento e controlla:
+                \begin{itemize}
+                    \item il pieno rispetto delle scelte tipografiche dettate dalle norme di progetto;
+                    \item la soddisfazione delle modifiche richieste dalla issue.
+                \end{itemize}
+            La verifica del documento per la fase di manutenzione avviene attraverso delle \emph{checklist} presenti nelle Piano di Qualifica. Terminata la procedura di verifica il verificatore deve pubblicare un commento sulla pull request riportando il feedback della verifica.
+            
+		\paragraph{Automazione build per i documenti} \label{sec:doc_CM}%
+		    La configurazioni per l'automazione della build di ogni documento sono contenute dentro il file \verb|config.csv|. Il file di configurazione appena citato deve essere gestito dall'amministratore.
+		    Oltre al file di configurazione il sistema di build usa le label assegnate alla pull request (che devono essere le stesse label assegnate alla issue) per impostare ulteriori parametri di compilazione.
+		    È responsabilità dell'autore della modifica e del verificatore nel assegnare le label corrette alla issue e alla pull request. Per la compilazione dei documenti le label da inserire sono:
+		    \begin{enumerate}
+		    	\item \emph{documentation}, indica che la pull request sta per introdurre un documento da compilare;
+		    	\item \emph{enhancement} o \emph{maintenance}, nel primo caso se la modifica è un aggiunta sostanziale, nel secondo caso se la modifica è di manutenzione. Permette di determinare come avviene l'aggiornamento della versione;
+		    	\item \emph{<Sigla Documento>}, serve a identificare quale documento costruire, es: NdP (Norme di Progetto), PdP (Piano di Progetto), e così via.
+		    \end{enumerate}
+		    Per tutte le label con la loro descrizione visitare la \href{https://github.com/QB-Software-swe/docs/labels}{repository Docs di QB Software}.
+            
+    \subsubsection{Produzione} 
+        \paragraph{Mettere in produzione i documenti} \label{sec:doc_production}%
+            Il responsabile può provvedere al rilascio di un documento da \verb|develop| al \verb|main| attraverso una pull request. L'approvazione e il conseguente rilascio di un documento deve essere fatto dal responsabile solo quando il documento è pronto per la pubblicazione per la milestone esterna. Il documento è disponibile nel branch \verb|main| e nel \href{https://qb-software-swe.github.io/docs/}{sito web di QB Software}.
+            
+        \paragraph{Mettere in produzione i documenti validati da esterni} \label{sec:doc_approval_external}%
+        	I documenti che devono essere validati dagli esterni richiedono prima di seguire la procedura indicata nella sezione \ref{sec:doc_production} il seguente requisito:
+        	\begin{itemize}
+        		\item una firma, o una qualunque marcatura che possa dimostrare l'approvazione da parte degli esterni.
+        	\end{itemize}
+
+		\paragraph{Pubblicazione}
+			I documenti approvati verranno pubblicati nel \verb|main| della repository Docs di QB Software e nel \href{https://qb-software-swe.github.io/docs/site/index.html}{sito di QB Software}.
+
+    \subsubsection{Manutenzione} \label{sec:doc_maintenance}
+        Ogni documento che necessità di manutenzione può avere due tipi di modifiche:
+        \begin{itemize}
+            \item di correzione: vengono corrette alcune parti del documento senza modificarne la struttura;
+            \item di refactoring: viene modificata la struttura del documento, senza l'aggiunta di contenuti.
+        \end{itemize}

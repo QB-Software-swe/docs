@@ -1,0 +1,26 @@
+% DOC TYPE E DEF QB SOFTWARE %%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\input{base.tex}
+
+% INFORMAZIONI DOCUMENTO %%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Norme di progetto}
+\footname{Norme di progetto}
+
+\begin{document}
+	% PRIME PAGINE %%%%%%%%%%%%%%%%%%%%%%%%%
+	\makefirstpage
+	
+	\include{changelog.tex}
+	\clearpage
+	
+	\tableofcontents
+	\clearpage
+	
+	% CONTENUTO QUI %%%%%%%%%%%%%%%%%%%%%%%%%
+	\include{sections/introduction.tex}
+	\include{sections/supporting_processes/introduction.tex}
+	
+	\label{sec:bib}
+    \bibliographystyle{plain}
+    \bibliography{bibliography.bib}
+\end{document}
