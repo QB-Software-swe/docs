@@ -1,0 +1,47 @@
+% DOC TYPE E DEF QB SOFTWARE %%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\input{base.tex}
+
+% INFORMAZIONI DOCUMENTO %%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Analisi dei requisiti}
+%\date{EMPTY}
+\footname{Analisi dei requisiti}
+
+\begin{document}
+	% PRIME PAGINE %%%%%%%%%%%%%%%%%%%%%%%%%
+	\makefirstpage
+	
+	\include{changelog.tex}
+	\clearpage
+	
+	\tableofcontents
+	\clearpage
+	
+	% CONTENUTO QUI %%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\section{Introduzione}
+    	\subsection{Scopo del documento}
+    		L'obiettivo di questo documento è quello di raccogliere i casi d’uso ed i requisiti relativi al capitolato proposto da Zextras: JMAP: il nuovo protocollo per la posta elettronica.
+  
+    
+    	\subsection{Scopo del progetto}
+    		Il progetto progetto ha come obiettivo lo sviluppo di un servizio di posta elettronica che utilizza il protocollo JMAP.
+    
+    	\subsection{Glossario}
+    		Un glossario in questo documento si rende necessario poiché alcuni termini potrebbero generare dei dubbi sul loro significato.
+    		Tutti i termini facenti parte del Glossario verranno contrassegnati con una G.
+
+    	\subsection{Riferimenti}
+    		\subsubsection{Riferimenti normativi}
+        		\begin{itemize}
+            		\item \href{https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C8.pdf}{Capitolato C8 - JMAP: il nuovo protocollo per la posta elettronica}
+        		\end{itemize}
+
+	\section{Descrizione del prodotto}
+    	\subsection{Funzioni del prodotto}
+
+
+\input{sections/UC-obbligatori.tex}
+\input{sections/UC-facoltativi.tex}
+
+\end{document}
