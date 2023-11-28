@@ -7,14 +7,13 @@
     \item Descrizione: l'utente deve poter creare nuovi eventi nel calendario;
     \item Scenario principale:
         \begin{enumerate}
-        \item l'utente accede al calendario;
         \item l'utente inserisce il nome dell'evento (\hyperref[sec: UC9.1]{UC9.1});
         \item l'utente inserisce la data (\hyperref[sec: UC9.2]{UC9.2});
         \item l'utente inserisce una fascia oraria (\hyperref[sec: UC9.3]{UC9.3});
         \item l'utente conferma la creazione dell'evento (\hyperref[sec: UC9.4]{UC9.4}).
         \end{enumerate}
     \item Estensioni: l'utente inserisce dei valori non validi nei campi e viene mostrato un messaggio d'errore (\hyperref[sec: UC9.4.1]{UC9.4.1});
-    \item Precondizioni: l'utente sta creando un nuovo evento;
+    \item Precondizioni: l'utente ha acceduto al calendario e vuole creare un nuovo evento;
     \item Postcondizioni: un nuovo evento è stato creato dall'utente.
 \end{itemize}
 
@@ -28,7 +27,7 @@
         \item l'utente digita il nome dell'evento che vuole creare.
         \end{enumerate}
     
-    \item Precondizioni: l'utente sta svolgendo la creazione di un evento;
+    \item Precondizioni: l'utente vuole creare un nuovo evento;
     \item Postcondizioni: l'utente ha compilato il campo relativo al nome dell'evento.
 \end{itemize}
 
@@ -43,7 +42,7 @@
         \item l'utente inserisce la data per l'evento che vuole creare.
         \end{enumerate}
     
-    \item Precondizioni: l'utente sta svolgendo la creazione di un evento;
+    \item Precondizioni: l'utente vuole creare un nuovo evento;
     \item Postcondizioni: l'utente ha compilato il campo relativo alla data dell'evento.
 \end{itemize}
 
@@ -58,7 +57,7 @@
         \item l'utente inserisce la fascai oraria dell'evento che vuole creare.
         \end{enumerate}
     
-    \item Precondizioni: l'utente sta svolgendo la creazione di un evento;
+    \item Precondizioni: l'utente vuole creare un nuovo evento;
     \item Postcondizioni: l'utente ha compilato il campo relativo all'orario dell'evento.
 \end{itemize}
 
@@ -71,7 +70,7 @@
         \item l'utente conferma la creazione dell'evento.
         \end{enumerate}
     
-    \item Precondizioni: l'utente sta svolgendo la creazione di un evento;
+    \item Precondizioni: l'utente vuole creare un nuovo evento;
     \item Postcondizioni: l'utente ha confermato la creazione dell'evento.
 \end{itemize}
 
@@ -84,7 +83,7 @@
         \item l'utente visualizza il messaggio d'errore.
         \end{enumerate}
     
-    \item Precondizioni: l'utente sta svolgendo la creazione di un evento e inserisce dei dati non validi;
+    \item Precondizioni: l'utente vuole creare un nuovo evento e inserisce dei dati non validi;
     \item Postcondizioni: l'utente ha ricevuto un messaggio d'errore.
 \end{itemize}
 
@@ -96,13 +95,12 @@
     \item Descrizione: l'utente deve poter condividere degli eventi con altri utenti;
     \item Scenario principale:
         \begin{enumerate}
-        \item l'utente accede al calendario;
         \item l'utente sceglie l'evento da condividere (\hyperref[sec: UC10.1]{UC10.1});
         \item l'utente inserisce il nome del destinatario dell'evento (\hyperref[sec: UC10.2]{UC10.2});
         \item l'utente conferma la condivisione di un evento (\hyperref[sec: UC10.3]{UC10.3}).
         \end{enumerate}
     \item Estensioni: l'utente inserisce dei valori non validi nei campi e viene mostrato un messaggio d'errore (\hyperref[sec: UC10.3.1]{UC10.3.1});
-    \item Precondizioni: l'utente vuole condividere un evento;
+    \item Precondizioni: l'utente ha acceduto al calendario e vuole condividere un evento;
     \item Postcondizioni: l'utente ha condiviso un evento.
 \end{itemize}
 
@@ -115,7 +113,7 @@
         \item l'utente seleziona l'evento.
         \end{enumerate}
     
-    \item Precondizioni: l'utente sta condividendo un evento;
+    \item Precondizioni: l'utente vuole condividere un evento;
     \item Postcondizioni: l'utente ha scelto l'evento.
 \end{itemize}
 
@@ -129,7 +127,7 @@
         \item l'utente digita il nome dell'utente destinatario.
         \end{enumerate}
     
-    \item Precondizioni: l'utente sta svolgendo la creazione di un evento;
+    \item Precondizioni: l'utente vuole condividere un evento;
     \item Postcondizioni: l'utente ha scelto il destinatario.
 \end{itemize}
 
@@ -143,7 +141,7 @@
         \item l'utente deve confermare la condivisione dell'evento scelto con l'utente scelto.
         \end{enumerate}
     
-    \item Precondizioni: l'utente sta svolgendo la creazione di un evento;
+    \item Precondizioni: l'utente vuole condividere un evento;
     \item Postcondizioni: l'utente confermato la condivisione dell'evento.
 \end{itemize}
 
@@ -156,7 +154,7 @@
         \item l'utente visualizza il messaggio d'errore.
         \end{enumerate}
     
-    \item Precondizioni: l'utente sta svolgendo la creazione di un evento e inserisce dei dati non validi;
+    \item Precondizioni:l'utente vuole condividere un evento e inserisce dei dati non validi;
     \item Postcondizioni: l'utente ha ricevuto un messaggio d'errore.
 \end{itemize}
 
@@ -167,12 +165,11 @@
     \item Descrizione: l'utente deve poter eliminare eventi nel calendario;
     \item Scenario principale:
         \begin{enumerate}
-        \item l'utente accede al calendario;
         \item l'utente sceglie l'evento da eliminare (\hyperref[sec: UC11.1]{UC11.1});
         \item l'utente conferma l'eliminazione (\hyperref[sec: UC11.2]{UC11.2});
         \item l'utente riceve il messaggio di eliminazione di un evento (\hyperref[sec: UC11.3]{UC11.3}).
         \end{enumerate}
-    \item Precondizioni: l'utente vuole eliminare un evento esistente;
+    \item Precondizioni: l'utente ha acceduto al calendario e vuole eliminare un evento;
     \item Postcondizioni: un nuovo evento è stato creato dall'utente.
 \end{itemize}
 
@@ -185,7 +182,7 @@
         \item l'utente seleziona l'evento.
         \end{enumerate}
     
-    \item Precondizioni: l'utente sta eliminando un evento;
+    \item Precondizioni: l'utente vuole eliminare un evento;
     \item Postcondizioni: l'utente ha scelto l'evento da eliminare.
 \end{itemize}
 
@@ -199,7 +196,7 @@
         \item l'utente conferma l'eliminazione.
         \end{enumerate}
     
-    \item Precondizioni: l'utente sta eliminando un evento;
+    \item Precondizioni: l'utente vuole eliminare un evento;
     \item Postcondizioni: l'utente ha confermato l'eliminazione dell'evento.
 \end{itemize}
 
@@ -213,7 +210,7 @@
         \item l'utente riceve il messaggio informativo.
         \end{enumerate}
     
-    \item Precondizioni: l'utente sta eliminando un evento;
+    \item Precondizioni: l'utente vuole eliminare un evento;
     \item Postcondizioni: l'utente ha ricevuto il messaggio di corretta eliminazione.
 \end{itemize}
 
@@ -224,12 +221,11 @@
     \item Descrizione: l'utente deve poter eliminare eventi condivisi;
     \item Scenario principale:
         \begin{enumerate}
-        \item l'utente accede al calendario;
         \item l'utente sceglie l'evento condiviso da eliminare (\hyperref[sec: UC12.1]{UC12.1});
         \item l'utente conferma l'eliminazione (\hyperref[sec: UC12.2]{UC12.2});
         \item l'utente riceve il messaggio di eliminazione dell'evento condiviso (\hyperref[sec: UC12.3]{UC12.3}).
         \end{enumerate}
-    \item Precondizioni: l'utente vuole eliminare un evento condiviso esistente;
+    \item Precondizioni: l'utente ha acceduto al calendario e vuole eliminare un evento condiviso esistente;
     \item Postcondizioni: un evento condiviso è stato eliminato dall'utente.
 \end{itemize}
 
@@ -242,7 +238,7 @@
         \item l'utente seleziona l'evento.
         \end{enumerate}
     
-    \item Precondizioni: l'utente sta eliminando un evento condiviso;
+    \item Precondizioni: l'utente vuole eliminare un evento condiviso;
     \item Postcondizioni: l'utente ha scelto l'evento condiviso da eliminare.
 \end{itemize}
 
@@ -256,7 +252,7 @@
         \item l'utente conferma l'eliminazione.
         \end{enumerate}
     
-    \item Precondizioni: l'utente sta eliminando un evento condiviso;
+    \item Precondizioni: l'utente vuole eliminare un evento condiviso;
     \item Postcondizioni: l'utente ha confermato l'eliminazione dell'evento.
 \end{itemize}
 
@@ -270,7 +266,7 @@
         \item l'utente riceve il messaggio informativo.
         \end{enumerate}
     
-    \item Precondizioni: l'utente sta eliminando un evento condiviso;
+    \item Precondizioni: l'utente vuole eliminare un evento condiviso;
     \item Postcondizioni: l'utente ha ricevuto il messaggio di corretta eliminazione.
 \end{itemize}
 
@@ -284,13 +280,12 @@
     \item Descrizione: l'utente deve poter creare nuovi contatti;
     \item Scenario principale:
         \begin{enumerate}
-        \item l'utente accede alla rubrica;
         \item l'utente inserisce il nome del contatto (\hyperref[sec: UC13.1]{UC13.1});
         \item l'utente inserisce l'email del nuovo contatto (\hyperref[sec: UC13.2]{UC13.2});
         \item l'utente conferma la creazione del contatto (\hyperref[sec: UC13.3]{UC13.3}).
         \end{enumerate}
     \item Estensioni: l'utente inserisce dei valori non validi nei campi e viene mostrato un messaggio d'errore (\hyperref[sec: UC13.3.1]{13.3.1});
-    \item Precondizioni: l'utente sta creando un nuovo contatto;
+    \item Precondizioni: l'utente ha acceduto alla rubrica e vuole creare un nuovo contatto;
     \item Postcondizioni: un nuovo contatto è stato creato dall'utente.
 \end{itemize}
 
@@ -305,7 +300,7 @@
         \item l'utente digita il nome.
         \end{enumerate}
     
-    \item Precondizioni: l'utente sta creando un nuovo contatto;
+    \item Precondizioni: l'utente vuole creare un nuovo contatto;
     \item Postcondizioni: l'utente ha compilato il campo relativo al nome del contatto.
 \end{itemize}
 
@@ -320,7 +315,7 @@
         \item l'utente inserisce la mail del contatto.
         \end{enumerate}
     
-    \item Precondizioni: l'utente sta creando un nuovo contatto;
+    \item Precondizioni: l'utente vuole creare un nuovo contatto;
     \item Postcondizioni: l'utente ha compilato il campo relativo alla mail del contatto.
 \end{itemize}
 
@@ -334,7 +329,7 @@
         \item l'utente conferma la creazione.
         \end{enumerate}
     
-    \item Precondizioni: l'utente sta creando un nuovo contatto;
+    \item Precondizioni: l'utente vuole creare un nuovo contatto;
     \item Postcondizioni: l'utente ha confermato la creaione di un nuovo contatto.
 \end{itemize}
 
@@ -359,13 +354,12 @@
     \item Descrizione: l'utente deve poter condividere un contatto con altri utenti;
     \item Scenario principale:
         \begin{enumerate}
-        \item l'utente accede alla rubrica;
         \item l'utente sceglie il contatto da condividere (\hyperref[sec: UC14.1]{UC14.1});
         \item l'utente inserisce il nome del destinatario del utente (\hyperref[sec: UC14.2]{UC14.2});
         \item l'utente conferma la condivisione del contatto (\hyperref[sec: UC14.3]{UC14.3}).
         \end{enumerate}
     \item Estensioni: l'utente inserisce dei valori non validi nei campi e viene mostrato un messaggio d'errore (\hyperref[sec: UC14.3.1]{UC14.3.1});
-    \item Precondizioni: l'utente ha acceduto alla propria rubrica;
+    \item Precondizioni: l'utente ha acceduto alla rubrica e vuole condividere un contatto;
     \item Postcondizioni: l'utente ha condiviso un contatto.
 \end{itemize}
 
@@ -378,7 +372,7 @@
         \item l'utente seleziona il contatto.
         \end{enumerate}
     
-    \item Precondizioni: l'utente sta condividendo un contatto;
+    \item Precondizioni: l'utente vuole condividere un contatto;
     \item Postcondizioni: l'utente ha scelto il contatto.
 \end{itemize}
 
@@ -392,7 +386,7 @@
         \item l'utente digita il nome dell'utente destinatario.
         \end{enumerate}
     
-    \item Precondizioni: l'utente sta condividendo un contatto;
+    \item Precondizioni: l'utente vuole condividere un contatto;
     \item Postcondizioni: l'utente ha scelto il destinatario.
 \end{itemize}
 
@@ -406,7 +400,7 @@
         \item l'utente deve confermare la condivisione del contatto scelto con l'utente scelto.
         \end{enumerate}
     
-    \item Precondizioni: l'utente sta condividendo un contatto;
+    \item Precondizioni: l'utente vuole condividere un contatto;
     \item Postcondizioni: l'utente ha confermato la condivisione del contatto.
 \end{itemize}
 
@@ -419,6 +413,6 @@
         \item l'utente visualizza il messaggio d'errore.
         \end{enumerate}
     
-    \item Precondizioni: l'utente sta svolgendo la condivisione di un contatto e inserisce dei dati non validi;
+    \item Precondizioni: l'utente vuole condividere un contatto e inserisce dei dati non validi;
     \item Postcondizioni: l'utente ha ricevuto un messaggio d'errore.
 \end{itemize}
