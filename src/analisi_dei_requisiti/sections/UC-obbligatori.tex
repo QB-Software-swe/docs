@@ -1,0 +1,209 @@
+\section{Casi d'uso}
+    \subsection{Introduzione}
+    In questa parte del documento sono delineati i casi d'uso sviluppati in seguito all'analisi del capitolato, ai colloqui con il proponente e alle discussioni tra gli analisti del gruppo.
+    Ciascun caso d’uso possiede un codice, la cui struttura è descritta nel documento Norme di Progetto V xxxxxx
+    \subsection{Attori}
+    In seguito ad una discussione con il proponente, gli attori individuati sono:
+    \begin{itemize}
+        \item Utente: il quale, a seguito di un colloquio con l'azienda, si riferisce ad un utente autenticato generico, in quanto, il proponente
+        non richiede la registrazione dell'account, presupponendo, quindi, che l'utente sia già registrato nel sistema;
+        \item Developer Zextras: si riferisce agli sviluppatori dell'azienda.
+    \end{itemize}
+
+    \subsection{UC1 - Scrittura email}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter scrivere una email;
+        \item Scenario principale:
+            \begin{enumerate}
+            \item l’utente apre l’applicazione;
+            \item l'utente inserisce il destinatario della email (\textbf{UC1.1});
+            \item l'utente inserisce l'oggetto della email (\textbf{UC1.2});
+            \item l’utente scrive il corpo della email (\textbf{UC1.3});
+            \item l’utente invia l'email (\textbf{UC1.4}).
+            \end{enumerate}
+        \item Estensioni: l'utente inserisce dei valori non validi nei campi oppure non è possibile inviare l'email e viene mostrato un messaggio d'errore (\textbf{UC1.4.1});
+        \item Precondizioni: l'utente vuole scrivere una email;
+        \item Postcondizioni: l'email è stata creata e inviata.
+    \end{itemize}
+
+    \subsubsection{UC1.1 - Inserimento destinatario email}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter inserire il destinatario della email;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona il campo relativo al destinatario della email;
+        \item l'utente digita l'email del destinatario.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta svolgendo la scrittura di una email;
+        \item Postcondizioni: l'utente ha inserito il destinatario della email.
+    \end{itemize}
+
+    \subsubsection{UC1.2 - Inserimento oggetto email}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter inserire l'oggetto della email;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona il campo relativo all'oggetto della email;
+        \item l'utente inserisce l'oggetto della email.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta svolgendo la scrittura di una email;
+        \item Postcondizioni: l'utente ha inserito l'oggetto della email.
+    \end{itemize}
+    
+    \subsubsection{UC1.3 - Inserimento corpo email}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter scrivere il corpo della email;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona il campo relativo al corpo della email;
+        \item l'utente scrive il corpo della email.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta svolgendo la scrittura di una email;
+        \item Postcondizioni: l'utente ha scritto il corpo della email.
+    \end{itemize}
+
+    \subsubsection{UC1.4 - Invio email}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter inviare la email;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente preme il pulsante dedicato all'invio della email.
+        \end{enumerate}
+        
+        \item Precondizioni: l'utente sta svolgendo la scrittura di una email;
+        \item Postcondizioni: l'utente ha inviato l'email.
+    \end{itemize}
+
+    \subsubsection{UC1.4.1 - Visualizzazione errore }
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve ricevere un errore quando inserisce dei valori non validi nei campi oppure non è possibile inviare l'email;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente visualizza il messaggio d'errore.
+        \end{enumerate}
+        
+        \item Precondizioni: l'utente sta svolgendo la scrittura di una email;
+        \item Postcondizioni: l'utente ha ricevuto un messaggio d' errore.
+    \end{itemize}
+
+    \subsection{UC2 - Visualizzazione lista email}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter visualizzare le email ricevute e inviate;
+        \item Scenario principale:
+            \begin{enumerate}
+            \item l’utente apre la lista delle email;
+            \item l'utente visualizza una email specifica (\textbf{UC2.1});
+            \item l’utente risponde ad una email (\textbf{UC2.2}).
+            \end{enumerate}
+        \item Precondizioni: l'utente vuole visualizzare le email ricevute;
+        \item Postcondizioni: l'utente ha visualizzato le email ricevute.
+    \end{itemize}
+
+    \subsubsection{UC2.1 - Visualizzazione email specifica}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter visualizzare una email specifica;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona una email;
+        \item l'utente visualizza l'email.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta visualizzando le email ricevute;
+        \item Postcondizioni: l'utente ha visualizzato una email specifica.
+    \end{itemize}
+
+    \subsubsection{UC2.2 - Rispondere ad una email}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter rispondere ad una email;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente preme un pulsante che gli permette di scrivere una email (\textbf{UC1}).
+        \end{enumerate}
+        \item Precondizioni: l'utente sta visualizzando una email specifica;
+        \item Postcondizioni: l'utente ha risposto alla email.
+    \end{itemize}
+
+    \subsection{UC3 - Eliminazione email}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter eliminare una o più email;
+        \item Scenario principale:
+            \begin{enumerate}
+            \item l’utente elimina una email (\textbf{UC3.1});
+            \item l’utente elimina un gruppo di email (\textbf{UC3.2}).
+            \end{enumerate}
+        \item Inclusioni: l'utente visualizza un messaggio informativo (\textbf{UC3.3}).
+        \item Precondizioni: l'utente vuole eliminare una email o più email.
+        \item Postcondizioni: l'utente ha eliminato una email o più email.
+    \end{itemize}
+
+    \subsubsection{UC3.1 - Eliminazione email specifica}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter eliminare una email specifica;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente preme il pulsante dedicato alla eliminazione di una email.
+        \end{enumerate}
+        \item Precondizioni: l'utente vuole eliminare una email.
+        \item Postcondizioni: l'utente ha eliminato una email.
+    \end{itemize}
+
+    \subsubsection{UC3.2 - Eliminazione di un gruppo di email}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter eliminare un gruppo di email;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona le email che vuole cancellare;
+        \item l'utente preme il pulsante dedicato ed elimina le email.
+        \end{enumerate}
+        \item Precondizioni: l'utente vuole eliminare un gruppo di email;
+        \item Postcondizioni: l'utente ha eliminato un gruppo di email.
+    \end{itemize}
+
+    \subsection{UC3.3 - Visualizzazione messaggio informativo}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente visualizza un messaggio informativo;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente visualizza il messaggio informativo.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta eliminando una email;
+        \item Postcondizioni: l'utente ha visualizzato un messaggio informativo.
+    \end{itemize}
+
+    \subsection{UC4 - Refresh}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter eseguire un refresh per visualizzare nuovi dati;
+        \item Scenario principale:
+            \begin{enumerate}
+            \item l'utente preme il pulsante dedicato per eseguire il refresh della pagina;
+            \item l'utente visualizza un pagina aggiornata (\textbf{UC4.1}).
+            \end{enumerate}
+        \item Precondizioni: l'utente vuole visualizzare una pagina aggiornata;
+        \item Postcondizioni: l'utente ha visualizzato una pagina aggiornata.
+    \end{itemize}
+
+    \subsubsection{UC4.1 - Visualizzazione dati aggiornati}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente visualizza i dati aggiornati;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente visualizza i dati aggiornati.
+        \end{enumerate}
+        \item Precondizioni: l'utente vuole visualizzare una pagina aggiornata;
+        \item Postcondizioni: l'utente ha visualizzato una pagina aggiornata.
+    \end{itemize}
+
