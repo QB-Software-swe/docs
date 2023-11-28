@@ -8,17 +8,17 @@
     \item Scenario principale:
         \begin{enumerate}
         \item l'utente accede al calendario;
-        \item l'utente inserisce il nome dell'evento (\textbf{UC9.1});
-        \item l'utente inserisce la data (\textbf{UC9.2});
-        \item l'utente inserisce una fascia oraria (\textbf{UC9.3});
-        \item l'utente conferma la creazione dell'evento (\textbf{UC9.4}).
+        \item l'utente inserisce il nome dell'evento (\hyperref[sec: UC9.1]{UC9.1});
+        \item l'utente inserisce la data (\hyperref[sec: UC9.2]{UC9.2});
+        \item l'utente inserisce una fascia oraria (\hyperref[sec: UC9.3]{UC9.3});
+        \item l'utente conferma la creazione dell'evento (\hyperref[sec: UC9.4]{UC9.4}).
         \end{enumerate}
-    \item Estensioni: l'utente inserisce dei valori non validi nei campi e viene mostrato un messaggio d'errore (\textbf{UC9.4.1});
+    \item Estensioni: l'utente inserisce dei valori non validi nei campi e viene mostrato un messaggio d'errore (\hyperref[sec: UC9.4.1]{UC9.4.1});
     \item Precondizioni: l'utente sta creando un nuovo evento;
     \item Postcondizioni: un nuovo evento è stato creato dall'utente.
 \end{itemize}
 
-\subsubsection{UC9.1 - Inserimento nome evento}
+\subsubsection{UC9.1 - Inserimento nome evento} \label{sec: UC9.1}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter inserire il nome dell'evento che vuole \par aggiungere al calendario;
@@ -33,7 +33,7 @@
 \end{itemize}
 
 
-\subsubsection{UC9.2 - Inserimento data evento}
+\subsubsection{UC9.2 - Inserimento data evento} \label{sec: UC9.2}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter inserire la data dell'evento da creare;
@@ -48,7 +48,7 @@
 \end{itemize}
 
 
-\subsubsection{UC9.3 - Inserimento ora evento}
+\subsubsection{UC9.3 - Inserimento ora evento} \label{sec: UC9.3}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter inserire l'orario dell'evento;
@@ -62,7 +62,7 @@
     \item Postcondizioni: l'utente ha compilato il campo relativo all'orario dell'evento.
 \end{itemize}
 
-\subsubsection{UC9.4 - Conferma creazione evento}
+\subsubsection{UC9.4 - Conferma creazione evento} \label{sec: UC9.4}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter confermare la creazione dell'evento;
@@ -75,7 +75,7 @@
     \item Postcondizioni: l'utente ha confermato la creazione dell'evento.
 \end{itemize}
 
-\subsubsection{UC9.4.1 - Visualizzazione errore creazione evento}
+\subsubsection{UC9.4.1 - Visualizzazione errore creazione evento} \label{sec: UC9.4.1}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve ricevere un errore a seguito di dati non validi inseriti durante la procedura per creare un evento;
@@ -97,16 +97,16 @@
     \item Scenario principale:
         \begin{enumerate}
         \item l'utente accede al calendario;
-        \item l'utente sceglie l'evento da condividere (\textbf{UC10.1});
-        \item l'utente inserisce il nome del destinatario dell'evento (\textbf{UC10.2});
-        \item l'utente conferma la condivisione di un evento (\textbf{UC10.3}).
+        \item l'utente sceglie l'evento da condividere (\hyperref[sec: UC10.1]{UC10.1});
+        \item l'utente inserisce il nome del destinatario dell'evento (\hyperref[sec: UC10.2]{UC10.2});
+        \item l'utente conferma la condivisione di un evento (\hyperref[sec: UC10.3]{UC10.3}).
         \end{enumerate}
-    \item Estensioni: l'utente inserisce dei valori non validi nei campi e viene mostrato un messaggio d'errore (\textbf{UC10.3.1});
+    \item Estensioni: l'utente inserisce dei valori non validi nei campi e viene mostrato un messaggio d'errore (\hyperref[sec: UC10.3.1]{UC10.3.1});
     \item Precondizioni: l'utente vuole condividere un evento;
     \item Postcondizioni: l'utente ha condiviso un evento.
 \end{itemize}
 
-\subsubsection{UC10.1 - Scelta dell'evento da condividere}
+\subsubsection{UC10.1 - Scelta dell'evento da condividere} \label{sec: UC10.1}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve scegliere l'evento del calendario che vuole \par condividere;
@@ -120,7 +120,7 @@
 \end{itemize}
 
 
-\subsubsection{UC10.2 - Scelta del destinatario}
+\subsubsection{UC10.2 - Scelta del destinatario} \label{sec: UC10.2}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente inserisce il destinatario con cui desidera condividere l'evento;
@@ -134,7 +134,7 @@
 \end{itemize}
 
 
-\subsubsection{UC10.3 - Conferma condivisione evento}
+\subsubsection{UC10.3 - Conferma condivisione evento} \label{sec: UC10.3}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente conferma la condivisione di un evento;
@@ -147,7 +147,7 @@
     \item Postcondizioni: l'utente confermato la condivisione dell'evento.
 \end{itemize}
 
-\subsubsection{UC10.3.1 - Visualizzazione errore condivisione evento}
+\subsubsection{UC10.3.1 - Visualizzazione errore condivisione evento} \label{sec: UC10.3.1}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve ricevere un errore a seguito di dati non validi inseriti durante la procedura per condividere un evento;
@@ -168,18 +168,18 @@
     \item Scenario principale:
         \begin{enumerate}
         \item l'utente accede al calendario;
-        \item l'utente sceglie l'evento da eliminare (\textbf{UC11.1});
-        \item l'utente conferma l'eliminazione (\textbf{UC11.2});
-        \item l'utente riceve il messaggio di eliminazione di un evento (\textbf{UC11.3}).
+        \item l'utente sceglie l'evento da eliminare (\hyperref[sec: UC11.1]{UC11.1});
+        \item l'utente conferma l'eliminazione (\hyperref[sec: UC11.2]{UC11.2});
+        \item l'utente riceve il messaggio di eliminazione di un evento (\hyperref[sec: UC11.3]{UC11.3}).
         \end{enumerate}
     \item Precondizioni: l'utente vuole eliminare un evento esistente;
     \item Postcondizioni: un nuovo evento è stato creato dall'utente.
 \end{itemize}
 
-\subsubsection{UC11.1 - Scelta dell'evento da eliminare}
+\subsubsection{UC11.1 - Scelta dell'evento da eliminare} \label{sec: UC11.1}
 \begin{itemize}
     \item Attore: utente;
-    \item Descrizione: l'utente deve poter scegliere l'evento che vuole eliminare dal \par calendario;
+    \item Descrizione: l'utente deve poter scegliere l'evento che vuole eliminare dal \par calendario, che sia normale o condiviso;
     \item Scenario:
         \begin{enumerate}
         \item l'utente seleziona l'evento.
@@ -190,7 +190,7 @@
 \end{itemize}
 
 
-\subsubsection{UC11.2 - Conferma eliminazione evento}
+\subsubsection{UC11.2 - Conferma eliminazione evento} \label{sec: UC11.2}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve confermare l'eliminazione dell'evento scelto;
@@ -204,7 +204,7 @@
 \end{itemize}
 
 
-\subsubsection{UC11.3 - Ricezione messaggio eliminazione}
+\subsubsection{UC11.3 - Ricezione messaggio eliminazione} \label{sec: UC11.3}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve ricevere un messaggio che garantisce il buon esito dell'operazione;
@@ -225,15 +225,15 @@
     \item Scenario principale:
         \begin{enumerate}
         \item l'utente accede al calendario;
-        \item l'utente sceglie l'evento condiviso da eliminare (\textbf{UC12.1});
-        \item l'utente conferma l'eliminazione (\textbf{UC12.2});
-        \item l'utente riceve il messaggio di eliminazione dell'evento condiviso (\textbf{UC12.3}).
+        \item l'utente sceglie l'evento condiviso da eliminare (\hyperref[sec: UC12.1]{UC12.1});
+        \item l'utente conferma l'eliminazione (\hyperref[sec: UC12.2]{UC12.2});
+        \item l'utente riceve il messaggio di eliminazione dell'evento condiviso (\hyperref[sec: UC12.3]{UC12.3}).
         \end{enumerate}
     \item Precondizioni: l'utente vuole eliminare un evento condiviso esistente;
     \item Postcondizioni: un evento condiviso è stato eliminato dall'utente.
 \end{itemize}
 
-\subsubsection{UC12.1 - Scelta dell'evento condiviso da eliminare}
+\subsubsection{UC12.1 - Scelta dell'evento condiviso da eliminare} \label{sec: UC12.1}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter scegliere l'evento condiviso che vuole \par eliminare;
@@ -247,7 +247,7 @@
 \end{itemize}
 
 
-\subsubsection{UC12.2 - Conferma eliminazione evento condiviso}
+\subsubsection{UC12.2 - Conferma eliminazione evento condiviso} \label{sec: UC12.2}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve confermare l'eliminazione dell'evento condiviso \par scelto;
@@ -261,7 +261,7 @@
 \end{itemize}
 
 
-\subsubsection{UC12.3 - Ricezione messaggio eliminazione}
+\subsubsection{UC12.3 - Ricezione messaggio eliminazione} \label{sec: UC12.3}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve ricevere un messaggio che garantisce il buon esito dell'operazione;
