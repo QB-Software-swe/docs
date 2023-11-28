@@ -278,4 +278,76 @@
 
 %%%%%%%%%%%%%%% SCENARIO CONTATTI %%%%%%%%%%%%%%%%%%%%%%%
 
+\subsection{UC13 - Creazione nuovo contatto}
+\begin{itemize}
+    \item Attore: utente;
+    \item Descrizione: l'utente deve poter creare nuovi contatti;
+    \item Scenario principale:
+        \begin{enumerate}
+        \item l'utente accede alla rubrica;
+        \item l'utente inserisce il nome del contatto (\hyperref[sec: UC13.1]{UC13.1});
+        \item l'utente inserisce l'email del nuovo contatto (\hyperref[sec: UC13.2]{UC13.2});
+        \item l'utente conferma la creazione del contatto (\hyperref[sec: UC13.3]{UC13.3}).
+        \end{enumerate}
+    \item Estensioni: l'utente inserisce dei valori non validi nei campi e viene mostrato un messaggio d'errore (\hyperref[sec: UC13.3.1]{13.3.1});
+    \item Precondizioni: l'utente sta creando un nuovo contatto;
+    \item Postcondizioni: un nuovo contatto è stato creato dall'utente.
+\end{itemize}
 
+
+\subsubsection{UC13.1 - Inserimento nome nuovo contatto} \label{sec: UC13.1}
+\begin{itemize}
+    \item Attore: utente;
+    \item Descrizione: l'utente deve poter inserire il nome del nuovo contatto che vuole aggiungere alla rubrica;
+    \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona il campo relativo al nome del contatto;
+        \item l'utente digita il nome.
+        \end{enumerate}
+    
+    \item Precondizioni: l'utente sta creando un nuovo contatto;
+    \item Postcondizioni: l'utente ha compilato il campo relativo al nome del contatto.
+\end{itemize}
+
+
+\subsubsection{UC13.2 - Inserimento email contatto} \label{sec: UC13.2}
+\begin{itemize}
+    \item Attore: utente;
+    \item Descrizione: l'utente deve poter inserire la mail del nuovo contatto da creare;
+    \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona il campo relativo alla mail;
+        \item l'utente inserisce la mail del contatto.
+        \end{enumerate}
+    
+    \item Precondizioni: l'utente sta creando un nuovo contatto;
+    \item Postcondizioni: l'utente ha compilato il campo relativo alla mail del contatto.
+\end{itemize}
+
+
+\subsubsection{UC13.3 - Conferma creazione contatto} \label{sec: UC13.3}
+\begin{itemize}
+    \item Attore: utente;
+    \item Descrizione: l'utente deve poter confermare la creazione del nuovo contatto;
+    \item Scenario:
+        \begin{enumerate}
+        \item l'utente conferma la creazione.
+        \end{enumerate}
+    
+    \item Precondizioni: l'utente sta creando un nuovo contatto;
+    \item Postcondizioni: l'utente ha confermato la creaione di un nuovo contatto.
+\end{itemize}
+
+
+\subsubsection{UC13.3.1 - Visualizzazione errore creazione contatto} \label{sec: UC13.3.1}
+\begin{itemize}
+    \item Attore: utente;
+    \item Descrizione: l'utente deve ricevere un errore a seguito di dati non validi inseriti durante la procedura per creare un nuovo contatto;
+    \item Scenario:
+        \begin{enumerate}
+        \item l'utente visualizza il messaggio d'errore.
+        \end{enumerate}
+    
+    \item Precondizioni: l'utente sta svolgendo la creazione di un contatto e inserisce dei dati non validi;
+    \item Postcondizioni: l'utente ha ricevuto un messaggio d'errore.
+\end{itemize}
