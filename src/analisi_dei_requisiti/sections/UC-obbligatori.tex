@@ -1,5 +1,55 @@
 
     \subsection{UC5 - Creazione cartelle}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter creare una cartella;
+        \item Scenario principale:
+            \begin{enumerate}
+            \item l’utente apre l’applicazione;
+            \item l’utente clicca il pulsante di creazione di cartella";
+            \item l'utente inserisce il nome della cartella da creare (\textbf{UC5.1});
+            \item l'utente conferma la creazione della cartella (\textbf{UC5.2}).            
+            \end{enumerate}
+        \item Estensioni: l'utente inserisce dei valori non validi nei campi oppure non è possibile creare una cartella e viene mostrato un messaggio d'errore (\textbf{UC5.2.1});
+        \item Precondizioni: l'utente vuole creare una cartella;
+        \item Postcondizioni: la cartella è stata creata.
+    \end{itemize}
+
+    \subsubsection{UC5.1 - Inserimento nome cartella}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter inserire il nome della cartella;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona il campo relativo al nome della cartella;
+        \item l'utente digita il nome della cartella.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta creando una cartella;
+        \item Postcondizioni: l'utente ha inserito il nome della cartella.
+    \end{itemize}
+    \subsubsection{UC5.2 - Conferma creazione cartella}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter confermare la creazione della cartella;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente conferma la creazione della cartella.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta creando una cartella;
+        \item Postcondizioni: l'utente ha confermato la creazione della cartella.
+    \end{itemize}
+
+    \subsubsection{UC5.2.1 - Visualizzazione errore }
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve ricevere un errore quando inserisce dei valori non validi nei campi oppure non è possibile creare la cartella;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente visualizza il messaggio d'errore.
+        \end{enumerate}   
+        \item Precondizioni: l'utente sta creando una cartella;
+        \item Postcondizioni: l'utente ha ricevuto un messaggio d'errore.
+    \end{itemize}
 
     \subsection{UC6 - Condivisione di una cartella}
 
