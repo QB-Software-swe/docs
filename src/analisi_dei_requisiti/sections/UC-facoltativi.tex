@@ -1,23 +1,23 @@
 
 %%%%%%%%%%%%%%% SCENARIO EVENTI %%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{UC 9 - Creazione evento nel calendario}
+\subsection{UC 12 - Creazione evento nel calendario}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter creare nuovi eventi nel calendario;
     \item Scenario principale:
         \begin{enumerate}
-        \item l'utente inserisce il nome dell'evento (\hyperref[sec: UC 9.1]{UC 9.1});
-        \item l'utente inserisce la data (\hyperref[sec: UC 9.2]{UC 9.2});
-        \item l'utente inserisce una fascia oraria (\hyperref[sec: UC 9.3]{UC 9.3});
-        \item l'utente conferma la creazione dell'evento (\hyperref[sec: UC 9.4]{UC 9.4}).
+        \item l'utente inserisce il nome dell'evento (\hyperref[sec: UC 12.1]{UC 12.1});
+        \item l'utente inserisce la data (\hyperref[sec: UC 12.2]{UC 12.2});
+        \item l'utente inserisce una fascia oraria (\hyperref[sec: UC 12.3]{UC 12.3});
+        \item l'utente conferma la creazione dell'evento (\hyperref[sec: UC 12.4]{UC 12.4}).
         \end{enumerate}
-    \item Estensioni: l'utente inserisce dei valori non validi nei campi e viene mostrato un messaggio d'errore (\hyperref[sec: UC 9.4.1]{UC 9.4.1});
+    \item Estensioni: l'utente inserisce dei valori non validi nei campi e viene mostrato un messaggio d'errore (\hyperref[sec: UC 12.4.1]{UC 12.4.1});
     \item Precondizioni: l'utente ha acceduto al calendario e vuole creare un nuovo evento;
     \item Postcondizioni: un nuovo evento è stato creato dall'utente.
 \end{itemize}
 
-\subsubsection{UC 9.1 - Inserimento nome evento} \label{sec: UC 9.1}
+\subsubsection{UC 12.1 - Inserimento nome evento} \label{sec: UC 12.1}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter inserire il nome dell'evento che vuole \par aggiungere al calendario;
@@ -32,7 +32,7 @@
 \end{itemize}
 
 
-\subsubsection{UC 9.2 - Inserimento data evento} \label{sec: UC 9.2}
+\subsubsection{UC 12.2 - Inserimento data evento} \label{sec: UC 12.2}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter inserire la data dell'evento da creare;
@@ -47,7 +47,7 @@
 \end{itemize}
 
 
-\subsubsection{UC 9.3 - Inserimento ora evento} \label{sec: UC 9.3}
+\subsubsection{UC 12.3 - Inserimento ora evento} \label{sec: UC 12.3}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter inserire l'orario dell'evento;
@@ -61,7 +61,7 @@
     \item Postcondizioni: l'utente ha compilato il campo relativo all'orario dell'evento.
 \end{itemize}
 
-\subsubsection{UC 9.4 - Conferma creazione evento} \label{sec: UC 9.4}
+\subsubsection{UC 12.4 - Conferma creazione evento} \label{sec: UC 12.4}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter confermare la creazione dell'evento;
@@ -74,7 +74,7 @@
     \item Postcondizioni: l'utente ha confermato la creazione dell'evento.
 \end{itemize}
 
-\subsubsection{UC 9.4.1 - Visualizzazione errore creazione evento} \label{sec: UC 9.4.1}
+\subsubsection{UC 12.4.1 - Visualizzazione errore creazione evento} \label{sec: UC 12.4.1}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve ricevere un errore a seguito di dati non validi inseriti durante la procedura per creare un evento;
@@ -89,22 +89,22 @@
 
 
 
-\subsection{UC 10 - Condivisione di un evento}
+\subsection{UC 13 - Condivisione di un evento}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter condividere degli eventi con altri utenti;
     \item Scenario principale:
         \begin{enumerate}
-        \item l'utente sceglie l'evento da condividere (\hyperref[sec: UC 10.1]{UC 10.1});
-        \item l'utente inserisce il nome del destinatario dell'evento (\hyperref[sec: UC 10.2]{UC 10.2});
-        \item l'utente conferma la condivisione di un evento (\hyperref[sec: UC 10.3]{UC 10.3}).
+        \item l'utente sceglie l'evento da condividere (\hyperref[sec: UC 13.1]{UC 13.1});
+        \item l'utente inserisce il nome del destinatario dell'evento (\hyperref[sec: UC 13.2]{UC 13.2});
+        \item l'utente conferma la condivisione di un evento (\hyperref[sec: UC 13.3]{UC 13.3}).
         \end{enumerate}
-    \item Estensioni: l'utente inserisce dei valori non validi nei campi e viene mostrato un messaggio d'errore (\hyperref[sec: UC 10.3.1]{UC 10.3.1});
+    \item Estensioni: l'utente inserisce dei valori non validi nei campi e viene mostrato un messaggio d'errore (\hyperref[sec: UC 13.3.1]{UC 13.3.1});
     \item Precondizioni: l'utente ha acceduto al calendario e vuole condividere un evento;
     \item Postcondizioni: l'utente ha condiviso un evento.
 \end{itemize}
 
-\subsubsection{UC 10.1 - Scelta dell'evento da condividere} \label{sec: UC 10.1}
+\subsubsection{UC 13.1 - Scelta dell'evento da condividere} \label{sec: UC 13.1}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve scegliere l'evento del calendario che vuole \par condividere;
@@ -118,7 +118,7 @@
 \end{itemize}
 
 
-\subsubsection{UC 10.2 - Scelta del destinatario} \label{sec: UC 10.2}
+\subsubsection{UC 13.2 - Scelta del destinatario} \label{sec: UC 13.2}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente inserisce il destinatario con cui desidera condividere l'evento;
@@ -132,7 +132,7 @@
 \end{itemize}
 
 
-\subsubsection{UC 10.3 - Conferma condivisione evento} \label{sec: UC 10.3}
+\subsubsection{UC 13.3 - Conferma condivisione evento} \label{sec: UC 13.3}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente conferma la condivisione di un evento;
@@ -145,7 +145,7 @@
     \item Postcondizioni: l'utente confermato la condivisione dell'evento.
 \end{itemize}
 
-\subsubsection{UC 10.3.1 - Visualizzazione errore condivisione evento} \label{sec: UC 10.3.1}
+\subsubsection{UC 13.3.1 - Visualizzazione errore condivisione evento} \label{sec: UC 13.3.1}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve ricevere un errore a seguito di dati non validi inseriti durante la procedura per condividere un evento;
@@ -159,21 +159,21 @@
 \end{itemize}
 
 
-\subsection{UC 11 - Eliminazione evento nel calendario}
+\subsection{UC 14 - Eliminazione evento nel calendario}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter eliminare eventi nel calendario;
     \item Scenario principale:
         \begin{enumerate}
-        \item l'utente sceglie l'evento da eliminare (\hyperref[sec: UC 11.1]{UC 11.1});
-        \item l'utente conferma l'eliminazione (\hyperref[sec: UC 11.2]{UC 11.2});
-        \item l'utente riceve il messaggio di eliminazione di un evento (\hyperref[sec: UC 11.3]{UC 11.3}).
+        \item l'utente sceglie l'evento da eliminare (\hyperref[sec: UC 14.1]{UC 14.1});
+        \item l'utente conferma l'eliminazione (\hyperref[sec: UC 14.2]{UC 14.2});
+        \item l'utente riceve il messaggio di eliminazione di un evento (\hyperref[sec: UC 14.3]{UC 14.3}).
         \end{enumerate}
     \item Precondizioni: l'utente ha acceduto al calendario e vuole eliminare un evento;
     \item Postcondizioni: l'evento scelto è stato eliminato.
 \end{itemize}
 
-\subsubsection{UC 11.1 - Scelta dell'evento da eliminare} \label{sec: UC 11.1}
+\subsubsection{UC 14.1 - Scelta dell'evento da eliminare} \label{sec: UC 14.1}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter scegliere l'evento che vuole eliminare dal calendario;
@@ -187,7 +187,7 @@
 \end{itemize}
 
 
-\subsubsection{UC 11.2 - Conferma eliminazione evento} \label{sec: UC 11.2}
+\subsubsection{UC 14.2 - Conferma eliminazione evento} \label{sec: UC 14.2}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve confermare l'eliminazione dell'evento scelto;
@@ -201,7 +201,7 @@
 \end{itemize}
 
 
-\subsubsection{UC 11.3 - Ricezione messaggio eliminazione} \label{sec: UC 11.3}
+\subsubsection{UC 14.3 - Ricezione messaggio eliminazione} \label{sec: UC 14.3}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve ricevere un messaggio che garantisce il buon esito dell'operazione;
@@ -215,21 +215,21 @@
 \end{itemize}
 
 
-\subsection{UC 12 - Eliminazione evento condiviso}
+\subsection{UC 15 - Eliminazione evento condiviso}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter eliminare eventi condivisi;
     \item Scenario principale:
         \begin{enumerate}
-        \item l'utente sceglie l'evento condiviso da eliminare (\hyperref[sec: UC 12.1]{UC 12.1});
-        \item l'utente conferma l'eliminazione (\hyperref[sec: UC 12.2]{UC 12.2});
-        \item l'utente riceve il messaggio d'eliminazione dell'evento condiviso (\hyperref[sec: UC 12.3]{UC 12.3}).
+        \item l'utente sceglie l'evento condiviso da eliminare (\hyperref[sec: UC 15.1]{UC 15.1});
+        \item l'utente conferma l'eliminazione (\hyperref[sec: UC 15.2]{UC 15.2});
+        \item l'utente riceve il messaggio d'eliminazione dell'evento condiviso (\hyperref[sec: UC 15.3]{UC 15.3}).
         \end{enumerate}
     \item Precondizioni: l'utente ha acceduto al calendario e vuole eliminare un evento condiviso esistente;
     \item Postcondizioni: un evento condiviso è stato eliminato dall'utente.
 \end{itemize}
 
-\subsubsection{UC 12.1 - Scelta dell'evento condiviso da eliminare} \label{sec: UC 12.1}
+\subsubsection{UC 15.1 - Scelta dell'evento condiviso da eliminare} \label{sec: UC 15.1}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter scegliere l'evento condiviso che vuole \par eliminare;
@@ -243,7 +243,7 @@
 \end{itemize}
 
 
-\subsubsection{UC 12.2 - Conferma eliminazione evento condiviso} \label{sec: UC 12.2}
+\subsubsection{UC 15.2 - Conferma eliminazione evento condiviso} \label{sec: UC 15.2}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve confermare l'eliminazione dell'evento condiviso \par scelto;
@@ -257,7 +257,7 @@
 \end{itemize}
 
 
-\subsubsection{UC 12.3 - Ricezione messaggio eliminazione} \label{sec: UC 12.3}
+\subsubsection{UC 15.3 - Ricezione messaggio eliminazione} \label{sec: UC 15.3}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve ricevere un messaggio che garantisce il buon esito dell'operazione;
@@ -274,23 +274,23 @@
 
 %%%%%%%%%%%%%%% SCENARIO CONTATTI %%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{UC 13 - Creazione nuovo contatto}
+\subsection{UC 16 - Creazione nuovo contatto}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter creare nuovi contatti;
     \item Scenario principale:
         \begin{enumerate}
-        \item l'utente inserisce il nome del contatto (\hyperref[sec: UC 13.1]{UC 13.1});
-        \item l'utente inserisce l'email del nuovo contatto (\hyperref[sec: UC 13.2]{UC 13.2});
-        \item l'utente conferma la creazione del contatto (\hyperref[sec: UC 13.3]{UC 13.3}).
+        \item l'utente inserisce il nome del contatto (\hyperref[sec: UC 16.1]{UC 16.1});
+        \item l'utente inserisce l'email del nuovo contatto (\hyperref[sec: UC 16.2]{UC 16.2});
+        \item l'utente conferma la creazione del contatto (\hyperref[sec: UC 16.3]{UC 16.3}).
         \end{enumerate}
-    \item Estensioni: l'utente inserisce dei valori non validi nei campi e viene mostrato un messaggio d'errore (\hyperref[sec: UC 13.3.1]{UC 13.3.1});
+    \item Estensioni: l'utente inserisce dei valori non validi nei campi e viene mostrato un messaggio d'errore (\hyperref[sec: UC 16.3.1]{UC 16.3.1});
     \item Precondizioni: l'utente ha acceduto alla rubrica e vuole creare un nuovo contatto;
     \item Postcondizioni: un nuovo contatto è stato creato dall'utente.
 \end{itemize}
 
 
-\subsubsection{UC 13.1 - Inserimento nome nuovo contatto} \label{sec: UC 13.1}
+\subsubsection{UC 16.1 - Inserimento nome nuovo contatto} \label{sec: UC 16.1}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter inserire il nome del nuovo contatto che vuole aggiungere alla rubrica;
@@ -305,7 +305,7 @@
 \end{itemize}
 
 
-\subsubsection{UC 13.2 - Inserimento email contatto} \label{sec: UC 13.2}
+\subsubsection{UC 16.2 - Inserimento email contatto} \label{sec: UC 16.2}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter inserire la mail del nuovo contatto da creare;
@@ -320,7 +320,7 @@
 \end{itemize}
 
 
-\subsubsection{UC 13.3 - Conferma creazione contatto} \label{sec: UC 13.3}
+\subsubsection{UC 16.3 - Conferma creazione contatto} \label{sec: UC 16.3}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter confermare la creazione del nuovo contatto;
@@ -334,7 +334,7 @@
 \end{itemize}
 
 
-\subsubsection{UC 13.3.1 - Visualizzazione errore creazione contatto} \label{sec: UC 13.3.1}
+\subsubsection{UC 16.3.1 - Visualizzazione errore creazione contatto} \label{sec: UC 16.3.1}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve ricevere un errore a seguito di dati non validi inseriti durante la procedura per creare un nuovo contatto;
@@ -348,22 +348,22 @@
 \end{itemize}
 
 
-\subsection{UC14 - Condivisione di un contatto}
+\subsection{UC17 - Condivisione di un contatto}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter condividere un contatto con altri utenti;
     \item Scenario principale:
         \begin{enumerate}
-        \item l'utente sceglie il contatto da condividere (\hyperref[sec: UC 14.1]{UC 14.1});
-        \item l'utente inserisce il nome del destinatario del utente (\hyperref[sec: UC 14.2]{UC 14.2});
-        \item l'utente conferma la condivisione del contatto (\hyperref[sec: UC 14.3]{UC 14.3}).
+        \item l'utente sceglie il contatto da condividere (\hyperref[sec: UC 17.1]{UC 17.1});
+        \item l'utente inserisce il nome del destinatario del utente (\hyperref[sec: UC 17.2]{UC 17.2});
+        \item l'utente conferma la condivisione del contatto (\hyperref[sec: UC 17.3]{UC 17.3}).
         \end{enumerate}
-    \item Estensioni: l'utente inserisce dei valori non validi nei campi e viene mostrato un messaggio d'errore (\hyperref[sec: UC14.3.1]{UC 14.3.1});
+    \item Estensioni: l'utente inserisce dei valori non validi nei campi e viene mostrato un messaggio d'errore (\hyperref[sec: UC 17.3.1]{UC 17.3.1});
     \item Precondizioni: l'utente ha acceduto alla rubrica e vuole condividere un contatto;
     \item Postcondizioni: l'utente ha condiviso un contatto.
 \end{itemize}
 
-\subsubsection{UC 14.1 - Scelta del contatto da condividere} \label{sec: UC 14.1}
+\subsubsection{UC 17.1 - Scelta del contatto da condividere} \label{sec: UC 17.1}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve scegliere il contatto della rubrica che vuole \par condividere;
@@ -377,7 +377,7 @@
 \end{itemize}
 
 
-\subsubsection{UC 14.2 - Scelta del destinatario} \label{sec: UC 14.2}
+\subsubsection{UC 17.2 - Scelta del destinatario} \label{sec: UC 17.2}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente inserisce il destinatario con cui desidera condividere il contatto;
@@ -391,7 +391,7 @@
 \end{itemize}
 
 
-\subsubsection{UC 14.3 - Conferma condivisione contatto} \label{sec: UC 14.3}
+\subsubsection{UC 17.3 - Conferma condivisione contatto} \label{sec: UC 17.3}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente conferma la condivisione del contatto;
@@ -404,7 +404,7 @@
     \item Postcondizioni: l'utente ha confermato la condivisione del contatto.
 \end{itemize}
 
-\subsubsection{UC 14.3.1 - Visualizzazione errore condivisione contatto} \label{sec: UC 14.3.1}
+\subsubsection{UC 17.3.1 - Visualizzazione errore condivisione contatto} \label{sec: UC 17.3.1}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve ricevere un errore a seguito di dati non validi inseriti durante la procedura per condividere un contatto;
@@ -419,21 +419,21 @@
 
 
 
-\subsection{UC 15 - Eliminazione contatto}
+\subsection{UC 18 - Eliminazione contatto}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter eliminare un contatto dalla rubrica;
     \item Scenario principale:
         \begin{enumerate}
-        \item l'utente sceglie il contatto da eliminare (\hyperref[sec: UC 15.1]{UC 15.1});
-        \item l'utente conferma l'eliminazione (\hyperref[sec: UC 15.2]{UC 15.2});
-        \item l'utente riceve il messaggio di eliminazione di un contatto (\hyperref[sec: UC 15.3]{UC 15.3}).
+        \item l'utente sceglie il contatto da eliminare (\hyperref[sec: UC 18.1]{UC 18.1});
+        \item l'utente conferma l'eliminazione (\hyperref[sec: UC 18.2]{UC 18.2});
+        \item l'utente riceve il messaggio di eliminazione di un contatto (\hyperref[sec: UC 18.3]{UC 18.3}).
         \end{enumerate}
     \item Precondizioni: l'utente ha acceduto alla rubrica e vuole eliminare un contatto;
     \item Postcondizioni: il contatto scelto è stato eliminato.
 \end{itemize}
 
-\subsubsection{UC 15.1 - Scelta del contatto da eliminare} \label{sec: UC 15.1}
+\subsubsection{UC 18.1 - Scelta del contatto da eliminare} \label{sec: UC 18.1}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter scegliere il contatto che vuole eliminare dalla rubrica;
@@ -447,7 +447,7 @@
 \end{itemize}
 
 
-\subsubsection{UC 15.2 - Conferma eliminazione evento} \label{sec: UC 15.2}
+\subsubsection{UC 18.2 - Conferma eliminazione evento} \label{sec: UC 18.2}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve confermare l'eliminazione del contatto scelto;
@@ -461,7 +461,7 @@
 \end{itemize}
 
 
-\subsubsection{UC 15.3 - Ricezione messaggio eliminazione} \label{sec: UC 15.3}
+\subsubsection{UC 18.3 - Ricezione messaggio eliminazione} \label{sec: UC 18.3}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve ricevere un messaggio che garantisce il buon esito dell'operazione;
@@ -476,7 +476,7 @@
 
 %%%%%%%%%%%%%%% TESTING %%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{UC 16 - Eliminazione contatto}
+\subsection{UC 112 - Eliminazione contatto}
 \begin{itemize}
     \item Attore: developer Zextras;
     \item Descrizione: l'utente deve poter fare degli stess testper misurare le performance del prodotto;
