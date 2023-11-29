@@ -85,12 +85,12 @@
         \item Descrizione: l'utente deve poter scegliere i destinatari della condivisione;
         \item Scenario:
         \begin{enumerate}
-            \item l'utente seleziona il campo relativo all'inserimento dei destinatari;
-            \item l'utente digita i nomi.
-            \end{enumerate}
-            \item Precondizioni: l'utente sta condividendo una cartella;
-            \item Postcondizioni: l'utente ha selezionato i destinatari della condivisione della cartella.
-        \end{itemize}
+        \item l'utente seleziona il campo relativo all'inserimento dei destinatari;
+        \item l'utente digita i nomi.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta condividendo una cartella;
+        \item Postcondizioni: l'utente ha selezionato i destinatari della condivisione della cartella.
+    \end{itemize}
     
     \subsubsection{UC6.3 - Conferma condivisione cartella}
     \begin{itemize}
@@ -117,14 +117,24 @@
     \end{itemize}
 
     \subsection{UC7 - Visualizzazione lista cartelle}
-
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter visualizzare una lista di cartelle;
+        \item Scenario:
+            \begin{enumerate}
+            \item l'utente apre l'applicazione;
+            \item l'utente seleziona una cartella;
+            \item l'utente visualizza la cartella (\textbf{UC7.1}).
+            \end{enumerate}
+        \item Precondizioni: l'utente vuole visualizzare le cartelle;
+        \item Postcondizioni: l'utente ha visualizzato le cartelle.
+    \end{itemize}
     \subsubsection{UC7.1 - Visualizzazione cartella specifica}
     \begin{itemize}
         \item Attore: utente;
         \item Descrizione: l'utente deve poter visualizzare una cartella specifica;
         \item Scenario:
         \begin{enumerate}
-        \item l'utente apre l'applicazione;
         \item l'utente seleziona una cartella;
         \item l'utente visualizza la cartella.
         \end{enumerate}
@@ -133,6 +143,52 @@
     \end{itemize}
 
     \subsection{UC8 - Eliminazione cartelle}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter eliminare una cartella;
+        \item Scenario principale:
+            \begin{enumerate}
+            \item l'utente seleziona le cartele da eliminare (\textbf{UC8.1});
+            \item l'utente conferma l'eliminazione delle cartelle selezionate (\textbf{UC8.2}).
+            \end{enumerate}
+        \item Precondizioni: l'utente vuole eliminare delle cartelle;
+        \item Postcondizioni: l'utente ha eliminato le cartelle selezionate.
+    \end{itemize}
+    \subsubsection{UC8.1 - Selezionare cartelle}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter selezionare le cartelle da eliminare;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona le cartelle interessate.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta eliminando delle cartelle;
+        \item Postcondizioni: l'utente ha selezionato le cartelle da eliminare.
+    \end{itemize}
+
+    \subsubsection{UC8.2 - Conferma eliminazione}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente conferma di voler eliminare le cartelle;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente clicca il pulsante per eliminarle.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta eliminando delle cartelle;
+        \item Postcondizioni: l'utente ha eliminato le cartelle selezionate.
+    \end{itemize}
+
+    \subsubsection{UC8.2.1 - Visualizzazione errore }
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve ricevere un errore quando l'eliminazione delle cartelle non è andata a buon fine;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente visualizza il messaggio d'errore.
+        \end{enumerate}   
+        \item Precondizioni: l'utente sta eliminando delle cartelle;
+        \item Postcondizioni: l'utente ha ricevuto un messaggio d'errore.
+    \end{itemize}
 
     \subsection{UC9 - Eliminazione condivisione di una cartella}
 
