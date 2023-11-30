@@ -6,7 +6,7 @@
         \item Scenario principale:
             \begin{enumerate}
             \item l’utente apre l’applicazione;
-            \item l’utente clicca il pulsante di creazione di cartella";
+            \item l’utente clicca il pulsante di creazione di cartella;
             \item l'utente inserisce il nome della cartella da creare (\textbf{UC5.1});
             \item l'utente conferma la creazione della cartella (\textbf{UC5.2}).            
             \end{enumerate}
@@ -217,7 +217,7 @@
     \subsubsection{UC9.2 - Conferma eliminazione}
     \begin{itemize}
         \item Attore: utente;
-        \item Descrizione: l'utente conferma di voler eliminare la condivisione dellale cartella;
+        \item Descrizione: l'utente conferma di voler eliminare la condivisione della cartella;
         \item Scenario:
         \begin{enumerate}
         \item l'utente clicca il pulsante per eliminarla.
@@ -239,5 +239,53 @@
     \end{itemize}
 
     \subsection{UC10 - Modifica nome della cartella}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter modificare il nome di una cartella;
+        \item Scenario principale:
+            \begin{enumerate}
+            \item l’utente apre l'applicazione;
+            \item l’utente seleziona la cartella interessata (\textbf{UC10.1});
+            \item l'utente inserisce il nuovo nome della cartella (\textbf{UC10.2});
+            \item l'utente conferma il cambio del nome (\textbf{UC10.3}).            
+            \end{enumerate}
+        \item Estensioni: l'utente inserisce un valore non valido nel campo oppure non è possibile modificare il nome della cartella e viene mostrato un messaggio d'errore (\textbf{UC5.2.1});
+        \item Precondizioni: l'utente vuole modificare il nome di una cartella;
+        \item Postcondizioni: il nome della cartella è stato modificato.
+    \end{itemize}
+    \subsubsection{UC10.1 - Selezionare cartella}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter selezionare la cartella da rinominare;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona la cartella interessata.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta rinominando una cartella;
+        \item Postcondizioni: l'utente ha selezionato la cartella da rinominare.
+    \end{itemize}
+    \subsubsection{UC10.2 - Inserire nuovo nome}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter inserire il nuovo nome;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona il campo relativo all'inserimento del nome;
+        \item l'utente digita il nuovo nome.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta rinominando una cartella;
+        \item Postcondizioni: l'utente ha inserito il nuovo nome.
+    \end{itemize}
+    \subsubsection{UC10.3 - Conferma cambio nome}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente conferma di voler cambiare nome della cartella;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente clicca il pulsante per confermare.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta rinominando una cartella;
+        \item Postcondizioni: l'utente ha rinominato la cartella.
+    \end{itemize}
 
     \subsection{UC11 - Gestione elementi di una cartella}
