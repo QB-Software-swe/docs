@@ -1,0 +1,92 @@
+% DOC TYPE E DEF QB SOFTWARE %%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\input{base.tex}
+
+% INFORMAZIONI DOCUMENTO %%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Verbale interno}
+\date{del 20/11/2023}
+\footname{Verbale interno del 20/11/2023}
+
+\begin{document}
+	% PRIME PAGINE %%%%%%%%%%%%%%%%%%%%%%%%%
+	\makefirstpage
+	
+	\include{changelog.tex}
+	\clearpage
+	
+	\tableofcontents
+	\clearpage
+
+    \section{Informazioni generali}
+    
+    \subsection{Luogo e data dell'incontro}
+    
+    \begin{itemize}
+    	\item \textbf{Luogo}: meeting su Discord
+    	\item \textbf{Data}: 20/11/2023
+    	\item \textbf{Ora di inizio}: 16:00
+    	\item \textbf{Ora di fine}: 17:00
+    \end{itemize}
+    
+    \subsection{Presenze}
+    
+    \begin{itemize}
+    	\item \textbf{Totale presenze}:
+    	\begin{itemize}
+    		\item Bustreo Alessandro
+    		\item Destro Stefano
+    		\item Domuta Alessia 
+    		\item Feltrin Alessandro 
+    		\item Fontana Raffaele Paolo 
+    		\item Giurisato Andrea 
+    		\item Rovea Silvia
+    	\end{itemize}
+    	
+    	\item \textbf{Totale assenze}: 0
+    	
+    	\item \textbf{Partecipanti esterni}:
+    	\begin{itemize}
+    		\item nessuno.
+    	\end{itemize}
+    \end{itemize}
+    
+    \section{Ordine del giorno}
+    Questioni fissate nella riunione interna precedente:
+    \begin{itemize}
+    	\item Sviluppare altri processi del way of working oltre a quelli normati nelle norme
+    	di progetto;
+    	\item aggiornare il gruppo sullo stato dell’analisi dei requisiti.
+    \end{itemize}
+    
+    Nuove questioni:
+    \begin{itemize}
+    	\item sistema di automazione.
+    \end{itemize}
+    
+    \section{Verbale}
+    Il gruppo ha discusso dello stato di avanzamento dei lavori, sono stati mostrati all'intero gruppo i casi d'uso finora sviluppati e le motivazione di quelle decisioni. Il team di QB Software ha deciso la struttura e i contenuti del documento riguardante l'AdR:
+    \begin{itemize}
+    	\item introduzione,
+    	\item scopo/descrizione del prodotto,
+    	\item i casi d'uso individuati:
+    	\begin{itemize}
+    		\item introduzione e spiegazione della sintassi usata;
+    		\item casi d'uso, ogni caso d'uso dovrà essere riportato seguendo il \href{https://github.com/rcardin/swe-imdb/blob/main/use-cases/template.md}{template proposto dal prof. Cardin} (Online, ultima visita 20/11/2023).
+    	\end{itemize}
+    \end{itemize}
+    \noindent
+    Il gruppo poi ha discusso il sistema di automazione per il way of working della documentazione. È stato proposto di creare uno script in Python che utilizza un file configurazione CSV: \verb|config.csv|, e le label attribuite alla issue per fare la build in automatico del documento aggiornando la versione in base alla tipologia di modifica fatta.
+     
+    \section{Azioni da intraprendere}
+    \begin{todo}
+    	\href{https://github.com/QB-Software-swe/docs/issues/20}{VI-2023-10-26-\#20} 
+    	& A. Bustreo
+    	& Implementazione e testing del sistema di automazione 
+    	\\\hline
+    \end{todo}
+    
+    \section{Ordine del giorno per la prossima riunione interna}
+    \begin{itemize}
+    	\item nessuno.
+    \end{itemize}
+\end{document}
