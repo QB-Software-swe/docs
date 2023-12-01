@@ -218,23 +218,23 @@
 
 %%%%%%%%%%%%%%% SCENARIO CONTATTI %%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{UC 16 - Creazione nuovo contatto}
+\subsection{UC 15 - Creazione nuovo contatto}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter creare nuovi contatti;
     \item Scenario principale:
         \begin{enumerate}
-        \item l'utente inserisce il nome del contatto (\hyperref[sec: UC 16.1]{UC 16.1});
-        \item l'utente inserisce l'email del nuovo contatto (\hyperref[sec: UC 16.2]{UC 16.2});
-        \item l'utente conferma la creazione del contatto (\hyperref[sec: UC 16.3]{UC 16.3}).
+        \item l'utente inserisce il nome del contatto (\hyperref[sec: UC 15.1]{UC 15.1});
+        \item l'utente inserisce l'email del nuovo contatto (\hyperref[sec: UC 15.2]{UC 15.2});
+        \item l'utente conferma la creazione del contatto (\hyperref[sec: UC 15.3]{UC 15.3}).
         \end{enumerate}
-    \item Estensioni: l'utente inserisce dei valori non validi nei campi e viene mostrato un messaggio d'errore (\hyperref[sec: UC 16.3.1]{UC 16.3.1});
+    \item Estensioni: l'utente inserisce dei valori non validi nei campi e viene mostrato un messaggio d'errore (\hyperref[sec: UC 15.3.1]{UC 15.3.1});
     \item Precondizioni: l'utente ha acceduto alla rubrica e vuole creare un nuovo contatto;
     \item Postcondizioni: un nuovo contatto è stato creato dall'utente.
 \end{itemize}
 
 
-\subsubsection{UC 16.1 - Inserimento nome nuovo contatto} \label{sec: UC 16.1}
+\subsubsection{UC 15.1 - Inserimento nome nuovo contatto} \label{sec: UC 15.1}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter inserire il nome del nuovo contatto che vuole aggiungere alla rubrica;
@@ -249,7 +249,7 @@
 \end{itemize}
 
 
-\subsubsection{UC 16.2 - Inserimento email contatto} \label{sec: UC 16.2}
+\subsubsection{UC 15.2 - Inserimento email contatto} \label{sec: UC 15.2}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter inserire la mail del nuovo contatto da creare;
@@ -264,7 +264,7 @@
 \end{itemize}
 
 
-\subsubsection{UC 16.3 - Conferma creazione contatto} \label{sec: UC 16.3}
+\subsubsection{UC 15.3 - Conferma creazione contatto} \label{sec: UC 15.3}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter confermare la creazione del nuovo contatto;
@@ -278,7 +278,7 @@
 \end{itemize}
 
 
-\subsubsection{UC 16.3.1 - Visualizzazione errore creazione contatto} \label{sec: UC 16.3.1}
+\subsubsection{UC 15.3.1 - Visualizzazione errore creazione contatto} \label{sec: UC 15.3.1}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve ricevere un errore a seguito di dati non validi inseriti durante la procedura per creare un nuovo contatto;
@@ -292,22 +292,22 @@
 \end{itemize}
 
 
-\subsection{UC17 - Condivisione di un contatto}
+\subsection{UC16 - Condivisione di un contatto}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter condividere un contatto con altri utenti;
     \item Scenario principale:
         \begin{enumerate}
-        \item l'utente sceglie il contatto da condividere (\hyperref[sec: UC 17.1]{UC 17.1});
-        \item l'utente inserisce il nome del destinatario del utente (\hyperref[sec: UC 17.2]{UC 17.2});
-        \item l'utente conferma la condivisione del contatto (\hyperref[sec: UC 17.3]{UC 17.3}).
+        \item l'utente sceglie il contatto da condividere (\hyperref[sec: UC 16.1]{UC 16.1});
+        \item l'utente inserisce il nome del destinatario del utente (\hyperref[sec: UC 16.2]{UC 16.2});
+        \item l'utente conferma la condivisione del contatto (\hyperref[sec: UC 16.3]{UC 16.3}).
         \end{enumerate}
-    \item Estensioni: l'utente inserisce dei valori non validi nei campi e viene mostrato un messaggio d'errore (\hyperref[sec: UC 17.3.1]{UC 17.3.1});
+    \item Estensioni: l'utente inserisce dei valori non validi nei campi e viene mostrato un messaggio d'errore (\hyperref[sec: UC 16.3.1]{UC 16.3.1});
     \item Precondizioni: l'utente ha acceduto alla rubrica e vuole condividere un contatto;
     \item Postcondizioni: l'utente ha condiviso un contatto.
 \end{itemize}
 
-\subsubsection{UC 17.1 - Scelta del contatto da condividere} \label{sec: UC 17.1}
+\subsubsection{UC 16.1 - Scelta del contatto da condividere} \label{sec: UC 16.1}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve scegliere il contatto della rubrica che vuole \par condividere;
@@ -321,7 +321,7 @@
 \end{itemize}
 
 
-\subsubsection{UC 17.2 - Scelta del destinatario} \label{sec: UC 17.2}
+\subsubsection{UC 16.2 - Scelta del destinatario} \label{sec: UC 16.2}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente inserisce il destinatario con cui desidera condividere il contatto;
@@ -335,7 +335,7 @@
 \end{itemize}
 
 
-\subsubsection{UC 17.3 - Conferma condivisione contatto} \label{sec: UC 17.3}
+\subsubsection{UC 16.3 - Conferma condivisione contatto} \label{sec: UC 16.3}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente conferma la condivisione del contatto;
@@ -348,7 +348,7 @@
     \item Postcondizioni: l'utente ha confermato la condivisione del contatto.
 \end{itemize}
 
-\subsubsection{UC 17.3.1 - Visualizzazione errore condivisione contatto} \label{sec: UC 17.3.1}
+\subsubsection{UC 16.3.1 - Visualizzazione errore condivisione contatto} \label{sec: UC 16.3.1}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve ricevere un errore a seguito di dati non validi inseriti durante la procedura per condividere un contatto;
@@ -363,21 +363,21 @@
 
 
 
-\subsection{UC 18 - Eliminazione contatto}
+\subsection{UC 17 - Eliminazione contatto}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter eliminare un contatto dalla rubrica;
     \item Scenario principale:
         \begin{enumerate}
-        \item l'utente sceglie il contatto da eliminare (\hyperref[sec: UC 18.1]{UC 18.1});
-        \item l'utente conferma l'eliminazione (\hyperref[sec: UC 18.2]{UC 18.2});
-        \item l'utente riceve il messaggio di eliminazione di un contatto (\hyperref[sec: UC 18.3]{UC 18.3}).
+        \item l'utente sceglie il contatto da eliminare (\hyperref[sec: UC 17.1]{UC 17.1});
+        \item l'utente conferma l'eliminazione (\hyperref[sec: UC 17.2]{UC 17.2});
+        \item l'utente riceve il messaggio di eliminazione di un contatto (\hyperref[sec: UC 17.3]{UC 17.3}).
         \end{enumerate}
     \item Precondizioni: l'utente ha acceduto alla rubrica e vuole eliminare un contatto;
     \item Postcondizioni: il contatto scelto è stato eliminato.
 \end{itemize}
 
-\subsubsection{UC 18.1 - Scelta del contatto da eliminare} \label{sec: UC 18.1}
+\subsubsection{UC 17.1 - Scelta del contatto da eliminare} \label{sec: UC 17.1}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve poter scegliere il contatto che vuole eliminare dalla rubrica;
@@ -391,7 +391,7 @@
 \end{itemize}
 
 
-\subsubsection{UC 18.2 - Conferma eliminazione evento} \label{sec: UC 18.2}
+\subsubsection{UC 17.2 - Conferma eliminazione evento} \label{sec: UC 17.2}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve confermare l'eliminazione del contatto scelto;
@@ -405,7 +405,7 @@
 \end{itemize}
 
 
-\subsubsection{UC 18.3 - Ricezione messaggio eliminazione} \label{sec: UC 18.3}
+\subsubsection{UC 17.3 - Ricezione messaggio eliminazione} \label{sec: UC 17.3}
 \begin{itemize}
     \item Attore: utente;
     \item Descrizione: l'utente deve ricevere un messaggio che garantisce il buon esito dell'operazione;
@@ -420,7 +420,7 @@
 
 %%%%%%%%%%%%%%% TESTING %%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{UC 19 - Stress test}
+\subsection{UC 18 - Stress test}
 \begin{itemize}
     \item Attore: developer Zextras;
     \item Descrizione: l'utente deve poter fare degli stess test per misurare le performance del prodotto;
