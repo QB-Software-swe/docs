@@ -27,7 +27,7 @@
     		\item \textbf{Luogo}: meeting su Discord
     		\item \textbf{Data}: 06/11/2023
     		\item \textbf{Ora di inizio}: 16:00
-    		\item \textbf{Ora di fine}: 17:30
+    		\item \textbf{Ora di fine}: 18:30
     	\end{itemize}
 	
 	\subsection{Presenze}
@@ -61,25 +61,18 @@
     	Nuove questioni:
     	\begin{itemize}
 			\item retrospettiva basata sul feedback ricevuto durante l'aggiudicazione degli appalti;
-    		\item scegliere l'approccio per lo sviluppo del progetto;
-    		\item pianificare in generale le milestone per conseguire la prima revisione (RTB):
-    		\begin{itemize}
-				\item stimare una data per la revisione del RTB;
-				\item programmare gli scopi e le attività da fare per ogni milestone;
-				\item pianificare la prima milestone;
-				\item suddivisione ruoli e compiti.
-			\end{itemize}
-			\item brainstorming su quelli che possono essere i rischi per il successo del progetto.
+    		\item discutere la struttura e i contenuti del documento Norme di Progetto.
     	\end{itemize}
     
     \section{Verbale}
-		Basandosi sul feedback fornito durante l'aggiudicazione degli appalti del 06/11/2023, e in seguito a una discussione su com'è andato il periodo precedente, il gruppo ha sviluppato la seguente retrospettiva:
+		Basandosi sul feedback fornito durante l'aggiudicazione degli appalti del 06/11/2023, e in seguito a una discussione sul resoconto del periodo precedente, il gruppo ha sviluppato la seguente retrospettiva:
 		\begin{table}[H]
 			\begin{tabularx}{\textwidth}{X|X}
-				\multicolumn{1}{>{\centering\arraybackslash}X|}{\textbf{Keep doing}}
+				\hline
+				\multicolumn{1}{|>{\centering\arraybackslash}X|}{\textbf{Keep doing}}
 				&
-				\multicolumn{1}{>{\centering\arraybackslash}X}{\textbf{Improvments}}
-				\\\hline
+				\multicolumn{1}{>{\centering\arraybackslash}X|}{\textbf{Improvments}}
+				\\\hline\hline
 				Organizzazione repository
 				&
 				Sito web non semplifica veramente la navigazione della repository
@@ -102,66 +95,63 @@
 				Overleaf non permette l'automazione della workflow e una gestione sensata dei CI
 				\\\arrayrulecolor{gray}\hline
 				&
-				Scelta del sistema di comunicazione asincrona con il proponente attraverso l'e-mail
+				Scelta dell'e-mail come sistema di comunicazione asincrona con il proponente
 				\\
 			\end{tabularx}
-			\caption{retrospettiva del 13/11/2023.}
+			\caption{retrospettiva del 06/11/2023.}
 		\end{table}
 		\noindent\\
 		Il gruppo in risposta alle criticità individuate durante la retrospettiva ha deciso di:
 		\begin{itemize}
-			\item aggiungere al sito l'apertura dei PDF su una nuova scheda;
-			\item ristrutturare la baseline della candidatura, riportando le ragioni della divisione delle ore. Quindi, risistemare tutti i documenti precedentemente prodotti con il nuovo registro delle modifiche e  con il nuovo sistema di numerazione delle versioni entrambi riportati sulle Norme di Progetto (NdP);
-			\item chiedere al prossimo incontro con il proponente accordare un sistema di comunicazione asincrono;
-			\item aggiungere a ogni file la versione attuale;
-			\item passare allo sviluppo il locale dei documenti utilizzando TexLive e VS Code.
+			\item permettere nel sito:
+			\begin{itemize}
+				\item l'apertura di un documento PDF direttamente su una nuova scheda;
+				\item di vedere direttamente vicino al link del documento la versione caricata;
+			\end{itemize}
+			\item ristrutturare i documenti della baseline della candidatura, riportare le motivazione della divisione delle ore stimate nel documento: preventivo dei costi e degli impegni. È stato deciso di sistemare tutti i documenti precedentemente prodotti con il nuovo registro delle modifiche e con il nuovo sistema di numerazione delle versioni, entrambi riportati nel documento Norme di Progetto (NdP);
+			\item chiedere al prossimo incontro con il proponente di accordare un sistema di comunicazione asincrono;
+			\item aggiungere a ogni file nel nome la versione attuale;
+			\item passare allo sviluppo in locale dei documenti utilizzando TexLive e Visual Studio Code.
 		\end{itemize}
-		\noindent\\
-		Il gruppo dopo la retrospettiva ha discusso del metodo di sviluppo per gestire il progetto, la scelta è quella di utilizzare un approccio Agile: Scrum. Inoltre, è stata pianificata la struttura generale degli Sprint fino al RTB:
-		\begin{enumerate}
-			\item \textbf{Sprint 1} dal 13/11/2023 fino al 03/12/2023, con l'obbiettivo di continuare lo sviluppo del way of working e iniziare l'analisi dei requisiti;
-			\item \textbf{Sprint 2} dal 04/12/2023 fino al 17/12/2023, con l'obbiettivo di continuare l'analisi dei requisiti, studiare le tecnologie e sviluppare i primi PoC;
-			\item \textbf{Sprint 3} dal 18/12/2023 fino al 31/12/2023, continuare l'analisi dei requisiti, lo studio delle tecnologie e scegliere il PoC da presentare, iniziando a strutturare il PoC per la revisione del RTB;
-			\item \textbf{Sprint 4} dal 01/01/2024 fino al 07/01/2024, ultimare il PoC, controllare la documentazione per la candidatura del RTB e la documentazione richiesta per la presentazione;
-			\item \textbf{RTB} prevista nella settimana dopo il quarto Sprint.
-		\end{enumerate}
-		\noindent\\
-		Il team di QB Software ha scelto la suddivisione dei ruoli per il primo Sprint e sono state assegnate le prime task di correzione della baseline della candidatura e per l'avvio dei lavori verso la RTB. In fine, il gruppo ha parlato dei possibili rischi che potrebbe incontrare durante lo Sprint, questi rischi saranno riportati dal responsabile nel piano di progetto.
-		
 		\noindent
-		Si è deciso di chiedere un incontro con il proponente con lo scopo di:
+		Si è deciso, per quanto riguarda i rapporti esterni con il proponente, di discutere nel prossimo incontro con lo stakeholder riguardo ai seguenti temi:
 		\begin{itemize}
 			\item instaurare un nuovo canale di comunicazione asincrona;
-			\item accordare un metodo per dimostrare l'approvazione da parte del proponente del verbale esterno;
-			\item sviluppare una idea più precisa delle tecnologie proposte dal proponente e iniziare l'analisi dei requisiti.
+			\item accordare un metodo per dimostrare l'approvazione da parte del proponente del verbale esterno.
 		\end{itemize}
+		\noindent L'incontro con il proponente verrà fatto nella terza settimana di novembre 2023, per permettere al team di QB Software d'iniziare a preparare una bozza dell'analisi dei requisiti da presentare e discutere con il proponente.
+		\\\noindent
+		Il team ha discusso della struttura e dei contenuti del documento Norme di Progetto, il documento dovrà iniziare con una introduzione che riporti: gli scopi del prodotto e una breve spiegazione della sua struttura. Il contenuto del documento dovrà seguire quello dello standard ISO/IEC 12207:1997, questo perché il documento è rivolto al team di QB Software, e utilizzando una struttura già famigliare al team, quella dell'ISO, ci permette di ottenere o inserire le informazioni nelle Norme di Progetto più velocemente.
+		Ogni attività verrà normata con le procedure definite dal team, queste procedure dovranno rispettare le indicazioni fornite dall'ISO.
 		
     \section{Azioni da intraprendere}
-    
         \begin{todo}
-            VI-1970-01-01-01
+			\hline
+            \href{https://github.com/QB-Software-swe/docs/issues/14}{VI-2023-11-06-\#14}
             &
-            -
+            A. Bustreo,
+			S. Destro
             &
-            -
-            \\\midrule
-            VI-1970-01-01-02
+            Creazione e strutturazione del documento Norme di Progetto
+            \\\hline
+            \href{https://github.com/QB-Software-swe/docs/issues/15}{VI-2023-11-06-\#15}
             &
-            -
+            A. Domuta,
+			A. Feltrin
             &
-            -
-            \\\midrule
-            VI-1970-01-01-03
+            Modificare la struttura del registro delle modifiche e aggiornare tutti i documenti precedenti
+            \\\hline
+            \href{https://github.com/QB-Software-swe/docs/issues/16}{VI-2023-11-06-\#16}
             &
-            -
+            R. Fontana,
+			A. Giurisato
             &
-            -
-            \\
+            Manutezione del sito
+            \\\hline
     	\end{todo}
     
     \section{Ordine del giorno per la prossima riunione interna}
         \begin{itemize}
-        		\item Sviluppare altri processi del way of working oltre a quelli normati nelle norme di progetto;
-        		\item aggiornare il gruppo sullo stato dell'analisi dei requisiti.
+        		\item Iniziare la pianificazione delle prossime attività per la Requirements Technology Baseline.
     	\end{itemize}
 \end{document}
