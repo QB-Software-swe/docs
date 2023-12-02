@@ -29,6 +29,22 @@ class doc_configuration_items:
     def __str__(self) -> str:
         return f'{self.code};{self.src_path};{self.dest_path};{str(self.version)};{self.explict_filname_version}'
 
+#Refactoring
+def _is_verbale(code : str):
+    is_verbale : bool = False
+    code : str = None
+    serial : int = None
+
+
+    if (code.__len__ >= 2) and (code[0:1] == 'VI' or code[0:1] == 'VE'):
+        is_verbale = True
+        code = code[0:1]
+        
+        if (code.__len__ > 2):
+            serial = int(code[2:])
+
+    return is_verbale, code, serial
+
 def _read_doc_config():
     config_items = []
 
@@ -60,7 +76,17 @@ def _move_doc(src_path, destination_path):
 
 
 def _build_documents(doc_config_items : list, labels : list):
+    max_verb : int = 0
+
     for ci in doc_config_items:
+        # Refactoring
+        is_verbale, code, serial = is_verbale(ci.code)
+
+        if (is_verbale):
+            if (serial != None) and (max_verb < serial):
+                max_verb = serial
+        ###
+
         if not any('rebuild' in lb for lb in labels):
             if labels != None and not any(ci.code in lb for lb in labels):
                 continue
@@ -91,6 +117,13 @@ def _build_documents(doc_config_items : list, labels : list):
         
         
         _move_doc(build_pdf_path, f'{os.getcwd()}/{ci.dest_path}/{target_name}')
+
+        # Refactoring - post exec
+        if (is_verbale):
+            if (serial == None):
+                ci.code = serial+str(max_verb)
+                max_verb = max_verb + 1
+        ###
 
 
 def _cleanup_all_builds(doc_config_items : list):
