@@ -1,0 +1,144 @@
+% LTeX: language=it
+% DOC TYPE E DEF QB SOFTWARE %%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\input{base.tex}
+\usepackage[italian]{babel}
+
+% INFORMAZIONI DOCUMENTO %%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Verbale interno}
+\date{del 13/11/2023}
+\footname{Verbale interno del 13/11/2023}
+
+\begin{document}
+	% PRIME PAGINE %%%%%%%%%%%%%%%%%%%%%%%%%
+	\makefirstpage
+	
+	\include{changelog.tex}
+	\clearpage
+	
+	\tableofcontents
+	\clearpage
+
+    \section{Informazioni generali}
+	
+	\subsection{Luogo e data dell'incontro}
+	
+    	\begin{itemize}
+    		\item \textbf{Luogo}: meeting su Discord
+    		\item \textbf{Data}: 13/11/2023
+    		\item \textbf{Ora di inizio}: 15:30
+    		\item \textbf{Ora di fine}: 18:15
+    	\end{itemize}
+	
+	\subsection{Presenze}
+	
+    	\begin{itemize}
+    		\item \textbf{Totale presenze}:
+    		\begin{itemize}
+    			\item Bustreo Alessandro
+    			\item Destro Stefano
+    			\item Domuta Alessia 
+    			\item Feltrin Alessandro 
+    			\item Fontana Raffaele Paolo 
+    			\item Giurisato Andrea 
+    			\item Rovea Silvia
+    		\end{itemize}
+    		
+    		\item \textbf{Totale assenze}: 0
+    		
+    		\item \textbf{Partecipanti esterni}:
+    		\begin{itemize}
+    			\item nessuno
+    		\end{itemize}
+    	\end{itemize}
+
+    \section{Ordine del giorno}
+        Questioni fissate nella riunione interna precedente:
+    	\begin{itemize}
+    		\item iniziare la pianificazione delle prossime attività per la RTB.
+    	\end{itemize}
+    	%
+    	Nuove questioni:
+    	\begin{itemize}
+    		\item scegliere l'approccio per lo sviluppo del progetto;
+    		\item pianificare in generale le milestone per conseguire la prima revisione (RTB):
+    		\begin{itemize}
+				\item stimare una data per la revisione del RTB;
+				\item programmare gli scopi e le attività da fare per ogni milestone;
+				\item pianificare la prima milestone;
+				\item suddivisione ruoli e compiti;
+			\end{itemize}
+			\item brainstorming su quelli che possono essere i rischi per il successo del progetto.
+    	\end{itemize}
+    
+    \section{Verbale}
+		Il team QB Software ha discusso del metodo di sviluppo per gestire il progetto, la scelta è quella di utilizzare un approccio Agile: Scrum. Inoltre, è stata pianificata la struttura generale degli Sprint fino al RTB:
+		\begin{enumerate}
+			\item \textbf{Sprint 1} dal 13/11/2023 fino al 03/12/2023, con l'obiettivo di continuare lo sviluppo del way of working e iniziare l'attività dell'analisi dei requisiti; 
+			\item \textbf{Sprint 2} dal 04/12/2023 fino al 17/12/2023, con l'obiettivo di continuare l'attività dell'analisi dei requisiti, studiare le tecnologie e sviluppare i primi PoC;
+			\item \textbf{Sprint 3} dal 18/12/2023 fino al 31/12/2023, continuare l'attività dell'analisi dei requisiti, lo studio delle tecnologie e scegliere il PoC da presentare, iniziando a puntare il focus sul PoC scelto per la revisione del RTB;
+			\item \textbf{Sprint 4} dal 01/01/2024 fino al 07/01/2024, ultimare il PoC, controllare la documentazione per la candidatura del RTB e la documentazione richiesta per la presentazione;
+			\item \textbf{RTB} prevista nella settimana dopo il quarto Sprint.
+		\end{enumerate}
+		\noindent
+		Il team di QB Software ha scelto la suddivisione dei ruoli per il primo Sprint e sono state assegnate le prime task per l'avvio dei lavori verso la revisione del RTB. In fine, il gruppo ha parlato dei possibili rischi che potrebbe incontrare durante lo Sprint, questi rischi verranno riportati dal responsabile nel Piano di Progetto.
+		\\
+		È stato deciso di organizzare un brainstorming con tutti i componenti del gruppo per creare una bozza comune su tutti quelli che sono i requisiti principali individuati dal capitolato, in modo da poter iniziare il dialogo con il proponente e avviare correttamente l'analisi dei requisiti con una base comune.
+		
+		\noindent
+		Si è deciso, questa settimana (terza settimana di novembre 2023), di chiedere una riunione con lo stakeholder, con solo scopo di affrontare i seguenti temi:
+		\begin{itemize}
+			\item quelli precedentemente discussi nel verbale del 06/11/2023;
+			\item sviluppare una idea più precisa delle tecnologie proposte dal proponente e iniziare la discussione per una base comune dell'analisi dei requisiti.
+		\end{itemize}
+		\noindent
+		Il gruppo ha discusso degli argomenti da trattare nel Piano di Progetto (PdP) e della struttura che il team vuole dare al documento:
+		\begin{enumerate}
+			\item \textbf{introduzione}: riportiamo gli obiettivi del PdP, gli scopi del prodotto che QB Software ha intenzione di sviluppare e i riferimenti bibliografici;
+			\item \textbf{analisi dei rischi}: riportiamo i rischi individuati e incontrati, con le loro mitigazioni\footnote{È stato deciso che in ogni riunione programmata all'inizio di uno Sprint, dovrà esserci una discussione per valutate l'efficacia di queste mitigazioni e se i rischi previsti sono stati effettivamente incontrati.};
+			\item \textbf{pianificazione}: riportiamo la programmazione di ogni Sprint, specificando qual è la baseline attesa per il termine di ogni Sprint;
+			\item \textbf{preventivi}: riportiamo le stime di ogni Sprint;
+			\item \textbf{consultivi}: riportiamo i costi effettivamente sostenuti per ogni Sprint.
+		\end{enumerate}
+		
+    \section{Azioni da intraprendere}
+        \begin{todo}
+            \href{https://github.com/QB-Software-swe/docs/issues/21}{VI-2023-11-13-\#21}
+            &
+            R. Fontana,
+            A. Domuta
+            &
+            Stendere una bozza degli use case e dell'Analisi dei Requisiti
+            \\\hline
+            \href{https://github.com/QB-Software-swe/docs/issues/22}{VI-2023-11-13-\#22}
+            &
+            A. Bustreo
+            &
+            Scrivere il processo di supporto per la documentazione nelle Norme di Progetto
+            \\\hline
+            \href{https://github.com/QB-Software-swe/docs/issues/23}{VI-2023-11-13-\#23}
+            &
+            S. Destro
+            &
+            Scrivere la gestione organizzativa nelle Norme di Progetto
+            \\\hline
+            \href{https://github.com/QB-Software-swe/docs/issues/25}{VI-2023-11-13-\#25}
+            &
+            S. Destro
+            &
+            Iniziare la stesura del Glossario
+            \\\hline
+            \href{https://github.com/QB-Software-swe/docs/issues/26}{VI-2023-11-13-\#26}
+            &
+            S. Rovea
+            &
+            Prima stesura del Piano di Progetto
+            \\\hline
+    	\end{todo}
+    
+    \section{Ordine del giorno per la prossima riunione interna}
+        \begin{itemize}
+        		\item Continuare il way of working;
+        		\item aggiornare il gruppo sullo stato dell'avanzamento dei lavori.
+    	\end{itemize}
+\end{document}
