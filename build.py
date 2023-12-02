@@ -45,7 +45,7 @@ def _is_verbale(code_ci : str):
         code = code_ci[0:2]
         
         if (len(code_ci) > 2):
-            serial = int(code_ci[3:])
+            serial = int(code_ci[2:])
 
     return is_verbale, code, serial
 
