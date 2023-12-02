@@ -120,7 +120,7 @@
     \begin{itemize}
         \item Attore: utente;
         \item Descrizione: l'utente deve poter visualizzare una lista di cartelle;
-        \item Scenario:
+        \item Scenario principale:
             \begin{enumerate}
             \item l'utente apre l'applicazione;
             \item l'utente seleziona una cartella;
@@ -145,7 +145,7 @@
     \subsection{UC 8 - Eliminazione cartelle}
     \begin{itemize}
         \item Attore: utente;
-        \item Descrizione: l'utente deve poter eliminare una cartella;
+        \item Descrizione: l'utente deve poter eliminare una o più cartelle;
         \item Scenario principale:
             \begin{enumerate}
             \item l'utente seleziona le cartelle da eliminare (\textbf{UC 8.1});
@@ -205,7 +205,7 @@
     \subsubsection{UC 9.1 - Selezionare cartella}
     \begin{itemize}
         \item Attore: utente;
-        \item Descrizione: l'utente deve poter selezionare la cartella da eliminare;
+        \item Descrizione: l'utente deve poter selezionare la cartella di cui deve eliminare la condivisione;
         \item Scenario:
         \begin{enumerate}
         \item l'utente seleziona la cartella interessata.
@@ -317,7 +317,7 @@
     \subsubsection{UC 11.1 - Aggiungi eventi}
     \begin{itemize}
         \item Attore: utente;
-        \item Descrizione: l'utente deve poter aggiunge eventi alla sua cartella;
+        \item Descrizione: l'utente deve poter aggiungere eventi alla sua cartella;
         \item Scenario:
         \begin{enumerate}
         \item l'utente seleziona gli eventi da aggiungere (\textbf{UC 11.1.1});
@@ -328,13 +328,13 @@
         \item Postcondizioni: l'utente ha aggiunto eventi alla cartella.
     \end{itemize}
     \paragraph{UC 11.1.1 - Seleziona gli eventi}
-        \begin{itemize}
-            \item Attore: utente;
-            \item Descrizione: l'utente deve poter selezionare gli eventi da aggiungere;
-            \item Scenario:
-            \begin{enumerate}
-                \item l'utente seleziona gli eventi interessati.
-            \end{enumerate}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter selezionare gli eventi da aggiungere;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona gli eventi interessati.
+        \end{enumerate}
         \item Precondizioni: l'utente sta aggiungendo eventi alla cartella;
         \item Postcondizioni: l'utente ha selezionato gli eventi da aggiungere alla cartella.
     \end{itemize}
@@ -346,7 +346,7 @@
         \begin{enumerate}
         \item l'utente clicca il pulsante per confermare.
         \end{enumerate}
-        \item Precondizioni: l'utente sta aggiungendi eventi alla cartella;
+        \item Precondizioni: l'utente sta aggiungendo eventi alla cartella;
         \item Postcondizioni: l'utente ha confermato l'aggiunta di eventi alla cartella.
     \end{itemize}
     \paragraph{UC 11.1.2.1 - Visualizzazione errore}
@@ -364,7 +364,7 @@
     \subsubsection{UC 11.2 - Aggiungi email}
     \begin{itemize}
         \item Attore: utente;
-        \item Descrizione: l'utente deve poter aggiunge email alla sua cartella;
+        \item Descrizione: l'utente deve poter aggiungere email alla sua cartella;
         \item Scenario:
         \begin{enumerate}
         \item l'utente seleziona le email da aggiungere (\textbf{UC 11.2.1});
@@ -410,13 +410,13 @@
     \subsubsection{UC 11.3 - Aggiungi contatti}
     \begin{itemize}
         \item Attore: utente;
-        \item Descrizione: l'utente deve poter aggiunge i contatti alla sua cartella;
+        \item Descrizione: l'utente deve poter aggiungere i contatti alla sua cartella;
         \item Scenario:
         \begin{enumerate}
-        \item l'utente seleziona i contatti da aggiungere (\textbf{UC 11.2.1});
-        \item l'utente conferma i contatti aggiunti (\textbf{UC 11.2.2}).
+        \item l'utente seleziona i contatti da aggiungere (\textbf{UC 11.3.1});
+        \item l'utente conferma i contatti aggiunti (\textbf{UC 11.3.2}).
         \end{enumerate}
-        \item Estensioni: non è possibile aggiungere i contatti alla cartella e viene mostrato un messaggio d'errore (\textbf{U11.2.2.1});
+        \item Estensioni: non è possibile aggiungere i contatti alla cartella e viene mostrato un messaggio d'errore (\textbf{UC 11.3.2.1});
         \item Precondizioni: l'utente sta aggiungendo i contatti alla cartella;
         \item Postcondizioni: l'utente ha aggiunto i contatti alla cartella.
     \end{itemize}
@@ -439,7 +439,7 @@
         \begin{enumerate}
         \item l'utente clicca il pulsante per confermare.
         \end{enumerate}
-        \item Precondizioni: l'utente sta aggiungendi i contatti alla cartella;
+        \item Precondizioni: l'utente sta aggiungendo i contatti alla cartella;
         \item Postcondizioni: l'utente ha confermato l'aggiunta dei contatti alla cartella.
     \end{itemize}
     \paragraph{UC 11.3.2.1 - Visualizzazione errore}
@@ -477,7 +477,7 @@
         \item Precondizioni: l'utente sta eliminando gli elementi dalla cartella;
         \item Postcondizioni: l'utente ha selezionato gli elementi da eliminare dalla cartella.
     \end{itemize}
-    \paragraph{UC 11.4.2 - Conferma aggiunta}
+    \paragraph{UC 11.4.2 - Conferma eliminazione}
     \begin{itemize}
         \item Attore: utente;
         \item Descrizione: l'utente conferma di voler eliminare gli elementi dalla cartella;
