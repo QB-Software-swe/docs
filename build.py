@@ -30,18 +30,22 @@ class doc_configuration_items:
         return f'{self.code};{self.src_path};{self.dest_path};{str(self.version)};{self.explict_filname_version}'
 
 #Refactoring
-def _is_verbale(code : str):
+def _is_verbale(code_ci : str):
     is_verbale : bool = False
     code : str = None
     serial : int = None
 
 
-    if (code.__len__ >= 2) and (code[0:1] == 'VI' or code[0:1] == 'VE'):
+    print(code_ci)
+    print(len(code_ci))
+    print(code_ci[0:1])
+    print(code_ci[3:])
+    if (len(code_ci) >= 2) and (code_ci[0:2] == 'VI' or code_ci[0:2] == 'VE'):
         is_verbale = True
-        code = code[0:1]
+        code = code_ci[0:2]
         
-        if (code.__len__ > 2):
-            serial = int(code[2:])
+        if (len(code_ci) > 2):
+            serial = int(code_ci[3:])
 
     return is_verbale, code, serial
 
@@ -80,7 +84,8 @@ def _build_documents(doc_config_items : list, labels : list):
 
     for ci in doc_config_items:
         # Refactoring
-        is_verbale, code, serial = is_verbale(ci.code)
+        is_verbale, code, serial = _is_verbale(ci.code)
+        print(_is_verbale(ci.code))
 
         if (is_verbale):
             if (serial != None) and (max_verb < serial):
@@ -121,7 +126,7 @@ def _build_documents(doc_config_items : list, labels : list):
         # Refactoring - post exec
         if (is_verbale):
             if (serial == None):
-                ci.code = serial+str(max_verb)
+                ci.code = code+str(max_verb)
                 max_verb = max_verb + 1
         ###
 
