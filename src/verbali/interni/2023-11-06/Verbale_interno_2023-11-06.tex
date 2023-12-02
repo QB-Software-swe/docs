@@ -1,0 +1,157 @@
+% LTeX: language=it
+% DOC TYPE E DEF QB SOFTWARE %%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\input{base.tex}
+\usepackage[italian]{babel}
+
+% INFORMAZIONI DOCUMENTO %%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Verbale interno}
+\date{del 06/11/2023}
+\footname{Verbale interno del 06/11/2023}
+
+\begin{document}
+	% PRIME PAGINE %%%%%%%%%%%%%%%%%%%%%%%%%
+	\makefirstpage
+	
+	\include{changelog.tex}
+	\clearpage
+	
+	\tableofcontents
+	\clearpage
+
+    \section{Informazioni generali}
+	
+	\subsection{Luogo e data dell'incontro}
+	
+    	\begin{itemize}
+    		\item \textbf{Luogo}: meeting su Discord
+    		\item \textbf{Data}: 06/11/2023
+    		\item \textbf{Ora di inizio}: 16:00
+    		\item \textbf{Ora di fine}: 18:30
+    	\end{itemize}
+	
+	\subsection{Presenze}
+	
+    	\begin{itemize}
+    		\item \textbf{Totale presenze}:
+    		\begin{itemize}
+    			\item Bustreo Alessandro
+    			\item Destro Stefano
+    			\item Domuta Alessia 
+    			\item Feltrin Alessandro 
+    			\item Fontana Raffaele Paolo 
+    			\item Giurisato Andrea 
+    			\item Rovea Silvia
+    		\end{itemize}
+    		
+    		\item \textbf{Totale assenze}: 0
+    		
+    		\item \textbf{Partecipanti esterni}:
+    		\begin{itemize}
+    			\item nessuno
+    		\end{itemize}
+    	\end{itemize}
+
+    \section{Ordine del giorno}
+        Questioni fissate nella riunione interna precedente:
+    	\begin{itemize}
+    		\item continuare la discussione del nostro way of working in seguito all'aggiudicazione degli appalti fissata per il 06/11/2023.
+    	\end{itemize}
+    	%
+    	Nuove questioni:
+    	\begin{itemize}
+			\item retrospettiva basata sul feedback ricevuto durante l'aggiudicazione degli appalti;
+    		\item discutere la struttura e i contenuti del documento Norme di Progetto.
+    	\end{itemize}
+    
+    \section{Verbale}
+		Basandosi sul feedback fornito durante l'aggiudicazione degli appalti del 06/11/2023, e in seguito a una discussione sul resoconto del periodo precedente, il gruppo ha sviluppato la seguente retrospettiva:
+		\begin{table}[H]
+			\begin{tabularx}{\textwidth}{X|X}
+				\hline
+				\multicolumn{1}{|>{\centering\arraybackslash}X|}{\textbf{Keep doing}}
+				&
+				\multicolumn{1}{>{\centering\arraybackslash}X|}{\textbf{Improvements}}
+				\\\hline\hline
+				Organizzazione repository
+				&
+				Sito web non semplifica veramente la navigazione della repository
+				\\\arrayrulecolor{gray}\hline
+				La struttura dei verbali e contenuto
+				&
+				Maggiore chiarezza delle scelte nei documenti per la candidatura
+				\\\arrayrulecolor{gray}\hline
+				Strumenti scelti finora (\LaTeX, Notion, Discord, eccetera), ad eccezione di Overleaf
+				&
+				Gestione del registro delle modifiche e delle versioni errato a livello concettuale
+				\\\arrayrulecolor{gray}\hline
+				&
+				Verbali esterni non approvati
+				\\\arrayrulecolor{gray}\hline
+				&
+				Nome del file di ogni documento privo di versione 
+				\\\arrayrulecolor{gray}\hline
+				&
+				Overleaf non permette l'automazione del workflow e una gestione sensata dei CI
+				\\\arrayrulecolor{gray}\hline
+				&
+				Scelta dell'e-mail come sistema di comunicazione asincrona con il proponente
+				\\
+			\end{tabularx}
+			\caption{retrospettiva del 06/11/2023.}
+		\end{table}
+		\noindent\\
+		Il gruppo in risposta alle criticità individuate durante la retrospettiva ha deciso di:
+		\begin{itemize}
+			\item permettere nel sito:
+			\begin{itemize}
+				\item l'apertura di un documento PDF direttamente su una nuova scheda;
+				\item di vedere direttamente vicino al link del documento la versione caricata;
+			\end{itemize}
+			\item ristrutturare i documenti della baseline della candidatura, riportare le motivazione della divisione delle ore stimate nel documento: preventivo dei costi e degli impegni. È stato deciso di sistemare tutti i documenti precedentemente prodotti con il nuovo registro delle modifiche e con il nuovo sistema di numerazione delle versioni, entrambi riportati nel documento Norme di Progetto (NdP);
+			\item chiedere al prossimo incontro con il proponente di accordare un sistema di comunicazione asincrono;
+			\item aggiungere a ogni file nel nome la versione attuale;
+			\item passare allo sviluppo in locale dei documenti utilizzando TexLive e Visual Studio Code.
+		\end{itemize}
+		\noindent
+		Si è deciso, per quanto riguarda i rapporti esterni con il proponente, di discutere nel prossimo incontro con lo stakeholder riguardo ai seguenti temi:
+		\begin{itemize}
+			\item instaurare un nuovo canale di comunicazione asincrona;
+			\item accordare un metodo per dimostrare l'approvazione da parte del proponente del verbale esterno.
+		\end{itemize}
+		\noindent L'incontro con il proponente verrà fatto nella terza settimana di novembre 2023, per permettere al team di QB Software d'iniziare a preparare una bozza dell'analisi dei requisiti da presentare e discutere con il proponente.
+		\\\noindent
+		Il team ha discusso della struttura e dei contenuti del documento Norme di Progetto, il documento dovrà iniziare con una introduzione che riporti: gli scopi del prodotto e una breve spiegazione della sua struttura. Il contenuto del documento dovrà seguire quello dello standard ISO/IEC 12207:1997, questo perché il documento è rivolto al team di QB Software, e utilizzando una struttura già famigliare al team, quella dell'ISO, ci permette di ottenere o inserire le informazioni nelle Norme di Progetto più velocemente.
+		Ogni attività verrà normata con le procedure definite dal team, queste procedure dovranno rispettare le indicazioni fornite dall'ISO.
+		
+    \section{Azioni da intraprendere}
+        \begin{todo}
+			\hline
+            \href{https://github.com/QB-Software-swe/docs/issues/14}{VI-2023-11-06-\#14}
+            &
+            A. Bustreo,
+			S. Destro
+            &
+            Creazione e strutturazione del documento Norme di Progetto
+            \\\hline
+            \href{https://github.com/QB-Software-swe/docs/issues/15}{VI-2023-11-06-\#15}
+            &
+            A. Domuta,
+			A. Feltrin
+            &
+            Modificare la struttura del registro delle modifiche e aggiornare tutti i documenti precedenti
+            \\\hline
+            \href{https://github.com/QB-Software-swe/docs/issues/16}{VI-2023-11-06-\#16}
+            &
+            R. Fontana,
+			A. Giurisato
+            &
+            Manutezione del sito
+            \\\hline
+    	\end{todo}
+    
+    \section{Ordine del giorno per la prossima riunione interna}
+        \begin{itemize}
+        		\item Iniziare la pianificazione delle prossime attività per la Requirements Technology Baseline.
+    	\end{itemize}
+\end{document}
