@@ -1,0 +1,281 @@
+\section{Analisi dei rischi} \label{sec:analisi-rischi}
+L'analisi dei rischi si rende necessaria per anticipare i rischi che possono influenzare la pianificazione del progetto o la qualità del software. 
+La procedura di identificazione e gestione di questi rischi prevede i seguenti passi:
+\begin{itemize}
+    \item \textbf{identificazione}: individuazione di rischi che sarebbero problematici per l'avanzamento del progetto;
+    \item \textbf{analisi}: valutazione della probabilità che i rischi si presentino e delle conseguenze che potrebbero avere sul progetto;
+    \item \textbf{\textbf{piano di controllo}}: identificazione delle strategie per evitare i rischi o minimizzare gli effetti che potrebbero avere sul progetto;
+    \item \textbf{\textbf{piano di contingenza}}: individuazione di contromisure e azioni da attuare nel caso in cui uno dei rischi si verifichi.
+\end{itemize}
+Per informazioni sulla codifica dei rischi, fare riferimento alle Norme di Progetto vxxxxx sezione xxxxxx. %TODO
+
+
+\subsection{Rischi tecnologici} %RT
+        
+    \subsubsection{RT1 - Inesperienza con le tecnologie} \label{sec:RT1}
+        \begin{itemize}
+            \item \textbf{descrizione e conseguenze}: vista l'inesperienza del team, lo sviluppo del progetto può essere rallentato dall'apprendimento delle tecnologie necessarie. Queste possono richiedere del tempo per essere comprese appieno e quindi rallentare lo sviluppo;
+            \item \textbf{valutazione}:
+            \begin{itemize} 
+                \item \textbf{probabilità di occorrenza}: alta;
+                \item \textbf{pericolosità}: alta;
+            \end{itemize}
+            \item \textbf{piano di controllo}: oltre alla previsione di un periodo dedicato allo studio di queste tecnologie, ogni membro del gruppo si impegna ad essere aperto, dichiarando con trasparenza e onestà le difficoltà che sta incontrando;
+            \item \textbf{piano di contingenza}: in caso di una troppa complessità per il singolo verrà predisposta da parte del Responsabile una ridistribuzione del carico di lavoro tra i componenti del team con lo scopo di affiancare un membro del gruppo più esperto per fornire supporto. Nel caso in cui non sia presente un membro del gruppo più esperto, sarà necessario pianificare alcune ore di formazione. 
+        \end{itemize}
+    
+    \subsubsection{RT2 - Guasto hardware e software} \label{sec:RT2}
+        \begin{itemize}
+            \item \textbf{descrizione e conseguenze}: poichè si utilizzano vari strumenti hardware e software, è plausibile che alcuni di essi possano guastarsi o presentare malfunzionamenti. Questi inconvenienti potrebbero comportare la perdita di parte del lavoro svolto o richiedere tempo aggiuntivo per risolvere i problemi;
+            \item \textbf{valutazione}:
+            \begin{itemize} 
+                \item \textbf{probabilità di occorrenza}: bassa;
+                \item \textbf{pericolosità}: bassa;
+            \end{itemize}
+            \item \textbf{piano di controllo}: ogni componente del team si impegna ad aggiornare il repository remoto oltre ad avere una copia locale del progetto;
+            \item \textbf{piano di contingenza}: nel caso in cui una macchina subisca un guasto, i dati saranno recuperati dal repository remoto, che funge da fonte di backup centrale. Nel caso in cui il repository dovesse presentare problemi, le copie locali del progetto sulle macchine dei membri del team verranno utilizzate per il ripristino, permettendo di recuperare i dati senza dipendere esclusivamente da una singola fonte e garantire la continuità delle attività di progetto.
+        \end{itemize}
+
+    
+\subsection{Rischi legati alle persone} %RP
+
+    \subsubsection{RP1 - Conflitti caratteriali} \label{sec:RP1}
+        \begin{itemize}
+            \item \textbf{descrizione e conseguenze}: la diversità di caratteri e personalità in un gruppo di persone può generare conflitti o tensioni che influenzano il clima lavorativo. Queste differenze possono causare disaccordi, compromettendo la collaborazione e riducendo l'efficienza complessiva del team;
+            \item \textbf{valutazione}:
+            \begin{itemize} 
+                \item \textbf{probabilità di occorrenza}: bassa;
+                \item \textbf{pericolosità}: bassa;
+            \end{itemize}
+            \item \textbf{piano di controllo}: tutti i componenti del gruppo sono tenuti ad esporre i propri conflitti al resto del gruppo;
+            \item \textbf{piano di contingenza}: nel caso in cui le parti non riescano a trovare un accordo, sarà compito del Responsabile mediare tra le parti in conflitto, con lo scopo di risolvere il conflitto o almeno limitarne i danni al minimo.
+        \end{itemize}
+        
+    \subsubsection{RP2 - Conflitti decisionali} \label{sec:RP2}
+        \begin{itemize}
+            \item \textbf{descrizione e conseguenze}: in un gruppo di persone, ciascuna con le proprie idee, potrebbe accadere che si creino conflitti causati da opinioni contrastanti. Questo potrebbe portare ad un rallentamento nel prendere delle decisioni;
+            \item \textbf{valutazione}:
+            \begin{itemize} 
+                \item \textbf{probabilità di occorrenza}: bassa;
+                \item \textbf{pericolosità}: media;
+            \end{itemize}
+            \item \textbf{piano di controllo}: tutti i componenti del gruppo sono tenuti ad esporre le proprie idee e motivarle così da giungere ad una soluzione comune;
+            \item \textbf{piano di contingenza}: nel caso in cui non si riesca a trovare una soluzione comune, sarà compito del Responsabile risolvere il conflitto, ricorrendo all’utilizzo di sondaggi oppure contattando il committente o il proponente per discutere sull'argomento della decisione.               
+        \end{itemize}
+        
+    \subsubsection{RP3 - Comunicazione online} \label{sec:RP3}
+        \begin{itemize}
+            \item \textbf{descrizione e conseguenze}: il gruppo lavora interamente online, questo potrebbe portare ad un rallentamento nella comunicazione interna;
+            \item \textbf{valutazione}:
+            \begin{itemize} 
+                \item \textbf{probabilità di occorrenza}: media;
+                \item \textbf{pericolosità}: bassa;
+            \end{itemize}
+            \item \textbf{piano di controllo}: tutti i membri del gruppo si impegnano ad essere il più reperibili possibile e utilizzare i canali di comunicazione previsti;
+            \item \textbf{piano di contingenza}: verranno disposti più canali di comunicazione con l'obiettivo di rendere più semplice la comunicazione.
+        \end{itemize}
+
+    \subsubsection{RP4 - Ritiro dal progetto} \label{sec:RP4}
+        \begin{itemize}
+            \item \textbf{descrizione e conseguenze}: un componente del gruppo, per motivazioni personali, potrebbe decidere di ritirarsi dal progetto. Questo comporterebbe un cambiamento nelle dinamiche del team, rendendo necessaria una riorganizzazione;
+            \item \textbf{valutazione}:
+            \begin{itemize} 
+                \item \textbf{probabilità di occorrenza}: bassa;
+                \item \textbf{pericolosità}: alta;
+            \end{itemize}
+            \item \textbf{piano di controllo}: ogni membro del team è tenuto alla massima trasparenza in merito ai problemi che potrebbero influenzare la sua presenza come membro del team;
+            \item \textbf{piano di contingenza}: nel caso in cui un membro dovesse ritirarsi dal progetto si renderà necessaria una discussione con il proponente, con lo scopo di negoziare le funzionalità da realizzare senza sforare il monte ore previsto. Sarà poi prevista una riorganizzazione del lavoro e una ridistribuzione delle attività da parte del Responsabile.
+        \end{itemize}
+                    
+
+    
+
+\subsection{Rischi organizzativi} %RO
+
+    \subsubsection{RO1 - Inesperienza con i progetti} \label{sec:RO1}
+        \begin{itemize}
+            \item \textbf{descrizione e conseguenze}: il gruppo non ha mai lavorato ad un progetto di tale complessità. Questo può portare a problemi organizzativi e al rallentamento delle attività oltre ad un'insoddisfazione generale nel team;
+            \item \textbf{valutazione}:
+            \begin{itemize} 
+                \item \textbf{probabilità di occorrenza}: alta;
+                \item \textbf{pericolosità}: alta;
+            \end{itemize}
+            \item \textbf{piano di controllo}: il Responsabile deve controllare che lo sviluppo proceda senza intoppi;
+            \item \textbf{piano di contingenza}: in caso di eccessivi rallentamenti è necessario individuare la fonte del problema ed eventualmente predisporre una riorganizzazione per evitare ulteriori rallentamenti.
+        \end{itemize}
+        
+    \subsubsection{RO2 - Impegni personali} \label{sec:RO2}
+        \begin{itemize}
+            \item \textbf{descrizione e conseguenze}: durante lo svolgimento del progetto, è possibile che uno o più membri del team abbiano una disponibilità limitata per un certo periodo di tempo. Questo comporta un rallentamento delle attività;
+            \item \textbf{valutazione}:
+            \begin{itemize} 
+                \item \textbf{probabilità di occorrenza}: media;
+                \item \textbf{pericolosità}: media;
+            \end{itemize}
+            \item \textbf{piano di controllo}: ogni componente del team è tenuto alla massima trasparenza con il team, in particolare dovrà informare con anticipo il Responsabile del team riguardo i suoi impegni, così da permettere una pianificazione adeguata senza intaccare lo svolgimento del progetto;
+            \item \textbf{piano di contingenza}: nel caso di impegni imprevisti, sarà compito del Responsabile riorganizzare il carico di lavoro e, nei casi più gravi, apportare modifiche alle scadenze previste.
+        \end{itemize}
+        
+    \subsubsection{RO3 - Impegni universitari} \label{sec:RO3}
+        \begin{itemize}
+            \item \textbf{descrizione e conseguenze}: poichè tutti i membri del team sono studenti universitari, è probabile che si verificheranno periodi di tempo in cui uno o più componenti debbano dare precedenza ad altri impegni universitari. Questo comporta un rallentamento delle attività;
+            \item \textbf{valutazione}:
+            \begin{itemize} 
+                \item \textbf{probabilità di occorrenza}: alta;
+                \item \textbf{pericolosità}: alta;
+            \end{itemize}
+            \item \textbf{piano di controllo}: il Responsabile tiene conto del problema durante la fase di pianificazione, in particolare dedicherà un periodo di sospensione delle attività in vista della sessione;
+            \item \textbf{piano di contingenza}: se la pianificazione si rivelerà non essere adeguata in relazione a questi periodi si renderà necessaria un'ulteriore sospensione delle attività con conseguente spostamento delle scadenze.
+        \end{itemize}
+        
+    \subsubsection{RO4 - Distribuzione disomogenea} \label{sec:RO4}
+        \begin{itemize}
+            \item \textbf{descrizione e conseguenze}: vista l'inesperienza del team, può accadere che il carico di lavoro venga assegnato in maniera scorretta. Questo può portare a rallentamenti, un dirottamento dalla pianificazione stabilita e in generale poca efficienza;
+            \item \textbf{valutazione}:
+            \begin{itemize} 
+                \item \textbf{probabilità di occorrenza}: alta;
+                \item \textbf{pericolosità}: media;
+            \end{itemize}
+            \item \textbf{piano di controllo}: chiunque ritenga che il proprio carico di lavoro sia esagerato o, al contrario, troppo esiguo, è tenuto a farlo subito presente al gruppo;
+            \item \textbf{piano di contingenza}: il Responsabile dovrà ridistribuire il carico di lavoro in modo equo ed eventualmente modificarne la scadenza.
+        \end{itemize}
+
+    \subsubsection{RO5 - Reperibilità esterna} \label{sec:RO5}
+        \begin{itemize}
+            \item \textbf{descrizione e conseguenze}: si potrebbero verificare delle difficoltà nel programmare degli incontri con l'azienda a causa di un conflitto di impegni. Questo potrebbe rallentare il progresso delle attività previste.
+            \item \textbf{valutazione}:
+            \begin{itemize}
+                \item \textbf{probabilità di occorrenza}: bassa;
+                \item \textbf{pericolosità}: media;
+            \end{itemize}
+            \item \textbf{piano di controllo}: il gruppo cercherà di richiedere incontri al proponente con largo anticipo per permettere una migliore organizzazione basata sulle disponibilità di entrambe le parti;
+            \item \textbf{piano di contingenza}: nel caso in cui non fosse possibile fissare un incontro con l'azienda, sarà adottata una modalità di comunicazione asincrona per risolvere tempestivamente almeno le questioni più urgenti.
+        \end{itemize}
+
+\subsection{Rischi sulle stime} %RS
+
+    \subsubsection{RS1 - Costi previsti} \label{sec:RS1}
+        \begin{itemize}
+            \item \textbf{descrizione e conseguenze}: i costi preventivati dal gruppo potrebbero rivelarsi scorretti a causa dell'inesperienza. Questo potrebbe portare nel caso più grave allo sforamento del budget previsto;
+            \item \textbf{valutazione}:
+            \begin{itemize} 
+                \item \textbf{probabilità di occorrenza}: media;
+                \item \textbf{pericolosità}: alta;
+            \end{itemize}
+            \item \textbf{piano di controllo}: ogni componente del gruppo è tenuto a monitorare le proprie ore produttive comunicandole al Responsabile, così da poter mantenere aggiornato costantemente il budget;
+            \item \textbf{piano di contingenza}: il Responsabile ridistribuirà le risorse per concludere le attività nel budget previsto. Nel caso più grave in cui si rende impossibile terminare il lavoro rimanendo nei costi preventivati, si renderà necessaria una discussione con il proponente con lo scopo di negoziare le funzionalità da realizzare senza sforare il preventivo.
+        \end{itemize}
+    
+    \subsubsection{RS2 - Tempi previsti} \label{sec:RS2}
+        \begin{itemize}
+            \item \textbf{descrizione e conseguenze}: i tempi preventivati dal gruppo potrebbero rivelarsi scorretti a causa dell'inesperienza. Questo potrebbe portare allo sforamento delle scadenze previste;
+            \item \textbf{valutazione}:
+            \begin{itemize} 
+                \item \textbf{probabilità di occorrenza}: media;
+                \item \textbf{pericolosità}: alta;
+            \end{itemize}
+            \item \textbf{piano di controllo}: ogni componente del gruppo è tenuto a monitorare le proprie ore produttive e deve avvisare il team in caso di ritardi sul task assegnato;
+            \item \textbf{piano di contingenza}: il Responsabile ridistribuirà le risorse per concludere le attività nei tempi previsti. Nel caso più grave in cui si rende impossibile terminare il lavoro nei tempi previsti, si renderà necessaria una discussione con il proponente con lo scopo di negoziare le scadenze.
+        \end{itemize}
+
+\subsection{Rischi sui requisiti} %RR
+
+    \subsubsection{RR1 - Incomprensione requisiti} \label{sec:RR1}
+        \begin{itemize}
+            \item \textbf{descrizione e conseguenze}: considerando l'inesperienza del gruppo, potrebbe verificarsi un'errata interpretazione dei requisiti. Ciò potrebbe richiedere la ripetizione di lavoro già svolto e quindi un rallentamento delle attività;
+            \item \textbf{valutazione}:
+            \begin{itemize} 
+                \item \textbf{probabilità di occorrenza}: media;
+                \item \textbf{pericolosità}: alta;
+            \end{itemize}
+            \item \textbf{piano di controllo}: il team stabilirà fin da subito una comunicazione costante con il proponente per cercare di chiarire ogni dubbio;
+            \item \textbf{piano di contingenza}: effettueremo una revisione della progettazione riguardante i requisiti mal interpretati con conseguente confronto con il proponente; il modello adottato dal gruppo permette di adattarsi facilmente ad eventuali modifiche in corso d'opera.
+        \end{itemize}
+        
+    \subsubsection{RR2 - Modifica requisiti} \label{sec:RR2}
+        \begin{itemize}
+            \item \textbf{descrizione e conseguenze}: durante lo svolgimento del progetto, potrebbe capitare che il proponente decida di apportare delle modifiche ai requisiti. Ciò potrebbe richiedere la riorganizzazione del lavoro;
+            \item \textbf{valutazione}:
+            \begin{itemize} 
+                \item \textbf{probabilità di occorrenza}: bassa;
+                \item \textbf{pericolosità}: alta;
+            \end{itemize}
+            \item \textbf{piano di controllo}: il team manterrà una comunicazione costante con il proponente durante tutto il progetto per comprendere le eventuali necessità di modifica dei requisiti;
+            \item \textbf{piano di contingenza}: il Responsabile cercherà di riorganizzare il lavoro per soddisfare le modifiche richieste. Se il cambiamento richiesto è troppo esteso e potrebbe compromettere il progetto, il Responsabile cercherà di mediare con il proponente per raggiungere un compromesso accettabile e realizzabile.
+        \end{itemize}
+
+
+
+\subsection{Tabella riassuntiva}
+
+    \begin{table}[H]
+        \rowcolors{2}{cyan!80!black!30!}{cyan!80!black!20!}
+        \begin{tabular}{p{8cm}>{\raggedright\arraybackslash}p{3cm}>{\raggedright\arraybackslash}p{3cm}}
+
+            \toprule
+            \rowcolor{gray!20} \textbf{Rischio}	& \textbf{Probabilità} & \textbf{pericolosità} 
+            \\\midrule
+            RT1 - Inesperienza con le tecnologie (\ref{sec:RT1})
+            & alta
+            & alta
+            \\\midrule
+            RT2 - Guasto hardware e software (\ref{sec:RT2})
+            & bassa
+            & bassa
+            \\\midrule
+            RP1 - Conflitti caratteriali (\ref{sec:RP1})
+            & bassa
+            & bassa
+            \\\midrule
+            RP2 - Conflitti decisionali (\ref{sec:RP2})
+            & bassa
+            & media
+            \\\midrule
+            RP3 - Comunicazioni online (\ref{sec:RP3})
+            & media
+            & bassa
+            \\\midrule
+            RP4 - Ritiro dal progetto (\ref{sec:RP4})
+            & bassa
+            & alta
+            \\\midrule
+            RO1 - Inesperienza con i progetti (\ref{sec:RO1})
+            & alta
+            & alta
+            \\\midrule
+            RO2 - Impegni personali(\ref{sec:RO2})
+            & media
+            & media
+            \\\midrule
+            RO3 - Impegni universitari (\ref{sec:RO3})
+            & alta
+            & alta
+            \\\midrule
+            RO4 - Distribuzione disomogenea (\ref{sec:RO4})
+            & alta 
+            & media
+            \\\midrule
+            RO5 - Reperibilità esterna (\ref{sec:RO5})
+            & bassa 
+            & media
+            \\\midrule
+            RS1 - Costi previsti (\ref{sec:RS1})
+            & media
+            & alta
+            \\\midrule
+            RS2 - Tempi previsti (\ref{sec:RS2})
+            & media
+            & alta
+            \\\midrule
+            RR1 - Incomprensione requisiti (\ref{sec:RR1})
+            & media
+            & alta
+            \\\midrule
+            RR2 - Modifica requisiti (\ref{sec:RR2})
+            & bassa
+            & alta
+            \\\bottomrule
+        \end{tabular}
+        \caption{Riepilogo dei rischi, con probabilità e pericolosità}
+        \label{tab:rischi}
+    \end{table}
