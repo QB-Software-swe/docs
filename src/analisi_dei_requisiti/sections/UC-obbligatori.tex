@@ -1,0 +1,758 @@
+\section{Casi d'uso}
+    %%%%%%%%%%%%%%% SCENARIO EMAIL %%%%%%%%%%%%%%%%%%%%%%%
+
+    \subsection{UC 1 - Scrittura email} \label{sec: 1}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter scrivere una email;
+        \item Scenario principale:
+            \begin{enumerate}
+            \item l’utente apre l’applicazione;
+            \item l'utente inserisce il destinatario della email (\hyperref[sec: UC 1.1]{UC 1.1});
+            \item l'utente inserisce l'oggetto della email (\hyperref[sec: UC 1.2]{UC 1.2});
+            \item l’utente scrive il corpo della email (\hyperref[sec: UC 1.3]{UC 1.3});
+            \item l’utente invia l'email (\hyperref[sec: UC 1.4]{UC 1.4}).
+            \end{enumerate}
+        \item Estensioni: l'utente inserisce dei valori non validi nei campi oppure non è possibile inviare l'email e viene mostrato un messaggio d'errore (\hyperref[sec: UC 1.4.1]{UC 1.4.1});
+        \item Precondizioni: l'utente vuole scrivere una email;
+        \item Postcondizioni: l'email è stata creata e inviata.
+    \end{itemize}
+
+    \subsubsection{UC 1.1 - Inserimento destinatario email} \label{sec: UC 1.1}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter inserire il destinatario della email;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona il campo relativo al destinatario della email;
+        \item l'utente digita l'email del destinatario.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta svolgendo la scrittura di una email;
+        \item Postcondizioni: l'utente ha inserito il destinatario della email.
+    \end{itemize}
+
+    \subsubsection{UC 1.2 - Inserimento oggetto email} \label{sec: UC 1.2}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter inserire l'oggetto della email;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona il campo relativo all'oggetto della email;
+        \item l'utente inserisce l'oggetto della email.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta svolgendo la scrittura di una email;
+        \item Postcondizioni: l'utente ha inserito l'oggetto della email.
+    \end{itemize}
+    
+    \subsubsection{UC 1.3 - Inserimento corpo email} \label{sec: UC 1.3}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter scrivere il corpo della email;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona il campo relativo al corpo della email;
+        \item l'utente scrive il corpo della email.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta svolgendo la scrittura di una email;
+        \item Postcondizioni: l'utente ha scritto il corpo della email.
+    \end{itemize}
+
+    \subsubsection{UC 1.4 - Invio email} \label{sec: UC 1.4}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter inviare la email;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente preme il pulsante dedicato all'invio della email.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta svolgendo la scrittura di una email;
+        \item Postcondizioni: l'utente ha inviato l'email.
+    \end{itemize}
+
+    \subsubsection{UC 1.4.1 - Visualizzazione errore} \label{sec: UC 1.4.1}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve ricevere un errore quando inserisce dei valori non validi nei campi oppure non è possibile inviare l'email;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente visualizza il messaggio d'errore.
+        \end{enumerate}  
+        \item Precondizioni: l'utente sta inviando una email;
+        \item Postcondizioni: l'utente ha ricevuto un messaggio d'errore.
+    \end{itemize}
+
+    \subsection{UC 2 - Visualizzazione lista email}  \label{sec: UC 2}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter visualizzare le email ricevute e inviate;
+        \item Scenario principale:
+            \begin{enumerate}
+            \item l’utente apre la lista delle email;
+            \item l'utente visualizza una email specifica (\hyperref[sec: UC 2.1]{UC 2.1});
+            \item l’utente risponde ad una email (\hyperref[sec: UC 2.2]{UC 2.2}).
+            \end{enumerate}
+        \item Precondizioni: l'utente vuole visualizzare le email ricevute;
+        \item Postcondizioni: l'utente ha visualizzato le email ricevute e, potenzialmente, ha risposto a una di esse.
+    \end{itemize}
+
+    \subsubsection{UC 2.1 - Visualizzazione email specifica} \label{sec: UC 2.1}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter visualizzare una email specifica;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona una email;
+        \item l'utente visualizza l'email.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta visualizzando le email ricevute;
+        \item Postcondizioni: l'utente ha visualizzato una email specifica.
+    \end{itemize}
+
+    \subsubsection{UC 2.2 - Rispondere ad una email} \label{sec: UC 2.2}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter rispondere ad una email;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona l'email a cui vuole rispondere (\hyperref[sec: UC 2.2.1]{UC 2.2.1});
+        \item l'utente scrive la risposta (\hyperref[sec: UC 2.2.2]{UC 2.2.2});
+        \item l'utente conferma l'invio della risposta (\hyperref[sec: UC 2.2.3]{UC 2.2.3}).
+        \end{enumerate}
+        \item Estensioni: non è possibile inviare l'email e viene mostrato un messaggio d'errore (\hyperref[sec: UC 2.2.3.1]{UC 2.2.3.1});
+        \item Precondizioni: l'utente vuole visualizzare e rispondere ad una email;
+        \item Postcondizioni: l'utente ha risposto alla email.
+    \end{itemize}
+
+    \subsubsection{UC 2.2.1 - Selezionare email} \label{sec: UC 2.2.1}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter selezionare una email specifica per rispondere;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona una email.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta selezionando una email per rispondere;
+        \item Postcondizioni: l'utente ha selezionato una email specifica.
+    \end{itemize}
+
+    \subsubsection{UC 2.2.2 - Scrivere risposta} \label{sec: UC 2.2.2}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter scrivere una risposta;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente scrive l'oggetto;
+        \item l'utente scrive il corpo della email.
+        \end{enumerate}
+        \item Precondizioni: l'utente ha selezionato una email per rispondere;
+        \item Postcondizioni: l'utente ha scritto una risposta.
+    \end{itemize}
+
+    \subsubsection{UC 2.2.3 - Confermare invio} \label{sec: UC 2.2.3}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter inviare la risposta;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente preme il pulsante dedicato all'invio della email.
+        \end{enumerate}
+        \item Precondizioni: l'utente ha scritto una risposta;
+        \item Postcondizioni: l'utente ha inviato l'email.
+    \end{itemize}
+
+    \subsubsection{UC 2.2.3.1 - Visualizzazione errore} \label{sec: UC 2.2.3.1}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve ricevere un errore quando non è possibile inviare l'email;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente visualizza il messaggio d'errore.
+        \end{enumerate}  
+        \item Precondizioni: l'utente conferma l'invio della risposta;
+        \item Postcondizioni: l'utente ha ricevuto un messaggio d'errore.
+    \end{itemize}
+
+    \subsection{UC 3 - Eliminazione email} \label{sec: UC 3}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter eliminare una o più email;
+        \item Scenario principale:
+            \begin{enumerate}
+            \item l’utente seleziona una o più email (\hyperref[sec: UC 3.1]{UC 3.1});
+            \item l’utente conferma l'eliminazione di una o più email (\hyperref[sec: UC 3.2]{UC 3.2}).
+            \end{enumerate}
+        \item Estensioni: non è possibile eliminare le email selezionate e viene mostrato un messaggio d'errore (\hyperref[sec: UC 3.2.1]{UC 3.2.1});
+        \item Precondizioni: l'utente vuole eliminare una o più email;
+        \item Postcondizioni: l'utente ha eliminato una o più email.
+    \end{itemize}
+
+    \subsubsection{UC 3.1 - Selezionare email} \label{sec: UC 3.1}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter selezionare una o più email;
+        \item Scenario:
+            \begin{enumerate}
+            \item l'utente seleziona una o più email.
+            \end{enumerate}
+        \item Precondizioni: l'utente sta selezionando una o più email;
+        \item Postcondizioni: l'utente ha selezionato una o più email.
+    \end{itemize}
+
+    \subsubsection{UC 3.2 - Conferma eliminazione} \label{sec: UC 3.2}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter eliminare le email selezionate;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente preme il pulsante dedicato ed elimina le email selezionate.
+        \end{enumerate}
+        \item Precondizioni: l'utente vuole eliminare le email selezionate;
+        \item Postcondizioni: l'utente ha eliminato le email selezionate.
+    \end{itemize}
+
+    \subsection{UC 3.2.1 - Visualizzazione errore} \label{sec: UC 3.2.1}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve ricevere un messaggio d'errore quando non è possibile eliminare le email selezionate;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente visualizza il messaggio d'errore.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta eliminando le email selezionate;
+        \item Postcondizioni: l'utente ha visualizzato un messaggio d'errore.
+    \end{itemize}
+
+    \subsection{UC 4 - Refresh} \label{sec: UC 4}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter eseguire un refresh per visualizzare nuovi dati;
+        \item Scenario principale:
+            \begin{enumerate}
+            \item l'utente preme il pulsante dedicato per eseguire il refresh della pagina;
+            \item l'utente visualizza un pagina aggiornata (\hyperref[sec: UC 4.1]{UC 4.1}).
+            \end{enumerate}
+        \item Precondizioni: l'utente vuole visualizzare una pagina aggiornata;
+        \item Postcondizioni: l'utente ha visualizzato una pagina aggiornata.
+    \end{itemize}
+
+    \subsubsection{UC 4.1 - Visualizzazione dati aggiornati} \label{sec: UC 4.1}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente visualizza i dati aggiornati;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente visualizza i dati aggiornati.
+        \end{enumerate}
+        \item Precondizioni: l'utente vuole visualizzare una pagina aggiornata;
+        \item Postcondizioni: l'utente ha visualizzato una pagina aggiornata.
+    \end{itemize}
+
+
+    \subsection{UC 5 - Creazione cartelle}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter creare una cartella;
+        \item Scenario principale:
+            \begin{enumerate}
+            \item l’utente apre l’applicazione;
+            \item l’utente clicca il pulsante di creazione di una cartella;
+            \item l'utente inserisce il nome della cartella da creare (\textbf{UC 5.1});
+            \item l'utente conferma la creazione della cartella (\textbf{UC 5.2}).            
+            \end{enumerate}
+        \item Estensioni: l'utente inserisce dei valori non validi nei campi oppure non è possibile creare una cartella e viene mostrato un messaggio d'errore (\textbf{UC 5.2.1});
+        \item Precondizioni: l'utente vuole creare una cartella;
+        \item Postcondizioni: la cartella è stata creata.
+    \end{itemize}
+
+    \subsubsection{UC 5.1 - Inserimento nome cartella}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter inserire il nome della cartella;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona il campo relativo al nome della cartella;
+        \item l'utente digita il nome della cartella.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta creando una cartella;
+        \item Postcondizioni: l'utente ha inserito il nome della cartella.
+    \end{itemize}
+    \subsubsection{UC 5.2 - Conferma creazione cartella}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter confermare la creazione della cartella;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente conferma la creazione della cartella.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta creando una cartella;
+        \item Postcondizioni: l'utente ha confermato la creazione della cartella.
+    \end{itemize}
+
+    \subsubsection{UC 5.2.1 - Visualizzazione errore }
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve ricevere un errore quando inserisce dei valori non validi nei campi oppure non è possibile creare la cartella;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente visualizza il messaggio d'errore.
+        \end{enumerate}   
+        \item Precondizioni: l'utente sta creando una cartella;
+        \item Postcondizioni: l'utente ha ricevuto un messaggio d'errore.
+    \end{itemize}
+
+    \subsection{UC 6 - Condivisione di una cartella}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter condividere una cartella;
+        \item Scenario principale:
+            \begin{enumerate}
+            \item l’utente apre l’applicazione;
+            \item l’utente clicca il pulsante di condivisione di cartella;
+            \item l'utente seleziona la cartella da condividere (\textbf{UC 6.1});
+            \item l'utente inserisce i destinatari della condivisione della cartella (\textbf{UC 6.2});   
+            \item l'utente conferma la condivisione della cartella (\textbf{UC 6.3}).          
+            \end{enumerate}
+        \item Estensioni: non è possibile condividere una cartella per un problema e viene mostrato un messaggio d'errore (\textbf{UC 6.3.1});
+        \item Precondizioni: l'utente vuole condividere una cartella;
+        \item Postcondizioni: la cartella è stata condivisa.
+    \end{itemize}
+
+    \subsubsection{UC 6.1 - Selezionare la cartella}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter selezionare la cartella da condividere;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona la cartella da condividere.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta condividendo una cartella;
+        \item Postcondizioni: l'utente ha selezionato la cartella da condividere.
+    \end{itemize}
+    \subsubsection{UC 6.2 - Inserimento destinatari cartella}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter scegliere i destinatari della condivisione;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona il campo relativo all'inserimento dei destinatari;
+        \item l'utente digita i nomi.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta condividendo una cartella;
+        \item Postcondizioni: l'utente ha selezionato i destinatari della condivisione della cartella.
+    \end{itemize}
+    
+    \subsubsection{UC 6.3 - Conferma condivisione cartella}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter confermare la condivisione della cartella;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente conferma la condivisione della cartella.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta condividendo una cartella;
+        \item Postcondizioni: l'utente ha confermato la condivisione della cartella.
+    \end{itemize}
+
+    \subsubsection{UC 6.3.1 - Visualizzazione errore }
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve ricevere un errore quando la condivisione della cartella provoca un errore;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente visualizza il messaggio d'errore.
+        \end{enumerate}   
+        \item Precondizioni: l'utente sta condividendo una cartella;
+        \item Postcondizioni: l'utente ha ricevuto un messaggio d'errore.
+    \end{itemize}
+
+    \subsection{UC 7 - Visualizzazione lista cartelle}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter visualizzare una lista di cartelle;
+        \item Scenario principale:
+            \begin{enumerate}
+            \item l'utente apre l'applicazione;
+            \item l'utente seleziona una cartella;
+            \item l'utente visualizza la cartella (\textbf{UC 7.1}).
+            \end{enumerate}
+        \item Precondizioni: l'utente vuole visualizzare le cartelle;
+        \item Postcondizioni: l'utente ha visualizzato le cartelle.
+    \end{itemize}
+    \subsubsection{UC 7.1 - Visualizzazione cartella specifica}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter visualizzare una cartella specifica;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona una cartella;
+        \item l'utente visualizza la cartella.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta visualizzando le cartelle;
+        \item Postcondizioni: l'utente ha visualizzato una cartella specifica.
+    \end{itemize}
+
+    \subsection{UC 8 - Eliminazione cartelle}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter eliminare una o più cartelle;
+        \item Scenario principale:
+            \begin{enumerate}
+            \item l'utente seleziona le cartelle da eliminare (\textbf{UC 8.1});
+            \item l'utente conferma l'eliminazione delle cartelle selezionate (\textbf{UC 8.2}).
+            \end{enumerate}
+        \item Precondizioni: l'utente vuole eliminare delle cartelle;
+        \item Postcondizioni: l'utente ha eliminato le cartelle selezionate.
+    \end{itemize}
+    \subsubsection{UC 8.1 - Selezionare cartelle}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter selezionare le cartelle da eliminare;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona le cartelle interessate.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta eliminando delle cartelle;
+        \item Postcondizioni: l'utente ha selezionato le cartelle da eliminare.
+    \end{itemize}
+
+    \subsubsection{UC 8.2 - Conferma eliminazione}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente conferma di voler eliminare le cartelle;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente clicca il pulsante per eliminarle.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta eliminando delle cartelle;
+        \item Postcondizioni: l'utente ha eliminato le cartelle selezionate.
+    \end{itemize}
+
+    \subsubsection{UC 8.2.1 - Visualizzazione errore }
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve ricevere un errore quando l'eliminazione delle cartelle non è andata a buon fine;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente visualizza il messaggio d'errore.
+        \end{enumerate}   
+        \item Precondizioni: l'utente sta eliminando delle cartelle;
+        \item Postcondizioni: l'utente ha ricevuto un messaggio d'errore.
+    \end{itemize}
+
+    \subsection{UC 9 - Eliminazione condivisione di una cartella}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter eliminare una condivisione di una cartella;
+        \item Scenario principale:
+            \begin{enumerate}
+            \item l'utente seleziona la cartella dove deve eliminare la condivisione (\textbf{UC 9.1});
+            \item l'utente conferma l'eliminazione della condivisione (\textbf{UC 9.2}).
+            \end{enumerate}
+        \item Precondizioni: l'utente vuole eliminare una condivisione di una cartella;
+        \item Postcondizioni: l'utente ha eliminato la condivisione di una cartella.
+    \end{itemize}
+    \subsubsection{UC 9.1 - Selezionare cartella}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter selezionare la cartella di cui deve eliminare la condivisione;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona la cartella interessata.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta eliminando la condivisione di una cartella;
+        \item Postcondizioni: l'utente ha selezionato la cartella nella quale eliminare la condivisione.
+    \end{itemize}
+
+    \subsubsection{UC 9.2 - Conferma eliminazione}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente conferma di voler eliminare la condivisione della cartella;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente clicca il pulsante per eliminarla.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta eliminando la condivisione di una cartella;
+        \item Postcondizioni: l'utente ha eliminato la condivisione della cartella selezionata.
+    \end{itemize}
+
+    \subsubsection{UC 9.2.1 - Visualizzazione errore }
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve ricevere un errore quando l'eliminazione della condivisione della cartella non è andata a buon fine;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente visualizza il messaggio d'errore.
+        \end{enumerate}   
+        \item Precondizioni: l'utente sta eliminando la condivisione della cartella;
+        \item Postcondizioni: l'utente ha ricevuto un messaggio d'errore.
+    \end{itemize}
+
+    \subsection{UC 10 - Modifica nome della cartella}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter modificare il nome di una cartella;
+        \item Scenario principale:
+            \begin{enumerate}
+            \item l’utente apre l'applicazione;
+            \item l’utente seleziona la cartella interessata (\textbf{UC 10.1});
+            \item l'utente inserisce il nuovo nome della cartella (\textbf{UC 10.2});
+            \item l'utente conferma il cambio del nome (\textbf{UC 10.3}).            
+            \end{enumerate}
+        \item Estensioni: l'utente inserisce un valore non valido nel campo oppure non è possibile modificare il nome della cartella e viene mostrato un messaggio d'errore (\textbf{UC 5.2.1});
+        \item Precondizioni: l'utente vuole modificare il nome di una cartella;
+        \item Postcondizioni: il nome della cartella è stato modificato.
+    \end{itemize}
+    \subsubsection{UC 10.1 - Selezionare cartella}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter selezionare la cartella da rinominare;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona la cartella interessata.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta rinominando una cartella;
+        \item Postcondizioni: l'utente ha selezionato la cartella da rinominare.
+    \end{itemize}
+    \subsubsection{UC 10.2 - Inserire nuovo nome}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter inserire il nuovo nome;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona il campo relativo all'inserimento del nome;
+        \item l'utente digita il nuovo nome.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta rinominando una cartella;
+        \item Postcondizioni: l'utente ha inserito il nuovo nome.
+    \end{itemize}
+    \subsubsection{UC 10.3 - Conferma cambio nome}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente conferma di voler cambiare nome della cartella;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente clicca il pulsante per confermare.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta rinominando una cartella;
+        \item Postcondizioni: l'utente ha rinominato la cartella.
+    \end{itemize}
+    \subsubsection{UC 10.3.1 - Visualizzazione errore }
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve ricevere un errore quando la rinominazione della cartella non è andata a buon fine;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente visualizza il messaggio d'errore.
+        \end{enumerate}   
+        \item Precondizioni: l'utente sta rinominando la cartella;
+        \item Postcondizioni: l'utente ha ricevuto un messaggio d'errore.
+    \end{itemize}
+
+    \subsection{UC 11 - Gestione elementi di una cartella}
+        \begin{itemize}
+            \item Attore: utente;
+            \item Descrizione: l'utente deve poter gestire gli elementi di una cartella;
+            \item Scenario principale:
+                \begin{enumerate}
+                \item l’utente apre l'applicazione;
+                \item l’utente aggiunge eventi alla cartella (\textbf{UC 11.1});
+                \item l’utente aggiunge email alla cartella (\textbf{UC 11.2});
+                \item l’utente aggiunge contatti alla cartella (\textbf{UC 11.3});
+                \item l’utente elimina elementi dalla cartella (\textbf{UC 11.4}).              
+                \end{enumerate}
+            \item Precondizioni: l'utente vuole gestire il contenuto di una cartella;
+            \item Postcondizioni: l'utente ha aggiunto/eliminato elementi dalla cartella.
+        \end{itemize}
+    \subsubsection{UC 11.1 - Aggiungi eventi}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter aggiungere eventi alla sua cartella;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona gli eventi da aggiungere (\textbf{UC 11.1.1});
+        \item l'utente conferma gli eventi aggiunti (\textbf{UC 11.1.2}).
+        \end{enumerate}
+        \item Estensioni: non è possibile aggiungere eventi alla cartella e viene mostrato un messaggio d'errore (\textbf{U11.1.2.1});
+        \item Precondizioni: l'utente sta aggiungendo eventi alla cartella;
+        \item Postcondizioni: l'utente ha aggiunto eventi alla cartella.
+    \end{itemize}
+    \paragraph{UC 11.1.1 - Seleziona gli eventi}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter selezionare gli eventi da aggiungere;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona gli eventi interessati.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta aggiungendo eventi alla cartella;
+        \item Postcondizioni: l'utente ha selezionato gli eventi da aggiungere alla cartella.
+    \end{itemize}
+    \paragraph{UC 11.1.2 - Conferma aggiunta}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente conferma di voler aggiungere eventi alla cartella;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente clicca il pulsante per confermare.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta aggiungendo eventi alla cartella;
+        \item Postcondizioni: l'utente ha confermato l'aggiunta di eventi alla cartella.
+    \end{itemize}
+    \paragraph{UC 11.1.2.1 - Visualizzazione errore}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve ricevere un errore quando l'aggiunta degli eventi non è andata a buon fine;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente visualizza il messaggio d'errore.
+        \end{enumerate}   
+        \item Precondizioni: l'utente sta aggiungendo eventi alla cartella;
+        \item Postcondizioni: l'utente ha ricevuto un messaggio d'errore.
+    \end{itemize}
+
+    \subsubsection{UC 11.2 - Aggiungi email}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter aggiungere email alla sua cartella;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona le email da aggiungere (\textbf{UC 11.2.1});
+        \item l'utente conferma le email aggiunte (\textbf{UC 11.2.2}).
+        \end{enumerate}
+        \item Estensioni: non è possibile aggiungere le email alla cartella e viene mostrato un messaggio d'errore (\textbf{U11.2.2.1});
+        \item Precondizioni: l'utente sta aggiungendo le email alla cartella;
+        \item Postcondizioni: l'utente ha aggiunto le email alla cartella.
+    \end{itemize}
+    \paragraph{UC 11.2.1 - Seleziona le email}
+        \begin{itemize}
+            \item Attore: utente;
+            \item Descrizione: l'utente deve poter selezionare le email da aggiungere;
+            \item Scenario:
+            \begin{enumerate}
+                \item l'utente seleziona le email interessate.
+            \end{enumerate}
+        \item Precondizioni: l'utente sta aggiungendo le email alla cartella;
+        \item Postcondizioni: l'utente ha selezionato le email da aggiungere alla cartella.
+    \end{itemize}
+    \paragraph{UC 11.2.2 - Conferma aggiunta}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter confermare l'aggiunta delle email alla cartella;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente clicca il pulsante per confermare.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta aggiungendo le email alla cartella;
+        \item Postcondizioni: l'utente ha confermato l'aggiunta delle email alla cartella.
+    \end{itemize}
+    \paragraph{UC 11.2.2.1 - Visualizzazione errore}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve ricevere un errore quando l'aggiunta delle email non è andata a buon fine;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente visualizza il messaggio d'errore.
+        \end{enumerate}   
+        \item Precondizioni: l'utente sta aggiungendo le email alla cartella;
+        \item Postcondizioni: l'utente ha ricevuto un messaggio d'errore.
+    \end{itemize}
+    \subsubsection{UC 11.3 - Aggiungi contatti}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter aggiungere i contatti alla sua cartella;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona i contatti da aggiungere (\textbf{UC 11.3.1});
+        \item l'utente conferma i contatti aggiunti (\textbf{UC 11.3.2}).
+        \end{enumerate}
+        \item Estensioni: non è possibile aggiungere i contatti alla cartella e viene mostrato un messaggio d'errore (\textbf{UC 11.3.2.1});
+        \item Precondizioni: l'utente sta aggiungendo i contatti alla cartella;
+        \item Postcondizioni: l'utente ha aggiunto i contatti alla cartella.
+    \end{itemize}
+    \paragraph{UC 11.3.1 - Seleziona i contatti}
+        \begin{itemize}
+            \item Attore: utente;
+            \item Descrizione: l'utente deve poter selezionare i contatti da aggiungere;
+            \item Scenario:
+            \begin{enumerate}
+                \item l'utente seleziona i contatti interessati.
+            \end{enumerate}
+        \item Precondizioni: l'utente sta aggiungendo i contatti alla cartella;
+        \item Postcondizioni: l'utente ha selezionato i contatti da aggiungere alla cartella.
+    \end{itemize}
+    \paragraph{UC 11.3.2 - Conferma aggiunta}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente conferma di voler aggiungere i contatti alla cartella;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente clicca il pulsante per confermare.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta aggiungendo i contatti alla cartella;
+        \item Postcondizioni: l'utente ha confermato l'aggiunta dei contatti alla cartella.
+    \end{itemize}
+    \paragraph{UC 11.3.2.1 - Visualizzazione errore}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve ricevere un errore quando l'aggiunta dei contatti non è andata a buon fine;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente visualizza il messaggio d'errore.
+        \end{enumerate}   
+        \item Precondizioni: l'utente sta aggiungendo i contatti alla cartella;
+        \item Postcondizioni: l'utente ha ricevuto un messaggio d'errore.
+    \end{itemize}
+    \subsubsection{UC 11.4 - Elimina elementi}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter eliminare gli elementi dalla sua cartella;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona gli elementi da eliminare (\textbf{UC 11.4.1});
+        \item l'utente conferma gli elementi eliminati (\textbf{UC 11.4.2}).
+        \end{enumerate}
+        \item Estensioni: non è possibile eliminare gli elementi dalla cartella e viene mostrato un messaggio d'errore (\textbf{U11.4.2.1});
+        \item Precondizioni: l'utente sta eliminando gli elementi dalla cartella;
+        \item Postcondizioni: l'utente ha eliminato gli elementi dalla cartella.
+    \end{itemize}
+    \paragraph{UC 11.4.1 - Seleziona gli elementi}
+        \begin{itemize}
+            \item Attore: utente;
+            \item Descrizione: l'utente deve poter selezionare gli elementi da eliminare;
+            \item Scenario:
+            \begin{enumerate}
+                \item l'utente seleziona gli elementi interessati.
+            \end{enumerate}
+        \item Precondizioni: l'utente sta eliminando gli elementi dalla cartella;
+        \item Postcondizioni: l'utente ha selezionato gli elementi da eliminare dalla cartella.
+    \end{itemize}
+    \paragraph{UC 11.4.2 - Conferma eliminazione}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente conferma di voler eliminare gli elementi dalla cartella;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente clicca il pulsante per confermare.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta eliminando gli elementi dalla cartella;
+        \item Postcondizioni: l'utente ha confermato l'eliminazione degli elementi dalla cartella.
+    \end{itemize}
+    \paragraph{UC 11.4.2.1 - Visualizzazione errore}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve ricevere un errore quando l'eliminazione degli elementi non è andata a buon fine;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente visualizza il messaggio d'errore.
+        \end{enumerate}   
+        \item Precondizioni: l'utente sta elimiando gli elementi dalla cartella;
+        \item Postcondizioni: l'utente ha ricevuto un messaggio d'errore.
+    \end{itemize}
+
+
+    
+
+    
+   
+
+    
