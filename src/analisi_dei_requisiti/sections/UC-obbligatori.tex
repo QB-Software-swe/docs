@@ -1,3 +1,252 @@
+\section{Casi d'uso}
+    %%%%%%%%%%%%%%% SCENARIO EMAIL %%%%%%%%%%%%%%%%%%%%%%%
+
+    \subsection{UC 1 - Scrittura email} \label{sec: 1}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter scrivere una email;
+        \item Scenario principale:
+            \begin{enumerate}
+            \item l’utente apre l’applicazione;
+            \item l'utente inserisce il destinatario della email (\hyperref[sec: UC 1.1]{UC 1.1});
+            \item l'utente inserisce l'oggetto della email (\hyperref[sec: UC 1.2]{UC 1.2});
+            \item l’utente scrive il corpo della email (\hyperref[sec: UC 1.3]{UC 1.3});
+            \item l’utente invia l'email (\hyperref[sec: UC 1.4]{UC 1.4}).
+            \end{enumerate}
+        \item Estensioni: l'utente inserisce dei valori non validi nei campi oppure non è possibile inviare l'email e viene mostrato un messaggio d'errore (\hyperref[sec: UC 1.4.1]{UC 1.4.1});
+        \item Precondizioni: l'utente vuole scrivere una email;
+        \item Postcondizioni: l'email è stata creata e inviata.
+    \end{itemize}
+
+    \subsubsection{UC 1.1 - Inserimento destinatario email} \label{sec: UC 1.1}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter inserire il destinatario della email;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona il campo relativo al destinatario della email;
+        \item l'utente digita l'email del destinatario.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta svolgendo la scrittura di una email;
+        \item Postcondizioni: l'utente ha inserito il destinatario della email.
+    \end{itemize}
+
+    \subsubsection{UC 1.2 - Inserimento oggetto email} \label{sec: UC 1.2}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter inserire l'oggetto della email;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona il campo relativo all'oggetto della email;
+        \item l'utente inserisce l'oggetto della email.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta svolgendo la scrittura di una email;
+        \item Postcondizioni: l'utente ha inserito l'oggetto della email.
+    \end{itemize}
+    
+    \subsubsection{UC 1.3 - Inserimento corpo email} \label{sec: UC 1.3}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter scrivere il corpo della email;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona il campo relativo al corpo della email;
+        \item l'utente scrive il corpo della email.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta svolgendo la scrittura di una email;
+        \item Postcondizioni: l'utente ha scritto il corpo della email.
+    \end{itemize}
+
+    \subsubsection{UC 1.4 - Invio email} \label{sec: UC 1.4}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter inviare la email;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente preme il pulsante dedicato all'invio della email.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta svolgendo la scrittura di una email;
+        \item Postcondizioni: l'utente ha inviato l'email.
+    \end{itemize}
+
+    \subsubsection{UC 1.4.1 - Visualizzazione errore} \label{sec: UC 1.4.1}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve ricevere un errore quando inserisce dei valori non validi nei campi oppure non è possibile inviare l'email;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente visualizza il messaggio d'errore.
+        \end{enumerate}  
+        \item Precondizioni: l'utente sta inviando una email;
+        \item Postcondizioni: l'utente ha ricevuto un messaggio d'errore.
+    \end{itemize}
+
+    \subsection{UC 2 - Visualizzazione lista email}  \label{sec: UC 2}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter visualizzare le email ricevute e inviate;
+        \item Scenario principale:
+            \begin{enumerate}
+            \item l’utente apre la lista delle email;
+            \item l'utente visualizza una email specifica (\hyperref[sec: UC 2.1]{UC 2.1});
+            \item l’utente risponde ad una email (\hyperref[sec: UC 2.2]{UC 2.2}).
+            \end{enumerate}
+        \item Precondizioni: l'utente vuole visualizzare le email ricevute;
+        \item Postcondizioni: l'utente ha visualizzato le email ricevute e, potenzialmente, ha risposto a una di esse.
+    \end{itemize}
+
+    \subsubsection{UC 2.1 - Visualizzazione email specifica} \label{sec: UC 2.1}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter visualizzare una email specifica;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona una email;
+        \item l'utente visualizza l'email.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta visualizzando le email ricevute;
+        \item Postcondizioni: l'utente ha visualizzato una email specifica.
+    \end{itemize}
+
+    \subsubsection{UC 2.2 - Rispondere ad una email} \label{sec: UC 2.2}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter rispondere ad una email;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona l'email a cui vuole rispondere (\hyperref[sec: UC 2.2.1]{UC 2.2.1});
+        \item l'utente scrive la risposta (\hyperref[sec: UC 2.2.2]{UC 2.2.2});
+        \item l'utente conferma l'invio della risposta (\hyperref[sec: UC 2.2.3]{UC 2.2.3}).
+        \end{enumerate}
+        \item Estensioni: non è possibile inviare l'email e viene mostrato un messaggio d'errore (\hyperref[sec: UC 2.2.3.1]{UC 2.2.3.1});
+        \item Precondizioni: l'utente vuole visualizzare e rispondere ad una email;
+        \item Postcondizioni: l'utente ha risposto alla email.
+    \end{itemize}
+
+    \subsubsection{UC 2.2.1 - Selezionare email} \label{sec: UC 2.2.1}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter selezionare una email specifica per rispondere;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente seleziona una email.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta selezionando una email per rispondere;
+        \item Postcondizioni: l'utente ha selezionato una email specifica.
+    \end{itemize}
+
+    \subsubsection{UC 2.2.2 - Scrivere risposta} \label{sec: UC 2.2.2}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter scrivere una risposta;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente scrive l'oggetto;
+        \item l'utente scrive il corpo della email.
+        \end{enumerate}
+        \item Precondizioni: l'utente ha selezionato una email per rispondere;
+        \item Postcondizioni: l'utente ha scritto una risposta.
+    \end{itemize}
+
+    \subsubsection{UC 2.2.3 - Confermare invio} \label{sec: UC 2.2.3}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter inviare la risposta;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente preme il pulsante dedicato all'invio della email.
+        \end{enumerate}
+        \item Precondizioni: l'utente ha scritto una risposta;
+        \item Postcondizioni: l'utente ha inviato l'email.
+    \end{itemize}
+
+    \subsubsection{UC 2.2.3.1 - Visualizzazione errore} \label{sec: UC 2.2.3.1}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve ricevere un errore quando non è possibile inviare l'email;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente visualizza il messaggio d'errore.
+        \end{enumerate}  
+        \item Precondizioni: l'utente conferma l'invio della risposta;
+        \item Postcondizioni: l'utente ha ricevuto un messaggio d'errore.
+    \end{itemize}
+
+    \subsection{UC 3 - Eliminazione email} \label{sec: UC 3}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter eliminare una o più email;
+        \item Scenario principale:
+            \begin{enumerate}
+            \item l’utente seleziona una o più email (\hyperref[sec: UC 3.1]{UC 3.1});
+            \item l’utente conferma l'eliminazione di una o più email (\hyperref[sec: UC 3.2]{UC 3.2}).
+            \end{enumerate}
+        \item Estensioni: non è possibile eliminare le email selezionate e viene mostrato un messaggio d'errore (\hyperref[sec: UC 3.2.1]{UC 3.2.1});
+        \item Precondizioni: l'utente vuole eliminare una o più email;
+        \item Postcondizioni: l'utente ha eliminato una o più email.
+    \end{itemize}
+
+    \subsubsection{UC 3.1 - Selezionare email} \label{sec: UC 3.1}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter selezionare una o più email;
+        \item Scenario:
+            \begin{enumerate}
+            \item l'utente seleziona una o più email.
+            \end{enumerate}
+        \item Precondizioni: l'utente sta selezionando una o più email;
+        \item Postcondizioni: l'utente ha selezionato una o più email.
+    \end{itemize}
+
+    \subsubsection{UC 3.2 - Conferma eliminazione} \label{sec: UC 3.2}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter eliminare le email selezionate;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente preme il pulsante dedicato ed elimina le email selezionate.
+        \end{enumerate}
+        \item Precondizioni: l'utente vuole eliminare le email selezionate;
+        \item Postcondizioni: l'utente ha eliminato le email selezionate.
+    \end{itemize}
+
+    \subsection{UC 3.2.1 - Visualizzazione errore} \label{sec: UC 3.2.1}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve ricevere un messaggio d'errore quando non è possibile eliminare le email selezionate;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente visualizza il messaggio d'errore.
+        \end{enumerate}
+        \item Precondizioni: l'utente sta eliminando le email selezionate;
+        \item Postcondizioni: l'utente ha visualizzato un messaggio d'errore.
+    \end{itemize}
+
+    \subsection{UC 4 - Refresh} \label{sec: UC 4}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente deve poter eseguire un refresh per visualizzare nuovi dati;
+        \item Scenario principale:
+            \begin{enumerate}
+            \item l'utente preme il pulsante dedicato per eseguire il refresh della pagina;
+            \item l'utente visualizza un pagina aggiornata (\hyperref[sec: UC 4.1]{UC 4.1}).
+            \end{enumerate}
+        \item Precondizioni: l'utente vuole visualizzare una pagina aggiornata;
+        \item Postcondizioni: l'utente ha visualizzato una pagina aggiornata.
+    \end{itemize}
+
+    \subsubsection{UC 4.1 - Visualizzazione dati aggiornati} \label{sec: UC 4.1}
+    \begin{itemize}
+        \item Attore: utente;
+        \item Descrizione: l'utente visualizza i dati aggiornati;
+        \item Scenario:
+        \begin{enumerate}
+        \item l'utente visualizza i dati aggiornati.
+        \end{enumerate}
+        \item Precondizioni: l'utente vuole visualizzare una pagina aggiornata;
+        \item Postcondizioni: l'utente ha visualizzato una pagina aggiornata.
+    \end{itemize}
+
 
     \subsection{UC 5 - Creazione cartelle}
     \begin{itemize}
@@ -499,6 +748,8 @@
         \item Precondizioni: l'utente sta elimiando gli elementi dalla cartella;
         \item Postcondizioni: l'utente ha ricevuto un messaggio d'errore.
     \end{itemize}
+
+
     
 
     
