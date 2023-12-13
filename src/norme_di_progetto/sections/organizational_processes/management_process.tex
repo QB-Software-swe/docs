@@ -1,0 +1,274 @@
+\subsection{Gestione organizzativa}\label{sec:management_process}
+    In questa sezione vengono esposte le norme relative l'organizzazione e il coordinamento delle attività interne ed esterne del gruppo, l'assegnazione dei ruoli e relativi compiti. \\
+    Come stabilito dallo standard ISO/IEC 12207:1997 \cite{bib:ISO12207_1997} il processo di gestione identifica le seguenti attività:
+    \begin{enumerate}
+        \item inizializzazione e definizione dello scopo \ref{sec:scope};
+        \item pianificazione \ref{sec:planning};
+        \item esecuzione e controllo \ref{sec:execution};
+        \item revisione e valutazione \ref{sec:review};
+        \item chiusura \ref{sec:closure}.
+    \end{enumerate}
+
+    \subsubsection{Inizializzazione e definizione dello scopo}\label{sec:scope}
+
+        Questo processo ha i seguenti obiettivi:
+        \begin{itemize}
+            \item pianificare con criterio le attività;
+            \item monitorare in modo efficace il gruppo, le risorse e i processi;
+            \item assegnare correttamente ruoli e compiti;
+            \item facilitare la comunicazione intera ed esterna.
+        \end{itemize}
+
+        \vspace{0.3cm}
+        \noindent
+        Il Responsabile di progetto si impegna a:
+        \begin{itemize}
+            \item assegnare i ruoli e i relativi compiti ai membri del gruppo;
+            \item amministrare gli strumenti di coordinamento concordati;
+            \item stimare i rischi;
+            \item gestire gli imprevisti;
+            \item gestire le comunicazioni interne ed esterne;
+            \item calcolare i preventivi relativi alle ore e i costi divisi per ruolo;
+            \item calcolare i consuntivi di ogni periodo;
+            \item determinare quando un processo, attività o task è giunto al termine e approvarlo. 
+        \end{itemize}
+
+
+    \subsubsection{Pianificazione}\label{sec:planning}
+        Nell'attività di pianificazione il Responsabile prepara i piani dettagliati per l'esecuzione delle attività. In particolare verranno riportati:
+        \begin{itemize}
+            \item una descrizione completa dei compiti;
+            \item la definizione dei tempi di completamento;
+            \item l'assegnazione delle risorse;
+            \item la valutazione dei rischi e relativa implementazione di misure di controllo;
+            \item un'analisi dei costi.
+        \end{itemize} 
+        Questi piani verranno redatti dal Responsabile e si troveranno all'interno del documento Piano di Progetto.
+        
+        \vspace{0.3cm}
+        \noindent
+        Questa sezione relativa alla pianificazione sarà strutturata come segue:
+        \begin{itemize}
+            \item gestione Backlog;
+            \item gestione Sprint;
+            \item ruoli;
+            \item valutazione rischi;
+            \item preventivi.
+        \end{itemize}
+
+
+        \paragraph{Gestione Backlog} \label{sec:gestione-backlog}
+        Per la gestione delle attività è necessario rifarsi alla piattaforma Notion.
+        Qui è presente un database contenente il Backlog completo. 
+        In particolare, sono riportati, per ogni issue:
+        \begin{itemize}
+            \item \textbf{titolo}: indica il nome della issue;
+            \item \textbf{stato}: indica lo stato della issue. Ogni issue può avere soltanto uno tra i seguenti stati: 
+            \begin{itemize}
+                \item to-do: compito non ancora iniziato. Si noti che al momento dell'inserimento nel database, una issue ha sempre lo stato settato a to-do;
+                \item in-progress: compito in corso;
+                \item done: compito completato;
+            \end{itemize}
+            \item \textbf{importanza}: indica il grado di importanza associato;
+            \item \textbf{sprint}: indica lo Sprint in cui la issue è assegnata. 
+        \end{itemize} 
+
+        \vspace{0.3cm}
+        \noindent
+        Sono inoltre presenti delle viste al database per semplificarne la visione e avere un'idea più chiara sull'andamento del progetto. Le viste presenti sono:
+        \begin{itemize}
+            \item \textbf{board-generica}: mostra una board generale in cui tutte le issue sono divise tra to-do, in-progress e done;
+            \item \textbf{board-sprint}: mostra una board in cui sono presentate solo le issue relative allo Sprint in corso divise tra to-do, in-progress e done;
+        \end{itemize}
+
+        \paragraph{Gestione Sprint} \label{sec:gestione-sprint}
+        All'inizio di ogni Sprint, durante la fase di pianificazione, si procede a modificare o impostare il valore del campo "sprint" all'interno del database descritto nella sezione \ref{sec:gestione-backlog}. Questo si rende necessario poichè alcuni compiti vengono pianificati inizialmente, mentre altri vengono definiti successivamente.
+        
+        \noindent
+        Durante lo Sprint, è importante notare che alcune attività possono essere aggiunte nonostante non siano state originariamente pianificate. Questo avviene in base alle competenze possedute dal team e attraverso il riferimento al Backlog generale.
+
+        \noindent
+        Dopo aver selezionato quali compiti faranno parte dello Sprint, il Responsabile si occuperà di creare su GitHub una milestone relativa allo Sprint e le relative issue a cui verranno associati i vari membri del gruppo a seconda dei loro ruoli per quel determinato Sprint, descritti alla sezione \ref{sec:ruoli}. 
+
+        \vspace{0.3cm}
+        \noindent
+        Questa pratica permette di associare in modo chiaro i compiti allo Sprint in corso, consentendo al team di avere una visione chiara del lavoro e di monitorarne il progresso in maniera efficace.
+
+        \paragraph{Ruoli} \label{sec:ruoli}
+        Per garantire una suddivisione efficace delle attività, saranno delineati sei ruoli che i membri del team assumeranno durante lo svolgimento del progetto. 
+        I ruoli verranno assegnati all'inizio di ogni Sprint.
+        Ogni membro del team è tenuto a coprire almeno una volta ognuno dei ruoli, che vengono elencati qui di seguito:
+        
+        \begin{itemize}
+            \item \textbf{Responsabile}: svolge la funzione di coordinatore del gruppo e di rappresentante del team nei confronti di committente e proponente per tutta la durata del progetto. Ha molteplici responsabilità:
+            \begin{itemize}
+                \item predisposizione e gestione delle risorse;
+                \item coordinamento dei membri del team;
+                \item verifica dello stato di attività e processi;
+                \item relazioni con le figure esterne al team;
+                \item approvazione dei documenti di progetto.
+            \end{itemize}
+            \item \textbf{Amministratore}: definisce, controlla e amministra l'ambiente di lavoro e le risorse messe a disposizione per tutto il periodo di sviluppo del progetto.
+            Deve accertarsi che i mezzi messi a disposizione perseguano produttività, garantendo allo stesso tempo qualità ed economicità. \\
+            Redige le \emph{Norme di progetto} ed è sua responsabilità verificare che i membri del team le seguano. \\
+            \`E inoltre sua responsabilità:
+            \begin{itemize}
+                \item amministrare infrastrutture, strumenti e documentazione;
+                \item gestione degli imprevisti legati alla gestione dei processi;
+                \item redigere e mantenere aggiornata la documentazione e il versionamento della stessa;
+                \item gestire la configurazione del prodotto.
+            \end{itemize}
+            \item \textbf{Analista}: \`e una figura molto competente, a cui ci si affida per scomporre e approfondire le esigenze del committente. Il suo ruolo è fondamentale nelle prime fasi del progetto, in particolare per la stesura del file \emph{Analisi dei Requisiti} che sarà una serie di specifiche tecniche che saranno fondamentali per le fasi successive di sviluppo. \\
+            Si occupa di:
+            \begin{itemize}
+                \item mediare fra proponenti/committenti e sviluppatori;
+                \item studia le necessità dei proponenti definendo problemi, obiettivi e requisiti soluzione;
+                \item etichetta i requisiti in: impliciti/espliciti e opzionali/obbligatori;
+                \item redige i file \emph{Studio di fattibilità} e \emph{Analisi dei requisiti}.
+            \end{itemize}
+            \item \textbf{Progettista}: ha l'onere di sviluppare una soluzione che soddisfi in maniera accettabile i vincoli dati dall'Analista.
+            Effettua scelte tecniche e tecnologiche, segue lo sviluppo, non la manutenzione. \\
+            Si occupa di:
+            \begin{itemize}
+                \item sviluppare un'architettura robusta seguendo le best practises perseguendo coerenza e consistenza;
+                \item ricercare soluzioni efficienti ed efficaci che soddisfino i requisiti nel rispetto dei vincoli dati;
+                \item decomporre il sistema in componenti e organizzarne le interazioni fra di essi;
+                \item decomporre ruoli e responsabilità in favore di modularizzazione e riutilizzo;
+                \item usare soluzioni ottimizzate.
+            \end{itemize}
+            \item \textbf{Programmatore}: ha competenze tecniche e appartiene alla categoria pi\`u popolosa del gruppo.
+            Si occupa di:
+            \begin{itemize}
+                \item Codificare la soluzione in modo mantenibile;
+                \item partecipare a implementazione e manutenzione del prodotto;
+                \item creare test ad hoc per la verifica e valutazione del codice;
+                \item redige il manuale utente.
+            \end{itemize}
+            \item \textbf{Verificatore}: il suo compito \`e quello di controllare il lavoro svolto dagli altri membri del gruppo. \\
+            Inoltre ha l'onere di redigere il \emph{Piano di Qualifica}. \\
+            Deve assicurarsi che:
+            \begin{itemize}
+                \item I compiti vengano svolti come da programma, altrimenti offre spunti per le correzioni;
+                \item l'esecuzione delle attivit\`a di processo non causi errori.
+            \end{itemize}
+        \end{itemize}
+
+        \paragraph{Valutazione rischi}
+        Il Responsabile si occupa di riconoscere i possibili rischi e registrarli nel documento Piano di Progetto. Una volta individuati, è fondamentale delineare una o più strategie mirate alla gestione di tali rischi.
+
+        \vspace{0.3cm}
+        \noindent
+        I rischi vengono categorizzati in base alla natura del problema potenziale. Le tipologie individuate sono:
+        \begin{itemize}
+            \item rischi tecnologici;
+            \item rischi legati alle persone;
+            \item rischi organizzativi;
+            \item rischi sulle stime;
+            \item tischi sui requisiti.
+        \end{itemize}
+
+        \vspace{0.3cm}
+        \noindent
+        Ogni rischio è caratterizzato da:
+        \begin{itemize}
+            \item intestazione: i rischi vengono identificati mediante codici univoci creati appositamente per questo scopo e un nome, in questo formato:
+
+            \begin{center}
+                \verb|R[categoria][numero] - [nome]|
+            \end{center}
+            
+            dove:
+            \begin{itemize}
+                \item \verb|[categoria]| corrisponde alla tipologia del rischio:
+                \begin{itemize}
+                    \item \verb|T| se è un rischio tecnologico;
+                    \item \verb|P| se è un rischio legato alle persone;
+                    \item \verb|O| se è un rischio organizzativo;
+                    \item \verb|S| se è un rischio sulle stime;
+                    \item \verb|R| se è un rischio sui requisiti;
+                \end{itemize}
+                \item \verb|[numero]|: è un numero progressivo per quella categoria di rischio;
+                \item \verb|[nome]|: corrisponde al nome dato al rischio.
+            \end{itemize}
+            \item descrizione e conseguenze;
+            \item valutazione della probabilità di occorrenza e della pericolosità;
+            \item piano di controllo;
+            \item piano di contingenza.
+        \end{itemize}
+
+        
+    \subsubsection{Esecuzione e controllo}\label{sec:execution}
+
+    L'attività di esecuzione e controllo delinea le pratiche necessarie a guidare l'attuazione del piano per raggiungere gli obiettivi, monitorare attentamente il processo e fornire report sia interni che esterni. Si definisce inoltre la gestione dei problemi emergenti,  includendo l'analisi, la risoluzione e l'eventuale adattamento dei piani.
+    
+    \noindent 
+    Questa sezione relativa all'esecuzione e il controllo sarà strutturata come segue:
+    \begin{itemize}
+        \item gestione issue;
+        \item comunicazioni;
+        \item controllo rischi;
+    \end{itemize}
+
+    \paragraph{Gestione issue}
+    Nel momento in cui ad un membro del gruppo viene assegnata una issue, il procedimento è il seguente:
+
+    \begin{enumerate}
+        \item creazione del nuovo branch: il membro a cui viene assegnata la issue crea un nuovo branch a partire da \verb|develop| usando la sezione \emph{Development} nel form della issue su GitHub;
+        \item sviluppo delle attività: vengono sviluppate le attività richieste; ogni volta che una parte del lavoro è completata, le modifiche vengono pubblicate sul proprio branch, in modo da renderle disponibili a tutto il team di QB Software;
+        \item aggiornamento registro e pull request: quando la task è terminata, si aggiorna il registro delle modifiche e si richiede una pull request dal proprio branch verso il \verb|develop|;
+        \item verifica: il verificatore si auto-assegna e dovrà verificare i contenuti secondo quanto riportato nella sezione \ref{sec:pian-verifica};
+        \item approvazione o correzione delle modifiche: il verificatore, se approva il contenuto, deve fare il merge della pull request, integrando le modifiche nel branch di sviluppo principale e eliminando il branch creato per la issue. In caso di rifiuto, il membro del team a cui era assegnata la issue deve assolvere alle mancanze e iniziare nuovamente la procedura di verifica.
+    \end{enumerate}
+
+
+
+    \paragraph{Comunicazioni}
+    Le comunicazioni possono essere:
+    \begin{itemize}
+        \item comunicazioni interne:
+        \item comunicazioni esterne:
+    \end{itemize}
+
+    \paragraph{Controllo rischi}
+    È compito del Responsabile assicurarsi che, nel caso di attualizzazione di un rischio, il relativo piano di contingenza previsto venga seguito.
+    È inoltre compito del Responsabile, aggiornare ogni qual volta si renda necessario, i rischi e i relativi piani di contingenza.
+
+    %d MODIFICARE, RETROSPETTIVA A VERBALE 
+    Nella fase di retrospettiva di ciascuno Sprint, riportata nel file Piano di Progetto, è presente una descrizione dei rischi incontrati durante lo Sprint e una valutazione del piano di mitigazione previsto. Nel caso in cui il piano non si riveli adatto sarà necessario cambiarlo. 
+    
+    Queste informazioni, sono riportate dettagliatamente nel documento Piano di Progetto.
+    
+    \subsubsection{Revisione e valutazione}\label{sec:review}
+        prevede che il responsabile:
+        \begin{itemize}
+            \item valuti prodotti e piani d'azione ai fini di soddisfare i vincoli contrattuali;
+            \item valuti prodotti software, attivit\`a e task completate durante l'esecuzione, del processo per il raggiungimento dell'obiettivo e il completamento del piano.
+        \end{itemize}
+
+        Questa sezione relativa alla revisione e alla valutazione sarà strutturata come segue:
+        \begin{itemize}
+            \item retrospettiva;
+            \item verifica;
+            \item approvazione;
+        \end{itemize}
+
+
+        Alla fine di ogni Sprint, il Responsabile, redigerà poi un consuntivo nel documento Piano di Progetto, includendo i costi 
+
+        \paragraph{Verifica} \label{sec:pian-verifica}
+
+        La verifica del documento per la fase di creazione di un documento viene fatta attraverso il metodo del walkthrough, cioè il verificatore legge l’interno documento e controlla:
+        \begin{itemize}
+            \item la soddisfazione delle modifiche richieste dalla issue
+        \end{itemize}
+
+La verifica del documento per la fase di manutenzione avviene attraverso delle checklist presenti nelle Piano di Qualifica. Terminata la procedura di verifica il verificatore deve pubblicare un commento sulla pull request riportando il feedback della verifica.
+
+
+
+
+
+    \subsubsection{Chiusura}\label{sec:closure}
+        Al termine dello sviluppo dei prodotti, attivit\`a e task, il responsabile determina se il processo si possa definire ultimato verificando che rispetti i vincoli contrattuali. Infine archivia documentazione e prodotti software in un ambiente predefinito da contratto.
+        
+        
