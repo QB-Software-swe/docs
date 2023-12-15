@@ -85,12 +85,12 @@
         All'inizio di ogni Sprint, durante la fase di pianificazione, si procede a modificare o impostare il valore del campo "sprint" all'interno del database descritto nella sezione \ref{sec:gestione-backlog}. Questo si rende necessario poichè alcuni compiti vengono pianificati inizialmente, mentre altri vengono definiti successivamente.
         
         \noindent
-        Durante lo Sprint, è importante notare che alcune attività possono essere aggiunte nonostante non siano state originariamente pianificate. Questo avviene in base alle competenze possedute dal team e attraverso il riferimento al Backlog generale.
+        Durante lo Sprint, è importante notare che anche in un momento successivo alla pianificazione alcune attività possono essere aggiunte nonostante non siano state originariamente pianificate. Questo avviene in base alle competenze possedute dal team e attraverso il riferimento al Backlog generale. Questa pratica permette di massimizzare il valore del lavoro svolto e mantenere una certa flessibilità.
 
+        \vspace{0.3cm}
         \noindent
         Dopo aver selezionato quali compiti faranno parte dello Sprint, il Responsabile si occuperà di creare su GitHub una milestone relativa allo Sprint e le relative issue a cui verranno associati i vari membri del gruppo a seconda dei loro ruoli per quel determinato Sprint, descritti alla sezione \ref{sec:ruoli}. 
 
-        \vspace{0.3cm}
         \noindent
         Questa pratica permette di associare in modo chiaro i compiti allo Sprint in corso, consentendo al team di avere una visione chiara del lavoro e di monitorarne il progresso in maniera efficace.
 
@@ -145,7 +145,6 @@
                 \item redige il manuale utente.
             \end{itemize}
             \item \textbf{Verificatore}: il suo compito \`e quello di controllare il lavoro svolto dagli altri membri del gruppo. \\
-            Inoltre ha l'onere di redigere il \emph{Piano di Qualifica}. \\
             Deve assicurarsi che:
             \begin{itemize}
                 \item I compiti vengano svolti come da programma, altrimenti offre spunti per le correzioni;
@@ -164,7 +163,7 @@
             \item rischi legati alle persone;
             \item rischi organizzativi;
             \item rischi sulle stime;
-            \item tischi sui requisiti.
+            \item rischi sui requisiti.
         \end{itemize}
 
         \vspace{0.3cm}
@@ -205,7 +204,11 @@
     Questa sezione relativa all'esecuzione e il controllo sarà strutturata come segue:
     \begin{itemize}
         \item gestione issue;
-        \item comunicazioni;
+        \item comunicazioni interne;
+        \item comunicazioni esterne;
+        \item incontri interni;
+        \item incontri esterni;
+        \item verbali;
         \item controllo rischi;
     \end{itemize}
 
@@ -222,28 +225,45 @@
 
 
 
-    \paragraph{Comunicazioni}
-    Le comunicazioni possono essere:
+    \paragraph{Comunicazioni interne} \label{sec:com-interne}
+    Le comunicazioni interne possono avvenire tramite:
+        \begin{itemize}
+            \item Whatsapp: servizio di messaggistica istantanea utilizzato dai membri del team per comunicazioni rapide e informali;
+            \item Discord: servizio di messaggistica e videochiamate utilizzato dal team per le riunioni interne da remoto. Offre inoltre la possibilità di creare numerosi canali di comunicazione, questo risulta molto utile per strutturare la comunicazione dividendola per argomenti.  
+        \end{itemize}
+
+    \paragraph{Comunicazioni esterne}
+    Le comunicazioni esterne sono gestite dal Responsabile e possono avvenire tramite:
     \begin{itemize}
-        \item comunicazioni interne:
-        \item comunicazioni esterne:
+        \item posta elettronica: l'indirizzo di posta elettronica del gruppo è
+        \begin{center}
+            \mailtoQBS\\[0.3cm]
+        \end{center} 
+        \item Discord: viene creato un apposito canale di comunicazione condiviso con il proponente per questioni rapide.
     \end{itemize}
+
+    \paragraph{Riunioni interne}
+    Le riunioni interne del team avvengono interamente online tramite la piattaforma Discord. La data e l'ora vengono decise tramite i servizi descritti alla sezione \ref{sec:com-interne}. In seguito sarà compito del Responsabile creare un evento relativo all'incontro previsto su Google Calendar dell'account del gruppo per permettere a tutto il gruppo di visionarli.
+    Le riunioni interne generano un verbale, come descritto nella sezione \ref{sec:exe-verbali}
+
+    \paragraph{Riunioni esterne}
+    Le riunioni esterne prevedono la partecipazione di almeno 5 dei membri del gruppo. Le riunioni esterne si terranno su Carbonio Chats system: piattaforma per videochiamate sviluppata dal proponente.
+
+    Le riunioni esterne generano un verbale, come descritto nella sezione \ref{sec:exe-verbali}
+
+    \paragraph{Verbali} \label{sec:exe-verbali}
+    Le comunicazioni esterne e tutte le riunioni, sia interne che esterne, generano un verbale. Durante le riunioni, il Responsabile designa un membro del gruppo incaricato di prendere appunti su Notion. Questi appunti potranno sono disponibili per tutto il gruppo e saranno utilizzati per redigere il verbale. \\
+    Il membro del gruppo incaricato della stesuta del verbale viene scelto dal Responsabile.
+
+
 
     \paragraph{Controllo rischi}
     È compito del Responsabile assicurarsi che, nel caso di attualizzazione di un rischio, il relativo piano di contingenza previsto venga seguito.
-    È inoltre compito del Responsabile, aggiornare ogni qual volta si renda necessario, i rischi e i relativi piani di contingenza.
+    È inoltre compito del Responsabile aggiornare, ogni qual volta si renda necessario, i rischi e i relativi piani di contingenza.\\
+    Nella fase di retrospettiva di ciascuno Sprint, descritta nella sezione \ref{sec:val-retrospettiva}, verranno discussi i rischi incontrati.
 
-    %d MODIFICARE, RETROSPETTIVA A VERBALE 
-    Nella fase di retrospettiva di ciascuno Sprint, riportata nel file Piano di Progetto, è presente una descrizione dei rischi incontrati durante lo Sprint e una valutazione del piano di mitigazione previsto. Nel caso in cui il piano non si riveli adatto sarà necessario cambiarlo. 
-    
-    Queste informazioni, sono riportate dettagliatamente nel documento Piano di Progetto.
-    
     \subsubsection{Revisione e valutazione}\label{sec:review}
-        prevede che il responsabile:
-        \begin{itemize}
-            \item valuti prodotti e piani d'azione ai fini di soddisfare i vincoli contrattuali;
-            \item valuti prodotti software, attivit\`a e task completate durante l'esecuzione, del processo per il raggiungimento dell'obiettivo e il completamento del piano.
-        \end{itemize}
+    Questa attività coinvolge la valutazione dei prodotti e dei piani d'azione per adempiere ai vincoli contrattuali, nonché la valutazione delle attività e dei prodotti software completati durante l'esecuzione del processo per il raggiungimento degli obiettivi pianificati.
 
         Questa sezione relativa alla revisione e alla valutazione sarà strutturata come segue:
         \begin{itemize}
@@ -252,22 +272,25 @@
             \item approvazione;
         \end{itemize}
 
-
-        Alla fine di ogni Sprint, il Responsabile, redigerà poi un consuntivo nel documento Piano di Progetto, includendo i costi 
-
-        \paragraph{Verifica} \label{sec:pian-verifica}
-
-        La verifica del documento per la fase di creazione di un documento viene fatta attraverso il metodo del walkthrough, cioè il verificatore legge l’interno documento e controlla:
+    \paragraph{Retrospettiva} \label{sec:val-retrospettiva}
+        Alla fine di ogni Sprint, verrà discusso con il team quanto fatto in una riunione, in particolare il Responsabile creerà un file Notion con i seguenti punti da affrontare:
         \begin{itemize}
-            \item la soddisfazione delle modifiche richieste dalla issue
+            \item cose che hanno funzionato;
+            \item cose che non hanno funzionato;
+            \item rischi incontrati.
         \end{itemize}
 
-La verifica del documento per la fase di manutenzione avviene attraverso delle checklist presenti nelle Piano di Qualifica. Terminata la procedura di verifica il verificatore deve pubblicare un commento sulla pull request riportando il feedback della verifica.
+        Questo documento verrà utilizzato come base di appunti per il verbale relativo alla riunione.
+        Successivamente, il Responsabile riporterà un rapido riassunto di quanto riportato nel verbale anche nella sezione Consuntivi nel file Piano di Progetto, in particolare per i rischi incontrati durante lo Sprint e una valutazione del piano di mitigazione previsto.
 
+        \paragraph{Gestione oraria}
+        Per la gestione delle ore il team utilizza un Google Sheet condiviso sull'account aziendale. Questa pratica permette di gestire in modo trasparente il tempo dedicato alle attività e facilità la valutazione della produttività.\\
+        Alla fine di ogni Sprint, il Responsabile redigerà poi un consuntivo nel documento Piano di Progetto, includendo i costi prodotti dalle ore segnate nel file in questione.
 
-
-
-
+        \paragraph{Verifica} \label{sec:pian-verifica}
+        La verifica viene fatta attraverso il metodo del \emph{walkthrough}, cioè il verificatore legge l'interno documento o la rispettiva porzione di codice e controlla la soddisfazione delle modifiche richieste dalla issue.\\
+        La verifica per la fase di manutenzione avviene attraverso delle \emph{checklist} presenti nelle Piano di Qualifica. Terminata la procedura di verifica il verificatore deve pubblicare un commento sulla pull request riportando il feedback della verifica.
+            
     \subsubsection{Chiusura}\label{sec:closure}
         Al termine dello sviluppo dei prodotti, attivit\`a e task, il responsabile determina se il processo si possa definire ultimato verificando che rispetti i vincoli contrattuali. Infine archivia documentazione e prodotti software in un ambiente predefinito da contratto.
         
