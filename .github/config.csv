@@ -8,8 +8,9 @@ VI07;src/verbali/interni/2023-11-20/Verbale_interno_2023-11-20.tex;RTB/Documenti
 VI08;src/verbali/interni/2023-11-27/Verbale_interno_2023-11-27.tex;RTB/Documenti_interni/Verbali;0.1.0;True
 VI09;src/verbali/interni/2023-12-04/Verbale_interno_2023-12-04.tex;RTB/Documenti_interni/Verbali;0.1.0;True
 VE01;src/verbali/esterni/2023-10-25/Verbale_esterno_2023-10-25.tex;Candidatura/Documenti_esterni/Verbali;0.1.1;True
-VE02;src/verbali/esterni/2023-12-07/Verbale_esterno_2023-12-07.tex;RTB/Documenti_esterni/Verbali;0.1.0;True
-VE03;src/verbali/esterni/2023-11-16/Verbale_esterno_2023-11-16.tex;RTB/Documenti_esterni/Verbali;0.1.0;True
+VE02;src/verbali/esterni/2023-11-16/Verbale_esterno_2023-11-16.tex;RTB/Documenti_esterni/Verbali;0.1.0;True
+VE03;src/verbali/esterni/2023-12-07/Verbale_esterno_2023-12-07.tex;RTB/Documenti_esterni/Verbali;0.1.0;True
+VE04;src/verbali/esterni/2023-12-11/Verbale_esterno_2023-12-11.tex;RTB/Documenti_esterni/Verbali;0.1.0;True
 LP;src/candidatura/Lettera_presentazione/Lettera_di_presentazione;Candidatura/Documenti_esterni;0.1.1;True
 PdCeI;src/candidatura/Preventivo_costi/Preventivo_dei_costi_e_degli_impegni;Candidatura/Documenti_esterni;0.2.1;True
 VdC;src/candidatura/Valutazione_capitolati/Valutazione_dei_capitolati.tex;Candidatura/Documenti_esterni;0.3.1;True
