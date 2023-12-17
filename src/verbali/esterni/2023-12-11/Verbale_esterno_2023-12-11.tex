@@ -1,0 +1,93 @@
+% DOC TYPE E DEF QB SOFTWARE %%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\input{base.tex}
+
+% INFORMAZIONI DOCUMENTO %%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Verbale esterno}
+\date{del 11/12/2023}
+\footname{Verbale esterno del 11/12/2023}
+
+\begin{document}
+	% PRIME PAGINE %%%%%%%%%%%%%%%%%%%%%%%%%
+	\makefirstpage
+	
+	\include{changelog.tex}
+	\clearpage
+	
+	\tableofcontents
+	\clearpage
+
+    \section{Informazioni generali}
+    
+    \subsection{Luogo e data dell'incontro}
+    
+    \begin{itemize}
+    	\item \textbf{Luogo}: meeting su Zextras Chat
+    	\item \textbf{Data}: 11/12/2023
+    	\item \textbf{Ora di inizio}: 15:15
+    	\item \textbf{Ora di fine}: 16:00
+    \end{itemize}
+    
+    \subsection{Presenze}
+    
+    \begin{itemize}
+    	\item \textbf{Totale presenze}:
+    	\begin{itemize}
+    		\item Bustreo Alessandro
+    		\item Destro Stefano
+    		\item Domuta Alessia 
+    		\item Feltrin Alessandro 
+    		\item Fontana Raffaele Paolo 
+    		\item Giurisato Andrea 
+    		\item Rovea Silvia
+    	\end{itemize}
+    	
+    	\item \textbf{Totale assenze}: 0
+    	
+    	\item \textbf{Partecipanti esterni}:
+    	\begin{itemize}
+    		\item Federico Rispo (Zextras)
+    	\end{itemize}
+    \end{itemize}
+    
+    \section{Ordine del giorno}
+    \begin{itemize}
+    	\item domande da porre all'azienda.
+    \end{itemize}
+    
+    \section{Verbale}
+
+    Le domande poste da QB Software a Zextras durante il meeting:
+
+    \newcommand{\answer}{\item[\textbf{A:}]}
+        
+        \begin{enumerate}[label=\textbf{Q\arabic*:}]
+            \item Qual è il periodo esatto delle vostre vacanze natalizie?
+            \answer Dal 25 dicembre fino al 7 gennaio.
+
+            \item Possiamo avere dei domini su cui sperimentare? 
+            \answer Non è necessario, può essere tutto sviluppato in locale. In locale è anche più semplice.
+
+            \item Tra due istanze del server che andremo a sviluppare la comunicazione avviene tramite JMAP o SMTP?
+            \answer Non deve essere inviato ad un provider esterno, si da per scontato che la email viene ricevuta-inviata. Basta solo implementare il protocollo JMAP.
+            
+            \item La versione java 21 sta creando dei problemi, possiamo usare altre vesioni? 
+            \answer Certo, usate java 17.
+        
+            \item È consigliato usare guice per la dependency injection?
+            \answer Guice è consigliato, ma non è obbligatorio.
+            
+            \item Consigli sul client da usare?
+            \answer Usate il client che preferite.
+
+            \item Consigli sul database da usare?
+            \answer PostgreSQL è consigliato ma potete usare il database che preferite.
+
+        \end{enumerate}
+
+        \noindent
+        Il proponente ci ha consigliato di valutare le tecnologie Hikari e Quarkus, perchè potrebbero essere utili nel progetto.
+    
+    \section{Azioni da intraprendere}
+    Proseguire con lo studio delle tecnologie.
+\end{document}
