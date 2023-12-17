@@ -1,3 +1,4 @@
+%LTeX: language=it
 % DOC TYPE E DEF QB SOFTWARE %%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[12pt]{article}
 \input{base.tex}
@@ -52,41 +53,33 @@
     
     \section{Ordine del giorno}
     \begin{itemize}
-    	\item domande da porre all'azienda.
+    	\item Domande da porre all'azienda.
     \end{itemize}
     
     \section{Verbale}
-
     Le domande poste da QB Software a Zextras durante il meeting:
 
     \newcommand{\answer}{\item[\textbf{A:}]}
         
         \begin{enumerate}[label=\textbf{Q\arabic*:}]
-            \item Qual è il periodo esatto delle vostre vacanze natalizie?
+            \item In vista delle vacanze, per quale periodo dobbiamo sospendere i meeting con voi?
             \answer Dal 25 dicembre fino al 7 gennaio.
 
-            \item Possiamo avere dei domini su cui sperimentare? 
-            \answer Non è necessario, può essere tutto sviluppato in locale. In locale è anche più semplice.
+            \item Per testare lo scambio di e-mail tra server dobbiamo usare dei domini? E se sì, potete metterci a disposizione dei domini su cui sperimentare? 
+            \answer Non è necessario, potete sviluppare tutto in locale.
 
-            \item Tra due istanze del server che andremo a sviluppare la comunicazione avviene tramite JMAP o SMTP?
-            \answer Non deve essere inviato ad un provider esterno, si da per scontato che la email viene ricevuta-inviata. Basta solo implementare il protocollo JMAP.
+            \item Dobbiamo implementare tutto il sistema di scambio dell'e-mail? Quindi, implementare la comunicazione attraverso SMTP tra il prodotto che dobbiamo sviluppare e altri server sulla rete?
+            \answer L'e-mail non deve essere inviata a un provider esterno, si dà per scontato che la email viene inviata e ricevuta dal sistema esterno. L'obiettivo è implementare il protocollo JMAP, quindi non è obbligatorio implementare il SMTP.
             
-            \item La versione java 21 sta creando dei problemi, possiamo usare altre vesioni? 
-            \answer Certo, usate java 17.
+            \item Stiamo affrontando dei problemi con Java 21, possiamo utilizzare un'altra versione LTS? 
+            \answer Certo, usate Java 17.
         
-            \item È consigliato usare guice per la dependency injection?
+            \item È consigliato usare Guice per la dependency injection?
             \answer Guice è consigliato, ma non è obbligatorio.
-            
-            \item Consigli sul client da usare?
-            \answer Usate il client che preferite.
-
-            \item Consigli sul database da usare?
-            \answer PostgreSQL è consigliato ma potete usare il database che preferite.
-
         \end{enumerate}
 
         \noindent
-        Il proponente ci ha consigliato di valutare le tecnologie Hikari e Quarkus, perchè potrebbero essere utili nel progetto.
+        Il proponente ci ha consigliato di valutare le tecnologie Hikari e Quarkus, perché potrebbero essere utili nel progetto. Nell'ultima parte della riunione c'è stato una discussione sull'utilità di utilizzare MongoDB al posto di Postgre, visto che JMAP basa l'intero protocollo sull'uso del formato JSON.
     
     \section{Azioni da intraprendere}
     Proseguire con lo studio delle tecnologie.
