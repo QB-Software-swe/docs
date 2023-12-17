@@ -72,9 +72,9 @@ def _read_doc_config():
 # scrive sul csv gli update apportati ai configuration item 
 def _write_doc_config(cis : list):
     with open('.github/config.csv', newline='\n', mode='w') as config_database:
-        for _,ci in enumerate(cis):
+        for i,ci in enumerate(cis):
             config_database.write(str(ci))
-            if _+1 != cis.__len__:
+            if i != cis.__len__()-1 :
                 config_database.write('\n')
 
 
@@ -245,6 +245,7 @@ def _build_documents(doc_config_items : list, labels : list):
         if(serial == None):
             serial = _find_serial_numb(code)
             ci.code = code + serial
+            _write_doc_config(doc_config_items)
 
         print(f"\nBuilding {ci.code}\n")
         status = subprocess.run(['latexmk', '-pdf', '-cd', ci.src_path], cwd=os.getcwd())
