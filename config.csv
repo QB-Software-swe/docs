@@ -10,5 +10,9 @@ VE;src/verbali/esterni/2023-12-11/Verbale_esterno_2023-12-11.tex;Candidatura/Doc
 LP;src/candidatura/Lettera_presentazione/Lettera_di_presentazione;Candidatura/Documenti_esterni;0.1.1;True
 PdCeI;src/candidatura/Preventivo_costi/Preventivo_dei_costi_e_degli_impegni;Candidatura/Documenti_esterni;0.2.1;True
 VdC;src/candidatura/Valutazione_capitolati/Valutazione_dei_capitolati.tex;Candidatura/Documenti_esterni;0.3.1;True
-NdP;src/norme_di_progetto/Norme_di_progetto.tex;RTB/Documenti_interni;0.3.0;True
+NdP;src/norme_di_progetto/Norme_di_progetto.tex;RTB/Documenti_interni;0.4.0;True
 VI4;src/verbali/interni/2023-11-27/Verbale_interno_2023-11-27.tex;RTB/Documenti_interni/Verbali;0.1.0;True
+VI;src/verbali/interni/2023-12-04/Verbale_interno_2023-12-04.tex;RTB/Documenti_interni/Verbali;0.0.0;True
+VE4;src/verbali/esterni/2023-12-07/Verbale_esterno_2023-12-07.tex;RTB/Documenti_esterni/Verbali;0.1.0;True
+VE5;src/verbali/esterni/2023-11-16/Verbale_esterno_2023-11-16.tex;RTB/Documenti_esterni/Verbali;0.1.0;True
+VE;src/verbali/esterni/2023-12-11/Verbale_esterno_2023-12-11.tex;Candidatura/Documenti_esterni/Verbali;0.0.0;True

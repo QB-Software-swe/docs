@@ -1,0 +1,178 @@
+%LTeX: language=it
+% DOC TYPE E DEF QB SOFTWARE %%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\input{base.tex}
+
+% INFORMAZIONI DOCUMENTO %%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Verbale interno}
+\date{del 04/12/2023}
+\footname{Verbale interno del 04/12/2023}
+
+\begin{document}
+	% PRIME PAGINE %%%%%%%%%%%%%%%%%%%%%%%%%
+	\makefirstpage
+	
+	\include{changelog.tex}
+	\clearpage
+	
+	\tableofcontents
+	\clearpage
+
+    \section{Informazioni generali}
+	
+	\subsection{Luogo e data dell'incontro}
+	
+    	\begin{itemize}
+    		\item \textbf{Luogo}: meeting su Discord
+    		\item \textbf{Data}: 04/12/2023
+    		\item \textbf{Ora di inizio}: 15:30
+    		\item \textbf{Ora di fine}: 17:30
+    	\end{itemize}
+	
+	\subsection{Presenze}
+	
+    	\begin{itemize}
+    		\item \textbf{Totale presenze}:
+    		\begin{itemize}
+    			\item Bustreo Alessandro
+    			\item Destro Stefano
+    			\item Domuta Alessia 
+    			\item Feltrin Alessandro 
+    			\item Fontana Raffaele Paolo 
+    			\item Giurisato Andrea 
+    			\item Rovea Silvia
+    		\end{itemize}
+    		
+    		\item \textbf{Totale assenze}: 0
+    		
+    		\item \textbf{Partecipanti esterni}:
+    		\begin{itemize}
+    			\item nessuno
+    		\end{itemize}
+    	\end{itemize}
+
+    \section{Ordine del giorno}
+        Questioni fissate nella riunione interna precedente:
+    	\begin{itemize}
+    		\item terminare la discussione della struttura e dei contenuti da inserire nel documento Piano di Qualifica;
+			\item pianificare le singole attività per l'inizio del prossimo Sprint.
+    	\end{itemize}
+    	%
+    	Nuove questioni:
+    	\begin{itemize}
+    		\item retrospettiva sullo Sprint appena concluso.
+    	\end{itemize}
+    
+    \section{Verbale}
+
+	In seguito a una discussione sul resoconto del periodo precedente, il gruppo ha sviluppato la seguente retrospettiva:
+		\begin{table}[H]
+			\begin{tabularx}{\textwidth}{X|X}
+				\hline
+				\multicolumn{1}{|>{\centering\arraybackslash}X|}{\textbf{Keep doing}}
+				&
+				\multicolumn{1}{>{\centering\arraybackslash}X|}{\textbf{Improvements}}
+				\\\hline\hline
+				Il gruppo ha raggiunto gli obiettivi del primo Sprint
+				&
+				Rendere più atomiche le issue su GitHub e assegnarle a una singola persona
+				\\\arrayrulecolor{gray}\hline
+				&
+				Verificatori devono utilizzare gli strumenti forniti da GitHub per comunicare con chi stende un documento
+				\\\arrayrulecolor{gray}\hline
+				&
+				Migliorare il sistema con cui vengono assegnati i documenti da verificare ai verificatori 
+				\\\arrayrulecolor{gray}\hline
+				&
+				Il sistema di automazione può introdurre ulteriori funzionalità per rimuovere il carico di lavoro che può essere svolto automaticamente
+				\\\arrayrulecolor{gray}\hline
+				&
+				L'Analisi dei Requisiti va sistemata basandosi sulla discussione avvenuta durante il \emph{pit stop: analisi dei requisiti "per davvero"}.
+			\end{tabularx}
+			\caption{retrospettiva del 04/12/2023.}
+		\end{table}
+		\noindent\\
+		Il gruppo, dopo la retrospettiva, ha discusso degli obbiettivi da raggiungere per il prossimo Sprint. In particolare, il gruppo ha deciso di:
+		\begin{itemize}
+			\item proseguire con lo studio delle tecnologie da utilizzare per la realizzazione del PoC;
+			\item modificare i casi d'uso;
+			\item continuare con le NdP, in particolare espandere il processo di gestione organizzativa e stendere quello relativa alla fornitura;
+			\item correggere e migliorare l'Analisi dei Requisiti;
+			\item continuare con la stesura del Glossario.
+		\end{itemize}
+		\noindent\\
+		Il team ha deciso di posticipare la stesura del Piano di Qualifica, in quanto non ritenuto prioritario per il momento.
+
+		\noindent
+		Il team ha deciso di richiedere una riunione con il proponente per la prossima settimana, in modo da chiarire alcuni dubbi riguardanti lo stack tecnologico.
+    \section{Azioni da intraprendere}
+    
+        \begin{todo}
+            \hline
+			\href{https://github.com/QB-Software-swe/docs/issues/44}{VI-2023-12-04-\#44}
+            &
+            R. Fontana
+            &
+            Manutenzione script di automazione
+            \\\hline
+			\href{https://github.com/QB-Software-swe/docs/issues/45}{VI-2023-12-04-\#45}
+            &
+            S. Rovea
+            &
+            Espandere gestione organizzativa nel file NdP
+            \\\hline
+            \href{https://github.com/QB-Software-swe/docs/issues/46}{VI-2023-12-04-\#46}
+            &
+            A. Feltrin
+            &
+            Scrivere processo di fornitura nel file NdP
+			\\\hline
+			\href{https://github.com/QB-Software-swe/docs/issues/47}{VI-2023-12-04-\#47}
+            &
+            S. Rovea
+            &
+            Correzione e continuazione casi d'uso relative alle email
+			\\\hline
+			\href{https://github.com/QB-Software-swe/docs/issues/48}{VI-2023-12-04-\#48}
+            &
+            A. Giurisato
+            &
+            Correzione e continuazione casi d'uso relative alle cartelle
+			\\\hline
+			\href{https://github.com/QB-Software-swe/docs/issues/49}{VI-2023-12-04-\#49}
+            &
+            A. Bustreo
+            &
+            Correzione e continuazione casi d'uso facoltativi
+			\\\hline
+			\href{https://github.com/QB-Software-swe/docs/issues/50}{VI-2023-12-04-\#50}
+            &
+            A. Feltrin
+            &
+            Proseguire con stesura del Glossario
+			\\\hline
+			\href{https://github.com/QB-Software-swe/docs/issues/51}{VI-2023-12-04-\#51}
+            &
+            S. Destro
+            &
+            Inizio configurazione Maven per PoC
+			\\\hline
+			\href{https://github.com/QB-Software-swe/docs/issues/52}{VI-2023-12-04-\#52}
+            &
+            A. Domuta
+            &
+            Inizio configurazione Jetty per PoC
+			\\\hline
+			\href{https://github.com/QB-Software-swe/docs/issues/53}{VI-2023-12-04-\#53}
+            &
+            R. Fontana
+            &
+            Inizio configurazione RESTeasy per PoC
+			\\
+    	\end{todo}
+    
+    \section{Ordine del giorno per la prossima riunione interna}
+        \begin{itemize}
+			\item Pianificare le singole attività per l'inizio del prossimo Sprint.
+    	\end{itemize}
+\end{document}
