@@ -1,0 +1,95 @@
+% DOC TYPE E DEF QB SOFTWARE %%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\input{base.tex}
+
+% INFORMAZIONI DOCUMENTO %%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Verbale esterno}
+\date{del 16/11/2023}
+\footname{Verbale esterno del 16/11/2023}
+
+\begin{document}
+	% PRIME PAGINE %%%%%%%%%%%%%%%%%%%%%%%%%
+	\makefirstpage
+	
+	\include{changelog.tex}
+	\clearpage
+	
+	\tableofcontents
+	\clearpage
+
+    \section{Informazioni generali}
+    
+    \subsection{Luogo e data dell'incontro}
+    
+    \begin{itemize}
+    	\item \textbf{Luogo}: meeting su Zextras Chat
+    	\item \textbf{Data}: 16/11/2023
+    	\item \textbf{Ora di inizio}: 16:30
+    	\item \textbf{Ora di fine}: 17:30
+    \end{itemize}
+    
+    \subsection{Presenze}
+    
+    \begin{itemize}
+    	\item \textbf{Totale presenze}:
+    	\begin{itemize}
+    		\item Bustreo Alessandro
+    		\item Destro Stefano
+    		\item Domuta Alessia 
+    		\item Feltrin Alessandro 
+    		\item Fontana Raffaele Paolo 
+    		\item Giurisato Andrea 
+    		\item Rovea Silvia
+    	\end{itemize}
+    	
+    	\item \textbf{Totale assenze}: 0
+    	
+    	\item \textbf{Partecipanti esterni}:
+    	\begin{itemize}
+    		\item Alessio Crestani (Zextras)
+            \item Federico Rispo (Zextras)
+    	\end{itemize}
+    \end{itemize}
+    
+    \section{Ordine del giorno}
+    \begin{itemize}
+    	\item domande da porre all'azienda.
+    \end{itemize}
+    
+    \section{Verbale}
+
+    Le domande poste da QB Software a Zextras durante il meeting:
+
+    \newcommand{\answer}{\item[\textbf{A:}]}
+        
+        \begin{enumerate}[label=\textbf{Q\arabic*:}]
+            \item C'è una preferenza per la versione di Java da utilizzare?
+            \answer Sono preferibili le versioni dalla 17 in poi, in particolare è necessario che sia LTS.
+
+            \item Quale sistema di build è preferibile usare? 
+            \answer Per il sistema di build non c'è una preferenza. L'azienda usa Maven.  
+
+            \item È possibile utilizzare un metodo di comunicazione diverso dalle email per le comunicazioni veloci? 
+            \answer Certo, per le comunicazioni veloci possiamo utilizzare un canale nel vostro server Discord.
+        
+            \item È necessario che Zextras approvi i verbali che vengono redatti in seguito alle riunioni. È possibile avere una firma sul pdf?
+            \answer Certo. Sarà sufficiente inviare il pdf e in seguito l'azienda si occuperà di apporvi una firma.
+            
+            \item Cosa consigliate per creare e testare gli stess test?
+            \answer Per gli stress test si consiglia il tool Locust.
+
+            \item Possiamo considerare solamente utenti autenticati e registrati?
+            \answer L'utente è già autenticato, non è richiesto la registrazione dell'account e si presuppone che sia già registrato nel sistema.
+
+        \end{enumerate}
+
+        \noindent     
+        In seguito alle domande c'è stata una discussione sulle priorità dei casi d'uso facoltativi. L'azienda ha dimostrato interesse riguardo gli stress test, indicandoli come una priorità nel caso si decida di implementare requisiti facoltativi.
+
+        \vspace{0.3cm}
+        \noindent
+        Infine, si è parlato di come dovrebbe essere il server e il database, in particolare l'azienda ha specificato di utilizzare soltanto un database in cui inserire tutti i dati per mantenere il concetto di stateless e di usare Jetty.
+    
+    \section{Azioni da intraprendere}
+        Proseguire con la stesura dei casi d'uso.
+\end{document}
