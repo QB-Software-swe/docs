@@ -1,0 +1,81 @@
+\section{Requisiti}
+
+\subsection{Requisiti funzionali}
+
+\begin{table}[H]
+    \centering
+    \rowcolors{2}{cyan!80!black!30!}{cyan!80!black!20!}
+    \begin{tabular}{*{1}{>{\centering\arraybackslash}p{2cm}}*{1}{>{\centering\arraybackslash}p{3cm}}p{5cm}*{1}{>{\centering\arraybackslash}p{3cm}}}
+    \toprule
+    \rowcolor{gray!20} \textbf{Codice} & \textbf{Importanza} & \textbf{Descrizione} & \textbf{Fonte}
+    \\\midrule 
+    RF & Obbligatorio & Invio di un'email & Capitolato
+    \\\midrule
+    RF & Obbligatorio & Ricezione di un'email & Capitolato
+    \\\midrule
+    RF & Obbligatorio & Creazione di una cartella & Capitolato
+    \\\midrule
+    RF & Obbligatorio & Eliminazione di una cartella & Capitolato
+    \\\midrule
+    RF & Obbligatorio & Modifica di una cartella & Capitolato
+    \\\midrule %is that obbligatorio???
+    RF & Obbligatorio & Creazione condivisione di una cartella & Capitolato
+    \\\midrule 
+    RF & Obbligatorio & Eliminazione della condivisione di una cartella & Capitolato
+    \\\midrule
+    RF & Obbligatorio & Modifica condivisione di una cartella & Capitolato
+    \\\midrule %is that obbligatorio???
+    RF & Obbligatorio &  ??? & Capitolato
+    \\\midrule
+    RF & Opzionale & Creazione di un contatto & Capitolato
+    \\\midrule
+    RF & Opzionale & Eliminazione di un contatto & Capitolato
+    \\\midrule
+    RF & Opzionale & Modifica di un contatto & Capitolato
+    \\\midrule %is that obbligatorio???
+    RF & Opzionale & Creazione di un calendario & Capitolato
+    \\\midrule
+    RF & Opzionale & Eliminazione di un calendario & Capitolato
+    \\\midrule
+    RF & Opzionale & Modifica di un calendario & Capitolato
+    \\\midrule %is that obbligatorio???
+    RF & Opzionale & Creazione di un evento nel calendario & Capitolato
+    \\\midrule
+    RF & Opzionale & Eliminazione di un evento nel calendario & Capitolato
+    \\\midrule
+    RF & Opzionale & Modifica di un evento nel calendario & Capitolato 
+    \\\midrule %is that obbligatorio???
+    \\\bottomrule
+    \end{tabular}
+\caption{requisiti funzionali}
+\label{tab:req-fun}
+\end{table}
+
+
+\subsection{Requisiti di vincolo}
+\begin{table}[H]
+    \centering
+    \rowcolors{2}{cyan!80!black!30!}{cyan!80!black!20!}
+    \begin{tabular}{*{1}{>{\centering\arraybackslash}p{2cm}}*{1}{>{\centering\arraybackslash}p{3cm}}p{5cm}*{1}{>{\centering\arraybackslash}p{3cm}}}
+    \toprule
+    \rowcolor{gray!20} \textbf{Codice} & \textbf{Importanza} & \textbf{Descrizione} & \textbf{Fonte}
+    \\\midrule 
+    RV & Obbligatorio & usare JMAP & Capitolato
+    \\\midrule
+    RV & Obbligatorio & libreria al link https://github.com/iNPUTmice/jmap oppure una tra quelle presenti al link https://jmap.io/software.html & Capitolato
+    \\\midrule
+    RV & Obbligatorio & Il servizio deve essere sviluppato in un sistema container & Capitolato
+    \\\midrule
+    RV & Obbligatorio & Il servizio sviluppato deve essere scalabile mediante l’inizializzazione di più nodi stateless & Capitolato
+    \\\midrule
+    RV & Obbligatorio & Il database deve essere unico & Verbale .....
+    \\\midrule
+    RV & Opzionale & Stress test & Capitolato
+    \\\midrule
+    RV & Opzionale & - & Capitolato
+    \\\bottomrule
+    \end{tabular}
+
+\caption{requisiti di vincolo}
+\label{tab:req-vin}
+\end{table}
