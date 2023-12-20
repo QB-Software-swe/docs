@@ -108,7 +108,7 @@
         \item Scenario:
             \begin{enumerate}
             \item il MUA si connette con il server;
-            \item il MUA trasmette i dati necessari per creare la cartella.
+            \item il MUA trasmette i dati necessari per creare la cartella. %trasmette il nome semplicemente ????
             \end{enumerate}
         \item Estensioni: errore...
         \item Precondizioni: il MUA sta creando una cartella;
@@ -303,19 +303,73 @@
 
 
 
-    %%%% COSE UTILI %%%%
-    \paragraph{UC 11.4.2.1 - Visualizzazione errore} \label{sec: UC 11.4.2.1}
+
+    
+    %creazione cartella problema nome
+    \paragraph{UC Errore nome cartella} \label{sec: UC 11.4.2.1}
     \begin{itemize}
-        \item Attore: utente;
-        \item Descrizione: l'utente deve ricevere un errore quando l'eliminazione degli elementi non è andata a buon fine;
+        \item Attore: MUA;
+        \item Descrizione: il MUA deve ricevere un messaggio di errore adeguato quando si tenta la creazione di una cartella con lo stesso nome e la stessa cartella padre di un'altra;
         \item Scenario:
         \begin{enumerate}
-        \item l'utente visualizza il messaggio d'errore.
+        \item il MUA riceve il messaggio di errore;
         \end{enumerate}   
-        \item Precondizioni: l'utente sta elimiando gli elementi dalla cartella;
-        \item Postcondizioni: l'utente ha ricevuto un messaggio d'errore.
+        \item Precondizioni: 
+        \begin{enumerate}
+            \item il MUA ha trasmesso il nome per la creazione della cartella;
+            \item esiste già una cartella con lo stesso nome e la stessa cartella padre;
+        \end{enumerate}
+        \item Postcondizioni: il MUA ha ricevuto un messaggio di errore.
     \end{itemize}
 
+    %eliminazione cartella con email
+    \paragraph{UC Errore cartella contenente email} \label{sec: UC 11.4.2.1}
+    \begin{itemize}
+        \item Attore: MUA;
+        \item Descrizione: il MUA deve ricevere un messaggio di errore adeguato quando l'eliminazione di una cartella non è andata a buon fine a causa di una o più email presenti all'interno di quella cartella;
+        \item Scenario:
+        \begin{enumerate}
+        \item il MUA riceve il messaggio di errore;
+        \end{enumerate}   
+        \item Precondizioni: 
+        \begin{enumerate}
+            \item il MUA ha trasmesso i dati per l'emilinazione di una cartella ;
+            \item la cartella contiene una o più email;
+        \end{enumerate}
+        \item Postcondizioni: il MUA ha ricevuto un messaggio di errore.
+    \end{itemize}
+
+        %eliminazione cartella con cartelle
+        \paragraph{UC Errore cartella contenente cartelle} \label{sec: UC 11.4.2.1}
+        \begin{itemize}
+            \item Attore: MUA;
+            \item Descrizione: il MUA deve ricevere un messaggio di errore adeguato quando l'eliminazione di una cartella non è andata a buon fine a causa di una o più cartelle presenti all'interno di quella cartella;
+            \item Scenario:
+            \begin{enumerate}
+            \item il MUA riceve il messaggio di errore;
+            \end{enumerate}   
+            \item Precondizioni: 
+            \begin{enumerate}
+                \item il MUA ha trasmesso i dati per l'emilinazione di una cartella ;
+                \item la cartella contiene una o più cartelle;
+            \end{enumerate}
+            \item Postcondizioni: il MUA ha ricevuto un messaggio di errore.
+        \end{itemize}
+    
+
+
+            %%%% COSE UTILI %%%%
+    \paragraph{UC  errore} \label{sec: UC 11.4.2.1}
+    \begin{itemize}
+        \item Attore: MUA;
+        \item Descrizione: il MUA deve ricevere un messaggio di errore adeguato quando l'eliminazione degli elementi non è andata a buon fine;
+        \item Scenario:
+        \begin{enumerate}
+        \item il MUA riceve il messaggio di errore
+        \end{enumerate}   
+        \item Precondizioni: il MUA ha trasmesso ...;
+        \item Postcondizioni: il MUA ha ricevuto un messaggio d'errore.
+    \end{itemize}
 
     \subsection{UC 18 - Stress test}
 \begin{itemize}
