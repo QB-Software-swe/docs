@@ -5,45 +5,45 @@
 \begin{table}[H]
     \centering
     \rowcolors{2}{cyan!80!black!30!}{cyan!80!black!20!}
-    \begin{tabular}{*{1}{>{\centering\arraybackslash}p{2cm}}*{1}{>{\centering\arraybackslash}p{3cm}}p{5cm}*{1}{>{\centering\arraybackslash}p{3cm}}}
+    \begin{tabular}{*{1}{>{\centering\arraybackslash}p{1.5cm}}*{1}{>{\centering\arraybackslash}p{2.5cm}}p{6cm}*{1}{>{\centering\arraybackslash}p{3cm}}}
     \toprule
     \rowcolor{gray!20} \textbf{Codice} & \textbf{Importanza} & \textbf{Descrizione} & \textbf{Fonte}
     \\\midrule 
-    RF & Obbligatorio & Invio di un'email & Capitolato
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di inviare un'email & Capitolato
     \\\midrule
-    RF & Obbligatorio & Ricezione di un'email & Capitolato
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di ricevere un'email & Capitolato
     \\\midrule
-    RF & Obbligatorio & Creazione di una cartella & Capitolato
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di creare una cartella & Capitolato
     \\\midrule
-    RF & Obbligatorio & Eliminazione di una cartella & Capitolato
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di eliminare una cartella & Capitolato
     \\\midrule
-    RF & Obbligatorio & Modifica di una cartella & Capitolato
-    \\\midrule %is that obbligatorio???
-    RF & Obbligatorio & Creazione condivisione di una cartella & Capitolato
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di modificare una cartella & Capitolato
     \\\midrule 
-    RF & Obbligatorio & Eliminazione della condivisione di una cartella & Capitolato
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di creare una condivisione di una cartella & Capitolato
+    \\\midrule 
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di eliminare la condivisione di una cartella & Capitolato
     \\\midrule
-    RF & Obbligatorio & Modifica condivisione di una cartella & Capitolato
-    \\\midrule %is that obbligatorio???
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di modificare la condivisione di una cartella & Capitolato
+    \\\midrule 
     RF & Obbligatorio &  ??? & Capitolato
     \\\midrule
-    RF & Opzionale & Creazione di un contatto & Capitolato
+    RF & Opzionale & È necessario che il MUA abbia la capacità di creare un contatto & Capitolato
     \\\midrule
-    RF & Opzionale & Eliminazione di un contatto & Capitolato
+    RF & Opzionale & È necessario che il MUA abbia la capacità di eliminare un contatto & Capitolato
     \\\midrule
-    RF & Opzionale & Modifica di un contatto & Capitolato
+    RF & Opzionale & È necessario che il MUA abbia la capacità di modificare un contatto & Capitolato
     \\\midrule %is that obbligatorio???
-    RF & Opzionale & Creazione di un calendario & Capitolato
+    RF & Opzionale & È necessario che il MUA abbia la capacità di creare un calendario & Capitolato
     \\\midrule
-    RF & Opzionale & Eliminazione di un calendario & Capitolato
+    RF & Opzionale & È necessario che il MUA abbia la capacità di eliminare un calendario & Capitolato
     \\\midrule
-    RF & Opzionale & Modifica di un calendario & Capitolato
+    RF & Opzionale & È necessario che il MUA abbia la capacità di modificare un calendario & Capitolato
     \\\midrule %is that obbligatorio???
-    RF & Opzionale & Creazione di un evento nel calendario & Capitolato
+    RF & Opzionale & È necessario che il MUA abbia la capacità di creare un evento nel calendario & Capitolato
     \\\midrule
-    RF & Opzionale & Eliminazione di un evento nel calendario & Capitolato
+    RF & Opzionale & È necessario che il MUA abbia la capacità di eliminare un evento nel calendario & Capitolato
     \\\midrule
-    RF & Opzionale & Modifica di un evento nel calendario & Capitolato 
+    RF & Opzionale & È necessario che il MUA abbia la capacità di modificare un evento nel calendario & Capitolato 
     \\\midrule %is that obbligatorio???
     \\\bottomrule
     \end{tabular}
@@ -60,17 +60,21 @@
     \toprule
     \rowcolor{gray!20} \textbf{Codice} & \textbf{Importanza} & \textbf{Descrizione} & \textbf{Fonte}
     \\\midrule 
-    RV & Obbligatorio & usare JMAP & Capitolato
+    RV & Obbligatorio & È necessario usare JMAP come protocollo per accedere al server & Capitolato
     \\\midrule
-    RV & Obbligatorio & libreria al link https://github.com/iNPUTmice/jmap oppure una tra quelle presenti al link https://jmap.io/software.html & Capitolato
+    RV & Obbligatorio & L'implementazione di JMAP deve essere fatta utilizzando una delle librerie al link https://github.com/iNPUTmice/jmap oppure una tra quelle presenti al link https://jmap.io/software.html & Capitolato
     \\\midrule
     RV & Obbligatorio & Il servizio deve essere sviluppato in un sistema container & Capitolato
     \\\midrule
     RV & Obbligatorio & Il servizio sviluppato deve essere scalabile mediante l’inizializzazione di più nodi stateless & Capitolato
     \\\midrule
+    RV & Obbligatorio & Il client deve essere uno tra quelli presenti al link https://jmap.io/software.html  & Capitolato
+    \\\midrule
     RV & Obbligatorio & Il database deve essere unico & Verbale .....
     \\\midrule
-    RV & Opzionale & Stress test & Capitolato
+    RV & Desiderabile & Stress test per testare il protocollo JAMP & Capitolato
+    \\\midrule
+    RV & Desiderabile & Java come linguaggio di programmazione & Capitolato
     \\\midrule
     RV & Opzionale & - & Capitolato
     \\\bottomrule
