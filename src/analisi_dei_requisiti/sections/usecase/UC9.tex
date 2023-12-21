@@ -1,0 +1,89 @@
+%LTeX: language=it
+\subsection{UC 9 - Modificare un evento del calendario} \label{sec:UC8}
+    \begin{itemize}
+        \item \textbf{Attore principale}: MUA;
+        \item \textbf{Descrizione}: il MUA deve poter modificare un evento nel calendario;
+        \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, e ha un connessione aperta con il sistema ed è autenticato;
+        \item \textbf{Postcondizioni}: il MUA modifica un evento nel calendario, il suo nuovo stato viene salvato nel sistema;
+        \item \textbf{Scenario principale}:
+            \begin{enumerate}
+                \item il MUA invia le informazioni per aggiornare il l'evento del calendario nel sistema (\hyperref[sec:UC9.1]{UC 9.1});
+                \item il sistema salva il nuovo stato del evento;
+            \end{enumerate}
+        \item \textbf{Inclusioni}: nessuna;
+        \item \textbf{Generalizzazioni}: nessuna;
+        \item \textbf{Estensioni}: nessuna.
+    \end{itemize}
+
+\begin{figure}[h]
+    \includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC09.X.png}
+    \centering
+    \caption{Diagramma sotto-casi UC 9.}
+\end{figure}
+
+\subsubsection{UC 9.1 - Trasmette i dettagli del evento} \label{sec:UC9.1}
+    \begin{itemize}
+        \item \textbf{Attore principale}: MUA;
+        \item \textbf{Descrizione}: il MUA trasmette il nuovo stato del evento al sistema;
+        \item \textbf{Precondizioni}: il MUA sta utilizzando la funzionalità di modifica di un evento del calendario;
+        \item \textbf{Postcondizioni}: il MUA modifica l'evento, il nuovo evento viene salvato nel sistema;
+        \item \textbf{Scenario principale}:
+            \begin{enumerate}
+                \item il MUA invia le informazioni per aggiornare l'evento nel sistema;
+                \item il sistema elabora le nuove informazioni, e controlla che siano valide:
+                \begin{itemize}
+                    \item controlla che l'evento abbia un titolo che non sia vuoto;
+                    \item controlla che la data d'inizio si inferiore rispetto alla data di fine;
+                \end{itemize}
+                \item il sistema salva il nuovo stato del contato;
+            \end{enumerate}
+        \item \textbf{Inclusioni}: nessuna;
+        \item \textbf{Generalizzazioni}: nessuna;
+        \item \textbf{Estensioni}: 
+            \begin{enumerate}[label=\alph*.]
+                \item il sistema non riesce ad aggiornare lo stato dell'evento perché non è stato trovato:
+                \begin{enumerate}[label=\arabic*.]
+                    \item il sistema ritorna un errore al MUA di evento inesistente (\hyperref[sec:UC9.2]{UC 9.2});
+                \end{enumerate}
+                \item il sistema non riesce a modificare lo stato del evento perché i dati trasmessi non rispettano i requisiti:
+                \begin{enumerate}[label=\arabic*.]
+                    \item il sistema ritorna un errore al MUA dettagli dell'evento non validi (\hyperref[sec:U9.3]{UC 9.3}).
+                \end{enumerate}
+            \end{enumerate}
+    \end{itemize}
+
+\subsubsection{UC 9.2 - Ritorna l'errore l'evento inesistente} \label{sec:UC9.2}
+    \begin{itemize}
+        \item \textbf{Attore principale}: MUA;
+        \item \textbf{Descrizione}: il MUA sta trasmettendo il nuovo stato del contato al sistema, ma l'evento indicato non esiste;
+        \item \textbf{Precondizioni}: il MUA sta utilizzando la funzionalità di trasmissione dei dettagli per la modifica di un evento;
+        \item \textbf{Postcondizioni}: il sistema non aggiorna lo stato dell'evento, il MUA è stato notificato dell'errore;
+        \item \textbf{Scenario principale}:
+            \begin{enumerate}
+                \item il MUA invia le informazioni per aggiornare l'evento nel sistema;
+                \item il sistema controlla le informazioni, e riscontra che il l'evento non esiste;
+                \item il sistema non aggiorna il l'evento;
+                \item il sistema ritorna l'errore al MUA;
+            \end{enumerate}
+        \item \textbf{Inclusioni}: nessuna;
+        \item \textbf{Generalizzazioni}: nessuna;
+        \item \textbf{Estensioni}: nessuna.
+    \end{itemize}
+
+\subsubsection{UC 9.3 - Ritorna l'errore dettagli l'evento non validi} \label{sec:UC9.3}
+    \begin{itemize}
+        \item \textbf{Attore principale}: MUA;
+        \item \textbf{Descrizione}: il MUA sta trasmettendo il nuovo stato dell'evento al sistema, ma i dettagli inviati non rispettano i requisiti richiesti;
+        \item \textbf{Precondizioni}: il MUA sta utilizzando la funzionalità di trasmissione dei dettagli per la modifica di un evento;
+        \item \textbf{Postcondizioni}: il sistema non aggiorna lo stato dell'evento, il MUA è stato notificato dell'errore;
+        \item \textbf{Scenario principale}:
+            \begin{enumerate}
+                \item il MUA invia le informazioni per aggiornare l'evento nel sistema;
+                \item il sistema controlla le informazioni, il sistema riscontra dei valori non validi;
+                \item il sistema non aggiorna l'evento;
+                \item il sistema ritorna l'errore al MUA;
+            \end{enumerate}
+        \item \textbf{Inclusioni}: nessuna;
+        \item \textbf{Generalizzazioni}: nessuna;
+        \item \textbf{Estensioni}: nessuna.
+    \end{itemize}
