@@ -1,492 +1,409 @@
+%LTeX: language=it
 \section{Casi d'uso}
-    %%%%%%%%%%%%%%% SCENARIO EMAIL %%%%%%%%%%%%%%%%%%%%%%%
 
-    \subsection{UC 1 - Inviare un'email} \label{sec: 1}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve poter scrivere una email;
-        \item Scenario principale:
-            \begin{enumerate}
-            \item il MUA trasmette il destinatario (\hyperref[sec: UC 1.1]{UC 1.1});
-            \item il MUA trasmette il mittente (\hyperref[sec: UC 1.2]{UC 1.2});
-            \item il MUA trasmette l'oggetto (\hyperref[sec: UC 1.3]{UC 1.3});
-            \end{enumerate}
-        \item Estensioni: errore... %(\hyperref[sec: UC 1.4.1]{UC 1.4.1});
-        \item Precondizioni: l’account che il MUA gestisce è registrato nel sistema ed è autenticato;
-        \item Postcondizioni: l'email è stata inviata con successo al destinatario.
-    \end{itemize}
+    \input{sections/usecase/UC1.tex}
+    \include{sections/usecase/UC2.tex}
+    \include{sections/usecase/UC3.tex}
+    \include{sections/usecase/UC4.tex}
 
-    \subsubsection{UC 1.1 - Trasmettere il destinatario} \label{sec: UC 1.1}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve poter trasmettere il destinatario;
-        \item Scenario:
-        \begin{enumerate}
-        \item il MUA si connette con il server;
-        \item il MUA trasmette il destinatario.
-        \end{enumerate}
-        \item Precondizioni: il MUA sta inviando un'email;
-        \item Postcondizioni: il destinatario è stato trasmesso.
-    \end{itemize}
-
-    \subsubsection{UC 1.2 - Trasmettere il mittente} \label{sec: UC 1.2}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve poter trasmettere il mittente;
-        \item Scenario:
-        \begin{enumerate}
-        \item il MUA si connette con il server;
-        \item il MUA trasmette il mittente.
-        \end{enumerate}
-        \item Estensioni: errore... %(\hyperref[sec: UC 1.4.1]{UC 1.4.1});
-        \item Precondizioni: il MUA sta inviando un'email;
-        \item Postcondizioni: il mittente è stato trasmesso.
-    \end{itemize}
-    
-    \subsubsection{UC 1.3 - Trasmettere l'oggetto} \label{sec: UC 1.3}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve poter trasmettere il mittente;
-        \item Scenario:
-        \begin{enumerate}
-        \item il MUA si connette con il server;
-        \item il MUA trasmette il mittente.
-        \end{enumerate}
-        \item Estensioni: errore... %(\hyperref[sec: UC 1.4.1]{UC 1.4.1});
-        \item Precondizioni: il MUA sta inviando un'email;
-        \item Postcondizioni: l'oggetto è stato trasmesso.
-    \end{itemize}
+%     \subsubsection{UC 2.1 - Trasmettere richiesta di aggiornamento} \label{sec: UC 2.1}
+%     \begin{itemize}
+%         \item Attore: MUA;
+%         \item Descrizione: il MUA deve poter richiedere un aggiornamento dei propri dati;
+%         \item Scenario:
+%         \begin{enumerate}
+%         \item il MUA si connette con il server;
+%         \item il MUA richiede nuovi dati.
+%         \end{enumerate}
+%         \item Estensioni: errore... %(\hyperref[sec: UC 1.4.1]{UC 1.4.1});
+%         \item Precondizioni: il MUA si sta aggiornando con i nuovi dati;
+%         \item Postcondizioni: il MUA ha ricevuto nuove informazioni.
+%     \end{itemize}
 
 
-    \subsection{UC 2 - Sincronizzare}  \label{sec: UC 2}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve poter aggiornare il suo stato con le nuove informazioni;
-        \item Scenario principale:
-            \begin{enumerate}
-            \item il MUA trasmette una richiesta di aggiornamento (\hyperref[sec: UC 2.1]{UC 2.1}).
-            \end{enumerate}
-        \item Estensioni: errore... %(\hyperref[sec: UC 1.4.1]{UC 1.4.1});
-        \item Precondizioni: l'account che il MUA gestisce è registrato nel sistema ed è autenticato;
-        \item Postcondizioni: il MUA è stato aggiornato con le nuove informazioni.
-    \end{itemize}
 
-    \subsubsection{UC 2.1 - Trasmettere richiesta di aggiornamento} \label{sec: UC 2.1}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve poter richiedere un aggiornamento dei propri dati;
-        \item Scenario:
-        \begin{enumerate}
-        \item il MUA si connette con il server;
-        \item il MUA richiede nuovi dati.
-        \end{enumerate}
-        \item Estensioni: errore... %(\hyperref[sec: UC 1.4.1]{UC 1.4.1});
-        \item Precondizioni: il MUA si sta aggiornando con i nuovi dati;
-        \item Postcondizioni: il MUA ha ricevuto nuove informazioni.
-    \end{itemize}
+%     \subsubsection{UC 3.1 - Creare una cartella} \label{sec: UC 3.1}
+%     \begin{itemize}
+%         \item Attore: MUA;
+%         \item Descrizione: il MUA deve poter creare una cartella;
+%         \item Scenario:
+%             \begin{enumerate}
+%             \item il MUA si connette con il server;
+%             \item il MUA trasmette i dati necessari per creare la cartella; 
+%             \item % scrivere trasmettere solo nome forse???
+%             \end{enumerate}
+%         \item Estensioni: Errore nome cartella
+%         \item Precondizioni: il MUA sta creando una cartella;
+%         \item Postcondizioni: è stata creata la cartella.
+%     \end{itemize}
 
-    \subsection{UC 3 - Creare un oggetto} \label{sec: UC 3}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve poter creare un oggetto specifico;
-        \item Scenario principale:
-            \begin{enumerate}
-                \item 
-            \end{enumerate}
-        \item Generalizzazioni:
-            \begin{itemize}
-                \item il MUA crea una cartella (\hyperref[sec: UC 3.1]{UC 3.1});
-                \item il MUA crea un contatto (\hyperref[sec: UC 3.2]{UC 3.2});
-                \item il MUA crea una condivisione (\hyperref[sec: UC 3.3]{UC 3.3});
-                \item il MUA crea un evento (\hyperref[sec: UC 3.4]{UC 3.4}).
-            \end{itemize}
-        \item Estensioni: errore ;
-        \item Precondizioni: l’account che il MUA gestisce è registrato nel sistema ed è autenticato;
-        \item Postcondizioni: è stato creato l’oggetto desiderato.
-    \end{itemize}
+%     \subsubsection{UC 3.2 - Creare un contatto} \label{sec: UC 3.2}
+%     \begin{itemize}
+%         \item Attore: MUA;
+%         \item Descrizione: il MUA deve poter creare un contatto;
+%         \item Scenario:
+%         \begin{enumerate}
+%         \item il MUA si connette con il server;
+%         \item il MUA trasmette i dati necessari per creare il contatto;
+%         \end{enumerate}
+%         \item Estensioni: errore...
+%         \item Precondizioni: il MUA sta creando un contatto;
+%         \item Postcondizioni: è stata creata il contatto.
+%     \end{itemize}
 
-    \subsubsection{UC 3.1 - Creare una cartella} \label{sec: UC 3.1}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve poter creare una cartella;
-        \item Scenario:
-            \begin{enumerate}
-            \item il MUA si connette con il server;
-            \item il MUA trasmette i dati necessari per creare la cartella; 
-            \item % scrivere trasmettere solo nome forse???
-            \end{enumerate}
-        \item Estensioni: Errore nome cartella
-        \item Precondizioni: il MUA sta creando una cartella;
-        \item Postcondizioni: è stata creata la cartella.
-    \end{itemize}
+%     \subsubsection{UC 3.3 - Creare una condivisione} \label{sec: UC 3.3}
+%     \begin{itemize}
+%         \item Attore: MUA;
+%         \item Descrizione: il MUA deve poter creare una condivisione di una cartella;
+%         \item Scenario:
+%         \begin{enumerate}
+%         \item il MUA si connette con il server;
+%         \item il MUA trasmette i dati necessari per creare la condivisione della cartella.
+%         \end{enumerate}
+%         \item Estensioni: errore...
+%         \item Precondizioni: l’account che il MUA gestisce è registrato nel sistema ed è autenticato;
+%         \item Postcondizioni: è stata creata la condivisione di una cartella.
+%     \end{itemize}
 
-    \subsubsection{UC 3.2 - Creare un contatto} \label{sec: UC 3.2}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve poter creare un contatto;
-        \item Scenario:
-        \begin{enumerate}
-        \item il MUA si connette con il server;
-        \item il MUA trasmette i dati necessari per creare il contatto;
-        \end{enumerate}
-        \item Estensioni: errore...
-        \item Precondizioni: il MUA sta creando un contatto;
-        \item Postcondizioni: è stata creata il contatto.
-    \end{itemize}
+%     \subsubsection{UC 3.4 - Creare un evento} \label{sec: UC 3.4}
+%     \begin{itemize}
+%         \item Attore: MUA;
+%         \item Descrizione: il MUA deve poter creare un evento;
+%         \item Scenario:
+%         \begin{enumerate}
+%         \item il MUA si connette con il server;
+%         \item il MUA trasmette i dati necessari per creare un evento.
+%         \end{enumerate}
+%         \item Estensioni: errore...
+%         \item Precondizioni: il MUA sta creando un evento;
+%         \item Postcondizioni: è stato creato l'evento.
+%     \end{itemize}
 
-    \subsubsection{UC 3.3 - Creare una condivisione} \label{sec: UC 3.3}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve poter creare una condivisione di una cartella;
-        \item Scenario:
-        \begin{enumerate}
-        \item il MUA si connette con il server;
-        \item il MUA trasmette i dati necessari per creare la condivisione della cartella.
-        \end{enumerate}
-        \item Estensioni: errore...
-        \item Precondizioni: l’account che il MUA gestisce è registrato nel sistema ed è autenticato;
-        \item Postcondizioni: è stata creata la condivisione di una cartella.
-    \end{itemize}
+%     \subsection{UC 4 - Modificare un oggetto} \label{sec: UC 4}
+%     \begin{itemize}
+%         \item Attore: MUA;
+%         \item Descrizione: il MUA deve poter modificare un oggetto specifico;
+%         \item Scenario principale:
+%             \begin{enumerate}
+%                 \item 
+%             \end{enumerate}
+%         \item Generalizzazioni:
+%             \begin{itemize}
+%             \item il MUA modifica una cartella (\hyperref[sec: UC 4.1]{UC 4.1});
+%             \item il MUA modifica un contatto (\hyperref[sec: UC 4.2]{UC 4.2});
+%             \item il MUA mofidica una condivisione (\hyperref[sec: UC 4.3]{UC 4.3});
+%             \item il MUA modifica un evento (\hyperref[sec: UC 4.4]{UC 4.4}).
+%             \end{itemize}
+%         \item Estensioni: errore...
+%         \item Precondizioni: l’account che il MUA gestisce è registrato nel sistema ed è autenticato;
+%         \item Postcondizioni: è stato modificato l’oggetto desiderato.
+%     \end{itemize}
 
-    \subsubsection{UC 3.4 - Creare un evento} \label{sec: UC 3.4}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve poter creare un evento;
-        \item Scenario:
-        \begin{enumerate}
-        \item il MUA si connette con il server;
-        \item il MUA trasmette i dati necessari per creare un evento.
-        \end{enumerate}
-        \item Estensioni: errore...
-        \item Precondizioni: il MUA sta creando un evento;
-        \item Postcondizioni: è stato creato l'evento.
-    \end{itemize}
+%     \subsubsection{UC 4.1 - Modificare una cartella} \label{sec: UC 4.1}
+%     \begin{itemize}
+%         \item Attore: MUA;
+%         \item Descrizione: il MUA deve poter modificare una cartella;
+%         \item Scenario:
+%         \begin{enumerate}
+%         \item il MUA si connette con il server;
+%         \item Il MUA trasmette i dati necessari per modificare la cartella.
+%         \end{enumerate}
+%         \item Estensioni: errore...
+%         \item Precondizioni: il MUA sta modificando una cartella;
+%         \item Postcondizioni: è stata modificata la cartella.
+%     \end{itemize}
 
-    \subsection{UC 4 - Modificare un oggetto} \label{sec: UC 4}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve poter modificare un oggetto specifico;
-        \item Scenario principale:
-            \begin{enumerate}
-                \item 
-            \end{enumerate}
-        \item Generalizzazioni:
-            \begin{itemize}
-            \item il MUA modifica una cartella (\hyperref[sec: UC 4.1]{UC 4.1});
-            \item il MUA modifica un contatto (\hyperref[sec: UC 4.2]{UC 4.2});
-            \item il MUA mofidica una condivisione (\hyperref[sec: UC 4.3]{UC 4.3});
-            \item il MUA modifica un evento (\hyperref[sec: UC 4.4]{UC 4.4}).
-            \end{itemize}
-        \item Estensioni: errore...
-        \item Precondizioni: l’account che il MUA gestisce è registrato nel sistema ed è autenticato;
-        \item Postcondizioni: è stato modificato l’oggetto desiderato.
-    \end{itemize}
+%     \subsubsection{UC 4.2 - Modificare un contatto} \label{sec: UC 4.2}
+%     \begin{itemize}
+%         \item Attore: MUA;
+%         \item Descrizione: il MUA deve poter modificare un contatto;
+%         \item Scenario:
+%         \begin{enumerate}
+%         \item il MUA si connette con il server;
+%         \item Il MUA trasmette i dati necessari per modificare il contatto.
+%         \end{enumerate}
+%         \item Estensioni: errore...
+%         \item Precondizioni: il MUA sta modificando un contatto;
+%         \item Postcondizioni: è stato modificato il contatto.
+%     \end{itemize}
 
-    \subsubsection{UC 4.1 - Modificare una cartella} \label{sec: UC 4.1}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve poter modificare una cartella;
-        \item Scenario:
-        \begin{enumerate}
-        \item il MUA si connette con il server;
-        \item Il MUA trasmette i dati necessari per modificare la cartella.
-        \end{enumerate}
-        \item Estensioni: errore...
-        \item Precondizioni: il MUA sta modificando una cartella;
-        \item Postcondizioni: è stata modificata la cartella.
-    \end{itemize}
+%     \subsubsection{UC 4.3 - Modificare una condivisione} \label{sec: UC 4.3}
+%     \begin{itemize}
+%         \item Attore: MUA;
+%         \item Descrizione: il MUA deve poter modificare una condivisione di una cartella;
+%         \item Scenario:
+%         \begin{enumerate}
+%         \item il MUA si connette con il server;
+%         \item Il MUA trasmette i dati necessari per modificare la condivisione di una cartella.
+%         \end{enumerate}
+%         \item Estensioni: errore...
+%         \item Precondizioni: il MUA sta modificando una condivisione di una cartella;
+%         \item Postcondizioni: è stata modificata la condivisione di una cartella.
+%     \end{itemize}
 
-    \subsubsection{UC 4.2 - Modificare un contatto} \label{sec: UC 4.2}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve poter modificare un contatto;
-        \item Scenario:
-        \begin{enumerate}
-        \item il MUA si connette con il server;
-        \item Il MUA trasmette i dati necessari per modificare il contatto.
-        \end{enumerate}
-        \item Estensioni: errore...
-        \item Precondizioni: il MUA sta modificando un contatto;
-        \item Postcondizioni: è stato modificato il contatto.
-    \end{itemize}
+%     \subsubsection{UC 4.4 - Modificare un evento} \label{sec: UC 4.4}
+%     \begin{itemize}
+%         \item Attore: MUA;
+%         \item Descrizione: il MUA deve poter modificare un evento;
+%         \item Scenario:
+%         \begin{enumerate}
+%         \item il MUA si connette con il server;
+%         \item Il MUA trasmette i dati necessari per modificare un evento.
+%         \end{enumerate}
+%         \item Estensioni: 
+%         \begin{itemize}
+%             \item Errore dimensioni evento;
+%         \end{itemize}
+%         \item Precondizioni: il MUA sta modificando un evento;
+%         \item Postcondizioni: è stato modificato l'evento.
+%     \end{itemize}
 
-    \subsubsection{UC 4.3 - Modificare una condivisione} \label{sec: UC 4.3}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve poter modificare una condivisione di una cartella;
-        \item Scenario:
-        \begin{enumerate}
-        \item il MUA si connette con il server;
-        \item Il MUA trasmette i dati necessari per modificare la condivisione di una cartella.
-        \end{enumerate}
-        \item Estensioni: errore...
-        \item Precondizioni: il MUA sta modificando una condivisione di una cartella;
-        \item Postcondizioni: è stata modificata la condivisione di una cartella.
-    \end{itemize}
+%     \subsection{UC 5 - Eliminare un oggetto} \label{sec: UC 5}
+%     \begin{itemize}
+%         \item Attore: MUA;
+%         \item Descrizione: il MUA deve poter eliminare un oggetto specifico;
+%         \item Scenario principale:
+%         \begin{enumerate}
+%             \item 
+%         \end{enumerate}
+%         \item Generalizzazioni:
+%             \begin{itemize}
+%             \item il MUA elimina una cartella (\hyperref[sec: UC 5.1]{UC 5.1});
+%             \item il MUA elimina un contatto (\hyperref[sec: UC 5.2]{UC 5.2});
+%             \item il MUA elimina una condivisione (\hyperref[sec: UC 5.3]{UC 5.3});
+%             \item il MUA elimina un evento (\hyperref[sec: UC 5.4]{UC 5.4}).
+%             \end{itemize}
+%         \item Estensioni:
+%         \item Precondizioni: l’account che il MUA gestisce è registrato nel sistema ed è autenticato;
+%         \item Postcondizioni: è stato eliminato l’oggetto desiderato.
+%     \end{itemize}
 
-    \subsubsection{UC 4.4 - Modificare un evento} \label{sec: UC 4.4}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve poter modificare un evento;
-        \item Scenario:
-        \begin{enumerate}
-        \item il MUA si connette con il server;
-        \item Il MUA trasmette i dati necessari per modificare un evento.
-        \end{enumerate}
-        \item Estensioni: 
-        \begin{itemize}
-            \item Errore dimensioni evento;
-        \end{itemize}
-        \item Precondizioni: il MUA sta modificando un evento;
-        \item Postcondizioni: è stato modificato l'evento.
-    \end{itemize}
+%     \subsubsection{UC 5.1 - Eliminare una cartella} \label{sec: UC 5.1}
+%     \begin{itemize}
+%         \item Attore: MUA;
+%         \item Descrizione: il MUA deve poter eliminare una cartella;
+%         \item Scenario:
+%         \begin{enumerate}
+%         \item il MUA si connette con il server;
+%         \item Il MUA trasmette i dati necessari per eliminare la cartella.
+%         \end{enumerate}
+%         \item Estensioni: 
+%             \begin{itemize}
+%                 \item Errore cartella contenente email;
+%                 \item Errore cartella contenente cartelle;
+%             \end{itemize}
+%         \item Precondizioni: il MUA sta eliminando una cartella;
+%         \item Postcondizioni: è stata eliminata la cartella.
+%     \end{itemize}
 
-    \subsection{UC 5 - Eliminare un oggetto} \label{sec: UC 5}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve poter eliminare un oggetto specifico;
-        \item Scenario principale:
-        \begin{enumerate}
-            \item 
-        \end{enumerate}
-        \item Generalizzazioni:
-            \begin{itemize}
-            \item il MUA elimina una cartella (\hyperref[sec: UC 5.1]{UC 5.1});
-            \item il MUA elimina un contatto (\hyperref[sec: UC 5.2]{UC 5.2});
-            \item il MUA elimina una condivisione (\hyperref[sec: UC 5.3]{UC 5.3});
-            \item il MUA elimina un evento (\hyperref[sec: UC 5.4]{UC 5.4}).
-            \end{itemize}
-        \item Estensioni:
-        \item Precondizioni: l’account che il MUA gestisce è registrato nel sistema ed è autenticato;
-        \item Postcondizioni: è stato eliminato l’oggetto desiderato.
-    \end{itemize}
+%     \subsubsection{UC 5.2 - Eliminare un contatto} \label{sec: UC 5.2}
+%     \begin{itemize}
+%         \item Attore: MUA;
+%         \item Descrizione: il MUA deve poter eliminare un contatto;
+%         \item Scenario:
+%         \begin{enumerate}
+%         \item il MUA si connette con il server;
+%         \item Il MUA trasmette i dati necessari per eliminare il contatto.
+%         \end{enumerate}
+%         \item Estensioni: errore...
+%         \item Precondizioni: il MUA sta eliminando un contatto;
+%         \item Postcondizioni: è stato eliminato il contatto.
+%     \end{itemize}
 
-    \subsubsection{UC 5.1 - Eliminare una cartella} \label{sec: UC 5.1}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve poter eliminare una cartella;
-        \item Scenario:
-        \begin{enumerate}
-        \item il MUA si connette con il server;
-        \item Il MUA trasmette i dati necessari per eliminare la cartella.
-        \end{enumerate}
-        \item Estensioni: 
-            \begin{itemize}
-                \item Errore cartella contenente email;
-                \item Errore cartella contenente cartelle;
-            \end{itemize}
-        \item Precondizioni: il MUA sta eliminando una cartella;
-        \item Postcondizioni: è stata eliminata la cartella.
-    \end{itemize}
+%     \subsubsection{UC 5.3 - Eliminare una condivisione} \label{sec: UC 5.3}
+%     \begin{itemize}
+%         \item Attore: MUA;
+%         \item Descrizione: il MUA deve poter eliminare una condivisione di una cartella;
+%         \item Scenario:
+%         \begin{enumerate}
+%         \item il MUA si connette con il server;
+%         \item Il MUA trasmette i dati necessari per eliminare la condivisione di una cartella.
+%         \end{enumerate}
+%         \item Estensioni: errore...
+%         \item Precondizioni: il MUA sta eliminando una condivisione di una cartella;
+%         \item Postcondizioni: è stata eliminata la condivisione di una cartella.
+%     \end{itemize}
 
-    \subsubsection{UC 5.2 - Eliminare un contatto} \label{sec: UC 5.2}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve poter eliminare un contatto;
-        \item Scenario:
-        \begin{enumerate}
-        \item il MUA si connette con il server;
-        \item Il MUA trasmette i dati necessari per eliminare il contatto.
-        \end{enumerate}
-        \item Estensioni: errore...
-        \item Precondizioni: il MUA sta eliminando un contatto;
-        \item Postcondizioni: è stato eliminato il contatto.
-    \end{itemize}
-
-    \subsubsection{UC 5.3 - Eliminare una condivisione} \label{sec: UC 5.3}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve poter eliminare una condivisione di una cartella;
-        \item Scenario:
-        \begin{enumerate}
-        \item il MUA si connette con il server;
-        \item Il MUA trasmette i dati necessari per eliminare la condivisione di una cartella.
-        \end{enumerate}
-        \item Estensioni: errore...
-        \item Precondizioni: il MUA sta eliminando una condivisione di una cartella;
-        \item Postcondizioni: è stata eliminata la condivisione di una cartella.
-    \end{itemize}
-
-    \subsubsection{UC 5.4 - Eliminare un evento} \label{sec: UC 5.4}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve poter eliminare un evento;
-        \item Scenario:
-        \begin{enumerate}
-        \item il MUA si connette con il server;
-        \item Il MUA trasmette i dati necessari per eliminare un evento.
-        \end{enumerate}
-        \item Estensioni: errore...
-        \item Precondizioni: il MUA sta eliminando un evento;
-        \item Postcondizioni: è stato eliminato l'evento.
-    \end{itemize}
+%     \subsubsection{UC 5.4 - Eliminare un evento} \label{sec: UC 5.4}
+%     \begin{itemize}
+%         \item Attore: MUA;
+%         \item Descrizione: il MUA deve poter eliminare un evento;
+%         \item Scenario:
+%         \begin{enumerate}
+%         \item il MUA si connette con il server;
+%         \item Il MUA trasmette i dati necessari per eliminare un evento.
+%         \end{enumerate}
+%         \item Estensioni: errore...
+%         \item Precondizioni: il MUA sta eliminando un evento;
+%         \item Postcondizioni: è stato eliminato l'evento.
+%     \end{itemize}
 
 
-    %creazione cartella problema nome
-    \paragraph{UC Errore nome cartella} \label{sec: UC 11.4.2.1}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve ricevere un messaggio di errore adeguato quando si tenta la creazione di una cartella con lo stesso nome e la stessa cartella padre di un'altra;
-        \item Scenario:
-        \begin{enumerate}
-        \item il MUA riceve il messaggio di errore;
-        \end{enumerate}   
-        \item Precondizioni: 
-        \begin{enumerate}
-            \item il MUA ha trasmesso il nome per la creazione della cartella;
-            \item esiste già una cartella con lo stesso nome e la stessa cartella padre;
-        \end{enumerate}
-        \item Postcondizioni: il MUA ha ricevuto un messaggio di errore.
-    \end{itemize}
+%     %creazione cartella problema nome
+%     \paragraph{UC Errore nome cartella} \label{sec: UC 11.4.2.1}
+%     \begin{itemize}
+%         \item Attore: MUA;
+%         \item Descrizione: il MUA deve ricevere un messaggio di errore adeguato quando si tenta la creazione di una cartella con lo stesso nome e la stessa cartella padre di un'altra;
+%         \item Scenario:
+%         \begin{enumerate}
+%         \item il MUA riceve il messaggio di errore;
+%         \end{enumerate}   
+%         \item Precondizioni: 
+%         \begin{enumerate}
+%             \item il MUA ha trasmesso il nome per la creazione della cartella;
+%             \item esiste già una cartella con lo stesso nome e la stessa cartella padre;
+%         \end{enumerate}
+%         \item Postcondizioni: il MUA ha ricevuto un messaggio di errore.
+%     \end{itemize}
 
-    %modificare una cartella (tho anche per creare c'è)
-    \paragraph{UC Errore dimensioni cartella} \label{sec: UC 11.4.2.1}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve ricevere un messaggio di errore adeguato quando la modifica di una o più caratteristiche di una cartella superano i limiti di dimensione stabiliti;
-        \item Scenario:
-        \begin{enumerate}
-        \item il MUA riceve il messaggio di errore;
-        \end{enumerate}   
-        \item Precondizioni: 
-        \begin{enumerate}
-            \item il MUA ha trasmesso i dati per la modifica di una cartella;
-            \item una o più caratteristiche di una cartella superano i limiti di dimensione stabiliti;
-        \end{enumerate}
-        \item Postcondizioni: il MUA ha ricevuto un messaggio di errore.
-    \end{itemize}
+%     %modificare una cartella (tho anche per creare c'è)
+%     \paragraph{UC Errore dimensioni cartella} \label{sec: UC 11.4.2.1}
+%     \begin{itemize}
+%         \item Attore: MUA;
+%         \item Descrizione: il MUA deve ricevere un messaggio di errore adeguato quando la modifica di una o più caratteristiche di una cartella superano i limiti di dimensione stabiliti;
+%         \item Scenario:
+%         \begin{enumerate}
+%         \item il MUA riceve il messaggio di errore;
+%         \end{enumerate}   
+%         \item Precondizioni: 
+%         \begin{enumerate}
+%             \item il MUA ha trasmesso i dati per la modifica di una cartella;
+%             \item una o più caratteristiche di una cartella superano i limiti di dimensione stabiliti;
+%         \end{enumerate}
+%         \item Postcondizioni: il MUA ha ricevuto un messaggio di errore.
+%     \end{itemize}
 
-    %modificare una cartella (tho anche per creare c'è)
-    \paragraph{UC Errore validità cartella} \label{sec: UC 11.4.2.1}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve ricevere un messaggio di errore adeguato quando la modifica di una o più caratteristiche di una cartella riporta un formato non valido;
-        \item Scenario:
-        \begin{enumerate}
-        \item il MUA riceve il messaggio di errore;
-        \end{enumerate}   
-        \item Precondizioni: 
-        \begin{enumerate}
-            \item il MUA ha trasmesso i dati per la modifica di una cartella;
-            \item una o più caratteristiche di una cartella  non sono valide;
-        \end{enumerate}
-        \item Postcondizioni: il MUA ha ricevuto un messaggio di errore.
-    \end{itemize}
+%     %modificare una cartella (tho anche per creare c'è)
+%     \paragraph{UC Errore validità cartella} \label{sec: UC 11.4.2.1}
+%     \begin{itemize}
+%         \item Attore: MUA;
+%         \item Descrizione: il MUA deve ricevere un messaggio di errore adeguato quando la modifica di una o più caratteristiche di una cartella riporta un formato non valido;
+%         \item Scenario:
+%         \begin{enumerate}
+%         \item il MUA riceve il messaggio di errore;
+%         \end{enumerate}   
+%         \item Precondizioni: 
+%         \begin{enumerate}
+%             \item il MUA ha trasmesso i dati per la modifica di una cartella;
+%             \item una o più caratteristiche di una cartella  non sono valide;
+%         \end{enumerate}
+%         \item Postcondizioni: il MUA ha ricevuto un messaggio di errore.
+%     \end{itemize}
 
 
-    %modificare una cartella (tho anche per eliminare c'è)
-    %troppo? sarebbe una ricerca per id
-    \paragraph{UC Errore esistenza cartella} \label{sec: UC 11.4.2.1}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve ricevere un messaggio di errore adeguato quando la ricerca della cartella che si intende modificare fallisce;
-        \item Scenario:
-        \begin{enumerate}
-        \item il MUA riceve il messaggio di errore;
-        \end{enumerate}   
-        \item Precondizioni: 
-        \begin{enumerate}
-            \item il MUA ha trasmesso i dati per la modifica di una cartella;
-            \item non viene trovata la cartella;
-        \end{enumerate}
-        \item Postcondizioni: il MUA ha ricevuto un messaggio di errore.
-    \end{itemize}
+%     %modificare una cartella (tho anche per eliminare c'è)
+%     %troppo? sarebbe una ricerca per id
+%     \paragraph{UC Errore esistenza cartella} \label{sec: UC 11.4.2.1}
+%     \begin{itemize}
+%         \item Attore: MUA;
+%         \item Descrizione: il MUA deve ricevere un messaggio di errore adeguato quando la ricerca della cartella che si intende modificare fallisce;
+%         \item Scenario:
+%         \begin{enumerate}
+%         \item il MUA riceve il messaggio di errore;
+%         \end{enumerate}   
+%         \item Precondizioni: 
+%         \begin{enumerate}
+%             \item il MUA ha trasmesso i dati per la modifica di una cartella;
+%             \item non viene trovata la cartella;
+%         \end{enumerate}
+%         \item Postcondizioni: il MUA ha ricevuto un messaggio di errore.
+%     \end{itemize}
 
-    %eliminazione cartella con email
-    \paragraph{UC Errore cartella contenente email} \label{sec: UC 11.4.2.1}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve ricevere un messaggio di errore adeguato quando l'eliminazione di una cartella non è andata a buon fine a causa di una o più email presenti all'interno di quella cartella;
-        \item Scenario:
-        \begin{enumerate}
-        \item il MUA riceve il messaggio di errore;
-        \end{enumerate}   
-        \item Precondizioni: 
-        \begin{enumerate}
-            \item il MUA ha trasmesso i dati per l'emilinazione di una cartella ;
-            \item la cartella contiene una o più email;
-        \end{enumerate}
-        \item Postcondizioni: il MUA ha ricevuto un messaggio di errore.
-    \end{itemize}
+%     %eliminazione cartella con email
+%     \paragraph{UC Errore cartella contenente email} \label{sec: UC 11.4.2.1}
+%     \begin{itemize}
+%         \item Attore: MUA;
+%         \item Descrizione: il MUA deve ricevere un messaggio di errore adeguato quando l'eliminazione di una cartella non è andata a buon fine a causa di una o più email presenti all'interno di quella cartella;
+%         \item Scenario:
+%         \begin{enumerate}
+%         \item il MUA riceve il messaggio di errore;
+%         \end{enumerate}   
+%         \item Precondizioni: 
+%         \begin{enumerate}
+%             \item il MUA ha trasmesso i dati per l'emilinazione di una cartella ;
+%             \item la cartella contiene una o più email;
+%         \end{enumerate}
+%         \item Postcondizioni: il MUA ha ricevuto un messaggio di errore.
+%     \end{itemize}
 
-    %eliminazione cartella con cartelle
-    \paragraph{UC Errore cartella contenente cartelle} \label{sec: UC 11.4.2.1}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve ricevere un messaggio di errore adeguato quando l'eliminazione di una cartella non è andata a buon fine a causa di una o più cartelle presenti all'interno di quella cartella;
-        \item Scenario:
-        \begin{enumerate}
-        \item il MUA riceve il messaggio di errore;
-        \end{enumerate}   
-        \item Precondizioni: 
-        \begin{enumerate}
-            \item il MUA ha trasmesso i dati per l'emilinazione di una cartella ;
-            \item la cartella contiene una o più cartelle;
-        \end{enumerate}
-        \item Postcondizioni: il MUA ha ricevuto un messaggio di errore.
-    \end{itemize}
+%     %eliminazione cartella con cartelle
+%     \paragraph{UC Errore cartella contenente cartelle} \label{sec: UC 11.4.2.1}
+%     \begin{itemize}
+%         \item Attore: MUA;
+%         \item Descrizione: il MUA deve ricevere un messaggio di errore adeguato quando l'eliminazione di una cartella non è andata a buon fine a causa di una o più cartelle presenti all'interno di quella cartella;
+%         \item Scenario:
+%         \begin{enumerate}
+%         \item il MUA riceve il messaggio di errore;
+%         \end{enumerate}   
+%         \item Precondizioni: 
+%         \begin{enumerate}
+%             \item il MUA ha trasmesso i dati per l'emilinazione di una cartella ;
+%             \item la cartella contiene una o più cartelle;
+%         \end{enumerate}
+%         \item Postcondizioni: il MUA ha ricevuto un messaggio di errore.
+%     \end{itemize}
 
-    %modificare un evento/ creazione
-    \paragraph{UC Errore dimensioni evento} \label{sec: UC 11.4.2.1}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve ricevere un messaggio di errore adeguato quando la modifica di una o più caratteristiche di un evento superano i limiti di dimensione stabiliti;
-        \item Scenario:
-        \begin{enumerate}
-        \item il MUA riceve il messaggio di errore;
-        \end{enumerate}   
-        \item Precondizioni: 
-        \begin{enumerate}
-            \item il MUA ha trasmesso i dati per la modifica di un evento;
-            \item una o più caratteristiche di un evento superano i limiti di dimensione stabiliti;
-        \end{enumerate}
-        \item Postcondizioni: il MUA ha ricevuto un messaggio di errore.
-    \end{itemize}
+%     %modificare un evento/ creazione
+%     \paragraph{UC Errore dimensioni evento} \label{sec: UC 11.4.2.1}
+%     \begin{itemize}
+%         \item Attore: MUA;
+%         \item Descrizione: il MUA deve ricevere un messaggio di errore adeguato quando la modifica di una o più caratteristiche di un evento superano i limiti di dimensione stabiliti;
+%         \item Scenario:
+%         \begin{enumerate}
+%         \item il MUA riceve il messaggio di errore;
+%         \end{enumerate}   
+%         \item Precondizioni: 
+%         \begin{enumerate}
+%             \item il MUA ha trasmesso i dati per la modifica di un evento;
+%             \item una o più caratteristiche di un evento superano i limiti di dimensione stabiliti;
+%         \end{enumerate}
+%         \item Postcondizioni: il MUA ha ricevuto un messaggio di errore.
+%     \end{itemize}
 
-    %modificare un contatto / creazione
-    \paragraph{UC Errore dimensioni contatto} \label{sec: UC 11.4.2.1}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve ricevere un messaggio di errore adeguato quando la modifica di una o più caratteristiche di un contatto superano i limiti di dimensione stabiliti;
-        \item Scenario:
-        \begin{enumerate}
-        \item il MUA riceve il messaggio di errore;
-        \end{enumerate}   
-        \item Precondizioni: 
-        \begin{enumerate}
-            \item il MUA ha trasmesso i dati per la modifica di un contatto;
-            \item una o più caratteristiche di un contatto superano i limiti di dimensione stabiliti;
-        \end{enumerate}
-        \item Postcondizioni: il MUA ha ricevuto un messaggio di errore.
-    \end{itemize}
+%     %modificare un contatto / creazione
+%     \paragraph{UC Errore dimensioni contatto} \label{sec: UC 11.4.2.1}
+%     \begin{itemize}
+%         \item Attore: MUA;
+%         \item Descrizione: il MUA deve ricevere un messaggio di errore adeguato quando la modifica di una o più caratteristiche di un contatto superano i limiti di dimensione stabiliti;
+%         \item Scenario:
+%         \begin{enumerate}
+%         \item il MUA riceve il messaggio di errore;
+%         \end{enumerate}   
+%         \item Precondizioni: 
+%         \begin{enumerate}
+%             \item il MUA ha trasmesso i dati per la modifica di un contatto;
+%             \item una o più caratteristiche di un contatto superano i limiti di dimensione stabiliti;
+%         \end{enumerate}
+%         \item Postcondizioni: il MUA ha ricevuto un messaggio di errore.
+%     \end{itemize}
 
 
 
 
-            %%%% COSE UTILI %%%%
-    \paragraph{UC  errore} \label{sec: UC 11.4.2.1}
-    \begin{itemize}
-        \item Attore: MUA;
-        \item Descrizione: il MUA deve ricevere un messaggio di errore adeguato quando l'eliminazione degli elementi non è andata a buon fine;
-        \item Scenario:
-        \begin{enumerate}
-        \item il MUA riceve il messaggio di errore
-        \end{enumerate}   
-        \item Precondizioni: il MUA ha trasmesso ...;
-        \item Postcondizioni: il MUA ha ricevuto un messaggio d'errore.
-    \end{itemize}
+%             %%%% COSE UTILI %%%%
+%     \paragraph{UC  errore} \label{sec: UC 11.4.2.1}
+%     \begin{itemize}
+%         \item Attore: MUA;
+%         \item Descrizione: il MUA deve ricevere un messaggio di errore adeguato quando l'eliminazione degli elementi non è andata a buon fine;
+%         \item Scenario:
+%         \begin{enumerate}
+%         \item il MUA riceve il messaggio di errore
+%         \end{enumerate}   
+%         \item Precondizioni: il MUA ha trasmesso ...;
+%         \item Postcondizioni: il MUA ha ricevuto un messaggio d'errore.
+%     \end{itemize}
 
-    \subsection{UC 18 - Stress test}
-\begin{itemize}
-    \item Attore: developer Zextras;
-    \item Descrizione: l'utente deve poter fare degli stess test per misurare le performance del prodotto;
-    \item Scenario principale:
-        \begin{enumerate}
-        \item l'utente avvia uno o una serie di stress test. 
-        \end{enumerate}
-    \item Precondizioni: l'utente vuole avviare degli stess test;
-    \item Postcondizioni: l'utente visualizza i risultati dei test.
-\end{itemize}
+%     \subsection{UC 18 - Stress test}
+% \begin{itemize}
+%     \item Attore: developer Zextras;
+%     \item Descrizione: l'utente deve poter fare degli stess test per misurare le performance del prodotto;
+%     \item Scenario principale:
+%         \begin{enumerate}
+%         \item l'utente avvia uno o una serie di stress test. 
+%         \end{enumerate}
+%     \item Precondizioni: l'utente vuole avviare degli stess test;
+%     \item Postcondizioni: l'utente visualizza i risultati dei test.
+% \end{itemize}
 
    
 

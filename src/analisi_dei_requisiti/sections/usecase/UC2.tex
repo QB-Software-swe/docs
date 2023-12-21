@@ -1,0 +1,17 @@
+%LTeX: language=it
+\subsection{UC 2 - Ricezione e-mail d'errore} \label{sec:UC2}
+    \begin{itemize}
+        \item \textbf{Attore principale}: MUA;
+        \item \textbf{Descrizione}: il MUA deve ricevere un e-mail con il messaggio d'errore e citata l'e-mail che non è stata inviata;
+        \item \textbf{Precondizioni}: il MUA stava usando la funzionalità d'invio di un'e-mail;
+        \item \textbf{Postcondizioni}: l'e-mail non è stata inviata, e il MUA è stato notificato con un e-mail di risposta;
+        \item \textbf{Scenario principale}:
+            \begin{enumerate}
+                \item il sistema recupera il codice d'errore e l'e-mail;
+                \item il sistema salva l'e-mail di risposta nel mailboxs;
+                \item il MUA riceve l'e-mail d'errore dal sistema;
+            \end{enumerate}
+        \item \textbf{Inclusioni}: nessuna;
+        \item \textbf{Generalizzazioni}: nessuna;
+        \item \textbf{Estensioni}: nessuna.
+    \end{itemize}
