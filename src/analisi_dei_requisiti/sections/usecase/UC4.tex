@@ -1,5 +1,5 @@
 %LTeX: language=it
-\subsubsection{UC 4 - Creazione di un contatto} \label{sec:UC4}
+\subsection{UC 4 - Creazione di un contatto} \label{sec:UC4}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA crea un contatto nel sistema;
@@ -34,7 +34,7 @@
         \item \textbf{Postcondizioni}: il sistema salva il contatto con le informazioni fornite dal MUA;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
-                \item il MUA invia i dettagli del contatto al sistema (\hyperref[sec:UC4.1]{UC 4.1});
+                \item il MUA invia i dettagli del contatto al sistema;
                 \item il sistema controlla che le informazioni ricevute rispettino il seguente requisito minimo:
                     \begin{itemize}
                         \item il nome del contatto non è vuoto;
@@ -46,7 +46,7 @@
             \begin{enumerate}[label=\alph*.]
                 \item il sistema non riesce a salvare il contatto perché è un duplicato:
                 \begin{enumerate}[label=\arabic*.]
-                    \item il sistema ritorna un errore al MUA di contatto duplicato (\hyperref[sec:UC4.2]{UC 4.2}).
+                    \item il sistema ritorna un errore al MUA di contatto duplicato (\hyperref[sec:UC4.2]{UC 4.2});
                 \end{enumerate}
                 \item il sistema non riesce a salvare il contatto perché è un duplicato:
                 \begin{enumerate}[label=\arabic*.]
