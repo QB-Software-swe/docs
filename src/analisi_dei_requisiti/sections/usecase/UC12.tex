@@ -1,0 +1,64 @@
+\subsubsection{UC 12 - Eliminare un contatto} \label{sec:UC12}
+    \begin{itemize}
+        \item \textbf{Attore principale}: MUA;
+        \item \textbf{Descrizione}: il MUA elimina un contatto dal sistema;
+        \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di eliminazione di un oggetto;
+        \item \textbf{Postcondizioni}: il sistema elimina il contatto con l'identificativo fornito dal MUA;
+        \item \textbf{Scenario principale}:
+            \begin{enumerate}
+                \item il MUA invia i dettagli del contatto da eliminare al sistema (\hyperref[sec:UC12.1]{UC 12.1});
+                \item il sistema elimina il contatto;
+            \end{enumerate}
+        \item \textbf{Inclusioni}: nessuna;
+        \item \textbf{Generalizzazioni}: nessuna;
+        \item \textbf{Estensioni}: nessuna.
+    \end{itemize}
+
+\begin{figure}[h]
+    \includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC04.X.png}
+    \centering
+    \caption{Diagramma sotto-casi UC 12.}
+\end{figure}
+
+\subsubsection{UC 12.1 - Trasmette i dettagli del contatto} \label{sec:UC12.1}
+    \begin{figure}[h]
+        \includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC04.X.png}
+        \centering
+        \caption{Diagramma UC 12.1.}
+    \end{figure}
+    \begin{itemize}
+        \item \textbf{Attore principale}: MUA;
+        \item \textbf{Descrizione}: il MUA invia le informazioni del contatto da eliminare al sistema;
+        \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di eliminazione di un contatto;
+        \item \textbf{Postcondizioni}: il sistema elimina il contatto identificato dalle informazioni fornite dal MUA;
+        \item \textbf{Scenario principale}:
+            \begin{enumerate}
+                \item il MUA invia l'identificativo del contatto al sistema;
+            \end{enumerate}
+        \item \textbf{Inclusioni}: nessuna;
+        \item \textbf{Generalizzazioni}: nessuna;
+        \item \textbf{Estensioni}:
+            \begin{enumerate}[label=\alph*.]
+                \item il sistema non riesce a eliminare il contatto perché non è stato trovato:
+                \begin{enumerate}[label=\arabic*.]
+                    \item il sistema ritorna un errore al MUA di identificativo non valido (\hyperref[sec:UC11.2]{UC 11.2}).
+                \end{enumerate}
+            \end{enumerate}
+    \end{itemize}
+
+
+\subsubsection{UC 12.2 - Ricezione errore identificativo contatto non valido} \label{sec:UC11.2}
+    \begin{itemize}
+        \item \textbf{Attore principale}: MUA;
+        \item \textbf{Descrizione}: il sistema non riesce a eliminare il contatto perché l'identificativo contatto non è stato trovato;
+        \item \textbf{Precondizioni}: il MUA sta usando la funzionalità d'invio dei dettagli al sistema di un contatto;
+        \item \textbf{Postcondizioni}: il sistema non elimina il contatto, il MUA è stato notificato dell'errore;
+        \item \textbf{Scenario principale}:
+            \begin{enumerate}
+                \item il sistema non trova il contatto con l'identificativo fornito dal MUA;
+                \item il sistema non elimina il contatto e notifica il MUA dell'errore;
+            \end{enumerate}
+        \item \textbf{Inclusioni}: nessuna;
+        \item \textbf{Generalizzazioni}: nessuna;
+        \item \textbf{Estensioni}: nessuna.
+    \end{itemize}
