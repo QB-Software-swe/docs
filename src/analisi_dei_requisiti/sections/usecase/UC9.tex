@@ -1,5 +1,5 @@
 %LTeX: language=it
-\subsection{UC 9 - Modificare un evento del calendario} \label{sec:UC8}
+\subsection{UC 9 - Modificare un evento del calendario} \label{sec:UC9}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA deve poter modificare un evento nel calendario;
@@ -21,7 +21,7 @@
     \caption{Diagramma sotto-casi UC 9.}
 \end{figure}
 
-\subsubsection{UC 9.1 - Trasmette i dettagli del evento} \label{sec:UC9.1}
+\subsubsection{UC 9.1 - Trasmette i dettagli evento} \label{sec:UC9.1}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA trasmette il nuovo stato del evento al sistema;
@@ -47,12 +47,12 @@
                 \end{enumerate}
                 \item il sistema non riesce a modificare lo stato del evento perché i dati trasmessi non rispettano i requisiti:
                 \begin{enumerate}[label=\arabic*.]
-                    \item il sistema ritorna un errore al MUA dettagli dell'evento non validi (\hyperref[sec:U9.3]{UC 9.3}).
+                    \item il sistema ritorna un errore al MUA dettagli dell'evento non validi (\hyperref[sec:UC9.3]{UC 9.3}).
                 \end{enumerate}
             \end{enumerate}
     \end{itemize}
 
-\subsubsection{UC 9.2 - Ritorna l'errore l'evento inesistente} \label{sec:UC9.2}
+\subsubsection{UC 9.2 - Ritorna l'errore evento inesistente} \label{sec:UC9.2}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA sta trasmettendo il nuovo stato del contato al sistema, ma l'evento indicato non esiste;
@@ -70,7 +70,7 @@
         \item \textbf{Estensioni}: nessuna.
     \end{itemize}
 
-\subsubsection{UC 9.3 - Ritorna l'errore dettagli l'evento non validi} \label{sec:UC9.3}
+\subsubsection{UC 9.3 - Ritorna l'errore dettagli evento non validi} \label{sec:UC9.3}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA sta trasmettendo il nuovo stato dell'evento al sistema, ma i dettagli inviati non rispettano i requisiti richiesti;
