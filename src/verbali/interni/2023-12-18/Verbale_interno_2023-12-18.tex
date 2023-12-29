@@ -53,7 +53,7 @@
     \section{Ordine del giorno}
         Questioni fissate nella riunione interna precedente:
         \begin{itemize}
-			\item pianificare le singole attività per l'inizio del prossimo Sprint.
+			\item pianificare le singole attività per l'inizio del prossimo Sprint (Sprint-3).
     	\end{itemize}
     	%
     	Nuove questioni:
@@ -63,34 +63,44 @@
     
     \section{Verbale}
 
-	\subsection{Retrospettiva}
+	La riunione si è aperta discutendo la retrospettiva relativa allo Sprint-2, riportata dettagliatamente nella sezione \hyperref[sec:retrospettiva]{Retrospettiva}, seguita dalla pianificazione del prossimo Sprint (Sprint-3), riportata dettagliatamente nella sezione \hyperref[sec:pianificazione]{Pianificazione}.
+	
+	\vspace{0.3cm}
+	\noindent
+	In seguito è stato deciso di richiedere un incontro con il professor Cardin durante questo Sprint per presentare il nostro lavoro e i nostri dubbi riguardanti l'Analisi dei Requisiti.
 
-	La riunione si è aperta con la retrospettiva relativa al secondo Sprint (dal 04/12/2023 al 17/12/2023).
+
+	\subsection{Retrospettiva} \label{sec:retrospettiva}
+
+	Si riporta di seguito la retrospettiva relativa al secondo Sprint (dal 04/12/2023 al 17/12/2023).
 
 	\subsubsection{Cosa ha funzionato}
 	\begin{itemize}
-		\item Gli obiettivi del secondo Sprint sono stati tutti raggiunti;
+		\item Pianificazione attività: gli obiettivi del secondo Sprint sono stati tutti raggiunti;
+		\item sistema di review di GitHub: il sistema di review di GitHub si è rivelato pratico e ci ha permesso di comunicare meglio tra di noi durante le attività di verifica;
 		\item sistema di automazione: il sistema di automazione, in seguito alle modifiche discusse durante la riunione del 12/04/2023, è stato migliorato con l'aggiunta della possibilità di controllare lo stato delle action prima di confermare una pull request. Questo si è rivelato molto utile e ci permette di evitare numerosi errori;
-		\item quantità del carico di lavoro omogenea: la quantità di ore produttive di ogni membro del team è stata adeguata;
-		\item 
+		\item quantità del carico di lavoro equa: la quantità di ore produttive prevista è stata distribuita equamente tra i membri del gruppo.
 	\end{itemize}
 	
 	\subsubsection{Cosa non ha funzionato}
 	\begin{itemize}
-		\item Distribuzione temporale del carico di lavoro dei Verificatori: il carico di lavoro dei Verificatori si è concentrato in particolare alla fine dello Sprint. Per il prossimo Sprint è necessario seguire meglio la pianificazione, così da terminare prima alcune issue e non concentrare il lavoro dei Verificatori a fine Sprint;
+		\item Distribuzione temporale del carico di lavoro dei Verificatori: il carico di lavoro dei Verificatori si è concentrato in particolare alla fine dello Sprint. Per il prossimo Sprint è necessario distribuire meglio il lavoro, così da terminare prima alcune issue e non concentrare il lavoro dei Verificatori a fine Sprint.
 	\end{itemize}
 
 
 	\subsubsection{Rischi}
 	I rischi previsti durante la pianificazione del secondo sprint erano i seguenti: 
 	\begin{itemize}
-		\item 
+		\item RR1 - Incomprensione requisiti;
+		\item RT1 - Inesperienza con le tecnologie.
 	\end{itemize}
 	I rischi effettivamente incontrati sono i seguenti:
 	\begin{itemize}
-		\item R: vista l'inesperienza con l'utilizzo delle tecnologie 
+		\item RR1 - Incomprensione requisiti: il documento Analisi dei Requisiti è stato modificato più volte. Tuttavia, poichè gli errori sono stati gestiti in una fase ancora iniziale del documento, non ci sono stati ritardi;
+		\item RO2 - Impegni personali: un membro del team non è stato presente per una settimana. Tuttavia, il piano di controllo è stato seguito correttamente e non ci sono state conseguenze;
+		\item RO5 - Reperibilità esterna: a causa del licenziamento del project manager, il gruppo ha avuto difficoltà nel fissare un incontro con l'azienda. Tuttavia, è stato applicato il piano di contingenza previsto e non ci sono state conseguenze.
 	\end{itemize}
-	Il piano di mitigazioni si è rivelato efficace
+	Il piano di mitigazione si è rivelato efficace per tutti i rischi incontrati, dunque non si rendono necessarie attività di modifica della gestione dei rischi.
 
 	\subsubsection{Tabella riassuntiva}
 
@@ -105,7 +115,7 @@
 			&
 			Distribuzione temporale del carico di lavoro dei Verificatori
 			\\\arrayrulecolor{gray}\hline
-			Quantità omogenea del carico di lavoro nel team
+			Divisione equa del carico di lavoro nel team
 			&
 
 			\\\arrayrulecolor{gray}\hline
@@ -120,39 +130,62 @@
 		\caption{retrospettiva del 18/12/2023.}
 	\end{table}
 
-	\subsection{Pianificazione}
+	\subsection{Pianificazione} \label{sec:pianificazione}
+	\subsubsection{Obiettivi}
+	Gli obiettivi per lo Sprint 3 (dal 18/12/2023 al 31/12/2023) decisi dal gruppo sono i seguenti:
+	\begin{itemize}
+		\item proseguire con lo studio delle tecnologie da utilizzare per la realizzazione del PoC, in particolare MongoDB, RESTEasy e JMAP;
+		\item redigere una prima versione del documento Piano di Qualifica;
+		\item continuare il documento Analisi dei Requisiti.
+	\end{itemize}
 	\subsubsection{Rischi}
 	I rischi previsti sono i seguenti:
 	\begin{itemize}
-		\item RT: vista la mancanza di alcune fondamentali librerie per lo sviluppo del server con JMAP, si rende necessario estendere una delle librerie fornite per il client, questo comporta una una ridistribuzione delle risorse, come da piano di mitigazione
+		\item RT1 - Inesperienza con le tecnologie: prevista a causa dell'inesperienza con le tecnologie che il gruppo pianifica di studiare in questo Sprint;
+		\item RO5 - Reperibilità esterna: prevista a causa delle festività invernali;
+		\item RO2 - Impegni personali: prevista a causa delle festività invernali;
 	\end{itemize}
 	
     
     \section{Azioni da intraprendere}
     
         \begin{todo}
-            VI-1970-01-01-01
+            \href{https://github.com/QB-Software-swe/docs/issues/69}{VI-2023-12-18\#69}
             &
-            -
+            R. Fontana
             &
-            -
+            Prima stesura del documento Piano di Qualifica
             \\\midrule
-            VI-1970-01-01-02
+            \href{https://github.com/QB-Software-swe/docs/issues/70}{VI-2023-12-18\#70}
             &
-            -
+            S. Rovea 
             &
-            -
+            Continuazione stesura Casi d'Uso nel documento Analisi dei Requisiti
+            \\
+			\midrule
+            \href{https://github.com/QB-Software-swe/docs/issues/71}{VI-2023-12-18\#71}
+            &
+            A. Giurisato
+            &
+            Stesura sezione Requisiti nel documento Analisi dei Requisiti
             \\\midrule
-            VI-1970-01-01-03
+            \href{https://github.com/QB-Software-swe/docs/issues/72}{VI-2023-12-18\#72}
             &
-            -
+            A. Domuta
             &
-            -
+            Continuazione RESTEasy configuration per PoC
+            \\\midrule
+            \href{https://github.com/QB-Software-swe/docs/issues/73}{VI-2023-12-18\#73}
+            &
+            S. Destro
+            &
+            Configurazione JMAP lato server per PoC        
             \\
     	\end{todo}
     
     \section{Ordine del giorno per la prossima riunione interna}
         \begin{itemize}
-        		\item 
+        		\item pianificare le attività per l'inizio dello Sprint-4 (dal 01/01/2024 al 07/01/2024)
+        		\item retrospettiva dello Sprint-3 (dal 18/12/2023 al 31/12/2023)
     	\end{itemize}
 \end{document}
