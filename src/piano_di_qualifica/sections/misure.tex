@@ -1,0 +1,180 @@
+\section{Misure per la qualità} \label{misure}
+Per misurare ogni processo sono state usate delle metriche la cui definizione
+ è nelle \textit{Norme di Progetto V1.0.0}, che si rifanno allo standard 
+ISO/IEC 9126. In questa sezione sono riportati i valori che le metriche 
+devono assumere per essere ritenute accettabili o pienamente soddisfatte.
+
+\subsection{Qualità di processo}
+
+
+
+\begin{table}[h]
+    \rowcolors{2}{gray}{white}
+    \begin{adjustbox}{width=\textwidth}
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{>{\centering\arraybackslash} m{2cm} >{\centering\arraybackslash} m{6cm} >{\centering\arraybackslash} m{3cm} >{\centering\arraybackslash} m{3cm}}
+    \rowcolor[HTML]{bfbfbf} 
+    \textbf{Metrica} & \textbf{Nome} & \textbf{Valore accettabile} & \textbf{Valore preferibile} \\
+    M1-PMS & Percentuale di  Metriche soddisfatte & $\ge 85\%$ & $100\%$\\
+    M2-VP & Variazione di Piano & $\ge -7$ & $\ge 0$\\
+    M3-VC & Variazione di Costo & $0$ & $\le 0$\\
+    M4-VR & Variazione dei Requisiti & $\le 4$ & $0$\\
+    M5-IF & Implementazione delle funzionalità & $100\%$ & $100\%$\\
+    M6-CCM & Complessità Ciclomatica per Metodo & $\le 5$ & $\le 3$\\
+    M7-CC  & Code Coverage & $\ge 85\%$ & $100\%$               
+    \end{tabular}
+    \end{adjustbox}
+    \caption{Metriche per la qualità dei processi}
+\end{table}
+
+\clearpage
+
+
+\subsection{Qualità di prodotto}
+
+\begin{table}[h]
+    \rowcolors{2}{gray}{white}
+    \begin{adjustbox}{width=\textwidth}
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{>{\centering\arraybackslash} m{2cm} >{\centering\arraybackslash} m{6cm} >{\centering\arraybackslash} m{3cm} >{\centering\arraybackslash} m{3cm}}
+    \rowcolor[HTML]{bfbfbf} 
+    \textbf{Metrica} & \textbf{Nome} & \textbf{Valore accettabile} & \textbf{Valore preferibile} \\
+    M8-PROS & Percentuale dei Requisiti Obbligatori Soddisfatti &  $100\%$ & $100\%$\\
+    M9-PRDS & Percentuale dei Requisiti Desiderabili Soddisfatti & $\ge 0$ & $100\%$\\
+    M10-PRFS & Percentuale dei Requisiti Facoltativi Soddisfatti &   $\ge 0$ & $100\%$\\
+    M11-AC & Accoppiamento tra Classi & $\le 4$ & $\le 2$ \\
+    M12-PG & Profondità delle Gerarchie & $\le 5$ & $\le 2$\\
+    M13-NAC & Numero di Attributi per Classe & $\le 8$ & $\le 6$ \\
+    M14-NPM & Numero di Parametri per Metodo & $\le 6$ & $\le 4$ \\
+    M15-LCM & Linee di Codice per Metodo & $\le 40$ & $\le 25$ \\
+    M16-LCC & Linee di Commenti per linee di Codice & $\le 0.30$ & $\le 0.35$\\
+    M17-PIC & Profondità di Innestamento Condizionale & $\le 5$ & $\le 3$\\
+    M18-DE & Densità di Errori & $\le 10\%$ & $0\%$\\
+    M19-FU & Facilità di Utilizzo & $\le 15$ & $\le 10$ \\ 
+    \end{tabular}
+    \end{adjustbox}
+    \caption{Metriche per la qualità del prodotto}
+\end{table}
+
+\clearpage
+
+\subsection{Qualità per Obiettivo}
+Le metriche precedentemente elencate, verranno divise in base alle standard ISO/
+IEC 12207:1995, ovvero tra:
+\begin{itemize}
+    \item Processi primari (\ref{processi primari});
+    \item Processi di supporto (\ref{processi di supporto});
+    \item Processi organizzativi (\ref{processi organizzativi}).
+\end{itemize}
+
+\noindent Tuttavia, lo standard è stato adattato e semplificato per il progetto.
+
+
+\subsubsection{Processi primari} \label{processi primari}
+
+\paragraph{Analisi dei Requisiti}
+
+\begin{table}[h]
+    \rowcolors{2}{gray}{white}
+    \begin{adjustbox}{width=\textwidth}
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{>{\centering\arraybackslash} m{2cm} >{\centering\arraybackslash} m{6cm} >{\centering\arraybackslash} m{3cm} >{\centering\arraybackslash} m{3cm}}
+    \rowcolor[HTML]{bfbfbf} 
+    \textbf{Metrica} & \textbf{Nome} & \textbf{Valore accettabile} & \textbf{Valore preferibile} \\
+    M8-PROS & Percentuale dei Requisiti Obbligatori Soddisfatti &  $100\%$ & $100\%$\\
+    M9-PRDS & Percentuale dei Requisiti Desiderabili Soddisfatti & $\ge 0$ & $100\%$\\
+    M10-PRFS & Percentuale dei Requisiti Facoltativi Soddisfatti &   $\ge 0$ & $100\%$\\
+    \end{tabular}
+    \end{adjustbox}
+    \caption{Metriche per l'analisi dei requisiti}
+\end{table}
+
+\clearpage
+
+
+\paragraph{Progettazione}
+
+\begin{table}[h]
+    \rowcolors{2}{gray}{white}
+    \begin{adjustbox}{width=\textwidth}
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{>{\centering\arraybackslash} m{2cm} >{\centering\arraybackslash} m{6cm} >{\centering\arraybackslash} m{3cm} >{\centering\arraybackslash} m{3cm}}
+    \rowcolor[HTML]{bfbfbf} 
+    \textbf{Metrica} & \textbf{Nome} & \textbf{Valore accettabile} & \textbf{Valore preferibile} \\
+    M11-AC & Accoppiamento tra Classi & $\le 4$ & $\le 2$ \\
+    M12-PG & Profondità delle Gerarchie & $\le 5$ & $\le 2$\\
+    M19-FU & Facilità di Utilizzo & $\le 15$ & $\le 10$ \\ 
+    \end{tabular}
+    \end{adjustbox}
+    \caption{Metriche per la progettazione}
+\end{table}
+
+
+\paragraph{Codifica}
+
+\begin{table}[h]
+    \rowcolors{2}{gray}{white}
+    \begin{adjustbox}{width=\textwidth}
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{>{\centering\arraybackslash} m{2cm} >{\centering\arraybackslash} m{6cm} >{\centering\arraybackslash} m{3cm} >{\centering\arraybackslash} m{3cm}}
+    \rowcolor[HTML]{bfbfbf} 
+    \textbf{Metrica} & \textbf{Nome} & \textbf{Valore accettabile} & \textbf{Valore preferibile} \\
+    M6-CCM & Complessità Ciclomatica per Metodo & $\le 5$ & $\le 3$\\
+    M7-CC  & Code Coverage & $\ge 85\%$ & $100\%$ \\
+    M13-NAC & Numero di Attributi per Classe & $\le 8$ & $\le 6$ \\
+    M14-NPM & Numero di Parametri per Metodo & $\le 6$ & $\le 4$ \\
+    M15-LCM & Linee di Codice per Metodo & $\le 40$ & $\le 25$ \\
+    M16-LCC & Linee di Commenti per linee di Codice & $\le 0.30$ & $\le 0.35$\\
+    M17-PIC & Profondità di Innestamento Condizionale & $\le 5$ & $\le 3$\\
+    \end{tabular}
+    \end{adjustbox}
+    \caption{Metriche per la codifica}
+\end{table}
+
+\clearpage
+
+
+\subsubsection{Processi di supporto} \label{processi di supporto}
+
+\paragraph{Miglioramento}
+
+\begin{table}[h]
+    \rowcolors{2}{gray}{white}
+    \begin{adjustbox}{width=\textwidth}
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{>{\centering\arraybackslash} m{2cm} >{\centering\arraybackslash} m{6cm} >{\centering\arraybackslash} m{3cm} >{\centering\arraybackslash} m{3cm}}
+    \rowcolor[HTML]{bfbfbf} 
+    \textbf{Metrica} & \textbf{Nome} & \textbf{Valore accettabile} & \textbf{Valore preferibile} \\
+    M1-PMS & Percentuale di  Metriche soddisfatte & $\ge 85\%$ & $100\%$\\
+    M18-DE & Densità di Errori & $\le 10\%$ & $0\%$\\
+    \end{tabular}
+    \end{adjustbox}
+    \caption{Metriche per il miglioramento}
+\end{table}
+
+
+\subsubsection{Processi organizzativi} \label{processi organizzativi}
+\paragraph{Pianificazione}
+
+\begin{table}[h]
+    \rowcolors{2}{gray}{white}
+    \begin{adjustbox}{width=\textwidth}
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{>{\centering\arraybackslash} m{2cm} >{\centering\arraybackslash} m{6cm} >{\centering\arraybackslash} m{3cm} >{\centering\arraybackslash} m{3cm}}
+    \rowcolor[HTML]{bfbfbf} 
+    \textbf{Metrica} & \textbf{Nome} & \textbf{Valore accettabile} & \textbf{Valore preferibile} \\
+    M2-VP & Variazione di Piano & $\ge -7$ & $\ge 0$\\
+    M3-VC & Variazione di Costo & $0$ & $\le 0$\\
+    M4-VR & Variazione dei Requisiti & $\le 4$ & $0$\\
+    M5-IF & Implementazione delle funzionalità & $100\%$ & $100\%$\\
+    \end{tabular}
+    \end{adjustbox}
+    \caption{Metriche per la pianificazione}
+\end{table}
