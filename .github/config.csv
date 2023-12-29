@@ -15,4 +15,4 @@ LP;src/candidatura/Lettera_presentazione/Lettera_di_presentazione;Candidatura/Do
 PdCeI;src/candidatura/Preventivo_costi/Preventivo_dei_costi_e_degli_impegni;Candidatura/Documenti_esterni;0.2.1;True
 VdC;src/candidatura/Valutazione_capitolati/Valutazione_dei_capitolati.tex;Candidatura/Documenti_esterni;0.3.1;True
 NdP;src/norme_di_progetto/Norme_di_progetto.tex;RTB/Documenti_interni;0.4.0;True
-PdQ;src/piano_di_qualifica/Piano_di_qualifica.tex;RTB/Documenti_esterni;0.0.0;True
+PdQ;src/piano_di_qualifica/piano_di_qualifica.tex;RTB/Documenti_esterni;0.0.0;True
