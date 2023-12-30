@@ -1,83 +1,95 @@
-%LTeX: language=it
-\subsection{UC 8 - Modificare un contatto} \label{sec:UC8}
+\subsection{UC 8 - Creazione condivisione di un contatto} \label{sec:UC8}
+
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
-        \item \textbf{Descrizione}: il MUA deve poter modificare un contato nel sistema;
-        \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, e ha un connessione aperta con il sistema ed è autenticato;
-        \item \textbf{Postcondizioni}: il MUA modifica un contatto, il suo nuovo stato viene salvato nel sistema;
+        \item \textbf{Descrizione}: il MUA invia le informazioni del contatto da condividere al sistema;
+        \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di creazione di una condivisione;
+        \item \textbf{Postcondizioni}: il sistema condivide il contatto con l'indirizzo e-mail fornito dal MUA;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
-                \item il MUA invia le informazioni per aggiornare il contatto nel sistema (\hyperref[sec:UC8.1]{UC 8.1});
-                \item il sistema salva il nuovo stato del contato;
+                \item il MUA trasmette l'id del contatto da condividere (\hyperref[sec:UC8.1]{UC 8.1});
+                \item il MUA trasmette l'indirizzo e-mail a cui condividere (\hyperref[sec:UC8.2]{UC 8.2});
+                \item il sistema condivide il contatto;
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
         \item \textbf{Estensioni}: nessuna.
     \end{itemize}
 
-\begin{figure}[h]
-    \includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC08.X.png}
-    \centering
-    \caption{Diagramma sotto-casi UC 8.}
-\end{figure}
-
-\subsubsection{UC 8.1 - Trasmette i dettagli del contatto} \label{sec:UC8.1}
+    \subsubsection{UC 8.1 - Trasmette l'id del contatto} \label{sec:UC8.1}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
-        \item \textbf{Descrizione}: il MUA trasmette il nuovo stato del contato al sistema;
-        \item \textbf{Precondizioni}: il MUA sta utilizzando la funzionalità di modifica di un contatto;
-        \item \textbf{Postcondizioni}: il MUA modifica un contatto, il suo nuovo stato viene salvato nel sistema;
+        \item \textbf{Descrizione}: il MUA trasmette l'id del contatto per condividere il contatto;
+        \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di creazione condivisione di un contatto;
+        \item \textbf{Postcondizioni}: il sistema conosce l'id del contatto da condividere;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
-                \item il MUA invia le informazioni per aggiornare il contatto nel sistema;
-                \item il sistema elabora le nuove informazioni, e controlla che siano valide;
-                \item il sistema salva il nuovo stato del contato;
+                \item il MUA invia l'id del contatto per condividere il contatto;
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
-        \item \textbf{Estensioni}: 
+        \item \textbf{Estensioni}:
             \begin{enumerate}[label=\alph*.]
-                \item il sistema non riesce ad aggiornare lo stato del contato perché non è stato trovato:
+                \item il sistema non riesce a condividere il contatto perché l'id del contatto fornito non è stato trovato:
                 \begin{enumerate}[label=\arabic*.]
-                    \item il sistema ritorna un errore al MUA di contatto inesistente (\hyperref[sec:UC8.2]{UC 8.2});
-                \end{enumerate}
-                \item il sistema non riesce a modificare lo stato del contato perché i dati trasmessi non rispettano i requisiti:
-                \begin{enumerate}[label=\arabic*.]
-                    \item il sistema ritorna un errore al MUA dettagli contatto non validi (\hyperref[sec:U8.3]{UC 8.3}).
+                    \item il sistema ritorna un errore al MUA di contatto non trovato (\hyperref[sec:UC4.3]{UC 4.3}).
                 \end{enumerate}
             \end{enumerate}
     \end{itemize}
 
-\subsubsection{UC 8.2 - Ritorna l'errore contatto inesistente} \label{sec:UC8.2}
+
+    \subsubsection{UC 8.2 - Trasmette l'indirizzo e-mail} \label{sec:UC8.2}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
-        \item \textbf{Descrizione}: il MUA sta trasmettendo il nuovo stato del contato al sistema, ma il contatto indicato non esiste;
-        \item \textbf{Precondizioni}: il MUA sta utilizzando la funzionalità di trasmissione dei dettagli per la modifica di un contatto;
-        \item \textbf{Postcondizioni}: il sistema non aggiorna lo stato del contatto, il MUA è stato notificato dell'errore;
+        \item \textbf{Descrizione}: il MUA trasmette l'indirizzo e-mail per la condivisione al sistema;
+        \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di creazione condivisione di un contatto;
+        \item \textbf{Postcondizioni}: il sistema conosce l'indirizzo e-mail a cui condividere;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
-                \item il MUA invia le informazioni per aggiornare il contatto nel sistema;
-                \item il sistema controlla le informazioni, e riscontra che il contatto non esiste;
-                \item il sistema non aggiorna il contatto;
-                \item il sistema ritorna l'errore al MUA;
+                \item il MUA invia l'indirizzo e-mail la condivisione al sistema;
+                \item il sistema controlla che le informazioni ricevute rispettino il seguente requisito minimo:
+                    \begin{itemize}
+                        \item l'indirizzo email del contatto non è una stringa vuota;
+                    \end{itemize}
+            \end{enumerate}
+        \item \textbf{Inclusioni}: nessuna;
+        \item \textbf{Generalizzazioni}: nessuna;
+        \item \textbf{Estensioni}:
+            \begin{enumerate}[label=\alph*.]
+                \item il sistema non riesce a creare il contatto perché l'indirizzo e-mail fornito non è valido:
+                \begin{enumerate}[label=\arabic*.]
+                    \item il sistema ritorna un errore al MUA di indirizzo e-mail non valido (\hyperref[sec:UC8.4]{UC 8.4}).
+                \end{enumerate}
+            \end{enumerate}
+    \end{itemize}
+
+
+\subsubsection{UC 8.3 - Ritorna l'errore contatto non trovato} \label{sec:UC8.3}
+    \begin{itemize}
+        \item \textbf{Attore principale}: MUA;
+        \item \textbf{Descrizione}: il sistema non riesce a condividere il contatto perché il contatto non è stato trovato;
+        \item \textbf{Precondizioni}: il MUA ha inviato l'id del contatto da condividere;
+        \item \textbf{Postcondizioni}: il sistema non condivide il contatto, il MUA è stato notificato dell'errore;
+        \item \textbf{Scenario principale}:
+            \begin{enumerate}
+                \item il sistema non trova il contatto con l'identificativo fornito dal MUA;
+                \item il sistema non condivide il contatto e notifica il MUA dell'errore;
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
         \item \textbf{Estensioni}: nessuna.
     \end{itemize}
 
-\subsubsection{UC 8.3 - Ritorna l'errore dettagli contatto non validi} \label{sec:UC8.3}
+    \subsubsection{UC 8.4 - Ritorna l'errore indirizzo e-mail non valido} \label{sec:UC8.4}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
-        \item \textbf{Descrizione}: il MUA sta trasmettendo il nuovo stato del contato al sistema, ma i dettagli inviati non rispettano i requisiti richiesti;
-        \item \textbf{Precondizioni}: il MUA sta utilizzando la funzionalità di trasmissione dei dettagli per la modifica di un contatto;
-        \item \textbf{Postcondizioni}: il sistema non aggiorna lo stato del contatto, il MUA è stato notificato dell'errore;
+        \item \textbf{Descrizione}: il sistema non riesce a condividere il contatto perché l'indirizzo e-mail del contatto non rispetta i requisiti;
+        \item \textbf{Precondizioni}: il MUA ha inviato l'indirizzo e-mail a cui condividere;
+        \item \textbf{Postcondizioni}: il sistema non condivide il contatto, il MUA è stato notificato dell'errore;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
-                \item il MUA invia le informazioni per aggiornare il contatto nel sistema;
-                \item il sistema controlla le informazioni, il sistema riscontra dei valori non validi;
-                \item il sistema non aggiorna il contatto;
-                \item il sistema ritorna l'errore al MUA;
+                \item il sistema controlla la sintassi dell'indirizzo e-mail e trova un errore;
+                \item il sistema non condivide il contatto e notifica il MUA dell'errore;
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
