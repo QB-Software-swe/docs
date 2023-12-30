@@ -10,65 +10,297 @@
     \\\hline
     \rowcolor{gray!20} \textbf{Codice} & \textbf{Importanza} & \textbf{Descrizione} & \textbf{Fonte}
     \\\hline 
-    RF & Obbligatorio & È necessario che il MUA abbia la capacità di inviare un'email & Capitolato
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di inviare un'e-mail & \hyperref[sec:UC1]{UC 1}
     \\\hline 
-    RF & Obbligatorio & È necessario che il MUA venga avvisato se l'invio dell'email non va a buon fine & Capitolato
-    \\\hline 
-    RF & Obbligatorio & È necessario che il MUA abbia la capacità di inviare il destinatario dell'email al server & Capitolato
-    \\\hline 
-    RF & Obbligatorio & È necessario che il MUA venga avvisato se il campo destinatorio non soddisfa i requisiti & Capitolato
-    \\\hline 
-    RF & Obbligatorio & È necessario che il MUA abbia la capacità di inviare il mittente dell'email al server & Capitolato
-    \\\hline 
-    RF & Obbligatorio & È necessario che il MUA venga avvisato se il campo mittente non soddisfa i requisiti & Capitolato
-    \\\hline 
-    RF & Obbligatorio & È necessario che il MUA abbia la capacità di inviare l'oggetto dell'email al server & Capitolato
-    \\\hline 
-    RF & Obbligatorio & È necessario che il MUA abbia la capacità di inviare il corpo dell'email al server & Capitolato
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere l'id dell'account durante l'attività di invio e-mail & \hyperref[sec:UC1.1]{UC 1.1}
     \\\hline
-    RF & Obbligatorio & È necessario che il MUA abbia la capacità di ricevere un'email & Capitolato
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere l'id dell'e-mail durante l'attività di invio e-mail & \hyperref[sec:UC1.2]{UC 1.2}
     \\\hline
-    RF & Obbligatorio & È necessario che il MUA abbia la capacità di creare una cartella & Capitolato
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se l'id e-mail non è valido durante l'attività di invio e-mail & \hyperref[sec:UC1.5]{UC 1.5}
     \\\hline
-    RF & Obbligatorio & È necessario che il MUA abbia la capacità di eliminare una cartella & Capitolato
-    \\\hline 
-    RF & Obbligatorio & È necessario che il MUA venga avvisato quando l'eliminazione di una cartella non è andata a buon fine & Capitolato
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se l'oggetto non è valido durante l'attività di invio e-mail & \hyperref[sec:UC1.6]{UC 1.6}
     \\\hline
-    RF & Obbligatorio & È necessario che il MUA abbia la capacità di modificare una cartella & Capitolato
-    \\\hline 
-    RF & Obbligatorio & È necessario che il MUA abbia la capacità di creare una condivisione di una cartella & Capitolato
-    \\\hline 
-    RF & Obbligatorio & È necessario che il MUA abbia la capacità di eliminare la condivisione di una cartella & Capitolato
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se il corpo non è valido durante l'attività di invio e-mail & \hyperref[sec:UC1.7]{UC 1.7}
     \\\hline
-    RF & Obbligatorio & È necessario che il MUA abbia la capacità di modificare la condivisione di una cartella & Capitolato
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere il destinatario dell'e-mail durante l'attività di invio e-mail & \hyperref[sec:UC1.3]{UC 1.3}
     \\\hline
-    RF & Opzionale & È necessario che il MUA abbia la capacità di creare un contatto & Capitolato
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se il destinatario non è valido durante l'attività di invio e-mail & \hyperref[sec:UC1.8]{UC 1.8}
     \\\hline
-    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere i dettagli del contatto & Capitolato
-    \\\hline 
-    RF & Opzionale & È necessario che il MUA venga avvisato se si sta creando un duplicato di un contatto & Capitolato
-    \\\hline 
-    RF & Opzionale & È necessario che il MUA venga avvisato se i dati trasmessi non sono validi per la creazione del contatto & Capitolato
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se il destinatario non è esiste durante l'attività di invio e-mail & \hyperref[sec:UC1.9]{UC 1.9}
     \\\hline
-    RF & Opzionale & È necessario che il MUA abbia la capacità di eliminare un contatto & Capitolato
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se sono presenti troppi destinatari durante l'attività di invio e-mail & UC \hyperref[sec:UC1.10]{UC 1.10}
     \\\hline
-    RF & Opzionale & È necessario che il MUA venga avvisato quando l'eliminazione di un contatto non è andata a buon fine & Capitolato
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere il mittente dell'e-mail durante l'attività di invio e-mail & \hyperref[sec:UC1.4]{UC 1.4}
     \\\hline
-    RF & Opzionale & È necessario che il MUA abbia la capacità di modificare un contatto & Capitolato
-    \\\hline 
-    RF & Opzionale & È necessario che il MUA abbia la capacità di creare un calendario & Capitolato
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se il mittente non è valido durante l'attività di invio e-mail & \hyperref[sec:UC1.11]{UC 1.11}
     \\\hline
-    RF & Opzionale & È necessario che il MUA abbia la capacità di eliminare un calendario & Capitolato
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di creare un'e-mail & \hyperref[sec:UC2]{UC 2}
     \\\hline
-    RF & Opzionale & È necessario che il MUA abbia la capacità di modificare un calendario & Capitolato
-    \\\hline 
-    RF & Opzionale & È necessario che il MUA abbia la capacità di creare un evento nel calendario & Capitolato
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere il destinatario dell'e-mail durante l'attività di creazione e-mail & \hyperref[sec:UC2.1]{UC 2.1}
     \\\hline
-    RF & Opzionale & È necessario che il MUA abbia la capacità di eliminare un evento nel calendario & Capitolato
+    
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere il mittente dell'e-mail durante l'attività di creazione e-mail & \hyperref[sec:UC2.2]{UC 2.2}    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere l'oggetto dell'e-mail durante l'attività di creazione e-mail & \hyperref[sec:UC2.3]{UC 2.3}
     \\\hline
-    RF & Opzionale & È necessario che il MUA venga avvisato quando l'eliminazione di un evento non è andata a buon fine & Capitolato
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere il corpo dell'e-mail durante l'attività di creazione e-mail & \hyperref[sec:UC2.4]{UC 2.4}
     \\\hline
-    RF & Opzionale & È necessario che il MUA abbia la capacità di modificare un evento nel calendario & Capitolato 
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere l'ID della cartella dell'e-mail durante l'attività di creazione e-mail & \hyperref[sec:UC2.5]{UC 2.5}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se le cartelle di destinazione sono troppe & \hyperref[sec:UC2.6]{UC 2.6}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di creare una cartella & \hyperref[sec:UC3]{UC 3}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere il nome della cartella durante l'attività di creazione cartella & \hyperref[sec:UC3.1]{UC 3.1}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se si crea una cartella con un nome non valido durante l'attività di creazione cartella & \hyperref[sec:UC3.3]{UC 3.3}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere l'id della cartella genitore durante l'attività di creazione cartella & \hyperref[sec:UC3.2]{UC 3.2}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se non si trova la cartella genitore durante l'attività di creazione cartella & \hyperref[sec:UC3.4]{UC 3.4} 
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se si crea una cartella duplicata durante l'attività di creazione cartella& \hyperref[sec:UC3.5]{UC 3.5}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di creare un contatto & \hyperref[sec:UC4]{UC 4}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere il nome del contatto durante l'attività di creazione contatto & \hyperref[sec:UC4.1]{UC 4.1}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se il nome trasmesso durante l'attività di creazione contatto non è valido & \hyperref[sec:UC4.3]{UC 4.3}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere l'indirizzo e-mail del contatto durante l'attività di creazione contatto & \hyperref[sec:UC4.2]{UC 4.2}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se l'indirizzo e-mail trasmesso durante l'attività di creazione contatto non è valido & \hyperref[sec:UC4.4]{UC 4.4}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di creare un evento nel calendario & \hyperref[sec:UC5]{UC 5}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere il titolo dell'evento durante l'attività di creazione evento & \hyperref[sec:UC5.1]{UC 5.1}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se il titolo trasmesso non è valido durante l'attività di creazione evento & \hyperref[sec:UC5.5]{UC 5.5}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere la data di inizio evento durante l'attività di creazione evento & \hyperref[sec:UC5.2]{UC 5.2}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se la data trasmessa durante l'attività di creazione evento non è valida & \hyperref[sec:UC5.6]{UC 5.6}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se la data di fine evento trasmessa durante l'attività di creazione evento non è valida & \hyperref[sec:UC5.3]{UC 5.3}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere la durata dell'evento durante l'attività di creazione evento & \hyperref[sec:UC5.4]{UC 5.4}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se la durata trasmessa è inconsistente durante l'attività di creazione evento & \hyperref[sec:UC5.7]{UC 5.7}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere la data di fine evento durante l'attività di creazione evento & \hyperref[sec:UC5.3]{UC 5.3}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di creare una condivisione di una cartella & \hyperref[sec:UC7]{UC 7}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere l'id della cartella durante l'attività di creazione condivisione cartella & \hyperref[sec:UC7.1]{UC 7.1}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se l'id cartella trasmesso durante l'attività di creazione condivisione cartella non è stato trovato & \hyperref[sec:UC7.3]{UC 7.3}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere l'indirizzo contatto durante l'attività di creazione condivisione cartella & \hyperref[sec:UC7.2]{UC 7.2}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se l'id contatto trasmesso durante l'attività di creazione condivisione cartella non è stato trovato & \hyperref[sec:UC7.4]{UC 7.4}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di creare una condivisione di un contatto & \hyperref[sec:UC8]{UC 8}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere l'id del contatto durante l'attività di creazione condivisione contatto & \hyperref[sec:UC8.1]{UC 8.1}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se l'id contatto trasmesso durante l'attività di creazione condivisione contatto non è stato trovato & \hyperref[sec:UC8.3]{UC 8.3}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere l'indirizzo contatto durante l'attività di creazione condivisione contatto & \hyperref[sec:UC8.2]{UC 8.2}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se l'id contatto trasmesso durante l'attività di creazione condivisione contatto non è stato trovato & \hyperref[sec:UC8.4]{UC 8.4}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di creare una condivisione di un evento nel calendario & \hyperref[sec:UC9]{UC 9}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere l'id dell'evento durante l'attività di creazione condivisione evento & \hyperref[sec:UC9.1]{UC 9.1}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se l'id evento trasmesso durante l'attività di creazione condivisione evento non è stato trovato & \hyperref[sec:UC9.3]{UC 9.3}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere l'indirizzo contatto durante l'attività di creazione condivisione evento & \hyperref[sec:UC9.2]{UC 9.2}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se l'indirizzo e-mail del contatto trasmesso durante l'attività di creazione condivisione evento non è valido & \hyperref[sec:UC9.4]{UC 9.4}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di modificare un'e-mail & \hyperref[sec:UC10]{UC 10}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere il destinatario durante l'attività di modifica e-mail & \hyperref[sec:UC10.1]{UC 10.1}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere il mittente dell'e-mail durante l'attività di modifica e-mail & \hyperref[sec:UC10.2]{UC 10.2}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere l'oggetto dell'e-mail durante l'attività di modifica e-mail & \hyperref[sec:UC10.3]{UC 10.3}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere il corpo dell'e-mail durante l'attività di modifica e-mail & \hyperref[sec:UC10.4]{UC 10.4}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere la cartella dell'e-mail durante l'attività di modifica e-mail & \hyperref[sec:UC10.5]{UC 10.5}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se le cartelle di destinazione sono troppe & \hyperref[sec:UC10.6]{UC 10.6}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di modificare una cartella & \hyperref[sec:UC11]{UC 11}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere il nome della cartella durante l'attività di modifica cartella & \hyperref[sec:UC11.1]{UC11.1}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se viene trasmesso un nome non valido durante l'attività di modifica cartella & \hyperref[sec:UC11.3]{UC 11.3}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere l'id della cartella genitore durante l'attività di modifica cartella & \hyperref[sec:UC11.2]{UC11.2}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se non si trova la cartella genitore durante l'attività di modifica cartella & \hyperref[sec:UC11.4]{UC 11.4}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore nel caso in cui venga creata una cartella duplicata durante l'attività di modifica cartella & \hyperref[sec:UC11.5]{UC 11.5}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di modificare un contatto & \hyperref[sec:UC12]{UC 12}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere il nome del contatto durante l'attività di modifica contatto & \hyperref[sec:UC12.1]{UC 12.1}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se il contatto trasmesso non è valido durante l'attività di modifica contatto & \hyperref[sec:UC12.3]{UC 12.3}
+    \\\hline  
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere l'indirizzo e-mail del contatto durante l'attività di modifica contatto & \hyperref[sec:UC12.2]{UC 12.2}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se ritorna un errore di indirizzo email non valido durante l'attività di modifica contatto & \hyperref[sec:UC12.4]{UC 12.4}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di modificare un evento nel calendario & \hyperref[sec:UC13]{UC 13}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere il titolo dell'evento durante l'attività di modifica evento & \hyperref[sec:UC13.1]{UC 13.1}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere la durata dell'evento durante l'attività di modifica evento & \hyperref[sec:UC13.4]{UC 13.4}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se ritorna un errore di titolo non valido durante l'attività di modifica evento & \hyperref[sec:UC13.5]{UC 13.5}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se ritorna un errore di data non valida durante l'attività di modifica evento & \hyperref[sec:UC13.6]{UC 13.6}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se ritorna un errore di durata evento inconsistente durante l'attività di modifica evento & \hyperref[sec:UC13.7]{UC 13.7}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di modificare una condivisione di una cartella & \hyperref[sec:UC15]{UC 15}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere l'id della cartella durante l'attività di modifica condivisione cartella & \hyperref[sec:UC15.1]{UC 15.1}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se l'id cartella trasmesso durante l'attività di modifica condivisione cartella non è stato trovato & \hyperref[sec:UC15.3]{UC 15.3}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere l'indirizzo contatto durante l'attività di modifica condivisione cartella & \hyperref[sec:UC15.2]{UC 15.2}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se indirizzo e-mail del contatto trasmesso durante l'attività di modifica condivisione cartella non è valido & \hyperref[sec:UC15.4]{UC 15.4}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di modificare una condivisione di un contatto & \hyperref[sec:UC16]{UC 16}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere l'id del contatto durante l'attività di modifica condivisione contatto & \hyperref[sec:UC16.1]{UC 16.1}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se l'id contatto trasmesso durante l'attività di modifica condivisione contatto non è stato trovato & \hyperref[sec:UC16.3]{UC 16.3}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere l'indirizzo contatto durante l'attività di modifica condivisione contatto & \hyperref[sec:UC16.2]{UC 16.2}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se l'indirizzo e-mail del contatto trasmesso durante l'attività di modifica condivisione contatto non è valido & \hyperref[sec:UC16.4]{UC 16.4}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di modificare una condivisione di un evento nel calendario & \hyperref[sec:UC17]{UC 17}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere l'id dell'evento durante l'attività di modifica condivisione evento & \hyperref[sec:UC17.1]{UC 17.1}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se l'id evento trasmesso durante l'attività di modifica condivisione evento non è stato trovato & \hyperref[sec:UC17.3]{UC 17.3}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere l'indirizzo contatto durante l'attività di modifica condivisione evento & \hyperref[sec:UC17.2]{UC 17.2}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se l'indirizzo e-mail del contatto trasmesso durante l'attività di modifica condivisione evento non è valido & \hyperref[sec:UC17.4]{UC 17.4}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di eliminare un'e-mail & \hyperref[sec:UC18]{UC 18}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere l'id dell'e-mail durante l'attività di eliminazione e-mail & \hyperref[sec:UC18.1]{UC 18.1}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se l'id e-mail trasmesso durante l'attività di eliminazione e-mail non è stato trovato & \hyperref[sec:UC18.2]{UC 18.2}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di eliminare una cartella & \hyperref[sec:UC19]{UC 19}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere l'id della cartella durante l'attività di eliminazione cartella & \hyperref[sec:UC19.1]{UC 19.1}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se l'id cartella trasmesso durante l'attività di eliminazione cartella non è stato trovato & \hyperref[sec:UC19.2]{UC 19.2}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se all'interno della cartella sono presenti e-mail durante l'attività di eliminazione cartella & \hyperref[sec:UC19.3]{UC 19.3}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se all'interno della cartella sono presenti altre cartelle durante l'attività di eliminazione cartella & \hyperref[sec:UC19.4]{UC 19.4}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di eliminare un contatto & \hyperref[sec:UC20]{UC 20}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere l'id del contatto durante l'attività di eliminazione contatto & \hyperref[sec:UC20.1]{UC 20.1}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se l'id contatto trasmesso durante l'attività di eliminazione contatto non è stato trovato & \hyperref[sec:UC20.2]{UC 20.2}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di eliminare un evento nel calendario & \hyperref[sec:UC21]{UC 21}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere l'id dell'evento durante l'attività di eliminazione evento & \hyperref[sec:UC21.1]{UC 21.1}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se l'id evento trasmesso durante l'attività di eliminazione evento non è stato trovato & \hyperref[sec:UC21.2]{UC 21.2}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di eliminare una condivisione di una cartella & \hyperref[sec:UC23]{UC 23}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere l'id della cartella durante l'attività di eliminazione condivisione cartella & \hyperref[sec:UC23.1]{UC 23.1}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se l'id cartella trasmesso durante l'attività di eliminazione condivisione cartella non è stato trovato & \hyperref[sec:UC23.3]{UC 23.3}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere l'indirizzo contatto durante l'attività di eliminazione condivisione cartella & \hyperref[sec:UC23.2]{UC 23.2}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se l'indirizzo e-mail del contatto trasmesso durante l'attività di eliminazione condivisione cartella non è valido & \hyperref[sec:UC23.4]{UC 23.4}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di eliminare una condivisione di un contatto & \hyperref[sec:UC24]{UC 24}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere l'id del contatto durante l'attività di eliminazione condivisione contatto & \hyperref[sec:UC24.1]{UC 24.1}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se l'id contatto trasmesso durante l'attività di eliminazione condivisione contatto non è stato trovato & \hyperref[sec:UC24.3]{UC 24.3}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere l'indirizzo contatto durante l'attività di eliminazione condivisione contatto & \hyperref[sec:UC24.2]{UC 24.2}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se l'indirizzo e-mail del contatto trasmesso durante l'attività di eliminazione condivisione contatto non è valido & \hyperref[sec:UC24.4]{UC 24.4}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di eliminare una condivisione di un evento nel calendario & \hyperref[sec:UC25]{UC 25}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere l'id dell'evento durante l'attività di eliminazione condivisione evento & \hyperref[sec:UC25.1]{UC 25.1}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se l'id evento trasmesso durante l'attività di eliminazione condivisione evento non è stato trovato & \hyperref[sec:UC25.3]{UC 25.3}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere l'indirizzo contatto durante l'attività di eliminazione condivisione evento & \hyperref[sec:UC25.2]{UC 25.2}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se l'indirizzo e-mail del contatto trasmesso durante l'attività di eliminazione condivisione evento non è valido & \hyperref[sec:UC25.4]{UC 25.4}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di sincronizzare le e-mail & \hyperref[sec:UC26]{UC 26}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere l'id account durante l'attività di sincronizzazione e-mail & \hyperref[sec:UC26.1]{UC 26.1}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere l'id delle e-mail da aggiornare durante l'attività di sincronizzazione e-mail & \hyperref[sec:UC26.2]{UC 26.2}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se la richiesta è troppo grande durante l'attività di sincronizzazione e-mail & \hyperref[sec:UC26.4]{UC 26.4}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere le proprietà delle e-mail da aggiornare durante l'attività di sincronizzazione e-mail & \hyperref[sec:UC26.3]{UC 26.3}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se la proprietà non è valida durante l'attività di sincronizzazione e-mail & \hyperref[sec:UC26.5]{UC 26.5}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di sincronizzare le cartelle & \hyperref[sec:UC27]{UC 27}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere l'id account durante l'attività di sincronizzazione cartelle & \hyperref[sec:UC27.1]{UC 27.1}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere l'id delle cartelle da aggiornare durante l'attività di sincronizzazione cartelle & \hyperref[sec:UC27.2]{UC 27.2}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se la richiesta è troppo grande durante l'attività di sincronizzazione cartelle & \hyperref[sec:UC27.4]{UC 27.4}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA abbia la capacità di trasmettere le proprietà delle cartelle da aggiornare durante l'attività di sincronizzazione cartelle & \hyperref[sec:UC27.3]{UC 27.3}
+    \\\hline
+    RF & Obbligatorio & È necessario che il MUA visualizzi un messaggio d'errore se la proprietà non è valida durante l'attività di sincronizzazione cartelle & \hyperref[sec:UC27.5]{UC 27.5}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di sincronizzare i contatti & \hyperref[sec:UC28]{UC 28}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere l'id account durante l'attività di sincronizzazione contatti & \hyperref[sec:UC28.1]{UC 28.1}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere l'id dei contatti da aggiornare durante l'attività di sincronizzazione contatti & \hyperref[sec:UC28.2]{UC 28.2}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se la richiesta è troppo grande durante l'attività di sincronizzazione contatti & \hyperref[sec:UC28.4]{UC 28.4}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere le proprietà dei contatti da aggiornare durante l'attività di sincronizzazione contatti & \hyperref[sec:UC28.3]{UC 28.3}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se la proprietà non è valida durante l'attività di sincronizzazione contatti & \hyperref[sec:UC28.5]{UC 28.5}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di sincronizzare gli eventi del calendario & \hyperref[sec:UC29]{UC 29}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere l'id account durante l'attività di sincronizzazione eventi & \hyperref[sec:UC29.1]{UC 29.1}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere l'id degli eventi da aggiornare durante l'attività di sincronizzazione eventi & \hyperref[sec:UC29.2]{UC 29.2}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se la richiesta è troppo grande durante l'attività di sincronizzazione eventi & \hyperref[sec:UC29.4]{UC 29.4}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA abbia la capacità di trasmettere le proprietà degli eventi da aggiornare durante l'attività di sincronizzazione eventi & \hyperref[sec:UC29.3]{UC 29.3}
+    \\\hline
+    RF & Opzionale & È necessario che il MUA visualizzi un messaggio d'errore se la proprietà non è valida durante l'attività di sincronizzazione eventi & \hyperref[sec:UC29.5]{UC 29.5}
     \\\hline
     \end{longtable}
 
@@ -91,13 +323,10 @@
     \\\midrule
     RV & Obbligatorio & Il client deve essere uno tra quelli presenti al link https://jmap.io/software.html  & Capitolato
     \\\midrule
-    RV & Obbligatorio & Il database deve essere unico & Verbale .....
-    \\\midrule
     RV & Desiderabile & Stress test per testare il protocollo JAMP & Capitolato
     \\\midrule
     RV & Desiderabile & Java come linguaggio di programmazione & Capitolato
-    \\\midrule
-    RV & Opzionale & - & Capitolato
+
     \\\bottomrule
     \end{tabular}
 
