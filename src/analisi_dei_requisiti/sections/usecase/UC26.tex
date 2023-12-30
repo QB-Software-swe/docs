@@ -49,12 +49,12 @@
     \subsubsection{UC 26.2 - Trasmette id e-mail da aggiornare} \label{sec:UC26.2}
     \begin{itemize}
         \item \textbf{Attore}: MUA;
-        \item \textbf{Descrizione}: il MUA invia al sistema gli id delle e-mail da sincronizzare;
+        \item \textbf{Descrizione}: il MUA invia al sistema gli id delle e-mail da aggiornare;
         \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di sincronizzazione delle e-mail;
         \item \textbf{Postcondizioni}: il sistema conosce gli id delle e-mail da aggiornare;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
-                \item il MUA trasmette l'id delle e-mail da aggiornare;
+                \item il MUA trasmette gli id delle e-mail da aggiornare;
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
@@ -71,7 +71,7 @@
     \subsubsection{UC 26.3 - Trasmette proprietà e-mail da aggiornare} \label{sec:UC26.3}
     \begin{itemize}
         \item \textbf{Attore}: MUA;
-        \item \textbf{Descrizione}: il MUA invia al sistema le proprietà delle e-mail da sincronizzare;
+        \item \textbf{Descrizione}: il MUA invia al sistema le proprietà delle e-mail da aggiornare;
         \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di sincronizzazione delle e-mail;
         \item \textbf{Postcondizioni}: il sistema conosce quali sono le proprietà delle e-mail da aggiornare;
         \item \textbf{Scenario principale}:
@@ -93,8 +93,8 @@
     \subsubsection{UC 26.4 - Ritorna errore richiesta troppo grande} \label{sec:UC26.4}
     \begin{itemize}
         \item \textbf{Attore}: MUA;
-        \item \textbf{Descrizione}: il MUA riceve l'errore che la quantità delle e-mail da sincronizzare supera la quantità massima di richieste al server;
-        \item \textbf{Precondizioni}: il MUA ha inviato gli id delle e-mail da sincronizzare;
+        \item \textbf{Descrizione}: il MUA riceve l'errore che la quantità delle e-mail da aggiornare supera la quantità massima di richieste al server;
+        \item \textbf{Precondizioni}: il MUA ha inviato gli id delle e-mail da aggiornare;
         \item \textbf{Postcondizioni}: il sistema non invia gli aggiornamenti e il MUA viene notificato che il numero delle e-mail da aggiornare è eccessivo;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
@@ -110,9 +110,9 @@
     \subsubsection{UC 26.5 - Ritorna errore proprietà non valida} \label{sec:UC26.5}
     \begin{itemize}
         \item \textbf{Attore}: MUA;
-        \item \textbf{Descrizione}: il MUA riceve l'errore che la proprietà dell'email da sincronizzare non è valida;
-        \item \textbf{Precondizioni}: il MUA ha inviato la proprietà dell'e-mail da sincronizzare;
-        \item \textbf{Postcondizioni}: il sistema non invia gli aggiornamenti e il MUA viene notificato che la proprietà dell'email da sincronizzare non è valida;
+        \item \textbf{Descrizione}: il MUA riceve l'errore che la proprietà dell'email da aggiornare non è valida;
+        \item \textbf{Precondizioni}: il MUA ha inviato la proprietà dell'e-mail da aggiornare;
+        \item \textbf{Postcondizioni}: il sistema non invia gli aggiornamenti e il MUA viene notificato che la proprietà dell'email da aggiornare non è valida;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
                 \item il sistema verifica la validitò della proprietà trasmessa e trova un errore;
