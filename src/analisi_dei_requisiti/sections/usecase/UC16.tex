@@ -1,4 +1,4 @@
-\subsection{UC 8 - Modifica condivisione di un contatto} \label{sec:UC8}
+\subsection{UC 16 - Modifica condivisione di un contatto} \label{sec:UC16}
 
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
@@ -7,8 +7,8 @@
         \item \textbf{Postcondizioni}: il sistema modifica la condivisione del contatto con le informazioni fornite dal MUA;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
-                \item il MUA trasmette l'id del contatto di cui modificare la condivisione (\hyperref[sec:UC8.1]{UC 8.1});
-                \item il MUA trasmette il nuovo indirizzo e-mail a cui condividere (\hyperref[sec:UC8.2]{UC 8.2});
+                \item il MUA trasmette l'id del contatto di cui modificare la condivisione (\hyperref[sec:UC16.1]{UC 16.1});
+                \item il MUA trasmette il nuovo indirizzo e-mail a cui condividere (\hyperref[sec:UC16.2]{UC 16.2});
                 \item il sistema condivide il contatto;
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
@@ -16,7 +16,7 @@
         \item \textbf{Estensioni}: nessuna.
     \end{itemize}
 
-    \subsubsection{UC 8.1 - Trasmette l'id del contatto} \label{sec:UC8.1}
+    \subsubsection{UC 16.1 - Trasmette l'id del contatto} \label{sec:UC16.1}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA trasmette l'id del contatto per modificarne la condivisione;
@@ -38,7 +38,7 @@
     \end{itemize}
 
 
-    \subsubsection{UC 8.2 - Trasmette l'indirizzo e-mail} \label{sec:UC8.2}
+    \subsubsection{UC 16.2 - Trasmette l'indirizzo e-mail} \label{sec:UC16.2}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA trasmette il nuovo indirizzo e-mail per la condivisione al sistema;
@@ -58,13 +58,13 @@
             \begin{enumerate}[label=\alph*.]
                 \item il sistema non riesce a modificare la condivisione del contatto perché l'indirizzo e-mail fornito non è valido:
                 \begin{enumerate}[label=\arabic*.]
-                    \item il sistema ritorna un errore al MUA di indirizzo e-mail non valido (\hyperref[sec:UC8.4]{UC 8.4}).
+                    \item il sistema ritorna un errore al MUA di indirizzo e-mail non valido (\hyperref[sec:UC16.4]{UC 16.4}).
                 \end{enumerate}
             \end{enumerate}
     \end{itemize}
 
 
-\subsubsection{UC 8.3 - Ritorna l'errore contatto non trovato} \label{sec:UC8.3}
+\subsubsection{UC 16.3 - Ritorna l'errore contatto non trovato} \label{sec:UC16.3}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il sistema non riesce a modificare la condivisione del contatto perché il contatto non è stato trovato;
@@ -80,7 +80,7 @@
         \item \textbf{Estensioni}: nessuna.
     \end{itemize}
 
-    \subsubsection{UC 8.4 - Ritorna l'errore indirizzo e-mail non valido} \label{sec:UC8.4}
+    \subsubsection{UC 16.4 - Ritorna l'errore indirizzo e-mail non valido} \label{sec:UC16.4}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il sistema non riesce a modificare la condivisione del contatto perché l'indirizzo e-mail fornito non rispetta i requisiti;
