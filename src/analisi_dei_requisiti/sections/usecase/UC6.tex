@@ -27,7 +27,7 @@
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA trasmette il nome per creare la cartella al sistema;
         \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di creazione di una cartella;
-        \item \textbf{Postcondizioni}: il sistema salva la nuova cartella creata;
+        \item \textbf{Postcondizioni}: il sistema conosce il nome della cartella;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
                 \item il MUA invia il nome per creare la cartella al sistema;
@@ -56,7 +56,7 @@
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA trasmette l'id della cartella genitore al sistema;
         \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di creazione di una cartella;
-        \item \textbf{Postcondizioni}: il sistema salva la nuova cartella creata;
+        \item \textbf{Postcondizioni}: il sistema conosce l'id della cartella genitore;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
                 \item il MUA invia le informazioni necessarie per creare la cartella;
@@ -87,7 +87,7 @@
         \item \textbf{Scenario principale}:
             \begin{enumerate}
                 \item il sistema controlla la sintassi del nome e trova un errore;
-                \item il sistema notifica il MUA dell'errore;
+                \item il sistema non crea la cartella e notifica il MUA dell'errore;
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
@@ -103,7 +103,7 @@
         \item \textbf{Scenario principale}:
             \begin{enumerate}
                 \item il sistema non trova l'di fornito;
-                \item il sistema notifica il MUA dell'errore;
+                \item il sistema non crea la cartella e notifica il MUA dell'errore;
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
@@ -119,7 +119,7 @@
         \item \textbf{Scenario principale}:
             \begin{enumerate}
                 \item il sistema nota che la cartella esiste già e annulla l'operazione per la creazione della cartella;
-                \item il sistema notifica il MUA dell'errore;
+                \item il sistema non crea la cartella e notifica il MUA dell'errore;
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
