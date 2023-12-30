@@ -1,89 +1,128 @@
-%LTeX: language=it
-\subsection{UC 10 - Modificare una cartella} \label{sec:UC10}
-    \begin{itemize}
-        \item \textbf{Attore principale}: MUA;
-        \item \textbf{Descrizione}: il MUA deve poter modificare un evento nel calendario;
-        \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, e ha un connessione aperta con il sistema ed è autenticato;
-        \item \textbf{Postcondizioni}: il MUA modifica un evento nel calendario, il suo nuovo stato viene salvato nel sistema;
-        \item \textbf{Scenario principale}:
-            \begin{enumerate}
-                \item il MUA invia le informazioni per aggiornare il l'evento del calendario nel sistema (\hyperref[sec:UC9.1]{UC 9.1});
-                \item il sistema salva il nuovo stato del evento;
-            \end{enumerate}
-        \item \textbf{Inclusioni}: nessuna;
-        \item \textbf{Generalizzazioni}: nessuna;
-        \item \textbf{Estensioni}: nessuna.
-    \end{itemize}
+    %LTeX: language=it
+\subsection{UC 11 - Modifica di una cartella} \label{sec:UC11}
+\begin{itemize}
+    \item \textbf{Attore principale}: MUA;
+    \item \textbf{Descrizione}: il MUA modifica una cartella nel sistema;
+    \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, e ha un connessione aperta con il sistema ed è autenticato;
+    \item \textbf{Postcondizioni}: la cartella è stata modificata con successo, ed è stata salvata nel sistema;
+    \item \textbf{Scenario principale}:
+        \begin{enumerate}
+            \item il MUA trasmette il nuovo nome della cartella (\hyperref[sec:UC11.1]{UC 11.1});
+            \item il MUA trasmette il nuovo id della cartella genitore (\hyperref[sec:UC11.2]{UC 11.2});
+            \item il sistema salva la nuova cartella;
+        \end{enumerate}
+    \item \textbf{Inclusioni}: nessuna;
+    \item \textbf{Generalizzazioni}: nessuna;
+    \item \textbf{Estensioni}: nessuna.
+\end{itemize}
 
 \begin{figure}[h]
-    \includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC09.X.png}
-    \centering
-    \caption{Diagramma sotto-casi UC 9.}
+%\includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC011.X.png}
+\centering
+\caption{Diagramma sotto-casi UC 11}
 \end{figure}
 
-\subsubsection{UC 9.1 - Trasmette i dettagli della cartella} \label{sec:UC9.1}
-    \begin{itemize}
-        \item \textbf{Attore principale}: MUA;
-        \item \textbf{Descrizione}: il MUA trasmette il nuovo stato del evento al sistema;
-        \item \textbf{Precondizioni}: il MUA sta utilizzando la funzionalità di modifica di un evento del calendario;
-        \item \textbf{Postcondizioni}: il MUA modifica l'evento, il nuovo evento viene salvato nel sistema;
-        \item \textbf{Scenario principale}:
-            \begin{enumerate}
-                \item il MUA invia le informazioni per aggiornare l'evento nel sistema;
-                \item il sistema elabora le nuove informazioni, e controlla che siano valide:
-                \begin{itemize}
-                    \item controlla che l'evento abbia un titolo che non sia vuoto;
-                    \item controlla che la data d'inizio si inferiore rispetto alla data di fine;
-                \end{itemize}
-                \item il sistema salva il nuovo stato del contato;
+\subsubsection{UC 11.1 - Trasmette nome cartella} \label{sec:UC11.1}
+\begin{itemize}
+    \item \textbf{Attore principale}: MUA;
+    \item \textbf{Descrizione}: il MUA trasmette il nuovo nome per modificare la cartella al sistema;
+    \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di modifica di una cartella;
+    \item \textbf{Postcondizioni}: il sistema conosce il nuovo nome della cartella;
+    \item \textbf{Scenario principale}:
+        \begin{enumerate}
+            \item il MUA invia il nuovo nome per modificare la cartella al sistema;
+            \item il sistema controlla che le informazioni ricevute rispettino il seguente requisito minimo:
+            \begin{itemize}
+                \item il nome ricevuto non è una stringa vuota;
+            \end{itemize}
+        \end{enumerate}
+    \item \textbf{Inclusioni}: nessuna;
+    \item \textbf{Generalizzazioni}: nessuna;
+    \item \textbf{Estensioni}:
+        \begin{enumerate}[label=\alph*.]
+            \item il sistema non riesce a salvare la cartella perché è un duplicato:
+            \begin{enumerate}[label=\arabic*.]
+                \item il sistema ritorna un errore al MUA di cartella duplicata (\hyperref[sec:UC11.3]{UC 11.3});
             \end{enumerate}
-        \item \textbf{Inclusioni}: nessuna;
-        \item \textbf{Generalizzazioni}: nessuna;
-        \item \textbf{Estensioni}: 
-            \begin{enumerate}[label=\alph*.]
-                \item il sistema non riesce ad aggiornare lo stato dell'evento perché non è stato trovato:
-                \begin{enumerate}[label=\arabic*.]
-                    \item il sistema ritorna un errore al MUA di evento inesistente (\hyperref[sec:UC9.2]{UC 9.2});
-                \end{enumerate}
-                \item il sistema non riesce a modificare lo stato del evento perché i dati trasmessi non rispettano i requisiti:
-                \begin{enumerate}[label=\arabic*.]
-                    \item il sistema ritorna un errore al MUA dettagli dell'evento non validi (\hyperref[sec:U9.3]{UC 9.3}).
-                \end{enumerate}
+            \item il sistema non riesce a modificare la cartella perché il nome fornito non è valido:
+            \begin{enumerate}[label=\arabic*.]
+                \item il sistema ritorna un errore al MUA di nome non valido (\hyperref[sec:UC11.4]{UC 11.4}).
             \end{enumerate}
-    \end{itemize}
+        \end{enumerate}
+\end{itemize}
 
-\subsubsection{UC 8.2 - Ritorna l'errore l'evento conflitto con un'altra cartella} \label{sec:UC8.2}
-    \begin{itemize}
-        \item \textbf{Attore principale}: MUA;
-        \item \textbf{Descrizione}: il MUA sta trasmettendo il nuovo stato del contato al sistema, ma il contatto indicato non esiste;
-        \item \textbf{Precondizioni}: il MUA sta utilizzando la funzionalità di trasmissione dei dettagli per la modifica di un contatto;
-        \item \textbf{Postcondizioni}: il sistema non aggiorna lo stato del contatto, il MUA è stato notificato dell'errore;
-        \item \textbf{Scenario principale}:
-            \begin{enumerate}
-                \item il MUA invia le informazioni per aggiornare il contatto nel sistema;
-                \item il sistema controlla le informazioni, e riscontra che il contatto non esiste;
-                \item il sistema non aggiorna il contatto;
-                \item il sistema ritorna l'errore al MUA;
+\subsubsection{UC 11.2 - Trasmette id cartella genitore} \label{sec:UC11.2}
+\begin{itemize}
+    \item \textbf{Attore principale}: MUA;
+    \item \textbf{Descrizione}: il MUA trasmette l'id della nuova cartella genitore al sistema;
+    \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di modifica di una cartella;
+    \item \textbf{Postcondizioni}: il sistema conosce l'id della nuova cartella genitore;
+    \item \textbf{Scenario principale}:
+        \begin{enumerate}
+            \item il MUA invia le informazioni necessarie per modificare la cartella;
+            \item il sistema elabora le informazioni ricevute, controlla che:
+            \begin{itemize}
+                \item la cartella genitore esista;
+            \end{itemize}
+        \end{enumerate}
+    \item \textbf{Inclusioni}: nessuna;
+    \item \textbf{Generalizzazioni}: nessuna;
+    \item \textbf{Estensioni}:
+        \begin{enumerate}[label=\alph*.]
+            \item il sistema non riesce a salvare la cartella perché non trova la cartella genitore:
+            \begin{enumerate}[label=\arabic*.]
+                \item il sistema ritorna un errore al MUA di cartella genitore non trovata (\hyperref[sec:UC11.5]{UC 11.5});
             \end{enumerate}
-        \item \textbf{Inclusioni}: nessuna;
-        \item \textbf{Generalizzazioni}: nessuna;
-        \item \textbf{Estensioni}: nessuna.
-    \end{itemize}
+        \end{enumerate}
+\end{itemize}
 
-\subsubsection{UC 8.3 - Ritorna l'errore dettagli l'evento non validi} \label{sec:UC8.3}
-    \begin{itemize}
-        \item \textbf{Attore principale}: MUA;
-        \item \textbf{Descrizione}: il MUA sta trasmettendo il nuovo stato del contato al sistema, ma i dettagli inviati non rispettano i requisiti richiesti;
-        \item \textbf{Precondizioni}: il MUA sta utilizzando la funzionalità di trasmissione dei dettagli per la modifica di un contatto;
-        \item \textbf{Postcondizioni}: il sistema non aggiorna lo stato del contatto, il MUA è stato notificato dell'errore;
-        \item \textbf{Scenario principale}:
-            \begin{enumerate}
-                \item il MUA invia le informazioni per aggiornare il contatto nel sistema;
-                \item il sistema controlla le informazioni, il sistema riscontra dei valori non validi;
-                \item il sistema non aggiorna il contatto;
-                \item il sistema ritorna l'errore al MUA;
-            \end{enumerate}
-        \item \textbf{Inclusioni}: nessuna;
-        \item \textbf{Generalizzazioni}: nessuna;
-        \item \textbf{Estensioni}: nessuna.
-    \end{itemize}
+
+
+\subsubsection{UC 11.3 - Ritorna l'errore nome non valido} \label{sec:UC11.3}
+\begin{itemize}
+    \item \textbf{Attore principale}: MUA;
+    \item \textbf{Descrizione}: il MUA riceve l'errore che il nuovo nome della cartella non è valido;
+    \item \textbf{Precondizioni}:  il MUA ha trasmesso il nome per modificare la cartella al sistema;
+    \item \textbf{Postcondizioni}: il sistema non modifica la nuova cartella e il MUA viene notificato dell'errore;
+    \item \textbf{Scenario principale}:
+        \begin{enumerate}
+            \item il sistema controlla la sintassi del nome e trova un errore;
+            \item il sistema non modifica la cartella e notifica il MUA dell'errore;
+        \end{enumerate}
+    \item \textbf{Inclusioni}: nessuna;
+    \item \textbf{Generalizzazioni}: nessuna;
+    \item \textbf{Estensioni}: nessuna.
+\end{itemize}
+
+\subsubsection{UC 11.4 - Ritorna l'errore cartella genitore non trovata} \label{sec:UC11.4}
+\begin{itemize}
+    \item \textbf{Attore principale}: MUA;
+    \item \textbf{Descrizione}: il MUA riceve l'errore che la cartella genitore non è stata trovata;
+    \item \textbf{Precondizioni}: il MUA ha trasmesso l'id della cartella genitore al sistema;
+    \item \textbf{Postcondizioni}: il sistema non modifica la nuova cartella e il MUA viene notificato dell'errore;
+    \item \textbf{Scenario principale}:
+        \begin{enumerate}
+            \item il sistema non trova l'di fornito;
+            \item il sistema non modifica la cartella e notifica il MUA dell'errore;
+        \end{enumerate}
+    \item \textbf{Inclusioni}: nessuna;
+    \item \textbf{Generalizzazioni}: nessuna;
+    \item \textbf{Estensioni}: nessuna.
+\end{itemize}
+
+\subsubsection{UC 11.5 - Ritorna l'errore cartella duplicata} \label{sec:UC11.5}
+\begin{itemize}
+    \item \textbf{Attore principale}: MUA;
+    \item \textbf{Descrizione}: il MUA riceve l'errore che la cartella è duplicata;
+    \item \textbf{Precondizioni}: il MUA ha trasmesso i dettagli per modificare la cartella al sistema;
+    \item \textbf{Postcondizioni}: il sistema non modifica la nuova cartella e il MUA viene notificato dell'errore;
+    \item \textbf{Scenario principale}:
+        \begin{enumerate}
+            \item il sistema nota che la cartella esiste già e annulla l'operazione per la modifica della cartella;
+            \item il sistema non modifica la cartella e notifica il MUA dell'errore;
+        \end{enumerate}
+    \item \textbf{Inclusioni}: nessuna;
+    \item \textbf{Generalizzazioni}: nessuna;
+    \item \textbf{Estensioni}: nessuna.
+\end{itemize}
+

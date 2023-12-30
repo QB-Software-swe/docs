@@ -39,7 +39,7 @@
     \subsubsection{UC 10.1 - Trasmette il destinatario dell'e-mail} \label{sec:UC10.1}
     \begin{itemize}
         \item \textbf{Attore}: MUA;
-        \item \textbf{Descrizione}: il MUA invia al sistema il destinatario dell'e-mail;
+        \item \textbf{Descrizione}: il MUA invia al sistema il nuovo destinatario dell'e-mail;
         \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di modifica di un'e-mail;
         \item \textbf{Postcondizioni}: il sistema conosce il nuovo indirizzo di posta elettronica del destinatario dell'e-mail;
         \item \textbf{Scenario principale}:
@@ -54,7 +54,7 @@
     \subsubsection{UC 10.2 - Trasmette il mittente dell'e-mail} \label{sec:UC10.2}
     \begin{itemize}
         \item \textbf{Attore}: MUA;
-        \item \textbf{Descrizione}: il MUA invia al sistema il mittente dell'e-mail;
+        \item \textbf{Descrizione}: il MUA invia al sistema il nuovo mittente dell'e-mail;
         \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di modifica di un'e-mail;
         \item \textbf{Postcondizioni}: il sistema conosce il nuovo indirizzo di posta elettronica del mittente dell'e-mail;
         \item \textbf{Scenario principale}:
@@ -69,7 +69,7 @@
     \subsubsection{UC 10.3 - Trasmette l'oggetto dell'e-mail} \label{sec:UC10.3}
     \begin{itemize}
         \item \textbf{Attore}: MUA;
-        \item \textbf{Descrizione}: il MUA invia al sistema l'oggetto dell'e-mail;
+        \item \textbf{Descrizione}: il MUA invia al sistema il nuovo oggetto dell'e-mail;
         \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di modifica di un'e-mail;
         \item \textbf{Postcondizioni}: il sistema conosce il nuovo oggetto dell'e-mail;
         \item \textbf{Scenario principale}:
@@ -84,9 +84,9 @@
     \subsubsection{UC 10.4 - Trasmette il corpo dell'e-mail} \label{sec:UC10.4}
     \begin{itemize}
         \item \textbf{Attore}: MUA;
-        \item \textbf{Descrizione}: il MUA invia al sistema il corpo dell'e-mail;
+        \item \textbf{Descrizione}: il MUA invia al sistema il nuovo corpo dell'e-mail;
         \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di modifica di un'e-mail;
-        \item \textbf{Postcondizioni}: il sistema conosce il corpo dell'e-mail;
+        \item \textbf{Postcondizioni}: il sistema conosce il nuovo corpo dell'e-mail;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
                 \item il MUA trasmette il corpo dell'e-mail modificato;
@@ -99,9 +99,9 @@
     \subsubsection{UC 10.5 - Trasmette id cartella dell'e-mail} \label{sec:UC10.5}
     \begin{itemize}
         \item \textbf{Attore}: MUA;
-        \item \textbf{Descrizione}: il MUA invia al sistema l'id della cartella di destinazione dell'e-mail;
+        \item \textbf{Descrizione}: il MUA invia al sistema il nuovo id della cartella di destinazione dell'e-mail;
         \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di modifica di un'e-mail;
-        \item \textbf{Postcondizioni}: il sistema conosce la cartella di destinazione dell'e-mail;
+        \item \textbf{Postcondizioni}: il sistema conosce la nuova cartella di destinazione dell'e-mail;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
                 \item il MUA trasmette l'id della cartella di destinazione dell'e-mail modificato;
@@ -127,7 +127,7 @@
             \begin{enumerate}
                 \item il sistema verifica il numero di cartelle;
                 \item il sistema rileva che il numero di cartelle supera la soglia massima consentita;
-                \item il sistema notifica il MUA dell'eccesso di cartelle nella e-mail;
+                \item il sistema non modifica l'email e notifica il MUA dell'eccesso di cartelle nella e-mail;
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
