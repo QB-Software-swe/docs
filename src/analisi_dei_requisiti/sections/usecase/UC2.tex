@@ -1,23 +1,26 @@
 
 %LTeX: language=it
+
+\begin{figure}[H]
+    \includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC-creazione.png}
+    \centering
+    \caption{Casi d'uso relativi alla creazione.}
+\end{figure}
+
 \subsection{UC 2 - Creazione e-mail} \label{sec:UC2}
-    \begin{figure}[h]
-        %\includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC02.png}
-        \centering
-        \caption{Diagramma UC 2}
-    \end{figure}
+
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
-        \item \textbf{Descrizione}: il MUA deve poter inviare una e-mail al destinatario indicato;
+        \item \textbf{Descrizione}: il MUA deve poter creare un'e-mail;
         \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, e ha un connessione aperta con il sistema ed è autenticato;
-        \item \textbf{Postcondizioni}: l'e-mail è stata consegnata con successo al destinatario, ed è stata salvata nel sistema;
+        \item \textbf{Postcondizioni}: l'e-mail è stata creata con successo è stata salvata nel sistema;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
                 \item il MUA trasmette il destinatario dell'e-mail (\hyperref[sec:UC2.1]{UC 2.1});
                 \item il MUA trasmette il mittente dell'e-mail (\hyperref[sec:UC2.2]{UC 2.2});
                 \item il MUA trasmette l'oggetto dell'e-mail (\hyperref[sec:UC2.3]{UC 2.3});
                 \item il MUA trasmette il corpo dell'e-mail (\hyperref[sec:UC2.4]{UC 2.4});
-                \item il MUA trasmette la cartella di appartenenza dell'email (\hyperref[sec:UC2.5]{UC 2.5});
+                \item il MUA trasmette l'id della cartella di appartenenza dell'email (\hyperref[sec:UC2.5]{UC 2.5});
                 \item il sistema salva l'e-mail nel mailbox.
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
@@ -32,12 +35,12 @@
     \end{itemize}
 
     \begin{figure}[h]
-        %\includegraphics[width=0.75\textwidth]{sections/uc_imgs/UC02.X.png}
+        \includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC02.png}
         \centering
-        \caption{Diagramma sotto-casi UC 2.1}
+        \caption{Sottocasi d'uso di UC 2}
     \end{figure}
 
-    \subsubsection{UC 2.1 - Trasmette il destinatario dell'e-mail} \label{sec:UC2.1}
+    \subsubsection{UC 2.1 - Trasmette destinatario e-mail} \label{sec:UC2.1}
     \begin{itemize}
         \item \textbf{Attore}: MUA;
         \item \textbf{Descrizione}: il MUA invia al sistema il destinatario dell'e-mail;
@@ -52,7 +55,7 @@
         \item \textbf{Estensioni}: nessuna;
     \end{itemize}
 
-    \subsubsection{UC 2.2 - Trasmette il mittente dell'e-mail} \label{sec:UC2.2}
+    \subsubsection{UC 2.2 - Trasmette mittente e-mail} \label{sec:UC2.2}
     \begin{itemize}
         \item \textbf{Attore}: MUA;
         \item \textbf{Descrizione}: il MUA invia al sistema il mittente dell'e-mail;
@@ -67,7 +70,7 @@
         \item \textbf{Estensioni}: nessuna.
     \end{itemize}
 
-    \subsubsection{UC 2.3 - Trasmette l'oggetto dell'e-mail} \label{sec:UC2.3}
+    \subsubsection{UC 2.3 - Trasmette oggetto e-mail} \label{sec:UC2.3}
     \begin{itemize}
         \item \textbf{Attore}: MUA;
         \item \textbf{Descrizione}: il MUA invia al sistema l'oggetto dell'e-mail;
@@ -82,7 +85,7 @@
         \item \textbf{Estensioni}: nessuna.
     \end{itemize}
 
-    \subsubsection{UC 2.4 - Trasmette il corpo dell'e-mail} \label{sec:UC2.4}
+    \subsubsection{UC 2.4 - Trasmette corpo e-mail} \label{sec:UC2.4}
     \begin{itemize}
         \item \textbf{Attore}: MUA;
         \item \textbf{Descrizione}: il MUA invia al sistema il corpo dell'e-mail;
@@ -97,7 +100,7 @@
         \item \textbf{Estensioni}: nessuna.
     \end{itemize}
 
-    \subsubsection{UC 2.5 - Trasmette id cartella dell'e-mail} \label{sec:UC2.5}
+    \subsubsection{UC 2.5 - Trasmette id cartella e-mail} \label{sec:UC2.5}
     \begin{itemize}
         \item \textbf{Attore}: MUA;
         \item \textbf{Descrizione}: il MUA invia al sistema l'id della cartella di destinazione dell'e-mail;
@@ -118,7 +121,7 @@
         \end{enumerate}
     \end{itemize}
 
-    \subsubsection{UC 2.6 - Ritorna l'errore troppe cartelle} \label{sec:UC2.6}
+    \subsubsection{UC 2.6 - Ritorna errore troppe cartelle} \label{sec:UC2.6}
     \begin{itemize}
         \item \textbf{Attore}: MUA;
         \item \textbf{Descrizione}: il MUA riceve l'errore che le cartelle di destinazione dell'email sono troppe;
