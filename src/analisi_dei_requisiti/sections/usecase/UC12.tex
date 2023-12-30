@@ -1,10 +1,10 @@
 %LTeX: language=it
-\subsection{UC 12 - Modifica di un contatto} \label{sec:UC12}
+\subsection{UC 12 - Modifica contatto} \label{sec:UC12}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA deve poter modificare un contatto nel sistema;
-        \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, e ha un connessione aperta con il sistema ed è autenticato;
-        \item \textbf{Postcondizioni}: il MUA modifica il contatto che viene salvato nel sistema;
+        \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, ha un connessione aperta con il sistema ed è autenticato;
+        \item \textbf{Postcondizioni}: il contatto è stata modificato con successo, ed è stato salvato nel sistema
         \item \textbf{Scenario principale}:
             \begin{enumerate}
                 \item il MUA trasmette il nuovo nome del contatto (\hyperref[sec:UC12.1]{UC 12.1});
@@ -13,16 +13,26 @@
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
-        \item \textbf{Estensioni}: nessuna.
+        \item \textbf{Estensioni}: 
+        \begin{enumerate}[label=\alph*.]
+            \item il sistema non riesce a modificare il contatto perchè il nome non è valido:
+            \begin{enumerate}[label=\arabic*.]
+                \item il sistema ritorna un errore al MUA di nome non valido (\hyperref[sec:UC12.3]{UC 12.3}).
+            \end{enumerate}
+            \item il sistema non riesce a modificare il contatto perchè l'indirizzo e-mail non è valido:
+            \begin{enumerate}[label=\arabic*.]
+                \item il sistema ritorna un errore al MUA di indirizzo e-mail non valido(\hyperref[sec:UC12.4]{UC 12.4}).
+            \end{enumerate}
+        \end{enumerate}
     \end{itemize}
 
 \begin{figure}[h]
-    %\includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC012.X.png}
+    \includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC12.png}
     \centering
-    \caption{Diagramma sotto-casi UC 12.}
+    \caption{Diagramma sotto-casi UC 12}
 \end{figure}
 
-\subsubsection{UC 12.1 - Trasmette il nome del contatto} \label{sec:UC12.1}
+\subsubsection{UC 12.1 - Trasmette nome contatto} \label{sec:UC12.1}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA trasmette il nuovo nome per modificare il contatto al sistema;
@@ -74,14 +84,12 @@
     \end{itemize}
 
 
-
-
 \subsubsection{UC 12.3 - Ritorna l'errore nome non valido} \label{sec:UC12.3}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
-        \item \textbf{Descrizione}: il sistema non riesce a salvare il contatto perché il nome del contatto non rispetta i requisiti;
+        \item \textbf{Descrizione}: il sistema non riesce a modificare il contatto perché il nome del contatto non rispetta i requisiti;
         \item \textbf{Precondizioni}: il MUA ha inviato il nome del contatto;
-        \item \textbf{Postcondizioni}: il sistema non salva il contatto, il MUA è stato notificato dell'errore;
+        \item \textbf{Postcondizioni}: il sistema non modifica il contatto, il MUA è stato notificato dell'errore;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
                 \item il sistema controlla la sintassi del nome del contatto e trova un errore;
@@ -92,12 +100,12 @@
         \item \textbf{Estensioni}: nessuna.
     \end{itemize}
 
-\subsubsection{UC 12. - Ritorna l'errore indirizzo e-mail non valido} \label{sec:UC12.4}
+\subsubsection{UC 12.4 - Ritorna l'errore indirizzo e-mail non valido} \label{sec:UC12.4}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
-        \item \textbf{Descrizione}: il sistema non riesce a salvare il contatto perché l'indirizzo e-mail del contatto non rispetta i requisiti;
+        \item \textbf{Descrizione}: il sistema non riesce a modificare il contatto perché l'indirizzo e-mail del contatto non rispetta i requisiti;
         \item \textbf{Precondizioni}: il MUA ha inviato l'indirizzo e-mail del contatto;
-        \item \textbf{Postcondizioni}: il sistema non salva il contatto, il MUA è stato notificato dell'errore;
+        \item \textbf{Postcondizioni}: il sistema non modifica il contatto, il MUA è stato notificato dell'errore;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
                 \item il sistema controlla la sintassi dell'indirizzo e-mail del contatto e trova un errore;
