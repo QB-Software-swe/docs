@@ -1,0 +1,21 @@
+%LTeX: language=it
+\subsection{UC 22 - Eliminazione condivisione} \label{sec:UC22}
+    \begin{itemize}
+        \item \textbf{Attore principale}: MUA;
+        \item \textbf{Descrizione}: il MUA deve poter eliminare una condivisione nel sistema;
+        \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, ha una connessione aperta con il sistema ed è autenticato;
+        \item \textbf{Postcondizioni}: la condivisione è stata eliminata con successo, ed è stata rimossa nel sistema;
+        \item \textbf{Scenario principale}:
+            \begin{enumerate}
+                \item il MUA invia la condivisione da eliminare al sistema;
+                \item il sistema elimina la condivisione;
+            \end{enumerate}
+        \item \textbf{Inclusioni}: nessuna;
+        \item \textbf{Generalizzazioni}:
+            \begin{itemize}
+                \item il MUA elimina una condivisione di una cartella (\hyperref[sec:UC23]{UC 23});
+                \item il MUA elimina una condivisione di un contatto (\hyperref[sec:UC24]{UC 24});
+                \item il MUA elimina una condivisione di un evento (\hyperref[sec:UC25]{UC 25});
+            \end{itemize}
+        \item \textbf{Estensioni}: nessuna;
+    \end{itemize}
