@@ -8,7 +8,7 @@
         \item \textbf{Scenario principale}:
             \begin{enumerate}
                 \item il MUA trasmette l'id del contatto condiviso (\hyperref[sec:UC24.1]{UC 24.1});
-                \item il MUA trasmette l'indirizzo email a cui rimuovere la condivisione del contatto (\hyperref[sec:UC24.2]{UC 24.2});
+                \item il MUA trasmette l'indirizzo e-mail a cui rimuovere la condivisione del contatto (\hyperref[sec:UC24.2]{UC 24.2});
                 \item il sistema rimuove la condivisione del contatto;
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
@@ -44,7 +44,7 @@
     \end{itemize}
 
 
-    \subsubsection{UC 24.2 - Trasmette indirizzo e-mail} \label{sec:UC24.2}
+    \subsubsection{UC 24.2 - Trasmette indirizzo contatto} \label{sec:UC24.2}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA trasmette l'indirizzo e-mail a cui togliere la condivisione al sistema;
@@ -55,7 +55,7 @@
                 \item il MUA invia l'indirizzo e-mail a cui togliere la condivisione del contatto al sistema;
                 \item il sistema controlla che le informazioni ricevute rispettino il seguente requisito minimo:
                     \begin{itemize}
-                        \item l'indirizzo email del contatto non è una stringa vuota;
+                        \item l'indirizzo e-mail del contatto non è una stringa vuota;
                     \end{itemize}
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
@@ -91,7 +91,7 @@
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il sistema non riesce a eliminare la condivisione del contatto perché l'indirizzo e-mail del contatto non rispetta i requisiti;
         \item \textbf{Precondizioni}: il MUA ha inviato l'indirizzo e-mail a cui rimuovere la condivisione;
-        \item \textbf{Postcondizioni}: il sistema non eliminazione la condivisione del contatto, il MUA è stato notificato dell'errore;
+        \item \textbf{Postcondizioni}: il sistema non elimina la condivisione del contatto, il MUA è stato notificato dell'errore;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
                 \item il sistema controlla la sintassi dell'indirizzo e-mail e trova un errore;

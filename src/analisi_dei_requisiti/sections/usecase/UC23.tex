@@ -8,7 +8,7 @@
         \item \textbf{Scenario principale}:
             \begin{enumerate}
                 \item il MUA trasmette l'id della cartella condivisa (\hyperref[sec:UC23.1]{UC 23.1});
-                \item il MUA trasmette l'indirizzo email a cui rimuovere la condivisione della cartella (\hyperref[sec:UC23.2]{UC 23.2});
+                \item il MUA trasmette l'indirizzo e-mail a cui rimuovere la condivisione della cartella (\hyperref[sec:UC23.2]{UC 23.2});
                 \item il sistema rimuove la condivisione della cartella;
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
@@ -44,7 +44,7 @@
     \end{itemize}
 
 
-    \subsubsection{UC 23.2 - Trasmette indirizzo e-mail} \label{sec:UC23.2}
+    \subsubsection{UC 23.2 - Trasmette indirizzo contatto} \label{sec:UC23.2}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA trasmette l'indirizzo e-mail a cui togliere la condivisione al sistema;
@@ -55,7 +55,7 @@
                 \item il MUA invia l'indirizzo e-mail a cui togliere la condivisione della cartella al sistema;
                 \item il sistema controlla che le informazioni ricevute rispettino il seguente requisito minimo:
                     \begin{itemize}
-                        \item l'indirizzo email del contatto non è una stringa vuota;
+                        \item l'indirizzo e-mail del contatto non è una stringa vuota;
                     \end{itemize}
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
@@ -74,7 +74,7 @@
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il sistema non riesce a eliminare la condivisione della cartella perché la cartella non è stata trovata;
-        \item \textbf{Precondizioni}: il MUA ha inviato l'id della cartella a cui togliere la condivisione al sistemae;
+        \item \textbf{Precondizioni}: il MUA ha inviato l'id della cartella a cui togliere la condivisione al sistema;
         \item \textbf{Postcondizioni}: il sistema non elimina la condivisione della cartella, il MUA è stato notificato dell'errore;
         \item \textbf{Scenario principale}:
             \begin{enumerate}

@@ -11,7 +11,7 @@
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA deve poter inviare una e-mail al destinatario indicato;
-        \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, ha un connessione aperta con il sistema ed è autenticato;
+        \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, ha una connessione aperta con il sistema ed è autenticato;
         \item \textbf{Postcondizioni}: l'e-mail è stata consegnata con successo al destinatario ed è stata salvata nel sistema;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
@@ -34,7 +34,7 @@
 
     \subsubsection{UC 1.1 - Trasmette id account} \label{sec:UC1.1}
     \begin{itemize}
-        \item \textbf{Attore}: MUA;
+        \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA invia al sistema l'id dell'account associato all'utente;
         \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di invio di un'e-mail;
         \item \textbf{Postcondizioni}: il sistema conosce l'id dell'account;
@@ -49,28 +49,36 @@
 
     \subsubsection{UC 1.2 - Trasmette id e-mail} \label{sec:UC1.2}
     \begin{itemize}
-        \item \textbf{Attore}: MUA;
+        \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA invia al sistema l'id dell'e-mail da inviare;
         \item \textbf{Precondizioni}: il MUA sta usando la funzionalità d'invio di un'e-mail;
         \item \textbf{Postcondizioni}: il sistema conosce l'e-mail da inviare;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
-                \item il MUA trasmette l'id dell'email da inviare;
+                \item il MUA trasmette l'id dell'e-mail da inviare;
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
         \item \textbf{Estensioni}:
             \begin{enumerate}[label=\alph*.]
-                \item l'email non è in un formato valido:
+                \item l'e-mail non è in un formato valido:
                 \begin{enumerate}[label=\arabic*.]
-                    \item il sistema ritorna un errore al MUA di email non valida (\hyperref[sec:UC1.5]{UC 1.5}).
+                    \item il sistema ritorna un errore al MUA di e-mail non valida (\hyperref[sec:UC1.5]{UC 1.5}).
+                \end{enumerate}
+                \item l'oggetto non è in un formato valido:
+                \begin{enumerate}[label=\arabic*.]
+                    \item il sistema ritorna un errore al MUA di oggetto non valido (\hyperref[sec:UC1.6]{UC 1.6}).
+                \end{enumerate}
+                \item il corpo non è in un formato valido:
+                \begin{enumerate}[label=\arabic*.]
+                    \item il sistema ritorna un errore al MUA di corpo non valido (\hyperref[sec:UC1.7]{UC 1.7}).
                 \end{enumerate}
             \end{enumerate}
     \end{itemize}
 
     \subsubsection{UC 1.3 - Trasmette destinatario e-mail} \label{sec:UC1.3}
     \begin{itemize}
-        \item \textbf{Attore}: MUA;
+        \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA invia al sistema il destinatario dell'e-mail;
         \item \textbf{Precondizioni}: il MUA sta usando la funzionalità d'invio di un'e-mail;
         \item \textbf{Postcondizioni}: il sistema conosce l'indirizzo di posta elettronica del destinatario dell'e-mail;
@@ -93,7 +101,7 @@
                 \begin{enumerate}[label=\arabic*.]
                     \item il sistema ritorna un errore al MUA di destinatario non trovato (\hyperref[sec:UC1.9]{UC 1.9}).
                 \end{enumerate}
-                \item la quantità di destinatari supera la soglia masima consentita:
+                \item la quantità di destinatari supera la soglia massima consentita:
                 \begin{enumerate}[label=\arabic*.]
                     \item il sistema ritorna un errore al MUA di troppi destinatari (\hyperref[sec:UC1.10]{UC 1.10}).
                 \end{enumerate}
@@ -102,7 +110,7 @@
 
     \subsubsection{UC 1.4 - Trasmette mittente e-mail} \label{sec:UC1.4}
     \begin{itemize}
-        \item \textbf{Attore}: MUA;
+        \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA invia al sistema il mittente dell'e-mail;
         \item \textbf{Precondizioni}: il MUA sta usando la funzionalità d'invio di un'e-mail;
         \item \textbf{Postcondizioni}: il sistema conosce l'indirizzo di posta elettronica del mittente dell'e-mail;
@@ -126,7 +134,7 @@
 
     \subsubsection{UC 1.5 - Ritorna errore e-mail non valida} \label{sec:UC1.5}
     \begin{itemize}
-        \item \textbf{Attore}: MUA;
+        \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA riceve l'errore che l'e-mail non è valida;
         \item \textbf{Precondizioni}: il MUA ha trasmesso al sistema l'id dell'e-mail da inviare;
         \item \textbf{Postcondizioni}: il MUA viene notificato che l'e-mail non è valida;
@@ -141,7 +149,7 @@
 
     \subsubsection{UC 1.6 - Ritorna errore oggetto non valido} \label{sec:UC1.6}
     \begin{itemize}
-        \item \textbf{Attore}: MUA;
+        \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA riceve l'errore che l'oggetto dell'e-mail non è valido;
         \item \textbf{Precondizioni}: il MUA ha trasmesso al sistema l'id dell'e-mail da inviare;
         \item \textbf{Postcondizioni}: il MUA viene notificato che l'oggetto dell'e-mail non è valido;
@@ -157,7 +165,7 @@
 
     \subsubsection{UC 1.7 - Ritorna errore corpo non valido} \label{sec:UC1.7}
     \begin{itemize}
-        \item \textbf{Attore}: MUA;
+        \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA riceve l'errore che il corpo dell'e-mail non è valido;
         \item \textbf{Precondizioni}: il MUA ha trasmesso al sistema l'id dell'e-mail da inviare;
         \item \textbf{Postcondizioni}: il MUA viene notificato che il corpo dell'e-mail da inviare non è valido;
@@ -175,13 +183,13 @@
 
     \subsubsection{UC 1.8 - Ritorna l'errore destinatario non valido} \label{sec:UC1.8}
     \begin{itemize}
-        \item \textbf{Attore}: MUA;
+        \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA riceve l'errore che il destinatario non è valido;
         \item \textbf{Precondizioni}: il MUA ha inviato il destinatario;
         \item \textbf{Postcondizioni}: il MUA viene notificato che il destinatario non è valido;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
-                \item il sistema controlla la sintassi dell'email del destinatario e trova un errore;
+                \item il sistema controlla la sintassi dell'e-mail del destinatario e trova un errore;
                 \item il sistema notifica il MUA che il destinatario non è valido;
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
@@ -192,7 +200,7 @@
 
     \subsubsection{UC 1.9 - Ritorna l'errore destinatario non trovato} \label{sec:UC1.9}
     \begin{itemize}
-        \item \textbf{Attore}: MUA;
+        \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA riceve l'errore che il destinatario non è stato trovato;
         \item \textbf{Precondizioni}: il MUA ha inviato il destinatario;
         \item \textbf{Postcondizioni}: il MUA viene notificato che il destinatario non è stato trovato;
@@ -209,7 +217,7 @@
 
     \subsubsection{UC 1.10 - Ritorna l'errore troppi destinatari} \label{sec:UC1.10}
     \begin{itemize}
-        \item \textbf{Attore}: MUA;
+        \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA riceve l'errore che il numero dei destinatari supera la soglia massima consentita;
         \item \textbf{Precondizioni}: il MUA ha inviato i destinatari;
         \item \textbf{Postcondizioni}: il MUA viene notificato che il numero dei destinatari è eccessivo;
@@ -227,7 +235,7 @@
 
     \subsubsection{UC 1.11 - Ritorna l'errore mittente non valido} \label{sec:UC1.11}
     \begin{itemize}
-        \item \textbf{Attore}: MUA;
+        \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA riceve l'errore che il mittente non è valido;
         \item \textbf{Precondizioni}: il MUA ha inviato il mittente;
         \item \textbf{Postcondizioni}: il MUA viene notificato che il mittente non è valido;
@@ -245,7 +253,7 @@
 
         % \subsubsection{UC 1.5 - Trasmettere gli allegati dell'e-mail} \label{sec:UC1.5}
     % \begin{itemize}
-    %     \item \textbf{Attore}: MUA;
+    %     \item \textbf{Attore principale}: MUA;
     %     \item \textbf{Descrizione}: il MUA invia al sistema il mittente dell'e-mail;
     %     \item \textbf{Precondizioni}: il MUA sta usando la funzionalità d'invio di un'e-mail;
     %     \item \textbf{Postcondizioni}: il sistema conosce l'indirizzo di posta elettronica del mittente dell'e-mail;
@@ -266,7 +274,7 @@
 
     % \subsubsection{UC 1.8 - Ritorna l'errore massima dimensione allegati} \label{sec:UC1.8}
     % \begin{itemize}
-    %     \item \textbf{Attore}: MUA;
+    %     \item \textbf{Attore principale}: MUA;
     %     \item \textbf{Descrizione}: il MUA viene notificato che gli allegati dell'e-mail hanno superato la massima dimensione supportata;
     %     \item \textbf{Precondizioni}: il MUA sta usando di trasmissione degli allegati;
     %     \item \textbf{Postcondizioni}: il MUA è stato notificato del superamento della massima dimensione per gli allegati;

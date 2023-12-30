@@ -3,7 +3,7 @@
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA deve poter modificare un evento nel sistema;
-        \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, ha un connessione aperta con il sistema ed è autenticato;
+        \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, ha una connessione aperta con il sistema ed è autenticato;
         \item \textbf{Postcondizioni}: il MUA modifica l'evento che viene salvato nel sistema;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
@@ -120,7 +120,7 @@
         \item \textbf{Generalizzazioni}: nessuna;
         \item \textbf{Estensioni}:
             \begin{enumerate}[label=\alph*.]
-                \item il sistema non riesce a modificare l'evento perché la durata fornita non è valido:
+                \item il sistema non riesce a modificare l'evento perché la durata fornita non è valida:
                 \begin{enumerate}[label=\arabic*.]
                     \item il sistema ritorna un errore al MUA di durata inconsistente (\hyperref[sec:UC13.7]{UC 13.7}).
                 \end{enumerate}
@@ -149,7 +149,7 @@
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il sistema non riesce a modificare l'evento perché la data non è nel formato corretto;
-        \item \textbf{Precondizioni}: il MUA ha inviato il titolo dell'evento;
+        \item \textbf{Precondizioni}: il MUA ha inviato la data dell'evento;
         \item \textbf{Postcondizioni}: il sistema non modifica l'evento, il MUA è stato notificato dell'errore;
         \item \textbf{Scenario principale}:
             \begin{enumerate}

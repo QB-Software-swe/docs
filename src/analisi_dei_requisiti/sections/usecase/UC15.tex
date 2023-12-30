@@ -38,13 +38,13 @@
             \begin{enumerate}[label=\alph*.]
                 \item il sistema non riesce a modificare la condivisione della cartella perché l'id della cartella fornito non è stato trovato:
                 \begin{enumerate}[label=\arabic*.]
-                    \item il sistema ritorna un errore al MUA di cartella non trovata (\hyperref[sec:UC4.3]{UC 4.3}).
+                    \item il sistema ritorna un errore al MUA di cartella non trovata (\hyperref[sec:UC15.3]{UC 15.3}).
                 \end{enumerate}
             \end{enumerate}
     \end{itemize}
 
 
-    \subsubsection{UC 15.2 - Trasmette indirizzo e-mail} \label{sec:UC15.2}
+    \subsubsection{UC 15.2 - Trasmette indirizzo contatto} \label{sec:UC15.2}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA trasmette il nuovo indirizzo e-mail per la condivisione al sistema;
@@ -52,10 +52,10 @@
         \item \textbf{Postcondizioni}: il sistema conosce il nuovo indirizzo e-mail a cui condividere;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
-                \item il MUA invia il nuovo indirizzo e-mail la condivisione al sistema;
+                \item il MUA invia il nuovo indirizzo e-mail per la condivisione al sistema;
                 \item il sistema controlla che le informazioni ricevute rispettino il seguente requisito minimo:
                     \begin{itemize}
-                        \item l'indirizzo email del contatto non è una stringa vuota;
+                        \item l'indirizzo e-mail del contatto non è una stringa vuota;
                     \end{itemize}
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;

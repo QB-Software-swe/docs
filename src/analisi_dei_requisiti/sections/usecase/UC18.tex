@@ -11,11 +11,11 @@
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA deve poter eliminare un'e-mail nel sistema;
-        \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, ha un connessione aperta con il sistema ed è autenticato;
-        \item \textbf{Postcondizioni}: l'e-mail è stata eliminata con successo, ed è stata rimossa dal sistema;
+        \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, ha una connessione aperta con il sistema ed è autenticato;
+        \item \textbf{Postcondizioni}: l'e-mail è stata eliminata con successo ed è stata rimossa dal sistema;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
-                \item il MUA trasmette l'id dell'email da eliminare (\hyperref[sec:UC18.1]{UC 18.1});
+                \item il MUA trasmette l'id dell'e-mail da eliminare (\hyperref[sec:UC18.1]{UC 18.1});
                 \item il sistema rimuove l'e-mail dal sistema.
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
@@ -23,7 +23,7 @@
         \item \textbf{Estensioni}: nessuna.
     \end{itemize}
 
-    \begin{figure}[h]
+    \begin{figure}[H]
         \includegraphics[width=0.75\textwidth]{sections/uc_imgs/UC18.png}
         \centering
         \caption{Diagramma sotto-casi UC 18}
@@ -32,13 +32,13 @@
 
 \subsubsection{UC 18.1 - Trasmette id e-mail} \label{sec:UC18.1}
 \begin{itemize}
-    \item \textbf{Attore}: MUA;
+    \item \textbf{Attore principale}: MUA;
     \item \textbf{Descrizione}: il MUA invia al sistema l'id dell'e-mail;
     \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di eliminazione di un'e-mail;
     \item \textbf{Postcondizioni}: il sistema conosce l'id dell'e-mail da eliminare;
     \item \textbf{Scenario principale}:
         \begin{enumerate}
-            \item il MUA trasmette l'id dell'email;
+            \item il MUA trasmette l'id dell'e-mail;
         \end{enumerate}
     \item \textbf{Inclusioni}: nessuna;
     \item \textbf{Generalizzazioni}: nessuna;

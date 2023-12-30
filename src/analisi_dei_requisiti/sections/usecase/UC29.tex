@@ -5,7 +5,7 @@
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA richiede la sincronizzazione con gli eventi del sistema;
-        \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, ha un connessione aperta con il sistema ed è autenticato;
+        \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, ha una connessione aperta con il sistema ed è autenticato;
         \item \textbf{Postcondizioni}: gli eventi sono stati sincronizzati;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
@@ -27,7 +27,7 @@
 
     \subsubsection{UC 29.1 - Trasmette id account} \label{sec:UC29.1}
     \begin{itemize}
-        \item \textbf{Attore}: MUA;
+        \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA invia al sistema l'id dell'account associato all'utente;
         \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di sincronizzazione eventi;
         \item \textbf{Postcondizioni}: il sistema conosce l'id dell'account;
@@ -42,7 +42,7 @@
 
     \subsubsection{UC 29.2 - Trasmette id eventi da aggiornare} \label{sec:UC29.2}
     \begin{itemize}
-        \item \textbf{Attore}: MUA;
+        \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA invia al sistema gli id degli eventi da aggiornare;
         \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di sincronizzazione degli eventi;
         \item \textbf{Postcondizioni}: il sistema conosce gli id degli eventi da aggiornare;
@@ -64,7 +64,7 @@
 
     \subsubsection{UC 29.3 - Trasmette proprietà eventi da aggiornare} \label{sec:UC29.3}
     \begin{itemize}
-        \item \textbf{Attore}: MUA;
+        \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA invia al sistema le proprietà degli eventi da aggiornare;
         \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di sincronizzazione degli eventi;
         \item \textbf{Postcondizioni}: il sistema conosce quali sono le proprietà degli eventi da aggiornare;
@@ -76,7 +76,7 @@
         \item \textbf{Generalizzazioni}: nessuna;
         \item \textbf{Estensioni}:
             \begin{enumerate}[label=\alph*.]
-                \item una :
+                \item le proprietà degli eventi da aggiornare non sono valide:
                 \begin{enumerate}[label=\arabic*.]
                     \item il sistema ritorna un errore al MUA di proprietà non valida (\hyperref[sec:UC29.5]{UC 29.5}).
                 \end{enumerate}
@@ -86,7 +86,7 @@
 
     \subsubsection{UC 29.4 - Ritorna errore richiesta troppo grande} \label{sec:UC29.4}
     \begin{itemize}
-        \item \textbf{Attore}: MUA;
+        \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA riceve l'errore che la quantità degli eventi da aggiornare supera la quantità massima di richieste al server;
         \item \textbf{Precondizioni}: il MUA ha inviato gli id degli eventi da aggiornare;
         \item \textbf{Postcondizioni}: il sistema non invia gli aggiornamenti e il MUA viene notificato che il numero degli eventi da aggiornare è eccessivo;
@@ -103,13 +103,13 @@
 
     \subsubsection{UC 29.5 - Ritorna errore proprietà non valida} \label{sec:UC29.5}
     \begin{itemize}
-        \item \textbf{Attore}: MUA;
+        \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA riceve l'errore che la proprietà degli eventi da aggiornare non è valida;
         \item \textbf{Precondizioni}: il MUA ha inviato la proprietà degli eventi da aggiornare;
         \item \textbf{Postcondizioni}: il sistema non invia gli aggiornamenti e il MUA viene notificato che la proprietà degli eventi da aggiornare non è valida;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
-                \item il sistema verifica la validitò della proprietà trasmessa e trova un errore;
+                \item il sistema verifica la validità della proprietà trasmessa e trova un errore;
                 \item il sistema non invia gli aggiornamenti e notifica il MUA dell'errore;
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;

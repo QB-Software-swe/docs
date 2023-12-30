@@ -3,12 +3,12 @@
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA deve poter modificare un contatto nel sistema;
-        \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, ha un connessione aperta con il sistema ed è autenticato;
+        \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, ha una connessione aperta con il sistema ed è autenticato;
         \item \textbf{Postcondizioni}: il contatto è stata modificato con successo, ed è stato salvato nel sistema
         \item \textbf{Scenario principale}:
             \begin{enumerate}
                 \item il MUA trasmette il nuovo nome del contatto (\hyperref[sec:UC12.1]{UC 12.1});
-                \item il MUA trasmette il nuovo indirizzo email del contatto (\hyperref[sec:UC12.2]{UC 12.2});
+                \item il MUA trasmette il nuovo indirizzo e-mail del contatto (\hyperref[sec:UC12.2]{UC 12.2});
                 \item il sistema salva il contatto modificato;
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
@@ -59,7 +59,7 @@
                 \item il MUA invia il nuovo indirizzo e-mail per modificare il contatto al sistema;
                 \item il sistema controlla che le informazioni ricevute rispettino il seguente requisito minimo:
                     \begin{itemize}
-                        \item l'indirizzo email del contatto non è una stringa vuota;
+                        \item l'indirizzo e-mail del contatto non è una stringa vuota;
                     \end{itemize}
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;

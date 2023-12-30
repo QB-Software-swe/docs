@@ -8,7 +8,7 @@
         \item \textbf{Scenario principale}:
             \begin{enumerate}
                 \item il MUA trasmette l'id dell'evento condiviso (\hyperref[sec:UC25.1]{UC 25.1});
-                \item il MUA trasmette l'indirizzo email a cui rimuovere la condivisione dell'evento (\hyperref[sec:UC25.2]{UC 25.2});
+                \item il MUA trasmette l'indirizzo e-mail a cui rimuovere la condivisione dell'evento (\hyperref[sec:UC25.2]{UC 25.2});
                 \item il sistema rimuove la condivisione dell'evento;
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
@@ -44,7 +44,7 @@
     \end{itemize}
 
 
-    \subsubsection{UC 25.2 - Trasmette indirizzo e-mail} \label{sec:UC25.2}
+    \subsubsection{UC 25.2 - Trasmette indirizzo contatto} \label{sec:UC25.2}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA trasmette l'indirizzo e-mail a cui togliere la condivisione al sistema;
@@ -55,14 +55,14 @@
                 \item il MUA invia l'indirizzo e-mail a cui togliere la condivisione dell'evento al sistema;
                 \item il sistema controlla che le informazioni ricevute rispettino il seguente requisito minimo:
                     \begin{itemize}
-                        \item l'indirizzo email dell'evento non è una stringa vuota;
+                        \item l'indirizzo e-mail non è una stringa vuota;
                     \end{itemize}
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
         \item \textbf{Estensioni}:
             \begin{enumerate}[label=\alph*.]
-                \item il sistema non riesce ad eliminare la condivisione del contato perché l'indirizzo e-mail fornito non è valido:
+                \item il sistema non riesce ad eliminare la condivisione dell'evento perché l'indirizzo e-mail fornito non è valido:
                 \begin{enumerate}[label=\arabic*.]
                     \item il sistema ritorna un errore al MUA di indirizzo e-mail non valido (\hyperref[sec:UC25.4]{UC 25.4}).
                 \end{enumerate}
@@ -89,7 +89,7 @@
     \subsubsection{UC 25.4 - Ritorna errore indirizzo e-mail non valido} \label{sec:UC25.4}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
-        \item \textbf{Descrizione}: il sistema non riesce a eliminare la condivisione dell'evento perché l'indirizzo e-mail dell'evento non rispetta i requisiti;
+        \item \textbf{Descrizione}: il sistema non riesce a eliminare la condivisione dell'evento perché l'indirizzo e-mail fornito non rispetta i requisiti;
         \item \textbf{Precondizioni}: il MUA ha inviato l'indirizzo e-mail a cui rimuovere la condivisione;
         \item \textbf{Postcondizioni}: il sistema non eliminazione la condivisione dell'evento, il MUA è stato notificato dell'errore;
         \item \textbf{Scenario principale}:
