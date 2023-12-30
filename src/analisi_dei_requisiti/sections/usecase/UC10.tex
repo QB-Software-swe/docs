@@ -1,14 +1,20 @@
 %LTeX: language=it
+\begin{figure}[h]
+    \includegraphics[width=0.75\textwidth]{sections/uc_imgs/UC-modifica.png}
+    \centering
+    \caption{Casi d'uso relativi alla modifica}
+\end{figure}
+
 \subsection{UC 10 - Modifica e-mail} \label{sec:UC10}
     \begin{figure}[h]
-        %\includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC010.png}
+        \includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC10.png}
         \centering
-        \caption{Diagramma UC 10}
+        \caption{Diagramma sotto-casi UC 10}
     \end{figure}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
-        \item \textbf{Descrizione}: il MUA deve poter modificare una e-mail;
-        \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, e ha un connessione aperta con il sistema ed è autenticato;
+        \item \textbf{Descrizione}: il MUA deve poter modificare una e-mail nel sistema;
+        \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, ha un connessione aperta con il sistema ed è autenticato;
         \item \textbf{Postcondizioni}: l'e-mail è stata modificata con successo, ed è stata salvata nel sistema;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
@@ -17,7 +23,7 @@
                 \item il MUA trasmette l'oggetto dell'e-mail modificato(\hyperref[sec:UC10.3]{UC 10.3});
                 \item il MUA trasmette il corpo dell'e-mail modificato(\hyperref[sec:UC10.4]{UC 10.4});
                 \item il MUA trasmette la cartella di appartenenza dell'email modificata(\hyperref[sec:UC10.5]{UC 10.5});
-                \item il sistema salva l'e-mail con le modifiche nel mailbox.
+                \item il sistema salva l'e-mail con le modifiche nel sistema.
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
@@ -31,7 +37,7 @@
     \end{itemize}
 
     \begin{figure}[h]
-        %\includegraphics[width=0.75\textwidth]{sections/uc_imgs/UC010.X.png}
+        \includegraphics[width=0.75\textwidth]{sections/uc_imgs/UC10.png}
         \centering
         \caption{Diagramma sotto-casi UC 10.1}
     \end{figure}
