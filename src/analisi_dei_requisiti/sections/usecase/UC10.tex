@@ -1,87 +1,128 @@
 %LTeX: language=it
-\subsection{UC 10 - Modificare una cartella} \label{sec:UC10}
-    \begin{itemize}
-        \item \textbf{Attore principale}: MUA;
-        \item \textbf{Descrizione}: il MUA deve poter modificare un evento nel calendario;
-        \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, e ha un connessione aperta con il sistema ed è autenticato;
-        \item \textbf{Postcondizioni}: il MUA modifica un evento nel calendario, il suo nuovo stato viene salvato nel sistema;
-        \item \textbf{Scenario principale}:
-            \begin{enumerate}
-                \item il MUA invia le informazioni per aggiornare il l'evento del calendario nel sistema (\hyperref[sec:UC9.1]{UC 9.1});
-                \item il sistema salva il nuovo stato del evento;
-            \end{enumerate}
-        \item \textbf{Inclusioni}: nessuna;
-        \item \textbf{Generalizzazioni}: nessuna;
-        \item \textbf{Estensioni}: nessuna.
-    \end{itemize}
-
-\begin{figure}[h]
-    \includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC09.X.png}
+\begin{figure}[H]
+    \includegraphics[width=0.75\textwidth]{sections/uc_imgs/UC-modifica.png}
     \centering
-    \caption{Diagramma sotto-casi UC 9.}
+    \caption{Casi d'uso relativi alla modifica}
 \end{figure}
 
-\subsubsection{UC 9.1 - Trasmette i dettagli della cartella} \label{sec:UC9.1}
+\subsection{UC 10 - Modifica e-mail} \label{sec:UC10}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
-        \item \textbf{Descrizione}: il MUA trasmette il nuovo stato del evento al sistema;
-        \item \textbf{Precondizioni}: il MUA sta utilizzando la funzionalità di modifica di un evento del calendario;
-        \item \textbf{Postcondizioni}: il MUA modifica l'evento, il nuovo evento viene salvato nel sistema;
+        \item \textbf{Descrizione}: il MUA deve poter modificare una e-mail nel sistema;
+        \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, ha una connessione aperta con il sistema ed è autenticato;
+        \item \textbf{Postcondizioni}: l'e-mail è stata modificata con successo, ed è stata salvata nel sistema;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
-                \item il MUA invia le informazioni per aggiornare l'evento nel sistema;
-                \item il sistema elabora le nuove informazioni, e controlla che siano valide:
-                \begin{itemize}
-                    \item controlla che l'evento abbia un titolo che non sia vuoto;
-                    \item controlla che la data d'inizio si inferiore rispetto alla data di fine;
-                \end{itemize}
-                \item il sistema salva il nuovo stato del contato;
-            \end{enumerate}
-        \item \textbf{Inclusioni}: nessuna;
-        \item \textbf{Generalizzazioni}: nessuna;
-        \item \textbf{Estensioni}: 
-            \begin{enumerate}[label=\alph*.]
-                \item il sistema non riesce ad aggiornare lo stato dell'evento perché non è stato trovato:
-                \begin{enumerate}[label=\arabic*.]
-                    \item il sistema ritorna un errore al MUA di evento inesistente (\hyperref[sec:UC9.2]{UC 9.2});
-                \end{enumerate}
-                \item il sistema non riesce a modificare lo stato del evento perché i dati trasmessi non rispettano i requisiti:
-                \begin{enumerate}[label=\arabic*.]
-                    \item il sistema ritorna un errore al MUA dettagli dell'evento non validi (\hyperref[sec:U9.3]{UC 9.3}).
-                \end{enumerate}
-            \end{enumerate}
-    \end{itemize}
-
-\subsubsection{UC 8.2 - Ritorna l'errore l'evento conflitto con un'altra cartella} \label{sec:UC8.2}
-    \begin{itemize}
-        \item \textbf{Attore principale}: MUA;
-        \item \textbf{Descrizione}: il MUA sta trasmettendo il nuovo stato del contato al sistema, ma il contatto indicato non esiste;
-        \item \textbf{Precondizioni}: il MUA sta utilizzando la funzionalità di trasmissione dei dettagli per la modifica di un contatto;
-        \item \textbf{Postcondizioni}: il sistema non aggiorna lo stato del contatto, il MUA è stato notificato dell'errore;
-        \item \textbf{Scenario principale}:
-            \begin{enumerate}
-                \item il MUA invia le informazioni per aggiornare il contatto nel sistema;
-                \item il sistema controlla le informazioni, e riscontra che il contatto non esiste;
-                \item il sistema non aggiorna il contatto;
-                \item il sistema ritorna l'errore al MUA;
+                \item il MUA trasmette il destinatario dell'e-mail modificato (\hyperref[sec:UC10.1]{UC 10.1});
+                \item il MUA trasmette il mittente dell'e-mail modificato(\hyperref[sec:UC10.2]{UC 10.2});
+                \item il MUA trasmette l'oggetto dell'e-mail modificato(\hyperref[sec:UC10.3]{UC 10.3});
+                \item il MUA trasmette il corpo dell'e-mail modificato(\hyperref[sec:UC10.4]{UC 10.4});
+                \item il MUA trasmette la cartella di appartenenza dell'e-mail modificata(\hyperref[sec:UC10.5]{UC 10.5});
+                \item il sistema salva l'e-mail con le modifiche nel sistema.
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
         \item \textbf{Estensioni}: nessuna.
     \end{itemize}
 
-\subsubsection{UC 8.3 - Ritorna l'errore dettagli l'evento non validi} \label{sec:UC8.3}
+    \begin{figure}[H]
+        \includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC10.png}
+        \centering
+        \caption{Diagramma sotto-casi UC 10}
+    \end{figure}
+
+    \subsubsection{UC 10.1 - Trasmette destinatario e-mail} \label{sec:UC10.1}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
-        \item \textbf{Descrizione}: il MUA sta trasmettendo il nuovo stato del contato al sistema, ma i dettagli inviati non rispettano i requisiti richiesti;
-        \item \textbf{Precondizioni}: il MUA sta utilizzando la funzionalità di trasmissione dei dettagli per la modifica di un contatto;
-        \item \textbf{Postcondizioni}: il sistema non aggiorna lo stato del contatto, il MUA è stato notificato dell'errore;
+        \item \textbf{Descrizione}: il MUA invia al sistema il nuovo destinatario dell'e-mail;
+        \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di modifica di un'e-mail;
+        \item \textbf{Postcondizioni}: il sistema conosce il nuovo indirizzo di posta elettronica del destinatario dell'e-mail;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
-                \item il MUA invia le informazioni per aggiornare il contatto nel sistema;
-                \item il sistema controlla le informazioni, il sistema riscontra dei valori non validi;
-                \item il sistema non aggiorna il contatto;
-                \item il sistema ritorna l'errore al MUA;
+                \item il MUA trasmette il destinatario modificato;
+            \end{enumerate}
+        \item \textbf{Inclusioni}: nessuna;
+        \item \textbf{Generalizzazioni}: nessuna;
+        \item \textbf{Estensioni}: nessuna;
+    \end{itemize}
+
+    \subsubsection{UC 10.2 - Trasmette mittente e-mail} \label{sec:UC10.2}
+    \begin{itemize}
+        \item \textbf{Attore principale}: MUA;
+        \item \textbf{Descrizione}: il MUA invia al sistema il nuovo mittente dell'e-mail;
+        \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di modifica di un'e-mail;
+        \item \textbf{Postcondizioni}: il sistema conosce il nuovo indirizzo di posta elettronica del mittente dell'e-mail;
+        \item \textbf{Scenario principale}:
+            \begin{enumerate}
+                \item il MUA trasmette il mittente modificato;
+            \end{enumerate}
+        \item \textbf{Inclusioni}: nessuna;
+        \item \textbf{Generalizzazioni}: nessuna;
+        \item \textbf{Estensioni}: nessuna.
+    \end{itemize}
+
+    \subsubsection{UC 10.3 - Trasmette oggetto e-mail} \label{sec:UC10.3}
+    \begin{itemize}
+        \item \textbf{Attore principale}: MUA;
+        \item \textbf{Descrizione}: il MUA invia al sistema il nuovo oggetto dell'e-mail;
+        \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di modifica di un'e-mail;
+        \item \textbf{Postcondizioni}: il sistema conosce il nuovo oggetto dell'e-mail;
+        \item \textbf{Scenario principale}:
+            \begin{enumerate}
+                \item il MUA trasmette l'oggetto dell'e-mail modificato;
+            \end{enumerate}
+        \item \textbf{Inclusioni}: nessuna;
+        \item \textbf{Generalizzazioni}: nessuna;
+        \item \textbf{Estensioni}: nessuna.
+    \end{itemize}
+
+    \subsubsection{UC 10.4 - Trasmette corpo e-mail} \label{sec:UC10.4}
+    \begin{itemize}
+        \item \textbf{Attore principale}: MUA;
+        \item \textbf{Descrizione}: il MUA invia al sistema il nuovo corpo dell'e-mail;
+        \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di modifica di un'e-mail;
+        \item \textbf{Postcondizioni}: il sistema conosce il nuovo corpo dell'e-mail;
+        \item \textbf{Scenario principale}:
+            \begin{enumerate}
+                \item il MUA trasmette il corpo dell'e-mail modificato;
+            \end{enumerate}
+        \item \textbf{Inclusioni}: nessuna;
+        \item \textbf{Generalizzazioni}: nessuna;
+        \item \textbf{Estensioni}: nessuna.
+    \end{itemize}
+
+    \subsubsection{UC 10.5 - Trasmette id cartella e-mail} \label{sec:UC10.5}
+    \begin{itemize}
+        \item \textbf{Attore principale}: MUA;
+        \item \textbf{Descrizione}: il MUA invia al sistema il nuovo id della cartella di destinazione dell'e-mail;
+        \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di modifica di un'e-mail;
+        \item \textbf{Postcondizioni}: il sistema conosce la nuova cartella di destinazione dell'e-mail;
+        \item \textbf{Scenario principale}:
+            \begin{enumerate}
+                \item il MUA trasmette l'id della cartella di destinazione dell'e-mail modificato;
+            \end{enumerate}
+        \item \textbf{Inclusioni}: nessuna;
+        \item \textbf{Generalizzazioni}: nessuna;
+        \item \textbf{Estensioni}:             
+        \begin{enumerate}[label=\alph*.]
+            \item il sistema non riesce a modificare l'e-mail perchè ci sono troppe cartelle di destinazione in cui salvare l'e-mail:
+            \begin{enumerate}[label=\arabic*.]
+                \item il sistema ritorna un errore al MUA di troppe cartelle (\hyperref[sec:UC10.6]{UC 10.6}).
+            \end{enumerate}
+        \end{enumerate}
+    \end{itemize}
+
+    \subsubsection{UC 10.6 - Ritorna errore troppe cartelle} \label{sec:UC10.6}
+    \begin{itemize}
+        \item \textbf{Attore principale}: MUA;
+        \item \textbf{Descrizione}: il MUA riceve l'errore che le cartelle di destinazione dell'e-mail sono troppe;
+        \item \textbf{Precondizioni}: il MUA ha trasmesso le cartelle di destinazione e-mail;
+        \item \textbf{Postcondizioni}: il MUA viene notificato che le cartelle sono troppe;
+        \item \textbf{Scenario principale}:
+            \begin{enumerate}
+                \item il sistema verifica il numero di cartelle;
+                \item il sistema rileva che il numero di cartelle supera la soglia massima consentita;
+                \item il sistema non modifica l'e-mail e notifica il MUA dell'eccesso di cartelle nella e-mail;
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
