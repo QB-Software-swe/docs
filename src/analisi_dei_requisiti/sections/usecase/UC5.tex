@@ -3,7 +3,7 @@
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA crea un evento nel sistema;
-        \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, e ha un connessione aperta con il sistema ed è autenticato;
+        \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, ha un connessione aperta con il sistema ed è autenticato;
         \item \textbf{Postcondizioni}: il MUA crea l'evento che viene salvato nel sistema;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
@@ -15,13 +15,31 @@
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
-        \item \textbf{Estensioni}: nessuna.
+        \item \textbf{Estensioni}: 
+        \begin{enumerate}[label=\alph*.]
+            \item il sistema non riesce a creare l'evento perchè il titolo non è valido:
+            \begin{enumerate}[label=\arabic*.]
+                \item il sistema ritorna un errore al MUA di titolo evento non valido (\hyperref[sec:UC5.5]{UC 5.5}).
+            \end{enumerate}
+            \item il sistema non riesce a creare l'evento perchè la data di inizio dell'evento non è in un formato valido:
+            \begin{enumerate}[label=\arabic*.]
+                \item il sistema ritorna un errore al MUA di data non valida (\hyperref[sec:UC5.6]{UC 5.6}).
+            \end{enumerate}
+            \item il sistema non riesce a creare l'evento perchè la data di fine dell'evento non è in un formato valido:
+            \begin{enumerate}[label=\arabic*.]
+                \item il sistema ritorna un errore al MUA di data non valida (\hyperref[sec:UC5.6]{UC 5.6}).
+            \end{enumerate}
+            \item il sistema non riesce a creare l'evento perchè la durata dell'evento è inconsistente rispetto alla data di inizio e di fine:
+            \begin{enumerate}[label=\arabic*.]
+                \item il sistema ritorna un errore al MUA di durata inconsistente (\hyperref[sec:UC5.7]{UC 5.7}).
+            \end{enumerate}
+        \end{enumerate}
     \end{itemize}
 
-\begin{figure}[h]
-    \includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC05.X.png}
+\begin{figure}[H]
+    \includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC05.png}
     \centering
-    \caption{Diagramma sotto-casi UC 5.}
+    \caption{Diagramma sotto-casi UC 5}
 \end{figure}
 
 \subsubsection{UC 5.1 - Trasmette il titolo dell'evento} \label{sec:UC5.1}
