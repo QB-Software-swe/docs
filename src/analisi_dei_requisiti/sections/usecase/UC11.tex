@@ -2,8 +2,8 @@
 \subsection{UC 11 - Modifica di una cartella} \label{sec:UC11}
 \begin{itemize}
     \item \textbf{Attore principale}: MUA;
-    \item \textbf{Descrizione}: il MUA modifica una cartella nel sistema;
-    \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, e ha un connessione aperta con il sistema ed è autenticato;
+    \item \textbf{Descrizione}: il MUA deve poter modificare una cartella nel sistema;
+    \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, ha un connessione aperta con il sistema ed è autenticato;
     \item \textbf{Postcondizioni}: la cartella è stata modificata con successo, ed è stata salvata nel sistema;
     \item \textbf{Scenario principale}:
         \begin{enumerate}
@@ -13,13 +13,27 @@
         \end{enumerate}
     \item \textbf{Inclusioni}: nessuna;
     \item \textbf{Generalizzazioni}: nessuna;
-    \item \textbf{Estensioni}: nessuna.
+    \item \textbf{Estensioni}: 
+    \begin{enumerate}[label=\alph*.]
+        \item il sistema non riesce a modificare la cartella perchè il nome non è valido:
+        \begin{enumerate}[label=\arabic*.]
+            \item il sistema ritorna un errore al MUA di nome non valido (\hyperref[sec:UC11.3]{UC 11.3}).
+        \end{enumerate}
+        \item il sistema non riesce a modificare la cartella genitore non è stata trovata:
+        \begin{enumerate}[label=\arabic*.]
+            \item il sistema ritorna un errore al MUA di cartella genitore non trovata(\hyperref[sec:UC11.4]{UC 11.4}).
+        \end{enumerate}
+        \item il sistema non riesce a modificare la cartella è duplicata:
+        \begin{enumerate}[label=\arabic*.]
+            \item il sistema ritorna un errore al MUA di cartella duplicata (\hyperref[sec:UC11.5]{UC 11.5}).
+        \end{enumerate}
+    \end{enumerate}
 \end{itemize}
 
-\begin{figure}[h]
-%\includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC011.X.png}
-\centering
-\caption{Diagramma sotto-casi UC 11}
+\begin{figure}[H]
+    \includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC11.png}
+    \centering
+    \caption{Diagramma sotto-casi UC 11}
 \end{figure}
 
 \subsubsection{UC 11.1 - Trasmette nome cartella} \label{sec:UC11.1}
@@ -40,13 +54,9 @@
     \item \textbf{Generalizzazioni}: nessuna;
     \item \textbf{Estensioni}:
         \begin{enumerate}[label=\alph*.]
-            \item il sistema non riesce a salvare la cartella perché è un duplicato:
-            \begin{enumerate}[label=\arabic*.]
-                \item il sistema ritorna un errore al MUA di cartella duplicata (\hyperref[sec:UC11.3]{UC 11.3});
-            \end{enumerate}
             \item il sistema non riesce a modificare la cartella perché il nome fornito non è valido:
             \begin{enumerate}[label=\arabic*.]
-                \item il sistema ritorna un errore al MUA di nome non valido (\hyperref[sec:UC11.4]{UC 11.4}).
+                \item il sistema ritorna un errore al MUA di nome non valido (\hyperref[sec:UC11.3]{UC 11.3}).
             \end{enumerate}
         \end{enumerate}
 \end{itemize}
@@ -59,7 +69,7 @@
     \item \textbf{Postcondizioni}: il sistema conosce l'id della nuova cartella genitore;
     \item \textbf{Scenario principale}:
         \begin{enumerate}
-            \item il MUA invia le informazioni necessarie per modificare la cartella;
+            \item il MUA invia l'id della nuova cartella genitore per modificare la cartella;
             \item il sistema elabora le informazioni ricevute, controlla che:
             \begin{itemize}
                 \item la cartella genitore esista;
@@ -71,19 +81,23 @@
         \begin{enumerate}[label=\alph*.]
             \item il sistema non riesce a salvare la cartella perché non trova la cartella genitore:
             \begin{enumerate}[label=\arabic*.]
-                \item il sistema ritorna un errore al MUA di cartella genitore non trovata (\hyperref[sec:UC11.5]{UC 11.5});
+                \item il sistema ritorna un errore al MUA di cartella genitore non trovata (\hyperref[sec:UC11.4]{UC 11.4});
+            \end{enumerate}
+            \item il sistema non riesce a modificare la cartella perché è un duplicato:
+            \begin{enumerate}[label=\arabic*.]
+                \item il sistema ritorna un errore al MUA di cartella duplicata (\hyperref[sec:UC11.5]{UC 11.5});
             \end{enumerate}
         \end{enumerate}
 \end{itemize}
 
 
 
-\subsubsection{UC 11.3 - Ritorna l'errore nome non valido} \label{sec:UC11.3}
+\subsubsection{UC 11.3 - Ritorna errore nome non valido} \label{sec:UC11.3}
 \begin{itemize}
     \item \textbf{Attore principale}: MUA;
     \item \textbf{Descrizione}: il MUA riceve l'errore che il nuovo nome della cartella non è valido;
     \item \textbf{Precondizioni}:  il MUA ha trasmesso il nome per modificare la cartella al sistema;
-    \item \textbf{Postcondizioni}: il sistema non modifica la nuova cartella e il MUA viene notificato dell'errore;
+    \item \textbf{Postcondizioni}: il sistema non modifica la cartella e il MUA viene notificato dell'errore;
     \item \textbf{Scenario principale}:
         \begin{enumerate}
             \item il sistema controlla la sintassi del nome e trova un errore;
@@ -94,12 +108,12 @@
     \item \textbf{Estensioni}: nessuna.
 \end{itemize}
 
-\subsubsection{UC 11.4 - Ritorna l'errore cartella genitore non trovata} \label{sec:UC11.4}
+\subsubsection{UC 11.4 - Ritorna errore cartella genitore non trovata} \label{sec:UC11.4}
 \begin{itemize}
     \item \textbf{Attore principale}: MUA;
     \item \textbf{Descrizione}: il MUA riceve l'errore che la cartella genitore non è stata trovata;
     \item \textbf{Precondizioni}: il MUA ha trasmesso l'id della cartella genitore al sistema;
-    \item \textbf{Postcondizioni}: il sistema non modifica la nuova cartella e il MUA viene notificato dell'errore;
+    \item \textbf{Postcondizioni}: il sistema non modifica la cartella e il MUA viene notificato dell'errore;
     \item \textbf{Scenario principale}:
         \begin{enumerate}
             \item il sistema non trova l'di fornito;
@@ -110,12 +124,12 @@
     \item \textbf{Estensioni}: nessuna.
 \end{itemize}
 
-\subsubsection{UC 11.5 - Ritorna l'errore cartella duplicata} \label{sec:UC11.5}
+\subsubsection{UC 11.5 - Ritorna errore cartella duplicata} \label{sec:UC11.5}
 \begin{itemize}
     \item \textbf{Attore principale}: MUA;
     \item \textbf{Descrizione}: il MUA riceve l'errore che la cartella è duplicata;
     \item \textbf{Precondizioni}: il MUA ha trasmesso i dettagli per modificare la cartella al sistema;
-    \item \textbf{Postcondizioni}: il sistema non modifica la nuova cartella e il MUA viene notificato dell'errore;
+    \item \textbf{Postcondizioni}: il sistema non modifica la cartella e il MUA viene notificato dell'errore;
     \item \textbf{Scenario principale}:
         \begin{enumerate}
             \item il sistema nota che la cartella esiste già e annulla l'operazione per la modifica della cartella;
