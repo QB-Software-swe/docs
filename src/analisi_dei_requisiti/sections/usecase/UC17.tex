@@ -8,13 +8,20 @@
         \item \textbf{Scenario principale}:
             \begin{enumerate}
                 \item il MUA trasmette l'id dell'evento di cui modificare la condivisione (\hyperref[sec:UC17.1]{UC 17.1});
-                \item il MUA trasmette il nuovo indirizzo e-mail a cui condividere (\hyperref[sec:UC17.2]{UC 17.2});
+                \item il MUA trasmette il nuovo indirizzo e-mail a cui condividere l'evento (\hyperref[sec:UC17.2]{UC 17.2});
                 \item il sistema condivide l'evento;
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
         \item \textbf{Estensioni}: nessuna.
     \end{itemize}
+
+    \begin{figure}[H]
+        \includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC17.png}
+        \centering
+        \caption{Diagramma sotto-casi UC 17}
+    \end{figure}
+
 
     \subsubsection{UC 17.1 - Trasmette id evento} \label{sec:UC17.1}
     \begin{itemize}
@@ -32,7 +39,7 @@
             \begin{enumerate}[label=\alph*.]
                 \item il sistema non riesce a modificare la condivisione dell'evento perché l'id dell'evento fornito non è stato trovato:
                 \begin{enumerate}[label=\arabic*.]
-                    \item il sistema ritorna un errore al MUA di evento non trovato (\hyperref[sec:UC4.3]{UC 4.3}).
+                    \item il sistema ritorna un errore al MUA di evento non trovato (\hyperref[sec:UC17.3]{UC 17.3}).
                 \end{enumerate}
             \end{enumerate}
     \end{itemize}
