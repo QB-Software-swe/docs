@@ -1,9 +1,9 @@
 %LTeX: language=it
-\subsection{UC 4 - Creazione di un contatto} \label{sec:UC4}
+\subsection{UC 4 - Creazione contatto} \label{sec:UC4}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
-        \item \textbf{Descrizione}: il MUA crea un contatto nel sistema;
-        \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, e ha un connessione aperta con il sistema ed è autenticato;
+        \item \textbf{Descrizione}: il MUA deve poter creare un contatto nel sistema;
+        \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, ha un connessione aperta con il sistema ed è autenticato;
         \item \textbf{Postcondizioni}: il MUA crea il contatto che viene salvato nel sistema;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
@@ -13,16 +13,26 @@
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
-        \item \textbf{Estensioni}: nessuna.
+        \item \textbf{Estensioni}:         
+        \begin{enumerate}[label=\alph*.]
+            \item il sistema non riesce a creare il contatto perchè il nome non è valido:
+            \begin{enumerate}[label=\arabic*.]
+                \item il sistema ritorna un errore al MUA di nome non valido (\hyperref[sec:UC4.3]{UC 4.3}).
+            \end{enumerate}
+            \item il sistema non riesce a creare il contatto perchè l'indirizzo email fornito non è valido:
+            \begin{enumerate}[label=\arabic*.]
+                \item il sistema ritorna un errore al MUA di indirizzo e-mail non valido (\hyperref[sec:UC4.4]{UC 4.4}).
+            \end{enumerate}
+        \end{enumerate}
     \end{itemize}
 
-\begin{figure}[h]
-    \includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC04.X.png}
+\begin{figure}[H]
+    \includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC04.png}
     \centering
-    \caption{Diagramma sotto-casi UC 4.}
+    \caption{Diagramma sotto-casi UC 4}
 \end{figure}
 
-\subsubsection{UC 4.1 - Trasmette il nome del contatto} \label{sec:UC4.1}
+\subsubsection{UC 4.1 - Trasmette nome contatto} \label{sec:UC4.1}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA trasmette il nome per creare il contatto al sistema;
@@ -48,7 +58,7 @@
     \end{itemize}
 
 
-    \subsubsection{UC 4.2 - Trasmette l'indirizzo e-mail del contatto} \label{sec:UC4.2}
+    \subsubsection{UC 4.2 - Trasmette indirizzo e-mail contatto} \label{sec:UC4.2}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA trasmette l'indirizzo e-mail per creare il contatto al sistema;
@@ -76,7 +86,7 @@
 
 
 
-\subsubsection{UC 4.3 - Ritorna l'errore nome non valido} \label{sec:UC4.3}
+\subsubsection{UC 4.3 - Ritorna errore nome non valido} \label{sec:UC4.3}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il sistema non riesce a salvare il contatto perché il nome del contatto non rispetta i requisiti;
@@ -92,7 +102,7 @@
         \item \textbf{Estensioni}: nessuna.
     \end{itemize}
 
-\subsubsection{UC 4. - Ritorna l'errore indirizzo e-mail non valido} \label{sec:UC4.4}
+\subsubsection{UC 4.4 - Ritorna errore indirizzo e-mail non valido} \label{sec:UC4.4}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il sistema non riesce a salvare il contatto perché l'indirizzo e-mail del contatto non rispetta i requisiti;

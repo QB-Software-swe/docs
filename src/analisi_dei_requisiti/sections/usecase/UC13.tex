@@ -1,5 +1,5 @@
 %LTeX: language=it
-\subsection{UC 5 - Modifica di un evento} \label{sec:UC5}
+\subsection{UC 13 - Modifica di un evento} \label{sec:UC13}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA modifica un evento nel sistema;
@@ -7,10 +7,10 @@
         \item \textbf{Postcondizioni}: il MUA modifica l'evento che viene salvato nel sistema;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
-                \item il MUA trasmette il nuovo titolo dell'evento (\hyperref[sec:UC5.1]{UC 5.1});
-                \item il MUA trasmette la nuova data di inizio dell'evento (\hyperref[sec:UC5.2]{UC 5.2});
-                \item il MUA trasmette la nuova data di fine dell'evento (\hyperref[sec:UC5.3]{UC 5.3});
-                \item il MUA trasmette la nuova durata dell'evento (\hyperref[sec:UC5.4]{UC 5.4});
+                \item il MUA trasmette il nuovo titolo dell'evento (\hyperref[sec:UC13.1]{UC 13.1});
+                \item il MUA trasmette la nuova data di inizio dell'evento (\hyperref[sec:UC13.2]{UC 13.2});
+                \item il MUA trasmette la nuova data di fine dell'evento (\hyperref[sec:UC13.3]{UC 13.3});
+                \item il MUA trasmette la nuova durata dell'evento (\hyperref[sec:UC13.4]{UC 13.4});
                 \item il sistema salva l'evento;
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
@@ -19,12 +19,12 @@
     \end{itemize}
 
 \begin{figure}[h]
-    \includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC05.X.png}
+    %\includegraphics[width=0.813\textwidth]{sections/uc_imgs/UC013.X.png}
     \centering
-    \caption{Diagramma sotto-casi UC 5.}
+    \caption{Diagramma sotto-casi UC 13.}
 \end{figure}
 
-\subsubsection{UC 5.1 - Trasmette il titolo dell'evento} \label{sec:UC5.1}
+\subsubsection{UC 13.1 - Trasmette il titolo dell'evento} \label{sec:UC13.1}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA trasmette il nuovo titolo per modificare l'evento al sistema;
@@ -44,14 +44,14 @@
             \begin{enumerate}[label=\alph*.]
                 \item il sistema non riesce a modificare l'evento perché il titolo fornito non è valido:
                 \begin{enumerate}[label=\arabic*.]
-                    \item il sistema ritorna un errore al MUA di titolo evento non valido (\hyperref[sec:UC5.5]{UC 5.5}).
+                    \item il sistema ritorna un errore al MUA di titolo evento non valido (\hyperref[sec:UC13.5]{UC 13.5}).
                 \end{enumerate}
             \end{enumerate}
     \end{itemize}
 
 
 
-    \subsubsection{UC 5.2 - Trasmette la data di inizio dell'evento} \label{sec:UC5.2}
+    \subsubsection{UC 13.2 - Trasmette la data di inizio dell'evento} \label{sec:UC13.2}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA trasmette la nuova data di inizio dell'evento per modificare l'evento al sistema;
@@ -71,13 +71,13 @@
             \begin{enumerate}[label=\alph*.]
                 \item il sistema non riesce a modificare l'evento perché la data di inizio dell'evento fornita non è in un formato corretto:
                 \begin{enumerate}[label=\arabic*.]
-                    \item il sistema ritorna un errore al MUA di data evento non valida (\hyperref[sec:UC5.6]{UC 5.6}).
+                    \item il sistema ritorna un errore al MUA di data evento non valida (\hyperref[sec:UC13.6]{UC 13.6}).
                 \end{enumerate}
             \end{enumerate}
     \end{itemize}
 
 
-    \subsubsection{UC 5.3 - Trasmette la data di fine dell'evento} \label{sec:UC5.3}
+    \subsubsection{UC 13.3 - Trasmette la data di fine dell'evento} \label{sec:UC13.3}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA trasmette la nuova data di fine dell'evento per modificare l'evento al sistema;
@@ -97,12 +97,12 @@
             \begin{enumerate}[label=\alph*.]
                 \item il sistema non riesce a modificare l'evento perché la data di fine dell'evento fornita non è in un formato corretto:
                 \begin{enumerate}[label=\arabic*.]
-                    \item il sistema ritorna un errore al MUA di data evento non valida (\hyperref[sec:UC5.6]{UC 5.6}).
+                    \item il sistema ritorna un errore al MUA di data evento non valida (\hyperref[sec:UC13.6]{UC 13.6}).
                 \end{enumerate}
             \end{enumerate}
     \end{itemize}
 
-    \subsubsection{UC 5.4 - Trasmette la durata dell'evento} \label{sec:UC5.4}
+    \subsubsection{UC 13.4 - Trasmette la durata dell'evento} \label{sec:UC13.4}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA trasmette la nuova durata per modificare l'evento al sistema;
@@ -122,13 +122,13 @@
             \begin{enumerate}[label=\alph*.]
                 \item il sistema non riesce a modificare l'evento perché la durata fornita non è valido:
                 \begin{enumerate}[label=\arabic*.]
-                    \item il sistema ritorna un errore al MUA di durata inconsistente (\hyperref[sec:UC5.7]{UC 5.7}).
+                    \item il sistema ritorna un errore al MUA di durata inconsistente (\hyperref[sec:UC13.7]{UC 13.7}).
                 \end{enumerate}
             \end{enumerate}
     \end{itemize}
 
 
-    \subsubsection{UC 5.5 - Ritorna l'errore titolo evento non valido} \label{sec:UC5.5}
+    \subsubsection{UC 13.5 - Ritorna l'errore titolo evento non valido} \label{sec:UC13.5}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il sistema non riesce a modificare l'evento perché il titolo dell'evento non rispetta i requisiti;
@@ -145,7 +145,7 @@
     \end{itemize}
 
 
-    \subsubsection{UC 5.6 - Ritorna l'errore data non valida} \label{sec:UC5.6}
+    \subsubsection{UC 13.6 - Ritorna l'errore data non valida} \label{sec:UC13.6}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il sistema non riesce a modificare l'evento perché la data non rispetta i requisiti;
@@ -161,7 +161,7 @@
         \item \textbf{Estensioni}: nessuna.
     \end{itemize}
 
-    \subsubsection{UC 5.7 - Ritorna l'errore durata inconsistente} \label{sec:UC5.7}
+    \subsubsection{UC 13.7 - Ritorna l'errore durata inconsistente} \label{sec:UC13.7}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il sistema non riesce a modificare l'evento perché la durata non rispetta i requisiti;

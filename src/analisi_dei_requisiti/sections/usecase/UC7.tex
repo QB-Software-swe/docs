@@ -1,8 +1,8 @@
-\subsection{UC 7 - Creazione condivisione di una cartella} \label{sec:UC7}
+\subsection{UC 7 - Creazione condivisione cartella} \label{sec:UC7}
 
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
-        \item \textbf{Descrizione}: il MUA invia le informazioni della cartella da condividere al sistema;
+        \item \textbf{Descrizione}: il MUA deve poter creare una condivisione di una cartella nel sistema;
         \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di creazione di una condivisione;
         \item \textbf{Postcondizioni}: il sistema condivide la cartella con l'indirizzo e-mail fornito dal MUA;
         \item \textbf{Scenario principale}:
@@ -13,10 +13,26 @@
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
-        \item \textbf{Estensioni}: nessuna.
+        \item \textbf{Estensioni}: 
+        \begin{enumerate}[label=\alph*.]
+            \item il sistema non riesce a creare la condivisione della cartella perchè la cartella non è stata trovata:
+            \begin{enumerate}[label=\arabic*.]
+                \item il sistema ritorna un errore al MUA di cartella non trovata (\hyperref[sec:UC7.3]{UC 7.3});
+            \end{enumerate}
+            \item il sistema non riesce a creare la condivisione della cartella perchè l'indirizzo e-mail fornito non è valido:
+            \begin{enumerate}[label=\arabic*.]
+                \item il sistema ritorna un errore al MUA di e-mail non valida (\hyperref[sec:UC7.4]{UC 7.4}).
+            \end{enumerate}
+        \end{enumerate}
     \end{itemize}
 
-    \subsubsection{UC 7.1 - Trasmette l'id della cartella} \label{sec:UC7.1}
+    \begin{figure}[H]
+        \includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC07.png}
+        \centering
+        \caption{Diagramma sotto-casi UC 7}
+    \end{figure}
+
+    \subsubsection{UC 7.1 - Trasmette id cartella} \label{sec:UC7.1}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA trasmette l'id della cartella per condividere la cartella;
@@ -32,13 +48,13 @@
             \begin{enumerate}[label=\alph*.]
                 \item il sistema non riesce a condividere la cartella perché l'id della cartella fornito non è stato trovato:
                 \begin{enumerate}[label=\arabic*.]
-                    \item il sistema ritorna un errore al MUA di cartella non trovata (\hyperref[sec:UC4.3]{UC 4.3}).
+                    \item il sistema ritorna un errore al MUA di cartella non trovata (\hyperref[sec:UC7.3]{UC 7.3}).
                 \end{enumerate}
             \end{enumerate}
     \end{itemize}
 
 
-    \subsubsection{UC 7.2 - Trasmette l'indirizzo e-mail} \label{sec:UC7.2}
+    \subsubsection{UC 7.2 - Trasmette indirizzo contatto} \label{sec:UC7.2}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA trasmette l'indirizzo e-mail per la condivisione al sistema;
@@ -46,7 +62,7 @@
         \item \textbf{Postcondizioni}: il sistema conosce l'indirizzo e-mail a cui condividere;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
-                \item il MUA invia l'indirizzo e-mail la condivisione al sistema;
+                \item il MUA invia l'indirizzo e-mail per la condivisione al sistema;
                 \item il sistema controlla che le informazioni ricevute rispettino il seguente requisito minimo:
                     \begin{itemize}
                         \item l'indirizzo email del contatto non è una stringa vuota;
@@ -56,7 +72,7 @@
         \item \textbf{Generalizzazioni}: nessuna;
         \item \textbf{Estensioni}:
             \begin{enumerate}[label=\alph*.]
-                \item il sistema non riesce a creare il contatto perché l'indirizzo e-mail fornito non è valido:
+                \item il sistema non riesce a creare la condivisione della cartella perché l'indirizzo e-mail fornito non è valido:
                 \begin{enumerate}[label=\arabic*.]
                     \item il sistema ritorna un errore al MUA di indirizzo e-mail non valido (\hyperref[sec:UC7.4]{UC 7.4}).
                 \end{enumerate}
@@ -64,7 +80,7 @@
     \end{itemize}
 
 
-\subsubsection{UC 7.3 - Ritorna l'errore cartella non trovata} \label{sec:UC7.3}
+\subsubsection{UC 7.3 - Ritorna errore cartella non trovata} \label{sec:UC7.3}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il sistema non riesce a condividere la cartella perché la cartella non è stato trovato;
@@ -80,7 +96,7 @@
         \item \textbf{Estensioni}: nessuna.
     \end{itemize}
 
-    \subsubsection{UC 7.4 - Ritorna l'errore indirizzo e-mail non valido} \label{sec:UC7.4}
+    \subsubsection{UC 7.4 - Ritorna errore indirizzo e-mail non valido} \label{sec:UC7.4}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il sistema non riesce a condividere la cartella perché l'indirizzo e-mail del contatto non rispetta i requisiti;

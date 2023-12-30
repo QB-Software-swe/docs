@@ -1,8 +1,8 @@
 %LTeX: language=it
-\subsection{UC 3 - Creazione di una cartella} \label{sec:UC3}
+\subsection{UC 3 - Creazione cartella} \label{sec:UC3}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
-        \item \textbf{Descrizione}: il MUA crea una cartella nel sistema;
+        \item \textbf{Descrizione}: il MUA deve poter creare una cartella nel sistema;
         \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, e ha un connessione aperta con il sistema ed è autenticato;
         \item \textbf{Postcondizioni}: il MUA crea la cartella che viene salvato nel sistema;
         \item \textbf{Scenario principale}:
@@ -13,11 +13,25 @@
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
-        \item \textbf{Estensioni}: nessuna.
+        \item \textbf{Estensioni}: 
+        \begin{enumerate}[label=\alph*.]
+            \item il sistema non riesce a creare la cartella perchè il nome non è valido:
+            \begin{enumerate}[label=\arabic*.]
+                \item il sistema ritorna un errore al MUA di nome non valido (\hyperref[sec:UC3.3]{UC 3.3}).
+            \end{enumerate}
+            \item il sistema non riesce a creare la cartella perchè la cartella genitore non viene trovata:
+            \begin{enumerate}[label=\arabic*.]
+                \item il sistema ritorna un errore al MUA di cartella genitore non trovata (\hyperref[sec:UC3.4]{UC 3.4}).
+            \end{enumerate}
+            \item il sistema non riesce a creare la cartella perchè esiste già una cartella con lo stesso nome in quella directory:
+            \begin{enumerate}[label=\arabic*.]
+                \item il sistema ritorna un errore al MUA di cartella duplicata (\hyperref[sec:UC3.5]{UC 3.5}).
+            \end{enumerate}
+        \end{enumerate}
     \end{itemize}
 
-\begin{figure}[h]
-    %\includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC03.X.png}
+\begin{figure}[H]
+    \includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC03.png}
     \centering
     \caption{Diagramma sotto-casi UC 3}
 \end{figure}
@@ -40,13 +54,9 @@
         \item \textbf{Generalizzazioni}: nessuna;
         \item \textbf{Estensioni}:
             \begin{enumerate}[label=\alph*.]
-                \item il sistema non riesce a salvare la cartella perché è un duplicato:
-                \begin{enumerate}[label=\arabic*.]
-                    \item il sistema ritorna un errore al MUA di cartella duplicata (\hyperref[sec:UC3.3]{UC 3.3});
-                \end{enumerate}
                 \item il sistema non riesce a creare la cartella perché il nome fornito non è valido:
                 \begin{enumerate}[label=\arabic*.]
-                    \item il sistema ritorna un errore al MUA di nome non valido (\hyperref[sec:UC3.4]{UC 3.4}).
+                    \item il sistema ritorna un errore al MUA di nome non valido (\hyperref[sec:UC3.3]{UC 3.3}).
                 \end{enumerate}
             \end{enumerate}
     \end{itemize}
@@ -71,14 +81,19 @@
             \begin{enumerate}[label=\alph*.]
                 \item il sistema non riesce a salvare la cartella perché non trova la cartella genitore:
                 \begin{enumerate}[label=\arabic*.]
-                    \item il sistema ritorna un errore al MUA di cartella genitore non trovata (\hyperref[sec:UC3.5]{UC 3.5});
+                    \item il sistema ritorna un errore al MUA di cartella genitore non trovata (\hyperref[sec:UC3.4]{UC 3.4});
+                    \end{enumerate}
+                \item il sistema non riesce a salvare la cartella perché è un duplicato:
+                \begin{enumerate}[label=\arabic*.]
+                    \item il sistema ritorna un errore al MUA di cartella duplicata (\hyperref[sec:UC3.5]{UC 3.5});
                 \end{enumerate}
+                
             \end{enumerate}
     \end{itemize}
 
 
 
-    \subsubsection{UC 3.3 - Ritorna l'errore nome non valido} \label{sec:UC3.3}
+    \subsubsection{UC 3.3 - Ritorna errore nome non valido} \label{sec:UC3.3}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA riceve l'errore che il nome della cartella non è valido;
@@ -94,7 +109,7 @@
         \item \textbf{Estensioni}: nessuna.
     \end{itemize}
 
-    \subsubsection{UC 3.4 - Ritorna l'errore cartella genitore non trovata} \label{sec:UC3.4}
+    \subsubsection{UC 3.4 - Ritorna errore cartella genitore non trovata} \label{sec:UC3.4}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA riceve l'errore che la cartella genitore non è stata trovata;
@@ -110,7 +125,7 @@
         \item \textbf{Estensioni}: nessuna.
     \end{itemize}
 
-\subsubsection{UC 3.5 - Ritorna l'errore cartella duplicata} \label{sec:UC3.5}
+\subsubsection{UC 3.5 - Ritorna errore cartella duplicata} \label{sec:UC3.5}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA riceve l'errore che la cartella è duplicata;
