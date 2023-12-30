@@ -1,14 +1,15 @@
 %LTeX: language=it
-\subsection{UC 8 - Modificare un contatto} \label{sec:UC8}
+\subsection{UC 12 - Modifica di un contatto} \label{sec:UC12}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
-        \item \textbf{Descrizione}: il MUA deve poter modificare un contato nel sistema;
+        \item \textbf{Descrizione}: il MUA modifica un contatto nel sistema;
         \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, e ha un connessione aperta con il sistema ed è autenticato;
-        \item \textbf{Postcondizioni}: il MUA modifica un contatto, il suo nuovo stato viene salvato nel sistema;
+        \item \textbf{Postcondizioni}: il MUA modifica il contatto che viene salvato nel sistema;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
-                \item il MUA invia le informazioni per aggiornare il contatto nel sistema (\hyperref[sec:UC8.1]{UC 8.1});
-                \item il sistema salva il nuovo stato del contato;
+                \item il MUA trasmette il nuovo nome del contatto (\hyperref[sec:UC12.1]{UC 12.1});
+                \item il MUA trasmette il nuovo indirizzo email del contatto (\hyperref[sec:UC12.2]{UC 12.2});
+                \item il sistema salva il contatto modificato;
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
@@ -16,68 +17,91 @@
     \end{itemize}
 
 \begin{figure}[h]
-    \includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC08.X.png}
+    \includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC012.X.png}
     \centering
-    \caption{Diagramma sotto-casi UC 8.}
+    \caption{Diagramma sotto-casi UC 12.}
 \end{figure}
 
-\subsubsection{UC 8.1 - Trasmette i dettagli del contatto} \label{sec:UC8.1}
+\subsubsection{UC 12.1 - Trasmette il nome del contatto} \label{sec:UC12.1}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
-        \item \textbf{Descrizione}: il MUA trasmette il nuovo stato del contato al sistema;
-        \item \textbf{Precondizioni}: il MUA sta utilizzando la funzionalità di modifica di un contatto;
-        \item \textbf{Postcondizioni}: il MUA modifica un contatto, il suo nuovo stato viene salvato nel sistema;
+        \item \textbf{Descrizione}: il MUA trasmette il nuovo nome per modificare il contatto al sistema;
+        \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di modifica di un contatto;
+        \item \textbf{Postcondizioni}: il sistema conosce il nuovo nome del contatto;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
-                \item il MUA invia le informazioni per aggiornare il contatto nel sistema;
-                \item il sistema elabora le nuove informazioni, e controlla che siano valide;
-                \item il sistema salva il nuovo stato del contato;
+                \item il MUA invia il nuovo nome per modificare il contatto al sistema;
+                \item il sistema controlla che le informazioni ricevute rispettino il seguente requisito minimo:
+                    \begin{itemize}
+                        \item il nome del contatto non è una stringa vuota;
+                    \end{itemize}
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
-        \item \textbf{Estensioni}: 
+        \item \textbf{Estensioni}:
             \begin{enumerate}[label=\alph*.]
-                \item il sistema non riesce ad aggiornare lo stato del contato perché non è stato trovato:
+                \item il sistema non riesce a modificare il contatto perché il nome fornito non è valido:
                 \begin{enumerate}[label=\arabic*.]
-                    \item il sistema ritorna un errore al MUA di contatto inesistente (\hyperref[sec:UC8.2]{UC 8.2});
-                \end{enumerate}
-                \item il sistema non riesce a modificare lo stato del contato perché i dati trasmessi non rispettano i requisiti:
-                \begin{enumerate}[label=\arabic*.]
-                    \item il sistema ritorna un errore al MUA dettagli contatto non validi (\hyperref[sec:U8.3]{UC 8.3}).
+                    \item il sistema ritorna un errore al MUA di nome non valido (\hyperref[sec:UC12.3]{UC 12.3}).
                 \end{enumerate}
             \end{enumerate}
     \end{itemize}
 
-\subsubsection{UC 8.2 - Ritorna l'errore contatto inesistente} \label{sec:UC8.2}
+
+    \subsubsection{UC 12.2 - Trasmette l'indirizzo e-mail del contatto} \label{sec:UC12.2}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
-        \item \textbf{Descrizione}: il MUA sta trasmettendo il nuovo stato del contato al sistema, ma il contatto indicato non esiste;
-        \item \textbf{Precondizioni}: il MUA sta utilizzando la funzionalità di trasmissione dei dettagli per la modifica di un contatto;
-        \item \textbf{Postcondizioni}: il sistema non aggiorna lo stato del contatto, il MUA è stato notificato dell'errore;
+        \item \textbf{Descrizione}: il MUA trasmette il nuovo indirizzo e-mail per modificare il contatto al sistema;
+        \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di modifica di un contatto;
+        \item \textbf{Postcondizioni}: il sistema conosce il nuovo indirizzo e-mail del contatto;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
-                \item il MUA invia le informazioni per aggiornare il contatto nel sistema;
-                \item il sistema controlla le informazioni, e riscontra che il contatto non esiste;
-                \item il sistema non aggiorna il contatto;
-                \item il sistema ritorna l'errore al MUA;
+                \item il MUA invia il nuovo indirizzo e-mail per modificare il contatto al sistema;
+                \item il sistema controlla che le informazioni ricevute rispettino il seguente requisito minimo:
+                    \begin{itemize}
+                        \item l'indirizzo email del contatto non è una stringa vuota;
+                    \end{itemize}
+            \end{enumerate}
+        \item \textbf{Inclusioni}: nessuna;
+        \item \textbf{Generalizzazioni}: nessuna;
+        \item \textbf{Estensioni}:
+            \begin{enumerate}[label=\alph*.]
+                \item il sistema non riesce a modificare il contatto perché l'indirizzo e-mail fornito non è valido:
+                \begin{enumerate}[label=\arabic*.]
+                    \item il sistema ritorna un errore al MUA di indirizzo e-mail non valido (\hyperref[sec:UC12.4]{UC 12.4}).
+                \end{enumerate}
+            \end{enumerate}
+    \end{itemize}
+
+
+
+
+\subsubsection{UC 12.3 - Ritorna l'errore nome non valido} \label{sec:UC12.3}
+    \begin{itemize}
+        \item \textbf{Attore principale}: MUA;
+        \item \textbf{Descrizione}: il sistema non riesce a salvare il contatto perché il nome del contatto non rispetta i requisiti;
+        \item \textbf{Precondizioni}: il MUA ha inviato il nome del contatto;
+        \item \textbf{Postcondizioni}: il sistema non salva il contatto, il MUA è stato notificato dell'errore;
+        \item \textbf{Scenario principale}:
+            \begin{enumerate}
+                \item il sistema controlla la sintassi del nome del contatto e trova un errore;
+                \item il sistema non modifica il contatto e notifica il MUA dell'errore;
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
         \item \textbf{Estensioni}: nessuna.
     \end{itemize}
 
-\subsubsection{UC 8.3 - Ritorna l'errore dettagli contatto non validi} \label{sec:UC8.3}
+\subsubsection{UC 12. - Ritorna l'errore indirizzo e-mail non valido} \label{sec:UC12.4}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
-        \item \textbf{Descrizione}: il MUA sta trasmettendo il nuovo stato del contato al sistema, ma i dettagli inviati non rispettano i requisiti richiesti;
-        \item \textbf{Precondizioni}: il MUA sta utilizzando la funzionalità di trasmissione dei dettagli per la modifica di un contatto;
-        \item \textbf{Postcondizioni}: il sistema non aggiorna lo stato del contatto, il MUA è stato notificato dell'errore;
+        \item \textbf{Descrizione}: il sistema non riesce a salvare il contatto perché l'indirizzo e-mail del contatto non rispetta i requisiti;
+        \item \textbf{Precondizioni}: il MUA ha inviato l'indirizzo e-mail del contatto;
+        \item \textbf{Postcondizioni}: il sistema non salva il contatto, il MUA è stato notificato dell'errore;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
-                \item il MUA invia le informazioni per aggiornare il contatto nel sistema;
-                \item il sistema controlla le informazioni, il sistema riscontra dei valori non validi;
-                \item il sistema non aggiorna il contatto;
-                \item il sistema ritorna l'errore al MUA;
+                \item il sistema controlla la sintassi dell'indirizzo e-mail del contatto e trova un errore;
+                \item il sistema non modifica il contatto e notifica il MUA dell'errore;
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
