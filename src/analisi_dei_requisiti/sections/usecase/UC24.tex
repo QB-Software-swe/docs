@@ -1,0 +1,103 @@
+\subsection{UC 24 - Eliminazione condivisione di un contatto} \label{sec:UC24}
+
+    \begin{itemize}
+        \item \textbf{Attore principale}: MUA;
+        \item \textbf{Descrizione}: il MUA deve poter eliminare una condivisione di un contatto nel sistema;
+        \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di eliminazione di una condivisione;
+        \item \textbf{Postcondizioni}: il sistema elimina la condivisione del contatto con le informazioni fornite dal MUA;
+        \item \textbf{Scenario principale}:
+            \begin{enumerate}
+                \item il MUA trasmette l'id del contatto condiviso (\hyperref[sec:UC24.1]{UC 24.1});
+                \item il MUA trasmette il nuovo indirizzo e-mail a cui condividere (\hyperref[sec:UC24.2]{UC 24.2});
+                \item il sistema condivide il contatto;
+            \end{enumerate}
+        \item \textbf{Inclusioni}: nessuna;
+        \item \textbf{Generalizzazioni}: nessuna;
+        \item \textbf{Estensioni}: nessuna.
+    \end{itemize}
+
+    \begin{figure}[H]
+        \includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC24.png}
+        \centering
+        \caption{Diagramma sotto-casi UC 24}
+    \end{figure}
+
+    \subsubsection{UC 24.1 - Trasmette id contatto} \label{sec:UC24.1}
+    \begin{itemize}
+        \item \textbf{Attore principale}: MUA;
+        \item \textbf{Descrizione}: il MUA trasmette l'id del contatto per eliminare la condivisione del contatto;
+        \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di eliminazione condivisione di un contatto;
+        \item \textbf{Postcondizioni}: il sistema conosce l'id del contatto di cui eliminare la condivisione;
+        \item \textbf{Scenario principale}:
+            \begin{enumerate}
+                \item il MUA invia l'id del contatto per eliminare la condivisione del contatto;
+            \end{enumerate}
+        \item \textbf{Inclusioni}: nessuna;
+        \item \textbf{Generalizzazioni}: nessuna;
+        \item \textbf{Estensioni}:
+            \begin{enumerate}[label=\alph*.]
+                \item il sistema non riesce a eliminare la condivisione del contatto perché l'id del contatto fornito non è stato trovato:
+                \begin{enumerate}[label=\arabic*.]
+                    \item il sistema ritorna un errore al MUA di contatto non trovato (\hyperref[sec:UC24.3]{UC 24.3}).
+                \end{enumerate}
+            \end{enumerate}
+    \end{itemize}
+
+
+    \subsubsection{UC 24.2 - Trasmette indirizzo e-mail} \label{sec:UC24.2}
+    \begin{itemize}
+        \item \textbf{Attore principale}: MUA;
+        \item \textbf{Descrizione}: il MUA trasmette l'indirizzo e-mail a cui togliere la condivisione al sistema;
+        \item \textbf{Precondizioni}: il MUA sta usando la funzionalità di eliminazione condivisione di un contatto;
+        \item \textbf{Postcondizioni}: il sistema conosce l'indirizzo e-mail a cui rimuovere la condivisione;
+        \item \textbf{Scenario principale}:
+            \begin{enumerate}
+                \item il MUA invia l'indirizzo e-mail a cui togliere la condivisione al sistema;
+                \item il sistema controlla che le informazioni ricevute rispettino il seguente requisito minimo:
+                    \begin{itemize}
+                        \item l'indirizzo email del contatto non è una stringa vuota;
+                    \end{itemize}
+            \end{enumerate}
+        \item \textbf{Inclusioni}: nessuna;
+        \item \textbf{Generalizzazioni}: nessuna;
+        \item \textbf{Estensioni}:
+            \begin{enumerate}[label=\alph*.]
+                \item il sistema non riesce ad eliminare la condivisione del contato perché l'indirizzo e-mail fornito non è valido:
+                \begin{enumerate}[label=\arabic*.]
+                    \item il sistema ritorna un errore al MUA di indirizzo e-mail non valido (\hyperref[sec:UC24.4]{UC 24.4}).
+                \end{enumerate}
+            \end{enumerate}
+    \end{itemize}
+
+
+\subsubsection{UC 24.3 - Ritorna errore contatto non trovato} \label{sec:UC24.3}
+    \begin{itemize}
+        \item \textbf{Attore principale}: MUA;
+        \item \textbf{Descrizione}: il sistema non riesce a eliminare la condivisione del contatto perché il contatto non è stato trovato;
+        \item \textbf{Precondizioni}: il MUA ha inviato l'id del contatto a cui togliere la condivisione al sistema;
+        \item \textbf{Postcondizioni}: il sistema non elimina la condivisione del contatto, il MUA è stato notificato dell'errore;
+        \item \textbf{Scenario principale}:
+            \begin{enumerate}
+                \item il sistema non trova il contatto con l'identificativo fornito dal MUA;
+                \item il sistema non elimina la condivisione del contatto e notifica il MUA dell'errore;
+            \end{enumerate}
+        \item \textbf{Inclusioni}: nessuna;
+        \item \textbf{Generalizzazioni}: nessuna;
+        \item \textbf{Estensioni}: nessuna.
+    \end{itemize}
+
+    \subsubsection{UC 24.4 - Ritorna errore indirizzo e-mail non valido} \label{sec:UC24.4}
+    \begin{itemize}
+        \item \textbf{Attore principale}: MUA;
+        \item \textbf{Descrizione}: il sistema non riesce a eliminare la condivisione del contatto perché l'indirizzo e-mail del contatto non rispetta i requisiti;
+        \item \textbf{Precondizioni}: il MUA ha inviato l'indirizzo e-mail a cui rimuovere la condivisione;
+        \item \textbf{Postcondizioni}: il sistema non eliminazione la condivisione del contatto, il MUA è stato notificato dell'errore;
+        \item \textbf{Scenario principale}:
+            \begin{enumerate}
+                \item il sistema controlla la sintassi dell'indirizzo e-mail e trova un errore;
+                \item il sistema non elimina la condivisione del contatto e notifica il MUA dell'errore;
+            \end{enumerate}
+        \item \textbf{Inclusioni}: nessuna;
+        \item \textbf{Generalizzazioni}: nessuna;
+        \item \textbf{Estensioni}: nessuna.
+    \end{itemize}
