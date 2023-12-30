@@ -8,8 +8,8 @@
         \item \textbf{Scenario principale}:
             \begin{enumerate}
                 \item il MUA trasmette l'id del contatto condiviso (\hyperref[sec:UC24.1]{UC 24.1});
-                \item il MUA trasmette il nuovo indirizzo e-mail a cui condividere (\hyperref[sec:UC24.2]{UC 24.2});
-                \item il sistema condivide il contatto;
+                \item il MUA trasmette l'indirizzo email a cui rimuovere la condivisione del contatto (\hyperref[sec:UC24.2]{UC 24.2});
+                \item il sistema rimuove la condivisione del contatto;
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
@@ -52,7 +52,7 @@
         \item \textbf{Postcondizioni}: il sistema conosce l'indirizzo e-mail a cui rimuovere la condivisione;
         \item \textbf{Scenario principale}:
             \begin{enumerate}
-                \item il MUA invia l'indirizzo e-mail a cui togliere la condivisione al sistema;
+                \item il MUA invia l'indirizzo e-mail a cui togliere la condivisione del contatto al sistema;
                 \item il sistema controlla che le informazioni ricevute rispettino il seguente requisito minimo:
                     \begin{itemize}
                         \item l'indirizzo email del contatto non è una stringa vuota;
