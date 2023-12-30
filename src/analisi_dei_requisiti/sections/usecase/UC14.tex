@@ -1,12 +1,21 @@
 %LTeX: language=it
 \subsection{UC 14 - Modifica di una condivisione} \label{sec:UC14}
-    \begin{figure}[h]
-        %\includegraphics[width=0.85\textwidth]{sections/uc_imgs/UC03.png}
-        \centering
-        \caption{Diagramma UC 14}
-    \end{figure}
     \begin{itemize}
         \item \textbf{Attore principale}: MUA;
         \item \textbf{Descrizione}: il MUA deve poter modificare una condivisione nel sistema;
-        \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, e ha un connessione aperta con il sistema ed è autenticato;
-        \item \textbf{Postcondizioni}: il MUA crea una condivisione che viene salvata nel sistema;
+        \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, ha un connessione aperta con il sistema ed è autenticato;
+        \item \textbf{Postcondizioni}: la condivisione è stata modificata con successo, ed è stata salvata nel sistema;
+        \item \textbf{Scenario principale}:
+            \begin{enumerate}
+                \item il MUA invia la condivisione modificata al sistema;
+                \item il sistema salva la condivisione modificata;
+            \end{enumerate}
+        \item \textbf{Inclusioni}: nessuna;
+        \item \textbf{Generalizzazioni}:
+            \begin{itemize}
+                \item il MUA modifica una condivisione di una cartella (\hyperref[sec:UC15]{UC 15});
+                \item il MUA modifica una condivisione di un contatto (\hyperref[sec:UC16]{UC 16});
+                \item il MUA modifica una condivisione di un evento (\hyperref[sec:UC17]{UC 17});
+            \end{itemize}
+        \item \textbf{Estensioni}: nessuna;
+    \end{itemize}
