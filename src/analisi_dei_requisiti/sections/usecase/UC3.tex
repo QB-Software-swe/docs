@@ -9,7 +9,7 @@
             \begin{enumerate}
                 \item il MUA trasmette il nome della cartella (\hyperref[sec:UC3.1]{UC 3.1});
                 \item il MUA trasmette l'id della cartella genitore (\hyperref[sec:UC3.2]{UC 3.2});
-                \item il sistema salva la nuova cartella;
+                \item il sistema salva la nuova cartella.
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
@@ -33,7 +33,7 @@
                 \item il MUA invia il nome per creare la cartella al sistema;
                 \item il sistema controlla che le informazioni ricevute rispettino il seguente requisito minimo:
                 \begin{itemize}
-                    \item il nome ricevuto non è una stringa vuota;
+                    \item il nome ricevuto non è una stringa vuota.
                 \end{itemize}
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
@@ -58,7 +58,7 @@
                 \item il MUA invia le informazioni necessarie per creare la cartella;
                 \item il sistema elabora le informazioni ricevute, controlla che:
                 \begin{itemize}
-                    \item la cartella genitore esista;
+                    \item la cartella genitore esista.
                 \end{itemize}
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
@@ -71,7 +71,7 @@
                     \end{enumerate}
                 \item il sistema non riesce a salvare la cartella perché è un duplicato:
                 \begin{enumerate}[label=\arabic*.]
-                    \item il sistema ritorna un errore al MUA di cartella duplicata (\hyperref[sec:UC3.5]{UC 3.5});
+                    \item il sistema ritorna un errore al MUA di cartella duplicata (\hyperref[sec:UC3.5]{UC 3.5}).
                 \end{enumerate}
                 
             \end{enumerate}
@@ -88,7 +88,7 @@
         \item \textbf{Scenario principale}:
             \begin{enumerate}
                 \item il sistema controlla la sintassi del nome e trova un errore;
-                \item il sistema non crea la cartella e notifica il MUA dell'errore;
+                \item il sistema non crea la cartella e notifica il MUA dell'errore.
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
@@ -104,7 +104,7 @@
         \item \textbf{Scenario principale}:
             \begin{enumerate}
                 \item il sistema non trova l'di fornito;
-                \item il sistema non crea la cartella e notifica il MUA dell'errore;
+                \item il sistema non crea la cartella e notifica il MUA dell'errore.
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
@@ -120,7 +120,7 @@
         \item \textbf{Scenario principale}:
             \begin{enumerate}
                 \item il sistema nota che la cartella esiste già e annulla l'operazione per la creazione della cartella;
-                \item il sistema non crea la cartella e notifica il MUA dell'errore;
+                \item il sistema non crea la cartella e notifica il MUA dell'errore.
             \end{enumerate}
         \item \textbf{Inclusioni}: nessuna;
         \item \textbf{Generalizzazioni}: nessuna;
