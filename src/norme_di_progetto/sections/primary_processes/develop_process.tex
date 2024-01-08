@@ -1,0 +1,142 @@
+\subsection{Processo di sviluppo}
+Secondo lo standard \cite{bib:ISO12207_1997}, lo scopo del processo di sviluppo è quello di
+definire le attività di analisi dei requisiti, progettazione, codifica, integrazione, testing,
+installazione e accetazione relativi al prodotto software. Lo sviluppatore che esegue o supporta tali attività,
+lo fa in conformità dei requisiti definiti da contratto.
+
+    \subsubsection{Descrizione}
+    Segue un elenco delle attività che caraterizzano il processo di sviluppo:
+        \begin{itemize}
+            \item \textbf{Analisi dei requisiti} (\hyperref[sec:AdR]{§2.2.2});
+            \item \textbf{Progettazione architetturale} (\hyperref[sec:pa]{§2.2.3});
+            \item \textbf{Codifica} (\hyperref[sec:coding]{§2.2.4}).
+        \end{itemize}
+
+
+    \subsubsection{Analisi dei requisiti} \label{sec:AdR}
+
+    \paragraph{Scopo}
+    \noindent
+    Gli obiettivi dell'attività di \textit{Analisi dei requisiti} sono:
+        \begin{itemize}
+            \item Concordare con il proponente lo scopo del prodotto da realizzare, rispecchiandone le specifiche;
+            \item Fornire ai progettisti dei requisiti chiari e ottimiali;
+            \item Fornire una stima sulle tempistiche necessarie per completare il prodotto, in modo da favorire la pianificazione;
+            \item Favorire l'attività di verifica.
+        \end{itemize}
+
+    \paragraph{Descrizione}
+    \noindent
+    Il compito degli analisti è quello di effetuare l'Analisi dei Requisiti, redigendo un documento omonimo che deve contenere:
+        \begin{itemize}
+            \item \textbf{Introduzione}: spiega lo scopo del documento;
+            \item \textbf{Descrizione}: enuncia le finalità del prodotto;
+            \item \textbf{Attori}: chi interagisce con il prodotto;
+            \item \textbf{Casi d'uso}\glossario: tutte le possibili interazioni che possono avvenire con il prodotto da parte degli attori;
+            \item \textbf{Requisiti}\glossario: le caratteristiche funzionali e non da soddisfare.
+        \end{itemize}
+
+    \paragraph{Aspettative}
+    \noindent
+    Da questa attività, è previsto che venga redatta tutta la documentazione ufficiale che includa tutti i requisiti attesi dal cliente. 
+    
+    \paragraph{Casi d'uso}
+    \noindent
+    I casi d'uso sono un insieme di possibili sequenze di interazioni compiute da uno specifico
+    attore per raggiungere un particolare obiettivo all'interno del prodotto. I casi d'uso devono essere suddivisi in base alla tipologia di scenario che descrivono,
+    in modo da migliorare la chiarezza e la compresione. All'interno della propria sezione in cui vengono descritti gli use case, ogni caso d'uso
+    deve avere una \textit{sotto sezione}\glossario  dedicata, in cui deve essere analizzata e suddivisa in sotto casi, nella maniera più specifica possibile.
+
+    \noindent
+    Ogni caso d'uso deve essere costituito, in ordine, da:
+        \begin{itemize}
+            \item \textbf{Identificazione}: definita dal seguente formato;
+            $$\text{\texttt{UC [numero\_padre].[numero\_figlio] - titolo}}$$
+            dove:
+                \begin{itemize}
+                    \item \texttt{UC}: è l'acronimo di Use Case;
+                    \item \texttt{[numero\_padre]}: numero identificativo del caso d'uso;
+                    \item \texttt{[numero\_figlio]}: numero identificativo progressivo dei sotto casi;
+                    \item \texttt{titolo}: nome auto esplicativo del caso d'uso.
+                \end{itemize}
+            \item \textbf{Attore principale}: enuncia l'entità che interagisce con il sistema;
+            \item \textbf{Precondizioni}: le condizioni del sistema che devono essere soddisfatte prima che il caso d'uso possa essere eseguito;
+            \item \textbf{Postcondizioni}: le condizioni del sistema che si verificano al termine dell'esecuzione del caso d'uso;
+            \item \textbf{Scenario principale}: un elenco numerato che rappresenta il flusso degli eventi principali che si verificano durante l'esecuzione del caso d'uso;
+            \item \textbf{Inclusioni}: (opzionale) indica che la funzione rappresentata da uno dei due use case include completamente la funzione rappresentata dall'altro;
+            \item \textbf{Generalizzazioni}: (opzionale) usati per aggiungere caratteristiche e funzionalità rispetto ai padri, o modificarne il comportamento;
+            \item \textbf{Estensioni}: (opzionale) impiegate per modellare scenari alternativi. Al verificarsi di una determinata condizione, il caso d'uso ad essa collegata viene interrotto;
+            \item \textbf{Diagramma}: strumento grafico utilizzato per rappresentare visivamente le interazioni tra attori e il sistema. 
+        \end{itemize}
+        \noindent Di seguito, viene riportato un esempio di caso d'uso redatto secondo quanto normato:
+        \begin{tcolorbox}
+            \textbf{{\Large UC 1 - Invio e-mail}}
+    
+            \begin{itemize}
+                \item \textbf{Attore principale}: MUA;
+                \item \textbf{Descrizione}: il MUA deve poter inviare una e-mail al destinatario indicato;
+                \item \textbf{Precondizioni}: l’account che il MUA gestisce è registrato nel sistema, ha una connessione aperta con il sistema ed è autenticato;
+                \item \textbf{Postcondizioni}: l'e-mail è stata consegnata con successo al destinatario ed è stata salvata nel sistema;
+                \item \textbf{Scenario principale}:
+                    \begin{enumerate}
+                        \item il MUA trasmette l'id dell'account (UC 1.1);
+                        \item il MUA trasmette l'id dell'e-mail (UC 1.2);
+                        \item il MUA trasmette il destinatario dell'e-mail (UC 1.3);
+                        \item il MUA trasmette il mittente dell'e-mail (UC 1.4);
+                        \item il sistema elabora l'inoltro.
+                    \end{enumerate}
+                \item \textbf{Inclusioni}: nessuna;
+                \item \textbf{Generalizzazioni}: nessuna;
+                \item \textbf{Estensioni}: nessuna.
+            \end{itemize}
+        \end{tcolorbox}
+
+    \clearpage
+    \paragraph{Requisiti}
+    Secondo la definizione dell'IEEE, i requisiti sono delle caratteristiche o delle proprietà che un certo prodotto software è tenuto ad avere da contratto.
+    Nella redazione del documento di \texttt{Analisi dei Requisiti}, ogni requisito deve essere costituito da:
+    \begin{itemize}
+        \item \textbf{Codice univoco}: che deve aderire al seguente formato:
+        $$\text{\texttt{R[Tipologia][Importanza]-[Codice]}}$$
+        dove:
+        \begin{itemize}
+            \item \texttt{R}: sta per Requisito;
+            \item \texttt{[Tipologia]}: indica il tipo del requisito, che può assumere uno dei seguenti significati:
+                \begin{itemize}
+                    \item \textbf{F}: requisito \textbf{Funzionale}, con cui si descrivono i servizi e le funzioni che il sistema offre;
+                    \item \textbf{V}: requisito di \textbf{Vincolo}, con cui si descrivono i vincoli ai servizi che il sistema offre;
+                    \item \textbf{Q}: requisito di \textbf{Qualità}, con cui si descrivono i vincoli di quallità da realizzare secondo il \texttt{Piano di Progetto}.
+                \end{itemize}
+            \item \texttt{[Importanza]}: indica il valore di importanza che viene asseganto ad ogni requisito; possono assumere i seguenti valori, decrescenti per valore di importanza:
+                \begin{itemize}
+                    \item \textbf{1}: requisito \textbf{Obbligatorio} che deve essere necessariamente soddisfatto per garantire la presenza di funzionalità di base;
+                    \item \textbf{2}: requisito \textbf{Desiderabile} che non ricopre una funzionalità fondamentale, ma che la sua implementazione da una maggiore completezza al prodotto;
+                    \item \textbf{3}: requisito \textbf{Opzionale} che determina ulteriore completezza all'interno del sistema. Rispetto ai precedenti, ha maggiore probabilità di comportare un dispendio di risorse.
+                \end{itemize}
+            \item \texttt{[Codice]}: identificatore numerico che associa ogni requisito al caso d'uso che lo implementa, seguendo la convenzione:
+            $$\text{\texttt{[codice\_UC].[codice\_sotto\_UC]}}$$
+            dove:
+                \begin{itemize}
+                    \item \texttt{[codice\_UC]}: indica l'identificatore numerico del caso d'uso base preso in esame;
+                    \item \texttt{[codice\_sotto\_UC]}: (opzionale) indica l'identificatore progressivo relativo al sotto caso d'uso.
+                \end{itemize}
+        \end{itemize}
+        \item \textbf{Importanza}: che esprime in forma testuale uno dei tre valori di importanza (obbligatorio, desiderabile, facoltativo). Nonostante questo dato sia ridondante, deve essere specificato per facilitare la lettura del documento;     
+        \item \textbf{Descrizione}: fornisce una descrizione breve seppur completa, concentrandosi sulla chiarezza espositiva;
+        \item \textbf{Fonte}: indica il caso d'uso che lo implementa. Anche questo dato è ridondante, ma deve essere specificato per migliorare la tracciabilità. 
+    \end{itemize}
+
+    \noindent Di seguito viene riportato un esempio, in forma tabellare, che rispetta quanto detto precendetemente:
+    \begin{tcolorbox}
+        ciaodwfpojfpworenfsfgàràtò,àò
+        fef
+        
+    \end{tcolorbox}
+    
+
+    
+    
+
+    \subsubsection{Progettazione architetturale} \label{sec:pa}
+    \subsubsection{Codifica} \label{sec:coding}
+    
